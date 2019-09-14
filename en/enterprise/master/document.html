@@ -1,0 +1,4696 @@
+<!doctype html>
+<html lang="en">
+<link rel="icon" type="image/png" href="../../../Dependencies/Images/favicon.png"/>
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Red Framework Documentation - Enterprise SDK</title>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .block::after {
+            clear: both;
+        }
+
+        .codebox {
+            line-height: 32px;
+            margin-right: 4%;
+            margin-left: 4%;
+            padding: 15px;
+            font-family: Courier, sans-serif;
+            font-size: 13px;
+            color: #fff;
+            background-color: rgba(61, 61, 61, 0.96);
+            -webkit-border-radius: 0 0 6px 6px;
+            -moz-border-radius: 0 0 6px 6px;
+            border-radius: 0 0 4px 4px;
+            margin-bottom: 10px;
+            overflow: auto;
+        }
+
+        .codeheader {
+            margin-right: 4%;
+            margin-left: 4%;
+            padding: 5px 5px 5px 10px;
+            font-family: 'Roboto', sans-serif;
+            font-size: 16px;
+            color: #fff;
+            -webkit-border-radius: 6px 6px 0 0;
+            -moz-border-radius: 6px 6px 0 0;
+            border-radius: 4px 4px 0 0;
+            background-color: rgba(226, 90, 90, 0.8);
+        }
+
+        .nav-item {
+            color: rgba(211, 211, 211, 0.22);
+            text-decoration: none;
+            margin-right: 20px;
+            transition: 0.2s;
+        }
+
+        .nav-item:hover {
+            color: white;
+            transition: 0.6s;
+        }
+
+        #nav-first-item {
+            margin-right: 20px;
+            padding-bottom: 7px;
+            border-radius: 2px;
+            padding-left: 6px;
+            padding-right: 6px;
+            margin-left: 10px;
+        }
+
+        #nav-item-current {
+            color: white;
+            text-decoration: none;
+        }
+
+        .lang {
+            color: rgba(211, 211, 211, 0.22);
+            font-size: 13px;
+        }
+
+        .lang:hover {
+            color: white;
+            transition: 0.6s;
+        }
+
+        .box {
+            box-shadow: 0 0 0.625vw 0 rgba(0, 0, 0, 0.04);
+            padding: 8px;
+            border-radius: 5px;
+            background-color: rgba(192, 192, 192, 0.35);
+            overflow: auto;
+            font-family: Calibri, sans-serif;
+        }
+
+        .content-title {
+            text-shadow: black 0 0 1px;
+            font-family: 'Segoe UI Light', sans-serif;
+        }
+
+        .content-box {
+            margin: 40px;
+            background-color: white;
+            padding: 15px;
+            box-shadow: 0 0 0.625vw 0 rgba(0, 0, 0, 0.24);
+            border-radius: 4px;
+        }
+
+        p {
+            font-family: Calibri, sans-serif;
+        }
+    </style>
+
+    <meta name="theme-color" content="rgba(226, 90, 90, 0.8)">
+
+    <meta name="keywords"
+          content="رد فریم ورک,فریم ورک پی اچ پی,فریم ورک PHP, پی اچ پی,PHP,چهارچوب توسعه پی اچ پی,برنامه نویسی,توسعه نرم افزار,Framework,PHP Framework,Red Framework,Programming,Software Development">
+
+    <meta name="description" content="Red Framework - Enterprise Kit Documentation">
+
+    <meta name="author" content="RedCoder">
+
+    <meta name="robots" content="index, follow">
+
+    <meta name="revisit-after" content="3 days">
+</head>
+
+<body red-app="main" red-controller="enterprise_doc"
+      style="box-shadow: 0 0 0.625vw 0 rgba(0,0,0,0.24);border-radius: 5px">
+
+
+<div id="loader"
+     style="text-shadow: black 0 0 1px;background-color: white;height: 100%;width: 100%;position: fixed;z-index: 25;right: 0;left: 0;text-align: center;margin-top: -8px">
+    <img style="position: relative;top: 23%;width: 200px;height: 200px" src="../../../Dependencies/Images/loading.gif"
+         alt="Loading">
+    <br/>
+    <span style="position: relative;top: 26%;">Loading Data ...</span>
+    <br/>
+    <span style="position: relative;top: 32%;">Thanks for Your Patient</span>
+</div>
+
+
+<div id="header"
+     style="z-index: 1;box-shadow: 0 0 0.625vw 0 rgba(0,0,0,0.24);-moz-user-select: -moz-none;-webkit-user-select: none;-ms-user-select: none;user-select: none;position:sticky;top: 0;height: 220px;max-height: 220px;background-image: url('../../../Dependencies/Images/Header_Background.jpg');
+                 background-size: cover;width: 100%;margin: auto;border-radius: 5px 5px 0 0;">
+    <img id="header-logo" alt="Red Framework" draggable="false"
+         src="../../../Dependencies/Images/Red_Framework_Logo_For_Header.png"
+         style="opacity: 0.80;height: 120px;width: 120px;margin-top: 30px;float: left">
+    <div id="header-title"
+         style="font-size: 22px;text-shadow: 0 0 0.625vw 0 rgba(0,0,0,0.50);color:#ffffff;padding-top: 60px;">Red
+        Framework
+    </div>
+    <div id="header-caption" style="text-shadow: 0 0 0.625vw 0 rgba(0,0,0,0.50);color:#ffffff;padding-top: 14px;">
+        Enterprise Applications Host
+    </div>
+    <div id="navbar"
+         style="box-shadow: 0 0 0.625vw 0 rgba(0,0,0,0.35);position: absolute;left: 0;top: 170px;z-index: 3;color: white;width: 100%;height: 50px;background-color: rgba(226,90,90,0.55);">
+        <span id="navbar-header" style="display: none;font-family: Calibri;position:relative;top: 14px;left: 12px;">Red Framework Documentation</span>
+        <span id="navbar-toggle"
+              style="cursor: pointer;display: none;position:relative;top: 9px;right: 8px;float: right"><img
+                src="../../../Dependencies/Images/menu.png" alt="Expand Menu"></span>
+        <div id="navbar-items" style="padding: 15px 9px;font-size: 15px;color: #000;text-shadow: white 0 0 1px">
+            <hr id="navbar-separator"
+                style="color: white;text-align: center;margin: auto;position:relative;top: 14px;width: 100%;display: none">
+            <a href="#!home" id="nav-first-item" class="nav-item" style="">
+                <img style="opacity: 0.5;width: 15px;height: 15px;margin-right: 4px;position:relative;top: 2.5px"
+                     src="../../../Dependencies/Images/home.png" alt="Home">
+                Home</a>
+            <a href="#!documentation" class="nav-item" style="">
+                <img style="opacity: 0.5;width: 15px;height: 15px;margin-right: 4px;position:relative;top: 2.5px"
+                     src="../../../Dependencies/Images/document.png" alt="Document">
+                Documentation</a>
+            <a href="#!enterprise_doc" id="nav-item-current" class="nav-item" style="">
+                <img style="width: 15px;height: 15px;margin-right: 4px;position:relative;top: 2.5px"
+                     src="../../../Dependencies/Images/app.png" alt="App">
+                Enterprise SDK</a>
+            <a href="#!console_doc" class="nav-item" style="">
+                <img style="opacity: 0.5;width: 15px;height: 15px;margin-right: 4px;position:relative;top: 2.5px"
+                     src="../../../Dependencies/Images/console.png" alt="Console">
+                Console Kit</a>
+            <a href="#!red_js_doc" class="nav-item" style="">
+                <img style="opacity: 0.5;width: 15px;height: 15px;margin-right: 4px;position:relative;top: 2.5px"
+                     src="../../../Dependencies/Images/java-script.png" alt="Red JS">
+                Red JS</a>
+
+            <span id="language"
+                  style="cursor: pointer;color: white;text-decoration: none;margin-right: 20px;font-size: 12px;position:absolute;right: 0">
+                <img style="width: 15px;height: 15px;margin-right: 6px;position:relative;top: 1px"
+                     src="../../../Dependencies/Images/language.png" alt="Language">
+                <span id="current-language">EN</span>
+
+                <img style="margin-left: 3px;width: 10px;height: 10px;margin-right: 6px;position:relative;top: 1px"
+                     src="../../../Dependencies/Images/drop-down-arrow.png" alt="Drop Down">
+                <div id="lang-list"
+                     style="text-shadow: white 0 0 1px;padding: 5px;display: none;width: 140px;text-align: center;background-color: rgba(226,90,90,0.95);box-shadow: 0 0 0.625vw 0 rgba(0,0,0,0.24);height: 50px;position:absolute;right: 0;margin-top: 16px;border-radius: 0 0 4px 4px;">
+                    <div id="lang-en" class="lang"
+                         style="font-family: Calibri;margin-bottom: 7px;margin-top: 6px;">English - En</div>
+                    <div id="lang-fa" class="lang" style="font-family: Calibri">Persian - Fa</div>
+                </div>
+            </span>
+
+            <span id="version" style="position:absolute;right: 110px;margin-top: -3px">
+                 <img style="width: 18px;height: 18px;margin-right: 10px;position:relative;top: 4px"
+                      src="../../../Dependencies/Images/version.png" alt="Version">
+                <select style="border-color: white;height: 27px;width: 140px;box-shadow: 0 0 0.625vw 0 rgba(0,0,0,0.10);border-radius: 5px;"
+                        name="version" id="select-version">
+                    <option value="1.0.0">1.0.0</option>
+                </select>
+            </span>
+        </div>
+    </div>
+</div>
+
+
+<div id="subjects-container" style="width: 22%;float: left;
+margin-bottom: 20px;position:sticky;left: 0;top: 55px;z-index: 0;">
+
+    <div id="subjects" style="overflow: auto;max-height: 90vh;min-width: 27vw;margin-top: 10px">
+        <ul style="font-family: 'Segoe UI Light', sans-serif;margin-left: 11px;color: rgba(226,90,90,0.70);line-height: 19px;">
+            <li id="overview-s"><a href="#overview" style="text-decoration: none;color: black;">Overview</a></li>
+            <li id="directory-structure-s"><a href="#directory-structure" style="text-decoration: none;color: black;">Directory
+                Structure</a></li>
+            <li id="configuration-s"><a href="#configuration"
+                                        style="text-decoration: none;color: black">Configuration</a></li>
+            <li id="environment-s"><a href="#environment" style="text-decoration: none;color: black">Environment
+                Variables</a></li>
+            <li id="routing-s"><a href="#routing" style="text-decoration: none;color: black">Routing</a></li>
+            <li id="controllers-s"><a href="#controllers" style="text-decoration: none;color: black">Controllers</a>
+            </li>
+            <li id="models-s"><a href="#models" style="text-decoration: none;color: black">Models</a></li>
+            <li id="views-s"><a href="#views" style="text-decoration: none;color: black">Views</a></li>
+            <li id="middlewares-s"><a href="#middlewares" style="text-decoration: none;color: black">Middlewares</a>
+            </li>
+            <li id="api-s"><a href="#api" style="text-decoration: none;color: black">APIs</a></li>
+            <li id="database-engine-s"><a href="#database-engine" style="text-decoration: none;color: black">Database
+                Engine</a></li>
+            <li id="pagination-s"><a href="#pagination" style="text-decoration: none;color: black">Pagination</a></li>
+            <li id="mail-server-s"><a href="#mail-server" style="text-decoration: none;color: black">Mail Server</a>
+            </li>
+            <li id="validation-service-s"><a href="#validation-service" style="text-decoration: none;color: black">Validation
+                Service</a></li>
+            <li id="filter-service-s"><a href="#filter-service" style="text-decoration: none;color: black">Filter
+                Service</a></li>
+            <li id="sanitize-service-s"><a href="#sanitize-service" style="text-decoration: none;color: black">Sanitize
+                Service</a></li>
+            <li id="debug-components-s"><a href="#debug-components" style="text-decoration: none;color: black">Debug
+                Components</a></li>
+            <li id="error-handling-s"><a href="#error-handling" style="text-decoration: none;color: black">Error
+                Handling</a></li>
+            <li id="inputs-s"><a href="#inputs" style="text-decoration: none;color: black">Inputs</a></li>
+            <li id="sessions-s"><a href="#sessions" style="text-decoration: none;color: black">Sessions</a></li>
+            <li id="cookies-s"><a href="#cookies" style="text-decoration: none;color: black">Cookies</a></li>
+            <li id="crypt-tools-s"><a href="#crypt-tools" style="text-decoration: none;color: black">Crypt Tools</a>
+            </li>
+            <li id="post-method-encryption-system-s">
+                <a href="#post-method-encryption-system"
+                   style="text-decoration: none;color: black">Post Method Encryption
+                    System</a></li>
+            <li id="language-service-s"><a href="#language-service" style="text-decoration: none;color: black">Organized
+                Language Service</a></li>
+            <li id="picture-tools-s"><a href="#picture-tools" style="text-decoration: none;color: black">Picture Tools
+                (Upload, Resize, ...)</a></li>
+            <li id="captcha-service-s"><a href="#captcha-service" style="text-decoration: none;color: black">Captcha
+                Service</a></li>
+            <li id="authentication-s"><a href="#authentication"
+                                         style="text-decoration: none;color: black">Authentication</a></li>
+            <li id="ajax-request-s"><a href="#ajax-request" style="text-decoration: none;color: black">AJAX Request</a>
+            </li>
+            <li id="csrf-token-s"><a href="#csrf-token" style="text-decoration: none;color: black">CSRF Token</a></li>
+        </ul>
+    </div>
+</div>
+
+<div id="subjects-toggle"
+     style="display: none;cursor: pointer;box-shadow: 0 4px 2px -2px rgba(0,0,0,0.30);background-color: white;height: 50px;position: fixed;left: 0;margin-top: 40px;border-radius: 0 3px 3px 0">
+    <img src="../../../Dependencies/Images/subjects_menu.png" style="margin: 3px;width: 38px;height: 40px;"
+         alt="Subjects Menu">
+</div>
+
+<div id="content-container" class="block"
+     style="box-shadow: 0 4px 2px -2px rgba(0,0,0,0.24);margin-bottom: auto;width: 70%;float: right;margin-top: auto;background: url('../../../Dependencies/Images/background.png') no-repeat center center fixed;
+     background-size: 100% 100%;border-radius: 0 0 0 5px">
+
+    <div id="overview"
+         class="content-box">
+        <h3 class="content-title">Overview</h3>
+        <hr>
+        <div style="text-align: center">
+            <img id="enterprise-app" style="width: 600px;height: 300px;margin-top: 15px"
+                 src="../../../Dependencies/Images/enterprise_app.png" alt="Enterprise SDK Structure">
+        </div>
+        <p>
+            Enterprise SDK is a full-featured and Modern MVC Framework to Speed up and Organize Development
+            <br/>
+            it Contains High Quality Components such As:
+            <br/>
+            <br/>
+            Perfect Database Engine which Supports 3 Famous Databases (MySQL, SQLServer, SQLite), 3 Available Database
+            Slot, and High-Performance ORM which Supports CRUD Operations
+            <br/>
+            <br/>
+            Captcha Service
+            <br/>
+            <br/>
+            SMTP Mail Service
+            <br/>
+            <br/>
+            Safe Upload Service
+            <br/>
+            <br/>
+            Validate, Filter, Sanitize Service
+            <br/>
+            <br/>
+            Organized Language Service
+            <br/>
+            <br/>
+            High-Quality Routing System with Middleware
+            <br/>
+            <br/>
+            Organized Inputs(URL Parameters, GET, POST Variables and Etc)
+            <br/>
+            <br/>
+            Configured And Crypted Sessions
+            <br/>
+            <br/>
+            Debug Components Such as Debugger, DebugBar and a lot More ... !
+            <br>
+            <br>
+        </p>
+
+    </div>
+
+    <div id="directory-structure"
+         style="margin: 40px;background-color: white;padding: 15px;box-shadow: 0 0 0.625vw 0 rgba(0,0,0,0.24);border-radius: 4px;">
+        <h3 style="text-shadow: black 0 0 1px;font-family: 'Segoe UI Light', sans-serif">Directory Structure</h3>
+        <hr>
+
+        <h4 style="font-family: 'Segoe UI Light', sans-serif">APP :</h4>
+        <div class="box">
+            <q>App is Base Directory Of Application; Contains All of your Controllers,
+                Models, Middlewares and APIs.
+            </q>
+        </div>
+
+        <h4 style="font-family: 'Segoe UI Light', sans-serif">CONFIG :</h4>
+        <div class="box">
+            <q>Application Config, Session Config, Router Service Config and Path Variables
+                will be Stored at Config Folder.
+            </q>
+        </div>
+
+
+        <h4 style="font-family: 'Segoe UI Light', sans-serif">DATABASE :</h4>
+        <div class="box">
+            <q>Database Backups, Migration Files, Schema and SQLite Embedded Database file
+                are In Database Folder.</q>
+        </div>
+
+        <h4 style="font-family: 'Segoe UI Light', sans-serif">PUBLIC :</h4>
+        <div class="box">
+            <q>Public is an Accessible Directory which you Can access Outside of Server
+                <br/>
+                All Front-End Resources like JS, CSS and etc should be Stored at Public Directory
+            </q>
+        </div>
+
+
+        <h4 style="font-family: 'Segoe UI Light', sans-serif">RESOURCES :</h4>
+        <div class="box">
+            <q>Application Resources like Language JSON Files will be Stored at Resources
+                Directory
+            </q>
+        </div>
+
+        <h4 style="font-family: 'Segoe UI Light', sans-serif">ROUTES :</h4>
+        <div class="box">
+            <q>Application Registered Routes
+            </q>
+        </div>
+
+        <h4 style="font-family: 'Segoe UI Light', sans-serif">STORAGE :</h4>
+        <div class="box">
+            <q>Application / Framework Cache like Sessions, Template Engine Pre-Compiled
+                and Analytics Files (For Red Analytics) Will be Stored There.
+            </q>
+        </div>
+
+        <h4 style="font-family: 'Segoe UI Light', sans-serif">VENDOR :</h4>
+        <div class="box">
+            <q>Composer Directory; Containing Packages and Autoload PSR.
+            </q>
+        </div>
+
+        <h4 style="font-family: 'Segoe UI Light', sans-serif">VIEWS :</h4>
+        <div class="box">
+            <q>Template Engine Views; Containing Partial and Main Views of Your
+                Application.
+            </q>
+        </div>
+
+        <ul style="font-family: Calibri, sans-serif;font-size: 18px;color: rgb(226,90,90);cursor: pointer">
+            <li><span style="color: black">app</span>
+                <ul style="font-family: Calibri, sans-serif;font-size: 16px;color: rgb(226,90,90);padding-left: 22px">
+                    <li><span style="color: black">APIs</span></li>
+                    <li><span style="color: black">Bootstrap</span></li>
+                    <li><span style="color: black">Controllers</span></li>
+                    <li><span style="color: black">Models</span></li>
+                    <li><span style="color: black">Middlewares</span></li>
+                </ul>
+            </li>
+            <li><span style="color: black">config</span></li>
+            <li><span style="color: black">database</span>
+                <ul style="font-family: Calibri, sans-serif;font-size: 16px;color: rgb(226,90,90);padding-left: 22px">
+                    <li><span style="color: black">Backup</span></li>
+                    <li><span style="color: black">Migration</span></li>
+                    <li><span style="color: black">Schema</span></li>
+                    <li><span style="color: black">SQLite</span></li>
+                </ul>
+            </li>
+            <li><span style="color: black">public</span>
+                <ul style="font-family: Calibri, sans-serif;font-size: 16px;color: rgb(226,90,90);padding-left: 22px">
+                    <li><span style="color: black">CSS</span></li>
+                    <li><span style="color: black">Fonts</span></li>
+                    <li><span style="color: black">Images</span></li>
+                    <li><span style="color: black">JS</span></li>
+                    <li><span style="color: black">Library</span></li>
+                    <li><span style="color: black">Uploads</span></li>
+                    <li><span style="color: black">Red</span></li>
+                </ul>
+            </li>
+            <li><span style="color: black">resources</span>
+                <ul style="font-family: Calibri, sans-serif;font-size: 16px;color: rgb(226,90,90);padding-left: 22px">
+                    <li><span style="color: black">Language</span></li>
+                </ul>
+            </li>
+            <li><span style="color: black">routes</span></li>
+            <li><span style="color: black">storage</span>
+                <ul style="font-family: Calibri, sans-serif;font-size: 16px;color: rgb(226,90,90);padding-left: 22px">
+                    <li><span style="color: black">Analytics</span></li>
+                    <li><span style="color: black">Session</span></li>
+                    <li><span style="color: black">TemplateEngine</span></li>
+                </ul>
+            </li>
+            <li><span style="color: black">vendor</span></li>
+            <li><span style="color: black">views</span></li>
+        </ul>
+    </div>
+
+    <div id="configuration"
+         class="content-box">
+        <h3 class="content-title">Configuration</h3>
+        <hr>
+        <p>
+            To Get Started with Red Framework Configuration You Need to generate a New Secret Key to Secure your
+            Application.
+            <br/>
+            <br/>
+            to Do That You Can Open Red
+            Analytics On Your Project and Click on Project Tab -> Generate New Secret Key
+        </p>
+
+        <div style="text-align: center">
+            <img id="red-analytics-new-key" style="width: 600px;height: 550px;margin-top: 15px"
+                 src="../../../Dependencies/Images/Red_Analytics_new_secret_key.png"
+                 alt="Red Analytics - New Secret Key">
+        </div>
+
+        <p>
+            All Session Configurations are Available at Config -> Session.php which Can be Customized easily
+            <br/>
+            <br/>
+            All Path Variables are Available at Config -> Path.php
+            <br/>
+            <span style="font-family: Calibri, sans-serif">*** Never Ever Change or Remove Path Variables of Core of Framework</span>
+            <br/>
+            Pathes Should Be Defined (unCommented) By Developer :
+        </p>
+        <div class="codeheader">
+            DEFINE NECESSARY PATH VARIABLES - EXAMPLE
+        </div>
+        <div class="codebox" style="">
+            <code>
+                // ROOT_DIRECTORY
+                <br/>
+                define('ROOT_DIRECTORY', '/');
+                <br/>
+                <br/>
+                // PUBLIC_PATH
+                <br/>
+                define('PUBLIC_PATH', '/public/');
+                <br/>
+                <br/>
+                // MYSQL_PATH - If You Use a MySQL Database in your Project
+                <br/>
+                define('MYSQL_PATH', 'D:\Wamp\bin\mysql\mysql5.7.24\bin\mysql');
+                <br/>
+                <br/>
+                // MYSQL_DUMP_PATH - If You Use a MySQL Database in your Project
+                <br/>
+                define('MYSQL_DUMP_PATH', 'D:\Wamp\bin\mysql\mysql5.7.24\bin\mysqldump');
+                <br/>
+                <br/>
+                // SQL_CMD_PATH - If You Use a SQL Server Database in your Project
+                <br/>
+                define('SQL_CMD_PATH', '"C:\Program Files\Microsoft SQL Server\Client
+                SDK\ODBC\130\Tools\Binn\SQLCMD.exe"');
+                <br/>
+                <br/>
+                // SQLITE_CLI_PATH - If You Use a SQLite Database in your Project
+                <br/>
+                define('SQLITE_CLI_PATH', ROOT_PATH . "database" . DS . "SQLite" . DS . 'sqlite3.exe');
+            </code>
+        </div>
+
+        <p>
+            Router Configuration is Available At Config -> Router.php
+            <br/>
+            You Can Set Your Default Route (404 View) By Following Syntax :
+        </p>
+
+        <div class="codeheader">
+            SET DEFAULT ROUTE
+        </div>
+        <div class="codebox">
+            <code>
+                Router::setDefaultRoute(function () {
+                http_response_code('404');
+                \Red\View::render("Red.NotFoundError");
+                });
+            </code>
+        </div>
+
+
+        <p>
+            You Can Set Your Access Error (403 View - Occurs when Route Method / User Role is Not Valid) By Following
+            Syntax :
+        </p>
+
+        <div class="codeheader">
+            SET ACCESS ERROR
+        </div>
+        <div class="codebox">
+            <code>
+                Router::register('error/403', 'GET,POST,PUT,PATCH,DELETE', function (){
+                http_response_code('403');
+                \Red\View::render("Red.AccessError");
+                }, 'All');
+            </code>
+        </div>
+
+        <p>
+            to Set your Access Error on Web Server; Open .htaccess File at Root Direcroty and define Your Domain Name
+        </p>
+
+        <div class="codeheader">
+            SET ACCESS ERROR - WEB SERVER PART
+        </div>
+        <div class="codebox">
+            <code>
+                // Define your Domain Name Instead of localhost
+                <br/>
+                ErrorDocument 403 http://localhost/error/403
+            </code>
+        </div>
+    </div>
+
+    <div id="environment"
+         class="content-box">
+        <h3 class="content-title">ENVIRONMENT VARIABLES</h3>
+        <hr>
+        <p>
+            There is 2 Way to Set Environment Variables :
+            <br/>
+            <br/>
+            1 - Environment.JSON File in Root Directory
+            <br/>
+            <br/>
+            2 - Config.php File in Config Directory
+            <br/>
+
+            to Use Second way you Should Set PHP Config Enable at Config.php:
+        </p>
+
+        <div class="codeheader">
+            ENABLE PHP CONFIG
+        </div>
+        <div class="codebox">
+            <code>
+                Red::setPhpConfig(TRUE);
+            </code>
+        </div>
+
+        <h4 style="font-family: 'Segoe UI Light', sans-serif">PROJECT - Name :</h4>
+        <div class="box">
+            <q>Name of Your Applications; Will be Displayed in Red Analytics, Debug Bar and
+                Etc
+            </q>
+        </div>
+
+        <h4 style="font-family: 'Segoe UI Light', sans-serif">PROJECT - Version :</h4>
+        <div class="box">
+            <q>Version of Your Applications; Will be Displayed in Red Analytics, Debug Bar
+                and Etc
+            </q>
+        </div>
+
+        <h4 style="font-family: 'Segoe UI Light', sans-serif">PROJECT - State :</h4>
+        <div class="box">
+            <q>State of Current Project which can be on 3 Mode:
+                <br/>
+                <br/>
+                1 - Production : all Debug Components and Errors are Enabled to Assist Developer
+                <br/>
+                <br/>
+                2 - Maintenance : all Debug Components and Errors are Disabled
+                <br/>
+                <br/>
+                3 - Break : Maintenance Break Mode; Server Stays Down on this Mode
+            </q>
+        </div>
+
+
+        <h4 style="font-family: 'Segoe UI Light', sans-serif">PROJECT - SupervisorIP :</h4>
+        <div class="box">
+            <q>User who has the Supervisor IP Can Access Application During Maintenance
+                Break to Check Up
+            </q>
+        </div>
+
+        <h4 style="font-family: 'Segoe UI Light', sans-serif">PROJECT - SDK :</h4>
+        <div class="box">
+            <q>Current SDK is : Red Framework Enterprise Application
+            </q>
+        </div>
+
+        <h4 style="font-family: 'Segoe UI Light', sans-serif">PROJECT - Language :</h4>
+        <div class="box">
+            <q>Application Language ; all Errors and Texts will be Related on that.
+            </q>
+        </div>
+
+        <h4 style="font-family: 'Segoe UI Light', sans-serif">PROJECT - Programmer :</h4>
+        <div class="box">
+            <q>Programmer Name of Your Applications; Will be Displayed in Red Analytics,
+                Debug Bar and Etc
+            </q>
+        </div>
+
+        <h4 style="font-family: 'Segoe UI Light', sans-serif">PROJECT - Encryption :</h4>
+        <div class="box">
+            <q>Post Encryption System ; Can be on / off
+            </q>
+        </div>
+
+        <h4 style="font-family: 'Segoe UI Light', sans-serif">PROJECT - SecretKey :</h4>
+        <div class="box">
+            <q>Salt Key of Encryption Algorithms; Change This Value or Your Data would not
+                Be Safe
+            </q>
+        </div>
+
+        <h4 style="font-family: 'Segoe UI Light', sans-serif">PROJECT - TimeZone :</h4>
+        <div class="box">
+            <q>PHP TimeZone
+            </q>
+        </div>
+
+        <h4 style="font-family: 'Segoe UI Light', sans-serif">PROJECT - Cache :</h4>
+        <div class="box">
+            <q>Cache of Framework, Template Engine and Etc ; Value Can be on / off
+            </q>
+        </div>
+
+        <h4 style="font-family: 'Segoe UI Light', sans-serif">DATABASES Slot :</h4>
+        <div class="box">
+            <q>Red Framework Provides 3 Database Slot which will be Introduced in Database
+                Section
+            </q>
+        </div>
+
+        <h4 style="font-family: 'Segoe UI Light', sans-serif">Mail Server :</h4>
+        <div class="box">
+            <q>Red Framework Provides a SMTP Mail Server which will be Introduced in Mail
+                Server Section
+            </q>
+        </div>
+
+        <h4 style="font-family: 'Segoe UI Light', sans-serif"> DEBUG - DebugBar :</h4>
+        <div class="box">
+            <q>DebugBar is a Beautiful and useful Component of Red Framework which Helps
+                Developer to Check Up Application Process as Well ; Value Can be on / off
+            </q>
+        </div>
+
+        <h4 style="font-family: 'Segoe UI Light', sans-serif"> DEBUG - Errors :</h4>
+        <div class="box">
+            <q>Red Framework Provides Professional Debugger Component to Assist Developer
+                in Debugging Process ; Value Can be on / off
+            </q>
+        </div>
+    </div>
+
+    <div id="routing"
+         class="content-box">
+        <h3 class="content-title">ROUTING</h3>
+        <hr>
+        <p>
+            A Route in Red Framework (MVC Application) has Following Attributes :
+            <br/>
+        </p>
+
+        <ul style="font-family: Calibri, sans-serif;color: rgb(226,90,90);">
+            <li><span style="color: #000;">Route Path (URL) + Route Parameters (Optional / Non-Optional)</span></li>
+            <li><span style="color: #000;">Route Method (Which is HTTP Method: GET, POST, PUT, ...)</span></li>
+            <li><span style="color: #000;">Route Action (Controller@Method)</span></li>
+            <li><span style="color: #000;">Route Middlewares</span></li>
+        </ul>
+
+        <p>
+            You Have 2 Way front to Register a Route :
+            <br/>
+            <br/>
+            1 - Register Route Manually from Routes -> Routes.php
+            <br/>
+            2 - Register Route with Red Analytics
+            <br/>
+            <br/>
+            <br/>
+            In Following Example we are going to Register a GET route Manually with 2 Parameters(1 Non-Optional, 1
+            Optional), Authentication Middleware (Admin Role) and a GET, POST Route with Closure Action
+        </p>
+
+        <div class="codeheader">
+            REGISTER ROUTE
+        </div>
+        <div class="codebox">
+            <code>
+                Router::register("panel/{param1}{?param2}", "GET", "PanelController@panel", ["Authentication:admin"]);
+                <br/>
+                <br/>
+                <br/>
+                Router::register("welcome/{name}", "GET, POST", function($name) { echo 'Welcome :' . $name; });
+            </code>
+        </div>
+
+        <p>
+            Register Route with Red Analytics :
+        </p>
+
+        <div style="text-align: center">
+            <img id="red-analytics-register-route" style="width: 694px;height: 418px"
+                 src="../../../Dependencies/Images/Red_Analytics_register_route.png"
+                 alt="Red Analytics - Register Route">
+        </div>
+
+    </div>
+
+
+    <div id="controllers"
+         class="content-box">
+        <h3 class="content-title">CONTROLLERS</h3>
+        <hr>
+        <p>
+
+            In MVC Pattern A Controller Handle All Communication Between Front-Controller (Middleware / Request) ,
+            Model And Views
+            <br/>
+            All Decisions Will be Made By Controller
+
+            <br/>
+            <br/>
+            A Red Framework Controller is CamelCase and Ends with Controller Suffix
+            <br/>
+            Namespace for all Controllers is App\Controllers
+            <br/>
+            You Should Extend Main Controller on your New Controller :
+        </p>
+
+        <div class="codeheader">
+            NEW CONTROLLER
+        </div>
+        <div class="codebox">
+            <code>
+                < ? php
+                <br/>
+                /** Red Framework Controller
+                <br/>
+                * Generated By Red Analytics
+                <br/>
+                *
+                <br/>
+                * Date: 26/08/2019
+                <br/>
+                * Time: 01:14:23
+                <br/>
+                * @author RedCoder
+                <br/>
+                */
+                <br/>
+                <br/>
+
+                namespace App\Controllers;
+                <br/>
+                <br/>
+
+                use Red\Base\Controller;
+
+                <br/>
+                <br/>
+
+                class TestController extends Controller
+                <br/>
+
+                {
+                <br/>
+                <br/>
+
+                }
+
+            </code>
+        </div>
+        <br/>
+        <p>
+            Generating New Controller with Red Analytics :
+        </p>
+
+        <div style="text-align: center">
+            <img id="red-analytics-generate-controller" style="width: 600px;height: 550px;margin-top: 15px"
+                 src="../../../Dependencies/Images/Red_Analytics_generate_controller.png"
+                 alt="Red Analytics - Generate New Controller">
+        </div>
+
+        <p>
+            In Case You Want to Generate Model too; Click on Generate Model Checkbox.
+        </p>
+        <div class="box">
+            <q> Note : Controller Class will Create a Model Instance of its Own Name (If
+                Exist) and Hold it On Protected Property $model while Constructing Controller
+                <br/>
+                In Such Case you Have to Make Your IDE to Understand which Kind of Object is Your Model is ; with PHP
+                DOC
+            </q>
+        </div>
+
+        <p>
+            Example:
+        </p>
+
+        <div class="codeheader">
+            A CONTROLLER WHICH UNDERSTANDS $model OBJECT
+        </div>
+        <div class="codebox">
+            <code>
+                < ? php
+                <br/>
+                /** Red Framework Controller
+                <br/>
+                * Generated By Red Analytics
+                <br/>
+                *
+                <br/>
+                * Date: 26/08/2019
+                <br/>
+                * Time: 01:14:23
+                <br/>
+                * @author RedCoder
+                <br/>
+                */
+                <br/>
+                <br/>
+
+                namespace App\Controllers;
+                <br/>
+                <br/>
+
+                use Red\Base\Controller;
+
+                <br/>
+                <br/>
+
+                class TestController extends Controller
+                <br/>
+
+                {
+                <br/>
+                &emsp;/**
+                <br/>
+                &emsp;* @var TestModel $this->model
+                <br/>
+                &emsp;*/
+                <br/>
+                &emsp;protected $model;
+                <br/>
+
+                }
+
+            </code>
+        </div>
+    </div>
+
+    <div id="models"
+         class="content-box">
+        <h3 class="content-title">MODELS</h3>
+        <hr>
+        <p>
+            Models In MVC Applications are Used to Contact between Controller and Database.
+            <br/>
+            <br/>
+            A Red Framework Model is CamelCase and Ends with Model Suffix
+            <br/>
+            Namespace for all Models is App\Models
+            <br/>
+            You Should Extend Main Model on your New Model :
+        </p>
+
+        <div class="codeheader">
+            NEW MODEL
+        </div>
+        <div class="codebox">
+            <code>
+                < ? php
+                <br/>
+                /** Red Framework Model
+                <br/>
+                * Generated By Red Analytics
+                <br/>
+                *
+                <br/>
+                * Date: 26/08/2019
+                <br/>
+                * Time: 01:49:10
+                <br/>
+                * @author RedCoder
+                <br/>
+                */
+                <br/>
+                <br/>
+
+                namespace App\Models;
+                <br/>
+                <br/>
+
+                use Red\Base\Model;
+
+                <br/>
+                <br/>
+
+                class TestModel extends Model
+                <br/>
+
+                {
+                <br/>
+                <br/>
+
+                }
+
+            </code>
+        </div>
+
+        <br/>
+        <p>
+            Generating New Model with Red Analytics :
+        </p>
+
+        <div style="text-align: center">
+            <img id="red-analytics-generate-model" style="width: 600px;height: 550px;margin-top: 15px"
+                 src="../../../Dependencies/Images/Red_Analytics_generate_model.png"
+                 alt="Red Analytics - Generate New Model">
+        </div>
+
+    </div>
+
+    <div id="views"
+         class="content-box">
+        <h3 class="content-title">VIEWS</h3>
+        <hr>
+        <p>
+            Views Are Like Template ; They Stored on views Directory and Will be Render By A Template Engine
+            <br/>
+            <br/>
+            A Template Engine Allows You To Code PHP Between HTML Tags in A Cleaner Syntax.
+            <br/>
+            <br/>
+            Red Framework uses Twig Template Engine which I Known as Smooth and Strong Template Engine
+            <br/>
+            <br/>
+            All Twig Instructions is Available at <a href="https://twig.symfony.com/">Twig Official Website</a>
+        </p>
+
+        <div class="box">
+            <q>
+                I have Chosen Twig Engine because I Considered 90% of IDEs Supports Twig Syntax and Of Course Most PHP
+                Developers Knows it
+
+                <br/>
+                <br/>
+                Probability of Developing My Own Engine Will Still Remains; But I Assure you All Developers this Syntax
+                will Remains to Keep Red Framework Syntax Integrated
+            </q>
+        </div>
+
+        <br/>
+        <p>
+            Generating a View with Red Analytics :
+        </p>
+
+        <div style="text-align: center">
+            <img id="red-analytics-generate-view" style="width: 600px;height: 550px;margin-top: 15px"
+                 src="../../../Dependencies/Images/Red_Analytics_generate_view.png" alt="Red Analytics - Generate View">
+        </div>
+
+        <br/>
+
+        <p>
+            Rendering A View :
+            <br/>
+            <br/>
+            Note : "." Character Acts Like Directory Separator
+        </p>
+
+        <div class="codeheader">
+            RENDER VIEW
+        </div>
+        <div class="codebox">
+            <code>
+                View::render("Partials.Footer");
+            </code>
+        </div>
+
+    </div>
+
+    <div id="middlewares"
+         class="content-box">
+        <h3 class="content-title">MIDDLEWARES</h3>
+        <hr>
+        <p>
+            Middlewares of Another Name of Front-Controller in MVC Pattern
+            <br/>
+            <br/>
+            A Middleware is A Class which Will Be launched Before the Controller in Routing Process
+            <br/>
+            <br/>
+            Middlewares are in App\Middewares Namespace
+            <br/>
+            <br/>
+
+            to Create a New Middleware You Should extend Abstract Class Middleware and Implement it's abstract method ->
+            run()
+            <br/>
+            <br/>
+            run method Can receive unlimited parameters and it's return type is Boolean
+            <br/>
+            <br/>
+            if Run Method Returns TRUE ; Application will Proceed
+            <br/>
+            if Run Method Return FALSE ; Application will Stop Processing
+        </p>
+
+
+        <div class="codeheader">
+            NEW MIDDLEWARE
+        </div>
+        <div class="codebox">
+            <code>
+                < ? php
+                <br/>
+                /** Red Framework Middleware
+                <br/>
+                * Generated By Red Analytics
+                <br/>
+                *
+                <br/>
+                * Date: 26/08/2019
+                <br/>
+                * Time: 05:25:17
+                <br/>
+                * @author RedCoder
+                <br/>
+                */
+                <br/>
+                <br/>
+                namespace App\Middlewares;
+                <br/>
+                <br/>
+                use Red\Base\Middleware;
+                <br/>
+                <br/>
+
+                class Test extends Middleware
+                <br/>
+                {
+                <br/>
+                &emsp;public function run(... $parameters)
+                &emsp;{
+                <br/>
+                &emsp;// TODO: Implement run() method.
+                <br/>
+                &emsp;}
+                <br/>
+                }
+                <br/>
+            </code>
+        </div>
+
+        <br/>
+        <p>
+            Generating a Middleware with Red Analytics :
+        </p>
+
+        <div style="text-align: center">
+            <img id="red-analytics-generate-middleware" style="width: 600px;height: 550px;margin-top: 15px"
+                 src="../../../Dependencies/Images/Red_Analytics_generate_middleware.png"
+                 alt="Red Analytics - Generate Middleware">
+        </div>
+
+        <br/>
+
+        <p>
+            Passing 2 Parameters 'Admin' and 'Supporter' to Authentication Middleware
+        </p>
+
+        <div class="codeheader">
+            PASS PARAMETERS TO MIDDLEWARE
+        </div>
+        <div class="codebox">
+            <code>
+                Router::register("panel/{param1}{?param2}", "GET", "PanelController@panel",
+                ["Authentication:admin,supporter"]);
+            </code>
+        </div>
+
+    </div>
+
+    <div id="api"
+         class="content-box">
+        <h3 class="content-title">API SERVICE</h3>
+        <hr>
+        <p>
+            API Service Class Placed at App\APIs is A Class to Organize API Requests and Services.
+            <br/>
+            <br/>
+            at the Following Example We Call API Method of APIService :
+            <br/>
+        </p>
+
+        <div class="codeheader">
+            API SERVICE
+        </div>
+        <div class="codebox">
+            <code>
+                Router::register("api/", "GET", "APIService@API");
+            </code>
+        </div>
+
+    </div>
+
+    <div id="database-engine"
+         class="content-box">
+        <h3 class="content-title">DATABASE ENGINE</h3>
+        <hr>
+        <p>
+            Red Framework Provides Strong Database Engine Which Supports 3 Famous Databases (MySQL, SQLServer, SQLite),
+            3 Database Slot and High-Performance ORM
+            <br/>
+            <br/>
+            <br/>
+            To Get Started With Red Framework Database Engine Lets Take A Look to Application Environment :
+
+            <br/>
+            <br/>
+        </p>
+
+
+        <div class="codeheader">
+            ENVIRONMENT - DATABASE SLOT 1
+        </div>
+        <div class="codebox">
+            <code>
+                "DATABASE_1":
+                <br/>
+                {
+                <br/>
+                "Status": "off",
+                <br/>
+                "Driver": "mysql",
+                <br/>
+                "Host": "localhost",
+                <br/>
+                "Port": "3306",
+                <br/>
+                "Name": "red",
+                <br/>
+                "User": "root",
+                <br/>
+                "Password": "red",
+                <br/>
+                "Charset": "utf8",
+                <br/>
+                "Backup": "off",
+                <br/>
+                "BackupTime": "23",
+                <br/>
+                "Migration": "off"
+                <br/>
+                }
+                <br/>
+            </code>
+        </div>
+
+        <br/>
+
+
+        <h4 style="font-family: 'Segoe UI Light', sans-serif">STATUS :</h4>
+        <div class="box">
+            <q>to Use this Slot You Should Set Status to on
+            </q>
+        </div>
+
+
+        <h4 style="font-family: 'Segoe UI Light', sans-serif">DRIVER :</h4>
+        <div class="box">
+            <q>Database Driver ; Since Red Framework Supports 3 Databases, Driver Can Be :
+                <br/>
+                <br/>
+                For MySQL Database : mysql
+                <br/>
+                For SQLServer Database : sqlsrv
+                <br/>
+                For SQLite Database : sqlite
+                <br/>
+            </q>
+        </div>
+
+        <h4 style="font-family: 'Segoe UI Light', sans-serif">HOST :</h4>
+        <div class="box">
+            <q>Database Host
+            </q>
+        </div>
+
+        <h4 style="font-family: 'Segoe UI Light', sans-serif">PORT :</h4>
+        <div class="box">
+            <q>Database Port
+            </q>
+        </div>
+
+        <h4 style="font-family: 'Segoe UI Light', sans-serif">NAME :</h4>
+        <div class="box">
+            <q>Database Name
+            </q>
+        </div>
+
+        <h4 style="font-family: 'Segoe UI Light', sans-serif">USER :</h4>
+        <div class="box">
+            <q>Database Username
+            </q>
+        </div>
+
+        <h4 style="font-family: 'Segoe UI Light', sans-serif">PASSWORD :</h4>
+        <div class="box">
+            <q>Database Password
+            </q>
+        </div>
+
+        <h4 style="font-family: 'Segoe UI Light', sans-serif">CHARSET :</h4>
+        <div class="box">
+            <q>Database Charset (Default is UTF-8)
+            </q>
+        </div>
+
+        <h4 style="font-family: 'Segoe UI Light', sans-serif">BACKUP :</h4>
+        <div class="box">
+            <q>While Backup Option is Turned Up, Framework Will Automatically Takes Backup
+                of Your Database on Backup Time
+                <br/>
+                <br/>
+                Backup Process Will be Done By Shell ; So Before that You Have to Set These 4 Path in Path Variables .
+                <br/>
+                <br/>
+                MYSQL_DUMP_PATH & MYSQL_PATH - If You Use a MySQL Database
+                <br/>
+                SQL_CMD_PATH - If You Use a SQL Server Database
+                <br/>
+                SQLITE_CLI_PATH - If You Use a SQLite Database
+            </q>
+        </div>
+
+        <h4 style="font-family: 'Segoe UI Light', sans-serif">BACKUPTIME :</h4>
+        <div class="box">
+            <q>Backup TimeZone is Based on Your Application TimeZone and Time Format is HH
+            </q>
+        </div>
+
+        <h4 style="font-family: 'Segoe UI Light', sans-serif">MIGRATION :</h4>
+        <div class="box">
+            <q>If Your Turn Your Database Migration On, Framework Will Try to Migrate Your
+                Current Database (Stored at database -> Migration -> migration_of_db1.sql) to Your Connected Database.
+                <br/>
+                <br/>
+                Migrate Process Will be Done By Shell ; So Before that You Have to Set These 4 Path in Path Variables .
+                <br/>
+                <br/>
+                MYSQL_DUMP_PATH & MYSQL_PATH - If You Use a MySQL Database
+                <br/>
+                SQL_CMD_PATH - If You Use a SQL Server Database
+                <br/>
+                SQLITE_CLI_PATH - If You Use a SQLite Database
+            </q>
+        </div>
+
+
+        <h4 style="text-align: center;margin-top: 50px;text-shadow: black 0 0 1px;font-family: 'Segoe UI Light', sans-serif">
+            Working
+            with ORM</h4>
+        <hr style="width: 95%"/>
+
+
+        <p>
+
+            Red Framework ORM Provides 4 Base Operations CRUD (Create, Read, Update, Delete) and 2 Extra Operations
+            (COUNT, AVG)
+
+            <br/>
+            <br/>
+            <br/>
+            All Database Engine Flags (Const. For Easier Usage) :
+        </p>
+
+        <div style="margin-top: 20px" class="codeheader">DATABASE ENGINE FLAGS</div>
+        <div class="codebox">
+            <code>
+                /* DB1 - Which Refers to Database Slot 1
+                <br/>
+                DB2 - Which Refers to Database Slot 2
+                <br/>
+                DB3 - Which Refers to Database Slot 3
+                <br/>
+                CREATE - Which Refers to Create Operation
+                <br/>
+                READ - Which Refers to Read Operation
+                <br/>
+                READ_CONDITION - Which Refers to Read Operation By Condition
+                <br/>
+                UPDATE - Which Refers to Update Operation
+                <br/>
+                UPDATE_CONDITION - Which Refers to Update Operation By Condition
+                <br/>
+                DELETE - Which Refers to Delete Operation
+                <br/>
+                DELETE_CONDITION - Which Refers to Delete Operation By Condition
+                <br/>
+                COUNT - Which Refers to Count Operation
+                <br/>
+                COUNT_CONDITION - Which Refers to Count Operation By Condition
+                <br/>
+                AVG - Which Refers to Average Operation
+                <br/>
+                AVG_CONDITION - Which Refers to Average Operation By Condition
+                <br/>
+                FREE - Which Refers to Free Query */
+            </code>
+        </div>
+
+        <p>
+            <br/>
+            <br/>
+            Note : All ORM Operations Should be Done in A Model
+
+            <br/>
+            <br/>
+            <span style="text-shadow: black 0 0 1px">Create Operation :</span>
+        </p>
+
+
+        <div class="codeheader" style="margin-top: 30px">
+            ORM - CREATE
+        </div>
+
+        <div class="codebox">
+            <code>$this->setFields([
+                <br/>
+                'page' => 'any',
+                <br/>
+                'hits' => 'any',
+                <br/>
+                ]);
+                <br/>
+                <br/>
+                $this->setParameters([
+                <br/>
+                'page' => 'singup',
+                <br/>
+                'hits' => '0',
+                <br/>]);
+                <br/>
+                <br/>
+                $this->query("hits", CREATE, DB1);
+            </code>
+        </div>
+        <br/>
+        <br/>
+
+        Explain :
+
+        <br/>
+        <br/>
+
+        <div class="box">
+            <p>
+                At The First Command We Called 'SetFields' Method of Model Class With 1 Parameter (@array) Which
+                Contains Key as Field Name and Value as Model Validation Roles ;
+                We Have Set 'any' for Roles Which Means Anything Would Be Accepted and No Validation is Needed.
+                <br/>
+                <br/>
+                <br/>
+
+                At The Second Command We Called 'SetParameters' Method of Model Class With 1 Parameter (@array) Which
+                Contains Key as Field Name and Value as Field Value ;
+
+                <br/>
+                <br/>
+                <br/>
+
+                At Third and Final Command We Called Query Method of Model Class With 3 Parameters (Parameters in ltr
+                Sort : Tables, Operation Flag, Database Name Flag)
+            </p>
+        </div>
+
+        <p>
+            <span style="text-shadow: black 0 0 1px">Read Operation :</span>
+        </p>
+
+
+        <div class="codeheader" style="margin-top: 30px">
+            ORM - READ
+        </div>
+
+        <div class="codebox">
+            <code>$this->setFields([
+                <br/>
+                'page' => 'any',
+                <br/>
+                'hits' => 'any',
+                <br/>
+                ]);
+                <br/>
+                <br/>
+                $this->query("hits", READ, DB1, "id DESC", $offset, $limit);
+            </code>
+        </div>
+        <br/>
+        <br/>
+
+        Explain :
+
+        <br/>
+        <br/>
+
+        <div class="box">
+            <p>
+                We Have Set Page and Hits Fields to Fetch Data from with SetFields Method .
+                <br/>
+                <br/>
+                <br/>
+
+                At Final Command We Call Query Method with 6 Parameters (in ltr Sort : tables, CRUD Flag, Database Slot
+                Flag, order, offset, limit).
+                <br>
+                <br>
+                Order By Descending : FieldName DESC
+                <br>
+                Order By Ascending : FieldName ASC
+                <br>
+                Last 3 Parameters are Optional.
+            </p>
+        </div>
+
+        <p>
+            <span style="text-shadow: black 0 0 1px">Read Operation By Condition :</span>
+            <br/>
+            <br/>
+            In Following Example We Fetch Data By Condition in an Easier Way with Design Pattern :
+        </p>
+
+        <div class="codeheader" style="margin-top: 30px">
+            ORM - READ_CONDITION
+        </div>
+
+        <div class="codebox">
+            <code>
+                $this->setFields(['id' => 'any', 'page' => 'any', 'hits' => 'any', ])->
+                <br/>setConditionFields(['page' => 'any|equal|operator:and', 'hits' => 'any|equal'])->
+                <br/>setConditionParams(['page' => 'singup', 'hits' => '60'])->
+                <br/>query("hits", READ_CONDITION, DB1, "id DESC");
+            </code>
+        </div>
+        <br/>
+        <br/>
+
+        Explain :
+
+        <br/>
+        <br/>
+
+        <div class="box">
+            <p>
+                We Have Requested 3 Fields with setFields Method .
+                <br/>
+                <br/>
+                <br/>
+
+                After that We have Set Our Condition Fields and Attributes with setConditionFields
+                <br/>
+                1st token 'Any' Means no Validation is Needed, 2nd token Named equal is Conditional Operator (greater,
+                smaller, equal, like, not_like)
+                <br>
+                3rd token is Relational Operator (and, or, ...)
+                <br/>
+                <br/>
+                There is No Relational Operator is Needed for Last Condition
+                <br>
+                <br>
+                <br>
+                Note : Attributes and Model Validation Will Be Introduced Totally at the End of this Chapter
+
+                <br>
+                <br>
+                after Setting Conditions it's time to set Condition Parameters with setConditionParams method
+
+                <br/>
+                <br/>
+                and finally we Call Query method which execute our query hits table by id descending order.
+
+                <br/>
+                <br/>
+                <br/>
+                After Querying you Can Fetch Value easily with Following Syntax :
+            </p>
+        </div>
+
+        <div class="codeheader" style="margin-top: 30px">
+            ORM - READ_CONDITION (FETCH DATA)
+        </div>
+
+        <div class="codebox">
+            <code>
+                $result = $this->getContent(DB1);
+            </code>
+        </div>
+
+        <p>
+            <span style="text-shadow: black 0 0 1px">Update Operation :</span>
+            <br/>
+            <br/>
+            In Following Example We Update Record in Database :
+        </p>
+
+        <div class="codeheader" style="margin-top: 30px">
+            ORM - UPDATE
+        </div>
+
+        <div class="codebox">
+            <code>
+                $this->setFields(['email' => 'any'])->
+                <br/>
+                setParameters(['email' => 'mahbod@gmail.com'])->
+                <br/>
+                query("users", UPDATE, DB1);
+            </code>
+        </div>
+
+        <br/>
+        <br/>
+
+        Explain :
+
+        <br/>
+        <br/>
+
+        <div class="box">
+            <p>
+                At Above Example We Updated any Email Field to 'mahbod@gmail.com' .
+            </p>
+        </div>
+
+        <p>
+            <span style="text-shadow: black 0 0 1px">Update Operation By Condition :</span>
+            <br/>
+            <br/>
+            In Following Example We Update Record in Database By Condition and Validation :
+        </p>
+
+        <div class="codeheader" style="margin-top: 30px">
+            ORM - UPDATE_CONDITION
+        </div>
+
+        <div class="codebox">
+            <code>
+                $this->setFields(['email' => 'any'])->
+                <br/>
+                setParameters(['email' => 'mahbod@gmail.com'])->
+                <br/>
+                setConditionFields(['username' => 'required|method:en_digit|limit:5-25|sanitize_space:yes|equal',])->
+                <br/>
+                setConditionParams(['username' => 'mahbod'])->
+                <br/>
+                query("users", UPDATE_CONDITION, DB1);
+            </code>
+        </div>
+
+        <br/>
+        <br/>
+
+        Explain :
+
+        <br/>
+        <br/>
+
+        <div class="box">
+            <p>
+                At Above Example We Updated Email Field to 'mahbod@gmail.com' where username is 'mahbod' .
+
+                <br/>
+                <br/>
+                Model Validation Note : we Validate username field with Following Attributes ; english and digits
+                format, between 5-25 letters, sanitize extra space to match case
+
+                <br/>
+                <br/>
+                Model Validation will be Totally introduced at the End of this Chapter
+            </p>
+        </div>
+
+        <p>
+            <span style="text-shadow: black 0 0 1px">Delete Operation :</span>
+            <br/>
+            <br/>
+            In Following Example We Delete Records in Database :
+        </p>
+
+
+        <div class="codeheader" style="margin-top: 30px">
+            ORM - DELETE
+        </div>
+
+        <div class="codebox">
+            <code>
+                $this->query('hits', DELETE, DB1);
+            </code>
+        </div>
+
+        <p>
+            <span style="text-shadow: black 0 0 1px">Delete Operation By Condition :</span>
+            <br/>
+            <br/>
+            In Following Example We Delete Records in Database By Condition :
+        </p>
+
+
+        <div class="codeheader" style="margin-top: 30px">
+            ORM - DELETE_CONDITION
+        </div>
+
+        <div class="codebox">
+            <code>
+                $this->setFields(['hits'=> 'any']);
+                <br/>
+                $this->setConditionFields(['hits' => 'any|equal']);
+                <br/>
+                $this->setConditionParams(['hits'=>'mahi']);
+                <br/>
+                <br/>
+                $this->query('hits', DELETE, DB1);
+            </code>
+        </div>
+
+        <p>
+            <span style="text-shadow: black 0 0 1px">Count Operation :</span>
+        </p>
+
+
+        <div class="codeheader" style="margin-top: 30px">
+            ORM - COUNT
+        </div>
+
+        <div class="codebox">
+            <code>
+                $this->query('hits', COUNT, DB1);
+                <br/>
+                <br/>
+                $result = $this->getContent(DB1);
+            </code>
+        </div>
+
+        <p>
+            <span style="text-shadow: black 0 0 1px">Count Operation By Condition :</span>
+        </p>
+
+
+        <div class="codeheader" style="margin-top: 30px">
+            ORM - COUNT_CONDITION
+        </div>
+
+        <div class="codebox">
+            <code>
+                $this->setConditionFields(['id' => 'any|equal']);
+                <br/>
+                $this->setConditionParams(['id' => '12']);
+                <br/>
+                $this->query('test', COUNT_CONDITION, DB2);
+                <br/>
+                $result = $this->getContent(DB2);
+            </code>
+        </div>
+
+        <p>
+            <span style="text-shadow: black 0 0 1px">Average Operation :</span>
+        </p>
+
+
+        <div class="codeheader" style="margin-top: 30px">
+            ORM - AVG
+        </div>
+
+        <div class="codebox">
+            <code>
+                $this->setFields(['rate' => 'any', ]);
+                <br/>
+                $this->query('post_votes', AVG, DB1);
+            </code>
+        </div>
+
+
+        <p>
+            <span style="text-shadow: black 0 0 1px">Average Operation By Condition :</span>
+        </p>
+
+
+        <div class="codeheader" style="margin-top: 30px">
+            ORM - AVG_CONDITION
+        </div>
+
+        <div class="codebox">
+            <code>
+                $this->setFields(['rate' => 'any', ]);
+                <br/>
+                $this->setConditionFields(['post_id' => 'any|equal|operator:and',]);
+                <br/>
+                $this->setConditionParams(['post_id' => $id['id'],]);
+                <br/>
+                <br/>
+                $this->query('post_votes', AVG_CONDITION, DB1);
+            </code>
+        </div>
+
+        <p>
+            <span style="text-shadow: black 0 0 1px">Free Query :</span>
+        </p>
+
+
+        <div class="codeheader" style="margin-top: 30px">
+            ORM - Free Query
+        </div>
+
+        <div class="codebox">
+            <code>
+                $this->freeQuery("UPDATE `users` SET `email` = 'mzero651@gmail.com' WHERE `username` = 'mahbod'",
+                READ_CONDITION, DB1);
+                <br/>
+                <br/>
+                $result = $this->getContent(DB1);
+            </code>
+        </div>
+
+        <br/>
+        <br/>
+
+        Explain :
+
+        <br/>
+        <br/>
+
+        <div class="box">
+            <p>
+                At Above Example We did a SQL Query (Read Condition Method) with Database 1 Slot .
+            </p>
+        </div>
+
+        <p>
+            <span style="text-shadow: black 0 0 1px">Model Validation :</span>
+        </p>
+
+        <p>
+            in this topic We are Going to Explain All Model Validation Rules and techniques.
+        </p>
+
+
+        <div class="codeheader" style="margin-top: 30px">
+            ORM - MODEL VALIDATION
+        </div>
+
+        <div class="codebox">
+            <code>
+                $this->setFields(['username' => 'required|method:en_digit|limit:5-25|sanitize_space:yes']);
+            </code>
+        </div>
+
+
+        <p>
+            Attribute 1 No. Of Fields :
+            <br/>
+            <br/>
+            there are 3 kind of Fields :
+        </p>
+
+        <div class="box">
+
+            required (which means it can't be null)
+            <br/>
+            optional (which means it can be null)
+            <br/>
+            any (which means no validation is needed)
+        </div>
+
+        <p>
+            Attribute 2 Validation Method:
+            <br/>
+            <br/>
+            there are 17 Kind of Standard Validation Methods:
+            <br/>
+        </p>
+        <div class="box">
+
+            digit
+            <br/>
+            en
+            <br/>
+            en_digit
+            <br/>
+            fa
+            <br/>
+            fa_digit
+            <br/>
+            mix: fa and en with digits
+            <br/>
+            email: email Validation
+            <br/>
+            username: standard username validation (English, Digits, Special Chars .-_)
+            <br/>
+            password: standard password validation (English, Digits, Special Chars .@*)
+            <br/>
+            address: address (English, Persian and Special Char -)
+            <br/>
+            address_en: address_en (English and Special Char -)
+            <br/>
+            address_fa: address_fa (Persian and Special Char -)
+            <br/>
+            phone
+            <br/>
+            IP: IP Validation - No Limit is Acceptable for This Method
+            <br/>
+            text
+            <br/>
+            text_en
+            <br/>
+            text_fa
+        </div>
+        <p>
+            Attribute 3 is Character Limit; For Example:
+            <br/>
+        </p>
+
+        <div class="box">
+
+            limit:1-10
+        </div>
+        <p>
+
+            Attribute 4 is Sanitizing Extra Spaces;
+            <br/>
+        </p>
+
+        <div class="box">
+
+            value can be yes / no.
+        </div>
+
+
+    </div>
+
+    <div id="pagination"
+         class="content-box">
+        <h3 class="content-title">Pagination</h3>
+        <hr>
+        <p>
+            in Red Framework Pagination will be Calculated right after you executed a READ or READ_CONDITION Query with
+            Offset and Limit
+            <br/>
+            <br/>
+            For Example:
+
+
+        </p>
+
+        <div class="codeheader">
+            PAGINATION
+        </div>
+
+        <div class="codebox">
+            <code>$this->setFields([
+                <br/>
+                'page' => 'any',
+                <br/>
+                'hits' => 'any',
+                <br/>
+                ]);
+                <br/>
+                <br/>
+                $this->query("hits", READ, DB1, "id DESC", 0, 10);
+
+                <br/>
+                <br/>
+                $pages = $this->getPagesCount(DB1);
+            </code>
+        </div>
+
+    </div>
+
+    <div id="mail-server"
+         class="content-box">
+        <h3 class="content-title">Mail Server</h3>
+        <hr>
+        <p>
+
+            Red Framework Provides Easy Emailing System for SMTP Servers (PHP PEAR Library)
+
+            <br/>
+            <br/>
+            To Use SMTP Mail Server : You Have to Give Necessary Information About your Server At Environment.json
+            <br/>
+            <br/>
+            After That You Are Ready to Go.
+        </p>
+
+        <div class="codeheader">MAIL</div>
+
+        <div class="codebox">
+            <code>
+                use Red\MailService\Mail;
+
+                <br/>
+                <br/>
+                $subject = "test";
+                <br>
+                $target = "mzero651@gmail.com";
+                <br>
+                $body = "&lt;body&gt;&lt;h1&gt;test&lt;/h1&gt;&lt;/body&gt;";
+                <br>
+                $flag = Mail::HTML_Header;
+                <br>
+                <br>
+                Mail::send($subject, $target, $body, $flag);
+            </code>
+        </div>
+
+    </div>
+
+    <div id="validation-service"
+         class="content-box">
+        <h3 class="content-title">Validation Service</h3>
+        <hr>
+        <p>
+            Working With Validation :
+            <br/>
+            <br/>
+            Validation Service is Stored at Red\ValidateService\Validate
+
+
+            <br/>
+            <br/>
+            Usage :
+        </p>
+
+        <div class="codeheader">VALIDATION SERVICE</div>
+        <div class="codebox">
+            Validate::validate('test', 'required|method:en|limit:0-4|sanitize_space:yes');
+        </div>
+
+        <p>
+            Attribute 1 No. Of Fields :
+            <br/>
+            <br/>
+            there are 2 kind of Fields :
+        </p>
+
+        <div class="box">
+
+            required (which means it can't be null)
+            <br/>
+            optional (which means it can be null)
+
+        </div>
+
+        <p>
+            Attribute 2 Validation Method:
+            <br/>
+            <br/>
+            there are 17 Kind of Standard Validation Methods:
+            <br/>
+        </p>
+        <div class="box">
+
+            digit
+            <br/>
+            en
+            <br/>
+            en_digit
+            <br/>
+            fa
+            <br/>
+            fa_digit
+            <br/>
+            mix: fa and en with digits
+            <br/>
+            email: email Validation
+            <br/>
+            username: standard username validation (English, Digits, Special Chars .-_)
+            <br/>
+            password: standard password validation (English, Digits, Special Chars .@*)
+            <br/>
+            address: address (English, Persian and Special Char -)
+            <br/>
+            address_en: address_en (English and Special Char -)
+            <br/>
+            address_fa: address_fa (Persian and Special Char -)
+            <br/>
+            phone
+            <br/>
+            IP: IP Validation - No Limit is Acceptable for This Method
+            <br/>
+            text
+            <br/>
+            text_en
+            <br/>
+            text_fa
+        </div>
+        <p>
+            Attribute 3 is Character Limit; For Example:
+            <br/>
+
+        </p>
+
+        <div class="box">
+
+            limit:1-10
+        </div>
+        <p>
+
+            Attribute 4 is Sanitizing Extra Spaces;
+            <br/>
+        </p>
+
+        <div class="box">
+            value can be yes / no.
+        </div>
+
+
+        <p>
+            <span style="text-shadow: black 0 0 1px">Adding Method (Rule) to Validate Service :</span>
+            <br/>
+            <br/>
+            Open PHP File In Following Path :
+        </p>
+
+        <div class="box">
+            vendor\redframework\enterprise-core\src\Red\ValidateService\Rules.php
+        </div>
+
+        <br>
+        <br>
+        <div class="codeheader">ADDING METHOD TO VALIDATE SERVICE</div>
+        <div class="codebox">
+            Validate::addRule("test", function ($no, $min, $max, $string) {
+            <br>
+            // DO Your RegEX Based on Info then Return True or False Result (This Callback will be used For Standard
+            Validation)
+            <br>
+            },
+            <br>
+            function ($no, $min, $max, $string) {
+            <br>
+            // DO Your RegEX Based on Info then push your Error and Return True or False Result (This Callback will be
+            used For Model Validation)
+            <br>
+            });
+        </div>
+
+    </div>
+
+
+    <div id="filter-service"
+         class="content-box">
+        <h3 class="content-title">Filter Service</h3>
+        <hr>
+        <p>
+            Working with Filter Service :
+            <br/>
+            <br/>
+            Using Namespace:
+            <br/>
+            <br/>
+            use Red\FilterService\Filter;
+            <br>
+            <br>
+        </p>
+
+        <div class="codeheader">FILTER STRING</div>
+        <div class="codebox">
+
+            $string = "#redcoder";
+            <br/>
+            $method = "username";
+            <br/>
+            <br/>
+            $filtered_string = Filter::filter($string, $method);
+        </div>
+
+        <p>
+            there are 17 Kind of Standard Filter Methods:
+            <br/>
+        </p>
+
+        <div class="box">
+
+            digit
+            <br/>
+            en
+            <br/>
+            en_digit
+            <br/>
+            fa
+            <br/>
+            fa_digit
+            <br/>
+            mix: fa and en with digits
+            <br/>
+            email: email filter
+            <br/>
+            username: standard username filter (English, Digits, Special Chars .-_)
+            <br/>
+            password: standard password filter (English, Digits, Special Chars .@*)
+            <br/>
+            address: address (English, Persian and Special Char -)
+            <br/>
+            address_en: address_en (English and Special Char -)
+            <br/>
+            address_fa: address_fa (Persian and Special Char -)
+            <br/>
+            phone
+            <br/>
+            IP: IP Filter
+            <br/>
+            text
+            <br/>
+            text_en
+            <br/>
+            text_fa
+        </div>
+
+
+        <p>
+            <span style="text-shadow: black 0 0 1px">Adding Method (Rule) to Filter Service :</span>
+            <br/>
+            <br/>
+            Open PHP File In Following Path :
+        </p>
+
+        <div class="box">
+            vendor\redframework\enterprise-core\src\Red\FilterService\Rules.php
+        </div>
+
+        <br>
+        <br>
+        <div class="codeheader">ADDING METHOD TO FILTER SERVICE</div>
+        <div class="codebox">
+            Filter::addRule("test", function ($string) {
+            <br/>
+            // Do Your Filter Then Return the String
+            <br/>
+            });
+            <br/>
+        </div>
+
+    </div>
+
+
+    <div id="sanitize-service"
+         class="content-box">
+        <h3 class="content-title">Sanitize Service</h3>
+        <hr>
+        <p>
+            Working with Sanitize Service :
+            <br/>
+            <br/>
+            Using Namespace:
+            <br/>
+            <br/>
+            use Red\SanitizeService\Sanitize;
+            <br>
+            <br>
+        </p>
+
+        <div class="codeheader">SANITIZE STRING</div>
+        <div class="codebox">
+
+            $string = "redcoder927";
+            <br/>
+            $method = "digit";
+            <br/>
+            <br/>
+            $filtered_string = Filter::filter($string, $method);
+        </div>
+
+        <p>
+            there are 2 Kind of Standard Sanitize Methods:
+            <br/>
+        </p>
+
+        <div class="box">
+
+            digit
+            <br/>
+            space
+        </div>
+
+
+        <p>
+            <span style="text-shadow: black 0 0 1px">Adding Method (Rule) to Sanitize Service :</span>
+            <br/>
+            <br/>
+            Open PHP File In Following Path :
+        </p>
+
+        <div class="box">
+            vendor\redframework\enterprise-core\src\Red\SanitizeService\Rules.php
+        </div>
+
+        <br>
+        <br>
+        <div class="codeheader">ADDING METHOD TO SANITIZE SERVICE</div>
+        <div class="codebox">
+            Sanitize::addRule("test", function ($string) {
+            <br/>
+            // Do Your Sanitize then Return String
+            <br/>
+            });
+            <br/>
+        </div>
+
+    </div>
+
+
+    <div id="debug-components"
+         class="content-box">
+        <h3 class="content-title">Debug Components</h3>
+        <hr>
+        <p>
+            Red Framework Provides 2 useful Debug Components at Current Version (1.0) :
+            <br/>
+            <br/>
+            1- Red Framework Debugger
+            <br/>
+            2- Red Framework DebugBar
+
+            <br/>
+            <br/>
+            To turn Debug Components You Have to Refer to Environment.json ; DEBUG Section .
+            <br/>
+            <br/>
+            <br/>
+            Debugger will Process Stack Trace and etc Which An Errors Occurs.
+
+            <br/>
+            <br/>
+            <br/>
+            Debug Bar Will Profile All Application Status since You Started Application until Process Finishes.
+        </p>
+
+        <div class="codeheader">ADD CUSTOM MESSAGE TO DEBUGBAR</div>
+        <div class="codebox">
+            use Red\DebugBar\DebugBar;
+            <br/>
+            <br/>
+            $message = "test";
+            <br/>
+            DebugBar::addMessage($message);
+        </div>
+
+    </div>
+
+    <div id="error-handling"
+         class="content-box">
+        <h3 class="content-title">Error Handling</h3>
+        <hr>
+        <p>
+            Error Handling in Red Framework :
+            <br/>
+            <br/>
+            Pushing a Non-Fatal Error (Which Will Stop ORM and etc From Processing) :
+        </p>
+
+        <div class="codeheader">Non-Fatal Error</div>
+        <div class="codebox">
+            use Red\Red;
+            <br/>
+            <br/>
+            Red::pushError($error);
+        </div>
+
+        <p>
+            Pushing a Fatal Error (Which Will Stop Whole Application) :
+        </p>
+
+        <div class="codeheader">Fatal Error</div>
+        <div class="codebox">
+            use Red\Red;
+            <br/>
+            <br/>
+            Red::generateError($error_no, $error_message);
+        </div>
+
+    </div>
+
+    <div id="inputs"
+         class="content-box">
+        <h3 class="content-title">Inputs</h3>
+        <hr>
+        <p>
+            Namespace for input Class :
+        </p>
+        <div class="box">
+            Red\InputProvider\Input
+        </div>
+
+        <br/>
+        <br/>
+
+
+        <div class="codeheader">GET VARIABLES</div>
+
+        <div class="codebox">
+            // To get a GET Variable :
+            <br/>
+            Input::get($variable);
+            <br/>
+            // To get all GET Variables :
+            <br/>
+            Input::getAll();
+            <br/>
+            // To unset a GET Variable :
+            <br/>
+            Input::getUnset($variable);
+
+        </div>
+
+
+        <br>
+
+        <div class="codeheader">POST VARIABLES</div>
+
+        <div class="codebox">
+            // To get a Post Variable :
+            <br/>
+            Input::post($variable);
+            <br/>
+            // To get all Post Variables :
+            <br/>
+            Input::postAll();
+            <br/>
+            // To unset a Post Variable :
+            <br/>
+            Input::postUnset($variable);
+
+        </div>
+
+        <br>
+
+        <div class="codeheader">FILES</div>
+
+        <div class="codebox">
+            // To get a File :
+            <br/>
+            Input::file($file);
+            <br/>
+            // To unset a File :
+            <br/>
+            Input::fileUnset($file);
+        </div>
+
+    </div>
+
+    <div id="sessions"
+         class="content-box">
+        <h3 class="content-title">Sessions</h3>
+        <hr>
+        <p>
+            In Red Framework Sessions are Initialized with Nice Configuration which makes your Session Safe and Better;
+            Session Configuration is Available at :
+            <br/>
+        </p>
+        <div class="box">
+            Config -> Config.php
+        </div>
+        <p>
+            Normal Session Duration is 30 Minutes .
+            <br/>
+            <br/>
+            Sessions are Encrypted with Good algorithm and salted with your secret Key;
+            <br/>
+            Because of Encryption You are Available to Set Session Arrays with 1D, 2D or 3 Dimension
+            <br/>
+            <br/>
+            Namespace for Session Class :
+        </p>
+
+        <div class="box">
+            Red\SessionProvider\Session
+        </div>
+
+        <br/>
+        <br/>
+
+        <div class="codeheader">SESSIONS</div>
+        <div class="codebox">
+            // To set a Session use blow syntax :
+            <br/>
+            Session::set($value, $first_dimension);
+            <br/>
+            <br/>
+            // To unset a Session :
+            <br/>
+            Session::remove($first_dimension);
+            <br/>
+            <br/>
+            // To get a Session use blow syntax :
+            <br/>
+            Session::get($first_dimension);
+            <br/>
+            <br/>
+            // To get all Session Variables use :
+            <br/>
+            Session::getAll();
+        </div>
+
+    </div>
+
+    <div id="cookies"
+         class="content-box">
+        <h3 class="content-title">Cookies</h3>
+        <hr>
+        <p>
+            Red Framework Provides Cookie Helper which Helps you to Access Cookie easier .
+            <br/>
+            <br/>
+            Namespace for Cookie Class :
+        </p>
+
+        <div class="box">
+            Red\CookieProvider\Cookie
+        </div>
+
+        <br/>
+        <br/>
+
+        <div class="codeheader">COOKIES</div>
+        <div class="codebox">
+            // To set a Cookie :
+            <br/>
+            Cookie::set($cookie, $value, $expire_days);
+            <br/>
+            <br/>
+            // To unset a Cookie :
+            <br/>
+            Cookie::remove($cookie);
+            <br/>
+            <br/>
+            // To get a Cookie :
+            <br/>
+            Cookie::get($cookie);
+        </div>
+
+    </div>
+
+
+    <div id="crypt-tools"
+         class="content-box">
+        <h3 class="content-title">Crypt Tools</h3>
+        <hr>
+        <p>
+            Red Framework has its Own Encryption which will be salted with your Secret Key .
+            <br/>
+            <br/>
+            You Can Set your Secret Key from Environment.json File.
+            <br/>
+            <br/>
+            You are Available to Encrypt / Decrypt Arrays with 1D, 2D or 3 Dimension
+            <br/>
+            <br/>
+            <br/>
+            Namespace for Encryption Class :
+        </p>
+
+        <div class="box">
+            Red\Encryption\Crypter
+        </div>
+
+        <br/>
+
+        <div class="codeheader">ENCRYPTION</div>
+        <div class="codebox">
+            // Encrypt :
+            <br/>
+            $encrypted_data = Crypter::encrypt($data);
+            <br/>
+            <br/>
+            // Decrypt :
+            <br/>
+            $decrypted_data = Crypter::decrypt($data);
+        </div>
+
+    </div>
+
+    <div id="post-method-encryption-system"
+         class="content-box">
+        <h3 class="content-title">Post Method Encryption System</h3>
+        <hr>
+        <p>
+            One of Interesting Features of Red Framework is Post Method Encryption Components ; it will Encrypt Your
+            Post Variables even if you are not using SSL which can be very helpful on Security of Small Projects Whom
+            Can not Provide SSL .
+
+            <br/>
+            <br/>
+            To Start Using this Feature You have to Turn On Encryption at Environment.json File.
+            <br/>
+            <br/>
+            Use Following Function at Your Template Engine Head Tag ; this Function will Add Javascript Dependencies to
+            Your Page .
+        </p>
+
+        <div class="codeheader">ADD DEPENDENCIES TO YOUR PAGE</div>
+        <div class="codebox">
+            {{ encryption() | raw }}
+        </div>
+
+        <p>
+            Your Form Method should be post Make an ID for your form and set Event for it
+        </p>
+
+        <div class="codeheader">SET EVENT WITH NATIVE JAVASCRIPT</div>
+        <div class="codebox">
+            &lt;form id="form1" action="{{ self() }}" method="post" onsubmit="return RedCryption.encrypt('form1');"&gt;
+        </div>
+        <br/>
+        <div class="codeheader">SET EVENT WITH RED JS</div>
+        <div class="codebox"><pre>&lt;form id="form1" action="{{ self() }}" method="post"&gt;
+
+
+&lt;script&gt;
+Red.ready(function () {
+    Red.select("#form1").submit(function () {
+        RedCryption.encrypt("form1");
+    });
+});
+&lt;/script&gt;
+</pre>
+        </div>
+
+    </div>
+
+    <div id="language-service"
+         class="content-box">
+        <h3 class="content-title">Organized Language Service</h3>
+        <hr>
+        <p>
+            Red Framework provides Organized Language System to Develop International Applications.
+            <br/>
+            <br/>
+            With Language System You Are Available to provide different Text Messages (Errors, Events and etc).
+            <br/>
+            Default Language should be Configured at Environment.json .
+            <br/>
+            <br/>
+            Application Texts are Stored At :
+        </p>
+        <div class="box">
+            resources -> Language -> Your Language Directory (En, Fa and etc) -> Your Language JSON File .
+        </div>
+        <p>
+        Namespace for Language Class
+        </p>
+
+        <div class="box">
+            Red\LanguageService\Language
+        </div>
+        <br>
+
+        <div class="codeheader">LANGUAGE</div>
+        <div class="codebox">
+            // Set Current Language :
+            <br/>
+            Language::set('en');
+            <br/>
+            <br/>
+            // Get Current Language :
+            <br/>
+            Language::getCurrentLanguage();
+            <br/>
+            <br/>
+            // Get Language Field :
+            <br/>
+            Language::get($no, $field);
+        </div>
+
+    </div>
+
+    <div id="picture-tools"
+         class="content-box">
+        <h3 class="content-title">Picture Tools</h3>
+        <hr>
+        <p>
+            One of Red Framework Classes is Picture Tools Which Allows you To Upload / Resize Your Images Safely .
+            <br/>
+            <br/>
+            Picture Class is Stored at Following Namespace :
+
+        </p>
+        <div class="box">Red\PictureTools\Picture</div>
+
+        <br/>
+
+        <div class="codeheader">UPLOAD IMAGE</div>
+        <div class="codebox">
+            Picture::uploadImage($file, $upload_path, $new_file_name, $target_width, $target_height);
+        </div>
+
+        <br>
+
+        <div class="codeheader">RESIZE IMAGE</div>
+        <div class="codebox">
+            Picture::imageResize($image_resource_id, $width, $height, $target_width, $target_height);
+        </div>
+
+        <br/>
+
+        <div class="box">Note : for more security upload your images at UPLOAD_PATH; htaccess configuration will block
+            any shell and access on that directory
+        </div>
+
+    </div>
+
+
+    <div id="captcha-service"
+         class="content-box">
+        <h3 class="content-title">Captcha Service</h3>
+        <hr>
+        <p>
+            to Make Your Job Easier as Developer, I Provider a Captcha Service in Red Framework .
+
+            <br/>
+            <br/>
+            Adding Captcha Service Dependencies to Your View (Red JS) :
+        </p>
+
+        <div class="codeheader">CAPTCHA SERVICE DEPENDENCIES</div>
+        <div class="codebox">
+            {{ RedJS() | raw }}
+        </div>
+
+        <p>
+            Adding Captcha Code HTML Output To your View :
+        </p>
+
+        <div class="codeheader">CAPTCHA CODE</div>
+        <div class="codebox">
+            {{ captchaCode() | raw }}
+        </div>
+
+        <p>
+            Set your Input Text Box for Captcha Code :
+        </p>
+
+        <div class="codeheader">CAPTCHA INPUT</div>
+        <div class="codebox">
+            &lt;input type="text" name="captcha_code" placeholder="captcha"&gt;
+        </div>
+
+        <p>
+            To Verify Captcha On Controller :
+        </p>
+
+        <div class="codeheader">VERIFY CAPTCHA</div>
+        <div class="codebox">
+            use Red\CaptchaService\Captcha;
+            <br/>
+            <br/>
+            if (Captcha::verify() == TRUE) {
+            <br/>
+            //do process
+            <br/>
+            }
+        </div>
+
+
+    </div>
+
+
+    <div id="authentication"
+         class="content-box">
+        <h3 class="content-title">Authentication</h3>
+        <hr>
+        <p>
+            Authentication is Pre-designed Middleware in Red Framework .
+            <br/>
+            To Start Working with Authentication You Have to Modify your Login Process .
+            <br/>
+            <br/>
+            after a User Logged, User Role should be Stored in a Session Variable .
+            <br/>
+            <br/>
+            You Have to Refer Session Variable to Authentication Middleware By Following Syntax :
+        </p>
+
+        <div class="codeheader">SET AUTHENTICATION VARIABLE</div>
+        <div class="codebox">self::setAuthenticationVariable('user_logged_in', 'access_level');</div>
+
+        <p>
+            After You Modified Your Login and Authentication Variable You are Ready to Use Authentication Middleware on
+            Your Routes .
+        </p>
+
+        <div class="codeheader">AUTHENTICATION MIDDLEWARE USAGE</div>
+        <div class="codebox">
+            Router::register("panel/{param1}{?param2}", "GET", "PanelController@panel",
+            ["Authentication:admin,master"]);
+        </div>
+
+    </div>
+
+    <div id="ajax-request"
+         class="content-box">
+        <h3 class="content-title">AJAX Request</h3>
+        <hr>
+        <p>
+            AJAX Request is Pre-designed Middleware in Red Framework which Allow you to Recognize AJAX Requests from
+            Normal HTTP-Requests.
+            <br/>
+            <br/>
+            All Requests with AJAX-Request Header would be Accepted on this Middleware .
+        </p>
+
+        <div class="codeheader">AJAX-REQUEST MIDDLEWARE USAGE</div>
+        <div class="codebox">
+            Router::register("last-posts-api", "GET", "postController@lastPosts", ["AJAXRequest"]);
+        </div>
+
+        <p>
+            You Can Send AJAX-Request Header with Native JS or using RedJS :
+        </p>
+
+        <div class="codeheader">AJAX-REQUEST WITH RED JS</div>
+        <div class="codebox"><pre>Red.ready(function () {
+    Red.ajax({
+            type: 'GET',
+            url: 'http://localhost/,
+            contentType: 'text/html',
+            success: function () {
+                Red.select('#content').innerHTML(this.response)
+            },
+    });
+
+});
+</pre>
+        </div>
+
+    </div>
+
+    <div id="csrf-token"
+         class="content-box">
+        <h3 class="content-title">CSRF Token</h3>
+        <hr>
+        <p>
+            CSRF Protection is Pre-designed Middleware in Red Framework .
+            <br/>
+            <br/>
+            CSRF (Cross-Site Request Forgery) is a Known Vulnerability Which Allows Attacker to Execute an Unwanted
+            Request on Client System .
+            <br/>
+            Imagine that you have a Get Route in your application which Set up New Password for User (**i ve never
+            suggest this kind of routes , its just for example **) :
+        </p>
+        <div class="box">
+            http://app.com/user-area/reset-password/?new-password=newpass1232
+        </div>
+        <p>
+        if User has Authenticated ID on Your Application and Attacker do a Request to Your Website from User Computer
+        (By Visiting a Site, it could be a Simple Javascript Code) password will be changed to 'newpass1232' easily .
+        <br/>
+        <br/>
+        To Prevent CSRF Attacks we use CSRF Token on Our Forms.
+        <br/>
+        <br/>
+        Use CSRFToken method in your Form and Place it in a Hidden text Input .
+        </p>
+
+        <div class="codeheader">CSRF TOKEN USAGE</div>
+        <div class="codebox">
+            &lt;input type="hidden" name="CSRF_Token" value="{{ CSRFToken() }}"&gt;
+        </div>
+
+        <p>
+            Using CSRF Token in Route as Middleware :
+        </p>
+
+        <div class="codeheader">CSRF PROTECTION MIDDLEWARE USAGE</div>
+        <div class="codebox">
+            Router::register("user-area/reset-password/{new-password}", "GET", "UserController@resetPass",
+            ["Authentication:user", "CSRFToken"]);
+        </div>
+
+    </div>
+
+</div>
+
+<hr style="clear: both;opacity: 0;width: 95%;text-align: center;margin-top: 20px;">
+
+<div id="footer" style="padding-bottom: 15px;margin-top: 20px;">
+    <div style="text-shadow: black 0 0 1px;text-align: center">Honored to host your Application, Red Framework
+        2019
+    </div>
+</div>
+
+
+<script src="../../../Dependencies/Library/jquery-3.3.1.min.js"></script>
+<script src="../../../Dependencies/Library/Red.min.js"></script>
+
+<script>
+
+    Red.app.module("main");
+
+    Red.app.addController("main", "enterprise_doc", function () {
+
+    });
+
+    Red.ready(function () {
+
+        Root.initialize();
+
+    });
+
+    var Root = {
+
+        header: $("#header"),
+        header_title: $("#header-title"),
+        header_caption: $("#header-caption"),
+        header_logo: $("#header-logo"),
+        navbar: $("#navbar"),
+        language_element: $("#language"),
+        language_list: $("#lang-list"),
+        subjects_title: $("#subjects-title"),
+
+        overview_s: $("#overview-s"),
+        directory_structure_s: $("#directory-structure-s"),
+        configuration_s: $("#configuration-s"),
+        environment_s: $("#environment-s"),
+        routing_s: $("#routing-s"),
+        controllers_s: $("#controllers-s"),
+        models_s: $("#models-s"),
+        views_s: $("#views-s"),
+        middlewares_s: $("#middlewares-s"),
+        api_s: $("#api-s"),
+        database_engine_s: $("#database-engine-s"),
+        pagination_s: $("#pagination-s"),
+        mail_server_s: $("#mail-server-s"),
+        validation_service_s: $("#validation-service-s"),
+        filter_service_s: $("#filter-service-s"),
+        sanitize_service_s: $("#sanitize-service-s"),
+        debug_components_s: $("#debug-components-s"),
+        error_handling_s: $("#error-handling-s"),
+        inputs_s: $("#inputs-s"),
+        sessions_s: $("#sessions-s"),
+        cookies_s: $("#cookies-s"),
+        crypt_tools_s: $("#crypt-tools-s"),
+        post_method_encryption_system_s: $("#post-method-encryption-system-s"),
+        language_service_s: $("#language-service-s"),
+        picture_tools_s: $("#picture-tools-s"),
+        captcha_service_s: $("#captcha-service-s"),
+        authentication_s: $("#authentication-s"),
+        ajax_request_s: $("#ajax-request-s"),
+        csrf_token_s: $("#csrf-token-s"),
+
+
+        overview: $("#overview"),
+        directory_structure: $("#directory-structure"),
+        configuration: $("#configuration"),
+        environment: $("#environment"),
+        routing: $("#routing"),
+        controllers: $("#controllers"),
+        models: $("#models"),
+        views: $("#views"),
+        middlewares: $("#middlewares"),
+        api: $("#api"),
+        database_engine: $("#database-engine"),
+        pagination: $("#pagination"),
+        mail_server: $("#mail-server"),
+        validation_service: $("#validation-service"),
+        filter_service: $("#filter-service"),
+        sanitize_service: $("#sanitize-service"),
+        debug_components: $("#debug-components"),
+        error_handling: $("#error-handling"),
+        inputs: $("#inputs"),
+        sessions: $("#sessions"),
+        cookies: $("#cookies"),
+        crypt_tools: $("#crypt-tools"),
+        post_method_encryption_system: $("#post-method-encryption-system"),
+        language_service: $("#language-service"),
+        picture_tools: $("#picture-tools"),
+        captcha_service: $("#captcha-service"),
+        authentication: $("#authentication"),
+        ajax_request: $("#ajax-request"),
+        csrf_token: $("#csrf-token"),
+
+        enterprise_app: $("#enterprise-app"),
+        red_analytics_new_key: $("#red-analytics-new-key"),
+        red_analytics_register_route: $("#red-analytics-register-route"),
+        red_analytics_generate_controller: $("#red-analytics-generate-controller"),
+        red_analytics_generate_model: $("#red-analytics-generate-model"),
+        red_analytics_generate_view: $("#red-analytics-generate-view"),
+        red_analytics_generate_middleware: $("#red-analytics-generate-middleware"),
+
+        subjects_container: $("#subjects-container"),
+        subjects: $("#subjects"),
+        content_container: $("#content-container"),
+        navbar_items_container: $("#navbar-items"),
+        navbar_items: $(".nav-item"),
+        navbar_header: $("#navbar-header"),
+        navbar_toggle: $("#navbar-toggle"),
+        nav_first_item: $("#nav-first-item"),
+        navbar_separator: $("#navbar-separator"),
+        subjects_toggle: $("#subjects-toggle"),
+        timerHandler: null,
+        lang_en: $("#lang-en"),
+        lang_fa: $("#lang-fa"),
+
+        initialize: function () {
+
+            $(window).on("scroll", Root.handleComponentsOnScroll);
+
+            Root.handleComponentsOnSize();
+
+            if ($(window).scrollTop() >= 31) {
+
+                Root.header.css({
+                    height: "50px",
+                });
+                Root.header_title.hide(0);
+                Root.header_caption.hide(0);
+                Root.header_logo.hide(0);
+                Root.navbar.css({top: 0});
+                Root.language_list.hide(0);
+                Root.subjects_title.hide(0);
+            }
+
+            Root.subjectPager();
+
+
+            $(window).on("resize", Root.handleComponentsOnSize);
+
+            Root.languageHandler();
+            Root.subjectsToggle();
+            Root.navbarToggle();
+            Root.handleRoutes();
+
+            $("#loader").fadeOut(500);
+        },
+
+        handleRoutes: function () {
+
+            var current_lang = $("#current-language").html();
+
+            var home_path;
+            var document_path;
+            var enterprise_path;
+            var console_path;
+            var red_js_path;
+
+            if (current_lang == "EN") {
+                home_path = "http://redframework.ir/lang/en";
+                document_path = "../../../en/document.html";
+                enterprise_path = "../../../en/enterprise/master/document.html";
+                console_path = "../../../en/console-kit/master/document.html";
+                red_js_path = "../../../en/red-js/master/document.html";
+            } else if (current_lang == "FA") {
+                home_path = "http://redframework.ir/lang/fa";
+                document_path = "../../../fa/document.html";
+                enterprise_path = "../../../fa/enterprise/master/document.html";
+                console_path = "../../../fa/console-kit/master/document.html";
+                red_js_path = "../../../fa/red-js/master/document.html";
+            }
+
+            Red.app.registerRoute("main", {
+                home: home_path,
+                documentation: document_path,
+                enterprise_doc: enterprise_path,
+                console_doc: console_path,
+                red_js_doc: red_js_path,
+
+            })
+
+        },
+
+        languageHandler: function () {
+
+            Root.language_element.click(function () {
+                if (Root.language_list.css("display") === "none") {
+                    Root.language_list.stop(true).fadeIn(1000);
+                } else {
+                    Root.language_list.stop(true).fadeOut(1000);
+                }
+            });
+
+            Root.lang_en.click(function () {
+                Red.setCookie("language", "en", 30);
+                Red.redirect("../../../en/enterprise/master/document.html");
+            });
+
+            Root.lang_fa.click(function () {
+                Red.setCookie("language", "fa", 30);
+                Red.redirect("../../../fa/enterprise/master/document.html");
+            });
+        },
+
+        subjectsToggle: function () {
+            Root.subjects_toggle.click(function () {
+                if (Root.subjects_container.css("display") === "none") {
+
+                    Root.subjects_toggle.show();
+                    Root.navbar_separator.hide();
+                    if (Root.header_logo.css("display") === "none") {
+                        Root.header.css({
+                            height: "50px",
+                        });
+                    } else {
+                        Root.header.css({
+                            height: "220px",
+                        });
+                    }
+
+                    Root.nav_first_item.css({
+                        marginTop: "20px",
+                        position: "",
+                        top: "",
+                        marginLeft: "10px",
+                    });
+
+                    Root.navbar.css({
+                        height: "50px",
+                        backgroundColor: "rgba(226,90,90,0.55)"
+                    });
+
+                    Root.navbar_items.css({
+                        display: "",
+                        marginTop: "",
+                        marginRight: "20px",
+                    });
+                    Root.navbar_items_container.stop(true).fadeOut(0);
+
+                    Root.subjects.css({
+                        overflow: ""
+                    });
+
+                    if ($(window).scrollTop() <= 31) {
+                        Root.subjects_container.css({
+                            width: "87%",
+                            height: "65vh",
+                            maxHeight: "65vh",
+                            overflow: "auto",
+                            float: "",
+                            position: "fixed",
+                            top: "234px",
+                            left: "8px",
+                            backgroundColor: "white",
+                            boxShadow: "0 0 0.625vw 0 rgba(0,0,0,0.55)",
+                            borderRadius: "0 4px 4px 0"
+                        });
+
+                    } else {
+                        Root.subjects_container.css({
+                            width: "87%",
+                            height: "65vh",
+                            maxHeight: "65vh",
+                            overflow: "auto",
+                            float: "",
+                            position: "fixed",
+                            top: "80px",
+                            left: "8px",
+                            backgroundColor: "white",
+                            boxShadow: "0 0 0.625vw 0 rgba(0,0,0,0.55)",
+                            borderRadius: "0 4px 4px 0"
+                        });
+                    }
+
+                    Root.subjects_toggle.css({
+                        zIndex: "2"
+                    });
+                    Root.subjects_toggle.animate({left: "87.9%"}, 400);
+                    Root.subjects_container.show(400);
+                    Root.subjects.show(400);
+                } else {
+
+                    Root.subjects.css({
+                        overflow: "auto"
+                    });
+
+                    Root.subjects_container.hide(400);
+                    Root.subjects.hide(400);
+                    Root.subjects_toggle.animate({left: "0"}, 400);
+                    Root.subjects_toggle.css({
+                        right: "",
+                        zIndex: "0"
+                    });
+
+                }
+
+            });
+        },
+
+        navbarToggle: function () {
+            Root.navbar_toggle.click(function () {
+                if (Root.navbar_items_container.css("display") === "none") {
+
+                    Root.subjects_container.hide(400);
+                    Root.subjects.hide(400);
+                    Root.subjects_toggle.animate({left: "0"}, 400);
+                    Root.subjects_toggle.css({
+                        right: "",
+                        zIndex: "0"
+                    });
+
+
+                    setTimeout(function () {
+
+                        Root.subjects_container.css({
+                            width: "22%",
+                            height: "",
+                            maxHeight: "",
+                            overflow: "",
+                            float: "left",
+                            position: "sticky",
+                            top: "55px",
+                            left: "0",
+                            backgroundColor: "",
+                            boxShadow: "",
+                            borderRadius: ""
+                        });
+                    }, 400);
+
+
+                    Root.navbar_separator.show();
+
+                    Root.navbar.css({
+                        height: "233px",
+                        backgroundColor: "rgba(226,90,90,0.95)"
+                    });
+
+
+                    Root.navbar_items.css({
+                        display: "block",
+                        marginTop: "10px",
+                        marginLeft: "",
+                    });
+                    Root.nav_first_item.css({
+                        marginTop: "20px",
+                        position: "relative",
+                        top: "7px",
+                        marginLeft: "-4px",
+                    });
+                    Root.navbar_items_container.stop(true).fadeIn(400);
+                } else {
+                    Root.subjects_toggle.show();
+                    Root.navbar_separator.hide();
+                    if (Root.header_logo.css("display") === "none") {
+                        Root.header.css({
+                            height: "50px",
+                        });
+                    } else {
+                        Root.header.css({
+                            height: "220px",
+                        });
+                    }
+
+                    Root.nav_first_item.css({
+                        marginTop: "20px",
+                        position: "",
+                        top: "",
+                        marginLeft: "10px",
+                    });
+
+                    Root.navbar.css({
+                        height: "50px",
+                        backgroundColor: "rgba(226,90,90,0.55)"
+                    });
+
+                    Root.navbar_items.css({
+                        display: "",
+                        marginTop: "",
+                        marginRight: "20px",
+                    });
+                    Root.navbar_items_container.stop(true).fadeOut(0);
+                }
+            });
+        },
+
+        handleComponentsOnScroll: function () {
+            clearInterval(Root.timerHandler);
+
+            if ($(document).scrollTop() >= 8) {
+                Root.timerHandler = setTimeout(function handler() {
+                    Root.header_title.hide(0);
+                    Root.header_caption.hide(0);
+                    Root.header_logo.hide(0);
+                    Root.navbar.animate({top: 0});
+                    Root.header.css({height: "50px"});
+
+                    Root.language_list.hide(0);
+                }, 0);
+
+
+                if (Root.subjects_container.css("position") === "fixed") {
+                    Root.subjects_container.css({
+                        width: "87%",
+                        height: "65vh",
+                        float: "",
+                        position: "fixed",
+                        top: "80px",
+                        left: "8px",
+                        backgroundColor: "white",
+                        boxShadow: "0 0 0.625vw 0 rgba(0,0,0,0.55)",
+                        borderRadius: "0 4px 4px 0"
+                    });
+                }
+
+            } else {
+                Root.timerHandler = setTimeout(function () {
+                    Root.header.stop(true).animate({height: "220px"}, 200);
+                    Root.header_title.stop(true).show(0);
+                    Root.header_caption.stop(true).show(0);
+                    Root.header_logo.stop(true).show(0);
+                    Root.navbar.stop(true).animate({top: "170px"});
+                    Root.language_list.hide(0);
+
+                    if (Root.subjects_container.css("position") === "fixed") {
+                        Root.subjects_container.css({
+                            width: "87%",
+                            height: "65vh",
+                            float: "",
+                            position: "fixed",
+                            top: "234px",
+                            left: "8px",
+                            backgroundColor: "white",
+                            boxShadow: "0 0 0.625vw 0 rgba(0,0,0,0.55)",
+                            borderRadius: "0 4px 4px 0"
+                        });
+                    }
+                }, 200);
+
+            }
+
+
+            Root.subjectPager();
+        },
+
+        handleComponentsOnSize: function () {
+
+            if ($(window).innerWidth() <= 500) {
+
+                if (Root.subjects_container.css("position") === "fixed") {
+                    Root.subjects_container.hide(0);
+                    Root.subjects.hide(0);
+                    Root.subjects_toggle.css({left: "0"});
+                    Root.subjects_toggle.css({
+                        right: "",
+                        zIndex: "0"
+                    });
+
+                    Root.subjects.css({
+                        overflow: "auto"
+                    });
+
+                    Root.subjects_container.css({
+                        width: "22%",
+                        height: "",
+                        maxHeight: "",
+                        overflow: "",
+                        float: "left",
+                        position: "sticky",
+                        top: "55px",
+                        left: "0",
+                        backgroundColor: "",
+                        boxShadow: "",
+                        borderRadius: ""
+                    });
+                }
+
+                Root.content_container.css({
+                    float: "",
+                    marginTop: "-5px",
+                    marginBottom: "-40px",
+                    paddingTop: "40px",
+                    paddingBottom: "40px",
+                });
+
+                Root.navbar_header.show();
+                Root.subjects_toggle.show();
+                Root.navbar_toggle.show();
+                Root.navbar_items_container.hide();
+                Root.subjects_container.hide();
+                Root.subjects.hide();
+                Root.content_container.css({
+                    width: "100%",
+                    position: "relative",
+                    top: "-35px",
+                    zIndex: -5
+                });
+
+
+                Root.enterprise_app.css({
+                    width: "200px",
+                    height: "110px",
+                });
+
+                Root.red_analytics_new_key.css({
+                    width: "200px",
+                    height: "150px",
+                });
+
+                Root.red_analytics_register_route.css({
+                    width: "200px",
+                    height: "150px",
+                });
+
+                Root.red_analytics_generate_controller.css({
+                    width: "200px",
+                    height: "150px",
+                });
+
+                Root.red_analytics_generate_model.css({
+                    width: "200px",
+                    height: "150px",
+                });
+
+                Root.red_analytics_generate_view.css({
+                    width: "200px",
+                    height: "150px",
+                });
+
+                Root.red_analytics_generate_middleware.css({
+                    width: "200px",
+                    height: "150px",
+                });
+
+
+            } else if ($(window).innerWidth() <= 900) {
+
+                if (Root.subjects_container.css("position") === "fixed") {
+                    Root.subjects_container.hide(0);
+                    Root.subjects.hide(0);
+                    Root.subjects_toggle.css({left: "0"});
+                    Root.subjects_toggle.css({
+                        right: "",
+                        zIndex: "0"
+                    });
+
+                    Root.subjects.css({
+                        overflow: "auto"
+                    });
+
+                    Root.subjects_container.css({
+                        width: "22%",
+                        height: "",
+                        maxHeight: "",
+                        overflow: "",
+                        float: "left",
+                        position: "sticky",
+                        top: "55px",
+                        left: "0",
+                        backgroundColor: "",
+                        boxShadow: "",
+                        borderRadius: ""
+                    });
+                }
+
+                Root.content_container.css({
+                    float: "",
+                    marginTop: "-5px",
+                    marginBottom: "-40px",
+                    paddingTop: "40px",
+                    paddingBottom: "40px",
+                });
+
+                Root.navbar_header.show();
+                Root.subjects_toggle.show();
+                Root.navbar_toggle.show();
+                Root.navbar_items_container.hide();
+                Root.subjects_container.hide();
+                Root.subjects.hide();
+                Root.content_container.css({
+                    width: "100%",
+                    position: "relative",
+                    top: "-35px",
+                    zIndex: -5
+                });
+
+
+                Root.enterprise_app.css({
+                    width: "320px",
+                    height: "150px",
+                });
+
+                Root.red_analytics_new_key.css({
+                    width: "300px",
+                    height: "250px",
+                });
+
+                Root.red_analytics_register_route.css({
+                    width: "300px",
+                    height: "250px",
+                });
+
+                Root.red_analytics_generate_controller.css({
+                    width: "300px",
+                    height: "250px",
+                });
+
+                Root.red_analytics_generate_model.css({
+                    width: "300px",
+                    height: "250px",
+                });
+
+                Root.red_analytics_generate_view.css({
+                    width: "300px",
+                    height: "250px",
+                });
+
+                Root.red_analytics_generate_middleware.css({
+                    width: "300px",
+                    height: "250px",
+                });
+
+
+            } else if ($(window).innerWidth() <= 930) {
+
+                if (Root.subjects_container.css("position") === "fixed") {
+                    Root.subjects_container.hide(0);
+                    Root.subjects.hide(0);
+                    Root.subjects_toggle.css({left: "0"});
+                    Root.subjects_toggle.css({
+                        right: "",
+                        zIndex: "0"
+                    });
+
+                    Root.subjects.css({
+                        overflow: "auto"
+                    });
+
+                    Root.subjects_container.css({
+                        width: "22%",
+                        height: "",
+                        maxHeight: "",
+                        overflow: "",
+                        float: "left",
+                        position: "sticky",
+                        top: "55px",
+                        left: "0",
+                        backgroundColor: "",
+                        boxShadow: "",
+                        borderRadius: ""
+                    });
+                }
+
+                Root.subjects_toggle.show();
+
+                Root.content_container.css({
+                    float: "",
+                    marginTop: "-5px",
+                    marginBottom: "-40px",
+                    paddingTop: "40px",
+                    paddingBottom: "40px",
+                });
+
+                Root.navbar_separator.hide();
+                if (Root.header_logo.css("display") === "none") {
+                    Root.header.css({
+                        height: "50px",
+                    });
+                } else {
+                    Root.header.css({
+                        height: "220px",
+                    });
+                }
+
+                Root.nav_first_item.css({
+                    marginTop: "20px",
+                    position: "",
+                    top: "",
+                    marginLeft: "10px",
+                });
+
+                Root.navbar.css({
+                    height: "50px",
+                    backgroundColor: "rgba(226,90,90,0.55)"
+                });
+
+                Root.navbar_items.css({
+                    display: "",
+                    marginTop: "",
+                    marginRight: "20px",
+                });
+
+                Root.navbar_header.hide();
+                Root.navbar_toggle.hide();
+                Root.navbar_items_container.show();
+
+                Root.subjects_container.hide();
+                Root.subjects.hide();
+                Root.content_container.css({
+                    width: "100%",
+                    position: "relative",
+                    top: "-35px",
+                    zIndex: -5
+                });
+
+                Root.enterprise_app.css({
+                    width: "520px",
+                    height: "250px",
+                });
+
+                Root.red_analytics_new_key.css({
+                    width: "500px",
+                    height: "450px",
+                });
+
+                Root.red_analytics_register_route.css({
+                    width: "400px",
+                    height: "250px",
+                });
+
+                Root.red_analytics_generate_controller.css({
+                    width: "500px",
+                    height: "450px",
+                });
+
+                Root.red_analytics_generate_model.css({
+                    width: "500px",
+                    height: "450px",
+                });
+
+                Root.red_analytics_generate_view.css({
+                    width: "500px",
+                    height: "450px",
+                });
+
+                Root.red_analytics_generate_middleware.css({
+                    width: "500px",
+                    height: "450px",
+                });
+            } else if ($(window).innerWidth() <= 1022) {
+
+                if (Root.subjects_container.css("position") === "fixed") {
+                    Root.subjects.css({
+                        overflow: "auto"
+                    });
+                    Root.subjects_container.hide(0);
+                    Root.subjects.hide(0);
+                    Root.subjects_toggle.css({left: "0"});
+                    Root.subjects_toggle.css({
+                        right: "",
+                        zIndex: "0"
+                    });
+
+
+                    Root.subjects_container.css({
+                        width: "22%",
+                        height: "",
+                        maxHeight: "",
+                        overflow: "",
+                        float: "left",
+                        position: "sticky",
+                        top: "55px",
+                        left: "0",
+                        backgroundColor: "",
+                        boxShadow: "",
+                        borderRadius: ""
+                    });
+                }
+
+                Root.subjects_toggle.hide();
+
+                Root.content_container.css({
+                    float: "left",
+                    marginTop: "",
+                    marginBottom: "",
+                    margin: "auto",
+                    paddingTop: "",
+                    paddingBottom: "",
+                    padding: "auto"
+                });
+
+
+                Root.navbar_separator.hide();
+                if (Root.header_logo.css("display") === "none") {
+                    Root.header.css({
+                        height: "50px",
+                    });
+                } else {
+                    Root.header.css({
+                        height: "220px",
+                    });
+                }
+
+                Root.nav_first_item.css({
+                    marginTop: "20px",
+                    position: "",
+                    top: "",
+                    marginLeft: "10px",
+                });
+
+                Root.navbar.css({
+                    height: "50px",
+                    backgroundColor: "rgba(226,90,90,0.55)"
+                });
+
+                Root.navbar_items.css({
+                    display: "",
+                    marginTop: "",
+                    marginRight: "20px",
+                });
+
+                Root.navbar_header.hide();
+                Root.navbar_toggle.hide();
+                Root.navbar_items_container.show();
+                Root.subjects_container.show();
+                Root.subjects.show();
+                Root.content_container.css({
+                    width: "70%",
+                    float: "right",
+                    position: "",
+                    top: ""
+                });
+
+                Root.enterprise_app.css({
+                    width: "520px",
+                    height: "250px",
+                });
+
+                Root.red_analytics_new_key.css({
+                    width: "500px",
+                    height: "450px",
+                });
+
+                Root.red_analytics_register_route.css({
+                    width: "600px",
+                    height: "350px",
+                });
+
+                Root.red_analytics_generate_controller.css({
+                    width: "500px",
+                    height: "450px",
+                });
+
+                Root.red_analytics_generate_model.css({
+                    width: "500px",
+                    height: "450px",
+                });
+
+                Root.red_analytics_generate_view.css({
+                    width: "500px",
+                    height: "450px",
+                });
+
+                Root.red_analytics_generate_middleware.css({
+                    width: "500px",
+                    height: "450px",
+                });
+            } else {
+
+                if (Root.subjects_container.css("position") === "fixed") {
+                    Root.subjects.css({
+                        overflow: "auto"
+                    });
+                    Root.subjects_toggle.css({left: "0"});
+                    Root.subjects_toggle.css({
+                        right: "",
+                        zIndex: "0"
+                    });
+
+
+                    Root.subjects_container.css({
+                        width: "22%",
+                        height: "",
+                        maxHeight: "",
+                        overflow: "",
+                        float: "left",
+                        position: "sticky",
+                        top: "55px",
+                        left: "0",
+                        backgroundColor: "",
+                        boxShadow: "",
+                        borderRadius: ""
+                    });
+                    Root.subjects_container.show();
+                }
+
+                Root.subjects_toggle.hide();
+
+                Root.content_container.css({
+                    float: "left",
+                    marginTop: "",
+                    marginBottom: "",
+                    margin: "auto",
+                    paddingTop: "",
+                    paddingBottom: "",
+                    padding: "auto"
+                });
+
+
+                Root.navbar_separator.hide();
+                if (Root.header_logo.css("display") === "none") {
+                    Root.header.css({
+                        height: "50px",
+                    });
+                } else {
+                    Root.header.css({
+                        height: "220px",
+                    });
+                }
+
+                Root.nav_first_item.css({
+                    marginTop: "20px",
+                    marginBottom: "",
+                    position: "",
+                    top: "",
+                    marginLeft: "10px",
+                });
+
+                Root.navbar.css({
+                    height: "50px",
+                    backgroundColor: "rgba(226,90,90,0.55)"
+                });
+
+                Root.navbar_items.css({
+                    display: "",
+                    marginTop: "",
+                    marginRight: "20px",
+                });
+
+                Root.navbar_header.hide();
+                Root.navbar_toggle.hide();
+                Root.navbar_items_container.show();
+                Root.subjects_container.show();
+                Root.subjects.show();
+
+                Root.content_container.css({
+                    width: "70%",
+                    float: "right",
+                    position: "",
+                    top: ""
+                });
+
+                Root.enterprise_app.css({
+                    width: "600px",
+                    height: "300px",
+                });
+
+                Root.red_analytics_new_key.css({
+                    width: "600px",
+                    height: "550px",
+                });
+
+                Root.red_analytics_register_route.css({
+                    width: "600px",
+                    height: "350px",
+                });
+
+                Root.red_analytics_generate_controller.css({
+                    width: "600px",
+                    height: "550px",
+                });
+
+                Root.red_analytics_generate_model.css({
+                    width: "600px",
+                    height: "550px",
+                });
+
+                Root.red_analytics_generate_view.css({
+                    width: "600px",
+                    height: "550px",
+                });
+
+                Root.red_analytics_generate_middleware.css({
+                    width: "600px",
+                    height: "550px",
+                });
+            }
+
+        },
+
+        subjectPager: function () {
+            if (Root.overview.offset()['top'] <= $(window).scrollTop() && Root.directory_structure.offset()['top'] >= $(window).scrollTop()) {
+                Root.overview_s.css({"text-shadow": "black 0 0 1px"});
+                Root.directory_structure_s.css({"text-shadow": ""});
+                Root.configuration_s.css({"text-shadow": ""});
+                Root.environment_s.css({"text-shadow": ""});
+                Root.routing_s.css({"text-shadow": ""});
+                Root.controllers_s.css({"text-shadow": ""});
+                Root.models_s.css({"text-shadow": ""});
+                Root.views_s.css({"text-shadow": ""});
+                Root.middlewares_s.css({"text-shadow": ""});
+                Root.api_s.css({"text-shadow": ""});
+                Root.database_engine_s.css({"text-shadow": ""});
+                Root.pagination_s.css({"text-shadow": ""});
+                Root.mail_server_s.css({"text-shadow": ""});
+                Root.validation_service_s.css({"text-shadow": ""});
+                Root.filter_service_s.css({"text-shadow": ""});
+                Root.sanitize_service_s.css({"text-shadow": ""});
+                Root.debug_components_s.css({"text-shadow": ""});
+                Root.error_handling_s.css({"text-shadow": ""});
+                Root.inputs_s.css({"text-shadow": ""});
+                Root.sessions_s.css({"text-shadow": ""});
+                Root.cookies_s.css({"text-shadow": ""});
+                Root.crypt_tools_s.css({"text-shadow": ""});
+                Root.post_method_encryption_system_s.css({"text-shadow": ""});
+                Root.language_service_s.css({"text-shadow": ""});
+                Root.picture_tools_s.css({"text-shadow": ""});
+                Root.captcha_service_s.css({"text-shadow": ""});
+                Root.authentication_s.css({"text-shadow": ""});
+                Root.ajax_request_s.css({"text-shadow": ""});
+                Root.csrf_token_s.css({"text-shadow": ""});
+            } else if (Root.directory_structure.offset()['top'] <= $(window).scrollTop() && Root.configuration.offset()['top'] >= $(window).scrollTop()) {
+                Root.directory_structure_s.css({"text-shadow": "black 0 0 1px"});
+                Root.overview_s.css({"text-shadow": ""});
+                Root.configuration_s.css({"text-shadow": ""});
+                Root.environment_s.css({"text-shadow": ""});
+                Root.routing_s.css({"text-shadow": ""});
+                Root.controllers_s.css({"text-shadow": ""});
+                Root.models_s.css({"text-shadow": ""});
+                Root.views_s.css({"text-shadow": ""});
+                Root.middlewares_s.css({"text-shadow": ""});
+                Root.api_s.css({"text-shadow": ""});
+                Root.database_engine_s.css({"text-shadow": ""});
+                Root.pagination_s.css({"text-shadow": ""});
+                Root.mail_server_s.css({"text-shadow": ""});
+                Root.validation_service_s.css({"text-shadow": ""});
+                Root.filter_service_s.css({"text-shadow": ""});
+                Root.sanitize_service_s.css({"text-shadow": ""});
+                Root.debug_components_s.css({"text-shadow": ""});
+                Root.error_handling_s.css({"text-shadow": ""});
+                Root.inputs_s.css({"text-shadow": ""});
+                Root.sessions_s.css({"text-shadow": ""});
+                Root.cookies_s.css({"text-shadow": ""});
+                Root.crypt_tools_s.css({"text-shadow": ""});
+                Root.post_method_encryption_system_s.css({"text-shadow": ""});
+                Root.language_service_s.css({"text-shadow": ""});
+                Root.picture_tools_s.css({"text-shadow": ""});
+                Root.captcha_service_s.css({"text-shadow": ""});
+                Root.authentication_s.css({"text-shadow": ""});
+                Root.ajax_request_s.css({"text-shadow": ""});
+                Root.csrf_token_s.css({"text-shadow": ""});
+            } else if (Root.configuration.offset()['top'] <= $(window).scrollTop() && Root.environment.offset()['top'] >= $(window).scrollTop()) {
+                Root.configuration_s.css({"text-shadow": "black 0 0 1px"});
+                Root.overview_s.css({"text-shadow": ""});
+                Root.directory_structure_s.css({"text-shadow": ""});
+                Root.environment_s.css({"text-shadow": ""});
+                Root.routing_s.css({"text-shadow": ""});
+                Root.controllers_s.css({"text-shadow": ""});
+                Root.models_s.css({"text-shadow": ""});
+                Root.views_s.css({"text-shadow": ""});
+                Root.middlewares_s.css({"text-shadow": ""});
+                Root.api_s.css({"text-shadow": ""});
+                Root.database_engine_s.css({"text-shadow": ""});
+                Root.pagination_s.css({"text-shadow": ""});
+                Root.mail_server_s.css({"text-shadow": ""});
+                Root.validation_service_s.css({"text-shadow": ""});
+                Root.filter_service_s.css({"text-shadow": ""});
+                Root.sanitize_service_s.css({"text-shadow": ""});
+                Root.debug_components_s.css({"text-shadow": ""});
+                Root.error_handling_s.css({"text-shadow": ""});
+                Root.inputs_s.css({"text-shadow": ""});
+                Root.sessions_s.css({"text-shadow": ""});
+                Root.cookies_s.css({"text-shadow": ""});
+                Root.crypt_tools_s.css({"text-shadow": ""});
+                Root.post_method_encryption_system_s.css({"text-shadow": ""});
+                Root.language_service_s.css({"text-shadow": ""});
+                Root.picture_tools_s.css({"text-shadow": ""});
+                Root.captcha_service_s.css({"text-shadow": ""});
+                Root.authentication_s.css({"text-shadow": ""});
+                Root.ajax_request_s.css({"text-shadow": ""});
+                Root.csrf_token_s.css({"text-shadow": ""});
+            } else if (Root.environment.offset()['top'] <= $(window).scrollTop() && Root.routing.offset()['top'] >= $(window).scrollTop()) {
+                Root.environment_s.css({"text-shadow": "black 0 0 1px"});
+                Root.overview_s.css({"text-shadow": ""});
+                Root.directory_structure_s.css({"text-shadow": ""});
+                Root.configuration_s.css({"text-shadow": ""});
+                Root.routing_s.css({"text-shadow": ""});
+                Root.controllers_s.css({"text-shadow": ""});
+                Root.models_s.css({"text-shadow": ""});
+                Root.views_s.css({"text-shadow": ""});
+                Root.middlewares_s.css({"text-shadow": ""});
+                Root.api_s.css({"text-shadow": ""});
+                Root.database_engine_s.css({"text-shadow": ""});
+                Root.pagination_s.css({"text-shadow": ""});
+                Root.mail_server_s.css({"text-shadow": ""});
+                Root.validation_service_s.css({"text-shadow": ""});
+                Root.filter_service_s.css({"text-shadow": ""});
+                Root.sanitize_service_s.css({"text-shadow": ""});
+                Root.debug_components_s.css({"text-shadow": ""});
+                Root.error_handling_s.css({"text-shadow": ""});
+                Root.inputs_s.css({"text-shadow": ""});
+                Root.sessions_s.css({"text-shadow": ""});
+                Root.cookies_s.css({"text-shadow": ""});
+                Root.crypt_tools_s.css({"text-shadow": ""});
+                Root.post_method_encryption_system_s.css({"text-shadow": ""});
+                Root.language_service_s.css({"text-shadow": ""});
+                Root.picture_tools_s.css({"text-shadow": ""});
+                Root.captcha_service_s.css({"text-shadow": ""});
+                Root.authentication_s.css({"text-shadow": ""});
+                Root.ajax_request_s.css({"text-shadow": ""});
+                Root.csrf_token_s.css({"text-shadow": ""});
+            } else if (Root.routing.offset()['top'] <= $(window).scrollTop() && Root.controllers.offset()['top'] >= $(window).scrollTop()) {
+                Root.routing_s.css({"text-shadow": "black 0 0 1px"});
+                Root.overview_s.css({"text-shadow": ""});
+                Root.directory_structure_s.css({"text-shadow": ""});
+                Root.configuration_s.css({"text-shadow": ""});
+                Root.environment_s.css({"text-shadow": ""});
+                Root.controllers_s.css({"text-shadow": ""});
+                Root.models_s.css({"text-shadow": ""});
+                Root.views_s.css({"text-shadow": ""});
+                Root.middlewares_s.css({"text-shadow": ""});
+                Root.api_s.css({"text-shadow": ""});
+                Root.database_engine_s.css({"text-shadow": ""});
+                Root.pagination_s.css({"text-shadow": ""});
+                Root.mail_server_s.css({"text-shadow": ""});
+                Root.validation_service_s.css({"text-shadow": ""});
+                Root.filter_service_s.css({"text-shadow": ""});
+                Root.sanitize_service_s.css({"text-shadow": ""});
+                Root.debug_components_s.css({"text-shadow": ""});
+                Root.error_handling_s.css({"text-shadow": ""});
+                Root.inputs_s.css({"text-shadow": ""});
+                Root.sessions_s.css({"text-shadow": ""});
+                Root.cookies_s.css({"text-shadow": ""});
+                Root.crypt_tools_s.css({"text-shadow": ""});
+                Root.post_method_encryption_system_s.css({"text-shadow": ""});
+                Root.language_service_s.css({"text-shadow": ""});
+                Root.picture_tools_s.css({"text-shadow": ""});
+                Root.captcha_service_s.css({"text-shadow": ""});
+                Root.authentication_s.css({"text-shadow": ""});
+                Root.ajax_request_s.css({"text-shadow": ""});
+                Root.csrf_token_s.css({"text-shadow": ""});
+            } else if (Root.controllers.offset()['top'] <= $(window).scrollTop() && Root.models.offset()['top'] >= $(window).scrollTop()) {
+                Root.controllers_s.css({"text-shadow": "black 0 0 1px"});
+                Root.overview_s.css({"text-shadow": ""});
+                Root.directory_structure_s.css({"text-shadow": ""});
+                Root.configuration_s.css({"text-shadow": ""});
+                Root.environment_s.css({"text-shadow": ""});
+                Root.routing_s.css({"text-shadow": ""});
+                Root.models_s.css({"text-shadow": ""});
+                Root.views_s.css({"text-shadow": ""});
+                Root.middlewares_s.css({"text-shadow": ""});
+                Root.api_s.css({"text-shadow": ""});
+                Root.database_engine_s.css({"text-shadow": ""});
+                Root.pagination_s.css({"text-shadow": ""});
+                Root.mail_server_s.css({"text-shadow": ""});
+                Root.validation_service_s.css({"text-shadow": ""});
+                Root.filter_service_s.css({"text-shadow": ""});
+                Root.sanitize_service_s.css({"text-shadow": ""});
+                Root.debug_components_s.css({"text-shadow": ""});
+                Root.error_handling_s.css({"text-shadow": ""});
+                Root.inputs_s.css({"text-shadow": ""});
+                Root.sessions_s.css({"text-shadow": ""});
+                Root.cookies_s.css({"text-shadow": ""});
+                Root.crypt_tools_s.css({"text-shadow": ""});
+                Root.post_method_encryption_system_s.css({"text-shadow": ""});
+                Root.language_service_s.css({"text-shadow": ""});
+                Root.picture_tools_s.css({"text-shadow": ""});
+                Root.captcha_service_s.css({"text-shadow": ""});
+                Root.authentication_s.css({"text-shadow": ""});
+                Root.ajax_request_s.css({"text-shadow": ""});
+                Root.csrf_token_s.css({"text-shadow": ""});
+            } else if (Root.models.offset()['top'] <= $(window).scrollTop() && Root.views.offset()['top'] >= $(window).scrollTop()) {
+                Root.models_s.css({"text-shadow": "black 0 0 1px"});
+                Root.overview_s.css({"text-shadow": ""});
+                Root.directory_structure_s.css({"text-shadow": ""});
+                Root.configuration_s.css({"text-shadow": ""});
+                Root.environment_s.css({"text-shadow": ""});
+                Root.routing_s.css({"text-shadow": ""});
+                Root.controllers_s.css({"text-shadow": ""});
+                Root.views_s.css({"text-shadow": ""});
+                Root.middlewares_s.css({"text-shadow": ""});
+                Root.api_s.css({"text-shadow": ""});
+                Root.database_engine_s.css({"text-shadow": ""});
+                Root.pagination_s.css({"text-shadow": ""});
+                Root.mail_server_s.css({"text-shadow": ""});
+                Root.validation_service_s.css({"text-shadow": ""});
+                Root.filter_service_s.css({"text-shadow": ""});
+                Root.sanitize_service_s.css({"text-shadow": ""});
+                Root.debug_components_s.css({"text-shadow": ""});
+                Root.error_handling_s.css({"text-shadow": ""});
+                Root.inputs_s.css({"text-shadow": ""});
+                Root.sessions_s.css({"text-shadow": ""});
+                Root.cookies_s.css({"text-shadow": ""});
+                Root.crypt_tools_s.css({"text-shadow": ""});
+                Root.post_method_encryption_system_s.css({"text-shadow": ""});
+                Root.language_service_s.css({"text-shadow": ""});
+                Root.picture_tools_s.css({"text-shadow": ""});
+                Root.captcha_service_s.css({"text-shadow": ""});
+                Root.authentication_s.css({"text-shadow": ""});
+                Root.ajax_request_s.css({"text-shadow": ""});
+                Root.csrf_token_s.css({"text-shadow": ""});
+            } else if (Root.views.offset()['top'] <= $(window).scrollTop() && Root.middlewares.offset()['top'] >= $(window).scrollTop()) {
+                Root.views_s.css({"text-shadow": "black 0 0 1px"});
+                Root.overview_s.css({"text-shadow": ""});
+                Root.directory_structure_s.css({"text-shadow": ""});
+                Root.configuration_s.css({"text-shadow": ""});
+                Root.environment_s.css({"text-shadow": ""});
+                Root.routing_s.css({"text-shadow": ""});
+                Root.controllers_s.css({"text-shadow": ""});
+                Root.models_s.css({"text-shadow": ""});
+                Root.middlewares_s.css({"text-shadow": ""});
+                Root.api_s.css({"text-shadow": ""});
+                Root.database_engine_s.css({"text-shadow": ""});
+                Root.pagination_s.css({"text-shadow": ""});
+                Root.mail_server_s.css({"text-shadow": ""});
+                Root.validation_service_s.css({"text-shadow": ""});
+                Root.filter_service_s.css({"text-shadow": ""});
+                Root.sanitize_service_s.css({"text-shadow": ""});
+                Root.debug_components_s.css({"text-shadow": ""});
+                Root.error_handling_s.css({"text-shadow": ""});
+                Root.inputs_s.css({"text-shadow": ""});
+                Root.sessions_s.css({"text-shadow": ""});
+                Root.cookies_s.css({"text-shadow": ""});
+                Root.crypt_tools_s.css({"text-shadow": ""});
+                Root.post_method_encryption_system_s.css({"text-shadow": ""});
+                Root.language_service_s.css({"text-shadow": ""});
+                Root.picture_tools_s.css({"text-shadow": ""});
+                Root.captcha_service_s.css({"text-shadow": ""});
+                Root.authentication_s.css({"text-shadow": ""});
+                Root.ajax_request_s.css({"text-shadow": ""});
+                Root.csrf_token_s.css({"text-shadow": ""});
+            } else if (Root.middlewares.offset()['top'] <= $(window).scrollTop() && Root.api.offset()['top'] >= $(window).scrollTop()) {
+                Root.middlewares_s.css({"text-shadow": "black 0 0 1px"});
+                Root.overview_s.css({"text-shadow": ""});
+                Root.directory_structure_s.css({"text-shadow": ""});
+                Root.configuration_s.css({"text-shadow": ""});
+                Root.environment_s.css({"text-shadow": ""});
+                Root.routing_s.css({"text-shadow": ""});
+                Root.controllers_s.css({"text-shadow": ""});
+                Root.models_s.css({"text-shadow": ""});
+                Root.views_s.css({"text-shadow": ""});
+                Root.api_s.css({"text-shadow": ""});
+                Root.database_engine_s.css({"text-shadow": ""});
+                Root.pagination_s.css({"text-shadow": ""});
+                Root.mail_server_s.css({"text-shadow": ""});
+                Root.validation_service_s.css({"text-shadow": ""});
+                Root.filter_service_s.css({"text-shadow": ""});
+                Root.sanitize_service_s.css({"text-shadow": ""});
+                Root.debug_components_s.css({"text-shadow": ""});
+                Root.error_handling_s.css({"text-shadow": ""});
+                Root.inputs_s.css({"text-shadow": ""});
+                Root.sessions_s.css({"text-shadow": ""});
+                Root.cookies_s.css({"text-shadow": ""});
+                Root.crypt_tools_s.css({"text-shadow": ""});
+                Root.post_method_encryption_system_s.css({"text-shadow": ""});
+                Root.language_service_s.css({"text-shadow": ""});
+                Root.picture_tools_s.css({"text-shadow": ""});
+                Root.captcha_service_s.css({"text-shadow": ""});
+                Root.authentication_s.css({"text-shadow": ""});
+                Root.ajax_request_s.css({"text-shadow": ""});
+                Root.csrf_token_s.css({"text-shadow": ""});
+            } else if (Root.api.offset()['top'] <= $(window).scrollTop() && Root.database_engine.offset()['top'] >= $(window).scrollTop()) {
+                Root.api_s.css({"text-shadow": "black 0 0 1px"});
+                Root.overview_s.css({"text-shadow": ""});
+                Root.directory_structure_s.css({"text-shadow": ""});
+                Root.configuration_s.css({"text-shadow": ""});
+                Root.environment_s.css({"text-shadow": ""});
+                Root.routing_s.css({"text-shadow": ""});
+                Root.controllers_s.css({"text-shadow": ""});
+                Root.models_s.css({"text-shadow": ""});
+                Root.views_s.css({"text-shadow": ""});
+                Root.middlewares_s.css({"text-shadow": ""});
+                Root.database_engine_s.css({"text-shadow": ""});
+                Root.pagination_s.css({"text-shadow": ""});
+                Root.mail_server_s.css({"text-shadow": ""});
+                Root.validation_service_s.css({"text-shadow": ""});
+                Root.filter_service_s.css({"text-shadow": ""});
+                Root.sanitize_service_s.css({"text-shadow": ""});
+                Root.debug_components_s.css({"text-shadow": ""});
+                Root.error_handling_s.css({"text-shadow": ""});
+                Root.inputs_s.css({"text-shadow": ""});
+                Root.sessions_s.css({"text-shadow": ""});
+                Root.cookies_s.css({"text-shadow": ""});
+                Root.crypt_tools_s.css({"text-shadow": ""});
+                Root.post_method_encryption_system_s.css({"text-shadow": ""});
+                Root.language_service_s.css({"text-shadow": ""});
+                Root.picture_tools_s.css({"text-shadow": ""});
+                Root.captcha_service_s.css({"text-shadow": ""});
+                Root.authentication_s.css({"text-shadow": ""});
+                Root.ajax_request_s.css({"text-shadow": ""});
+                Root.csrf_token_s.css({"text-shadow": ""});
+            } else if (Root.database_engine.offset()['top'] <= $(window).scrollTop() && Root.pagination.offset()['top'] >= $(window).scrollTop()) {
+                Root.database_engine_s.css({"text-shadow": "black 0 0 1px"});
+                Root.overview_s.css({"text-shadow": ""});
+                Root.directory_structure_s.css({"text-shadow": ""});
+                Root.configuration_s.css({"text-shadow": ""});
+                Root.environment_s.css({"text-shadow": ""});
+                Root.routing_s.css({"text-shadow": ""});
+                Root.controllers_s.css({"text-shadow": ""});
+                Root.models_s.css({"text-shadow": ""});
+                Root.views_s.css({"text-shadow": ""});
+                Root.middlewares_s.css({"text-shadow": ""});
+                Root.api_s.css({"text-shadow": ""});
+                Root.pagination_s.css({"text-shadow": ""});
+                Root.mail_server_s.css({"text-shadow": ""});
+                Root.validation_service_s.css({"text-shadow": ""});
+                Root.filter_service_s.css({"text-shadow": ""});
+                Root.sanitize_service_s.css({"text-shadow": ""});
+                Root.debug_components_s.css({"text-shadow": ""});
+                Root.error_handling_s.css({"text-shadow": ""});
+                Root.inputs_s.css({"text-shadow": ""});
+                Root.sessions_s.css({"text-shadow": ""});
+                Root.cookies_s.css({"text-shadow": ""});
+                Root.crypt_tools_s.css({"text-shadow": ""});
+                Root.post_method_encryption_system_s.css({"text-shadow": ""});
+                Root.language_service_s.css({"text-shadow": ""});
+                Root.picture_tools_s.css({"text-shadow": ""});
+                Root.captcha_service_s.css({"text-shadow": ""});
+                Root.authentication_s.css({"text-shadow": ""});
+                Root.ajax_request_s.css({"text-shadow": ""});
+                Root.csrf_token_s.css({"text-shadow": ""});
+            } else if (Root.pagination.offset()['top'] <= $(window).scrollTop() && Root.mail_server.offset()['top'] >= $(window).scrollTop()) {
+                Root.pagination_s.css({"text-shadow": "black 0 0 1px"});
+                Root.overview_s.css({"text-shadow": ""});
+                Root.directory_structure_s.css({"text-shadow": ""});
+                Root.configuration_s.css({"text-shadow": ""});
+                Root.environment_s.css({"text-shadow": ""});
+                Root.routing_s.css({"text-shadow": ""});
+                Root.controllers_s.css({"text-shadow": ""});
+                Root.models_s.css({"text-shadow": ""});
+                Root.views_s.css({"text-shadow": ""});
+                Root.middlewares_s.css({"text-shadow": ""});
+                Root.api_s.css({"text-shadow": ""});
+                Root.database_engine_s.css({"text-shadow": ""});
+                Root.mail_server_s.css({"text-shadow": ""});
+                Root.validation_service_s.css({"text-shadow": ""});
+                Root.filter_service_s.css({"text-shadow": ""});
+                Root.sanitize_service_s.css({"text-shadow": ""});
+                Root.debug_components_s.css({"text-shadow": ""});
+                Root.error_handling_s.css({"text-shadow": ""});
+                Root.inputs_s.css({"text-shadow": ""});
+                Root.sessions_s.css({"text-shadow": ""});
+                Root.cookies_s.css({"text-shadow": ""});
+                Root.crypt_tools_s.css({"text-shadow": ""});
+                Root.post_method_encryption_system_s.css({"text-shadow": ""});
+                Root.language_service_s.css({"text-shadow": ""});
+                Root.picture_tools_s.css({"text-shadow": ""});
+                Root.captcha_service_s.css({"text-shadow": ""});
+                Root.authentication_s.css({"text-shadow": ""});
+                Root.ajax_request_s.css({"text-shadow": ""});
+                Root.csrf_token_s.css({"text-shadow": ""});
+            } else if (Root.mail_server.offset()['top'] <= $(window).scrollTop() && Root.validation_service.offset()['top'] >= $(window).scrollTop()) {
+                Root.mail_server_s.css({"text-shadow": "black 0 0 1px"});
+                Root.overview_s.css({"text-shadow": ""});
+                Root.directory_structure_s.css({"text-shadow": ""});
+                Root.configuration_s.css({"text-shadow": ""});
+                Root.environment_s.css({"text-shadow": ""});
+                Root.routing_s.css({"text-shadow": ""});
+                Root.controllers_s.css({"text-shadow": ""});
+                Root.models_s.css({"text-shadow": ""});
+                Root.views_s.css({"text-shadow": ""});
+                Root.middlewares_s.css({"text-shadow": ""});
+                Root.api_s.css({"text-shadow": ""});
+                Root.database_engine_s.css({"text-shadow": ""});
+                Root.pagination_s.css({"text-shadow": ""});
+                Root.validation_service_s.css({"text-shadow": ""});
+                Root.filter_service_s.css({"text-shadow": ""});
+                Root.sanitize_service_s.css({"text-shadow": ""});
+                Root.debug_components_s.css({"text-shadow": ""});
+                Root.error_handling_s.css({"text-shadow": ""});
+                Root.inputs_s.css({"text-shadow": ""});
+                Root.sessions_s.css({"text-shadow": ""});
+                Root.cookies_s.css({"text-shadow": ""});
+                Root.crypt_tools_s.css({"text-shadow": ""});
+                Root.post_method_encryption_system_s.css({"text-shadow": ""});
+                Root.language_service_s.css({"text-shadow": ""});
+                Root.picture_tools_s.css({"text-shadow": ""});
+                Root.captcha_service_s.css({"text-shadow": ""});
+                Root.authentication_s.css({"text-shadow": ""});
+                Root.ajax_request_s.css({"text-shadow": ""});
+                Root.csrf_token_s.css({"text-shadow": ""});
+            } else if (Root.validation_service.offset()['top'] <= $(window).scrollTop() && Root.filter_service.offset()['top'] >= $(window).scrollTop()) {
+                Root.validation_service_s.css({"text-shadow": "black 0 0 1px"});
+                Root.overview_s.css({"text-shadow": ""});
+                Root.directory_structure_s.css({"text-shadow": ""});
+                Root.configuration_s.css({"text-shadow": ""});
+                Root.environment_s.css({"text-shadow": ""});
+                Root.routing_s.css({"text-shadow": ""});
+                Root.controllers_s.css({"text-shadow": ""});
+                Root.models_s.css({"text-shadow": ""});
+                Root.views_s.css({"text-shadow": ""});
+                Root.middlewares_s.css({"text-shadow": ""});
+                Root.api_s.css({"text-shadow": ""});
+                Root.database_engine_s.css({"text-shadow": ""});
+                Root.pagination_s.css({"text-shadow": ""});
+                Root.mail_server_s.css({"text-shadow": ""});
+                Root.filter_service_s.css({"text-shadow": ""});
+                Root.sanitize_service_s.css({"text-shadow": ""});
+                Root.debug_components_s.css({"text-shadow": ""});
+                Root.error_handling_s.css({"text-shadow": ""});
+                Root.inputs_s.css({"text-shadow": ""});
+                Root.sessions_s.css({"text-shadow": ""});
+                Root.cookies_s.css({"text-shadow": ""});
+                Root.crypt_tools_s.css({"text-shadow": ""});
+                Root.post_method_encryption_system_s.css({"text-shadow": ""});
+                Root.language_service_s.css({"text-shadow": ""});
+                Root.picture_tools_s.css({"text-shadow": ""});
+                Root.captcha_service_s.css({"text-shadow": ""});
+                Root.authentication_s.css({"text-shadow": ""});
+                Root.ajax_request_s.css({"text-shadow": ""});
+                Root.csrf_token_s.css({"text-shadow": ""});
+            } else if (Root.filter_service.offset()['top'] <= $(window).scrollTop() && Root.sanitize_service.offset()['top'] >= $(window).scrollTop()) {
+                Root.filter_service_s.css({"text-shadow": "black 0 0 1px"});
+                Root.overview_s.css({"text-shadow": ""});
+                Root.directory_structure_s.css({"text-shadow": ""});
+                Root.configuration_s.css({"text-shadow": ""});
+                Root.environment_s.css({"text-shadow": ""});
+                Root.routing_s.css({"text-shadow": ""});
+                Root.controllers_s.css({"text-shadow": ""});
+                Root.models_s.css({"text-shadow": ""});
+                Root.views_s.css({"text-shadow": ""});
+                Root.middlewares_s.css({"text-shadow": ""});
+                Root.api_s.css({"text-shadow": ""});
+                Root.database_engine_s.css({"text-shadow": ""});
+                Root.pagination_s.css({"text-shadow": ""});
+                Root.mail_server_s.css({"text-shadow": ""});
+                Root.validation_service_s.css({"text-shadow": ""});
+                Root.sanitize_service_s.css({"text-shadow": ""});
+                Root.debug_components_s.css({"text-shadow": ""});
+                Root.error_handling_s.css({"text-shadow": ""});
+                Root.inputs_s.css({"text-shadow": ""});
+                Root.sessions_s.css({"text-shadow": ""});
+                Root.cookies_s.css({"text-shadow": ""});
+                Root.crypt_tools_s.css({"text-shadow": ""});
+                Root.post_method_encryption_system_s.css({"text-shadow": ""});
+                Root.language_service_s.css({"text-shadow": ""});
+                Root.picture_tools_s.css({"text-shadow": ""});
+                Root.captcha_service_s.css({"text-shadow": ""});
+                Root.authentication_s.css({"text-shadow": ""});
+                Root.ajax_request_s.css({"text-shadow": ""});
+                Root.csrf_token_s.css({"text-shadow": ""});
+            } else if (Root.sanitize_service.offset()['top'] <= $(window).scrollTop() && Root.debug_components.offset()['top'] >= $(window).scrollTop()) {
+                Root.sanitize_service_s.css({"text-shadow": "black 0 0 1px"});
+                Root.overview_s.css({"text-shadow": ""});
+                Root.directory_structure_s.css({"text-shadow": ""});
+                Root.configuration_s.css({"text-shadow": ""});
+                Root.environment_s.css({"text-shadow": ""});
+                Root.routing_s.css({"text-shadow": ""});
+                Root.controllers_s.css({"text-shadow": ""});
+                Root.models_s.css({"text-shadow": ""});
+                Root.views_s.css({"text-shadow": ""});
+                Root.middlewares_s.css({"text-shadow": ""});
+                Root.api_s.css({"text-shadow": ""});
+                Root.database_engine_s.css({"text-shadow": ""});
+                Root.pagination_s.css({"text-shadow": ""});
+                Root.mail_server_s.css({"text-shadow": ""});
+                Root.validation_service_s.css({"text-shadow": ""});
+                Root.filter_service_s.css({"text-shadow": ""});
+                Root.debug_components_s.css({"text-shadow": ""});
+                Root.error_handling_s.css({"text-shadow": ""});
+                Root.inputs_s.css({"text-shadow": ""});
+                Root.sessions_s.css({"text-shadow": ""});
+                Root.cookies_s.css({"text-shadow": ""});
+                Root.crypt_tools_s.css({"text-shadow": ""});
+                Root.post_method_encryption_system_s.css({"text-shadow": ""});
+                Root.language_service_s.css({"text-shadow": ""});
+                Root.picture_tools_s.css({"text-shadow": ""});
+                Root.captcha_service_s.css({"text-shadow": ""});
+                Root.authentication_s.css({"text-shadow": ""});
+                Root.ajax_request_s.css({"text-shadow": ""});
+                Root.csrf_token_s.css({"text-shadow": ""});
+            } else if (Root.debug_components.offset()['top'] <= $(window).scrollTop() && Root.error_handling.offset()['top'] >= $(window).scrollTop()) {
+                Root.debug_components_s.css({"text-shadow": "black 0 0 1px"});
+                Root.overview_s.css({"text-shadow": ""});
+                Root.directory_structure_s.css({"text-shadow": ""});
+                Root.configuration_s.css({"text-shadow": ""});
+                Root.environment_s.css({"text-shadow": ""});
+                Root.routing_s.css({"text-shadow": ""});
+                Root.controllers_s.css({"text-shadow": ""});
+                Root.models_s.css({"text-shadow": ""});
+                Root.views_s.css({"text-shadow": ""});
+                Root.middlewares_s.css({"text-shadow": ""});
+                Root.api_s.css({"text-shadow": ""});
+                Root.database_engine_s.css({"text-shadow": ""});
+                Root.pagination_s.css({"text-shadow": ""});
+                Root.mail_server_s.css({"text-shadow": ""});
+                Root.validation_service_s.css({"text-shadow": ""});
+                Root.filter_service_s.css({"text-shadow": ""});
+                Root.sanitize_service_s.css({"text-shadow": ""});
+                Root.error_handling_s.css({"text-shadow": ""});
+                Root.inputs_s.css({"text-shadow": ""});
+                Root.sessions_s.css({"text-shadow": ""});
+                Root.cookies_s.css({"text-shadow": ""});
+                Root.crypt_tools_s.css({"text-shadow": ""});
+                Root.post_method_encryption_system_s.css({"text-shadow": ""});
+                Root.language_service_s.css({"text-shadow": ""});
+                Root.picture_tools_s.css({"text-shadow": ""});
+                Root.captcha_service_s.css({"text-shadow": ""});
+                Root.authentication_s.css({"text-shadow": ""});
+                Root.ajax_request_s.css({"text-shadow": ""});
+                Root.csrf_token_s.css({"text-shadow": ""});
+            } else if (Root.error_handling.offset()['top'] <= $(window).scrollTop() && Root.inputs.offset()['top'] >= $(window).scrollTop()) {
+                Root.error_handling_s.css({"text-shadow": "black 0 0 1px"});
+                Root.overview_s.css({"text-shadow": ""});
+                Root.directory_structure_s.css({"text-shadow": ""});
+                Root.configuration_s.css({"text-shadow": ""});
+                Root.environment_s.css({"text-shadow": ""});
+                Root.routing_s.css({"text-shadow": ""});
+                Root.controllers_s.css({"text-shadow": ""});
+                Root.models_s.css({"text-shadow": ""});
+                Root.views_s.css({"text-shadow": ""});
+                Root.middlewares_s.css({"text-shadow": ""});
+                Root.api_s.css({"text-shadow": ""});
+                Root.database_engine_s.css({"text-shadow": ""});
+                Root.pagination_s.css({"text-shadow": ""});
+                Root.mail_server_s.css({"text-shadow": ""});
+                Root.validation_service_s.css({"text-shadow": ""});
+                Root.filter_service_s.css({"text-shadow": ""});
+                Root.sanitize_service_s.css({"text-shadow": ""});
+                Root.debug_components_s.css({"text-shadow": ""});
+                Root.inputs_s.css({"text-shadow": ""});
+                Root.sessions_s.css({"text-shadow": ""});
+                Root.cookies_s.css({"text-shadow": ""});
+                Root.crypt_tools_s.css({"text-shadow": ""});
+                Root.post_method_encryption_system_s.css({"text-shadow": ""});
+                Root.language_service_s.css({"text-shadow": ""});
+                Root.picture_tools_s.css({"text-shadow": ""});
+                Root.captcha_service_s.css({"text-shadow": ""});
+                Root.authentication_s.css({"text-shadow": ""});
+                Root.ajax_request_s.css({"text-shadow": ""});
+                Root.csrf_token_s.css({"text-shadow": ""});
+            } else if (Root.inputs.offset()['top'] <= $(window).scrollTop() && Root.sessions.offset()['top'] >= $(window).scrollTop()) {
+                Root.inputs_s.css({"text-shadow": "black 0 0 1px"});
+                Root.overview_s.css({"text-shadow": ""});
+                Root.directory_structure_s.css({"text-shadow": ""});
+                Root.configuration_s.css({"text-shadow": ""});
+                Root.environment_s.css({"text-shadow": ""});
+                Root.routing_s.css({"text-shadow": ""});
+                Root.controllers_s.css({"text-shadow": ""});
+                Root.models_s.css({"text-shadow": ""});
+                Root.views_s.css({"text-shadow": ""});
+                Root.middlewares_s.css({"text-shadow": ""});
+                Root.api_s.css({"text-shadow": ""});
+                Root.database_engine_s.css({"text-shadow": ""});
+                Root.pagination_s.css({"text-shadow": ""});
+                Root.mail_server_s.css({"text-shadow": ""});
+                Root.validation_service_s.css({"text-shadow": ""});
+                Root.filter_service_s.css({"text-shadow": ""});
+                Root.sanitize_service_s.css({"text-shadow": ""});
+                Root.debug_components_s.css({"text-shadow": ""});
+                Root.error_handling_s.css({"text-shadow": ""});
+                Root.sessions_s.css({"text-shadow": ""});
+                Root.cookies_s.css({"text-shadow": ""});
+                Root.crypt_tools_s.css({"text-shadow": ""});
+                Root.post_method_encryption_system_s.css({"text-shadow": ""});
+                Root.language_service_s.css({"text-shadow": ""});
+                Root.picture_tools_s.css({"text-shadow": ""});
+                Root.captcha_service_s.css({"text-shadow": ""});
+                Root.authentication_s.css({"text-shadow": ""});
+                Root.ajax_request_s.css({"text-shadow": ""});
+                Root.csrf_token_s.css({"text-shadow": ""});
+            } else if (Root.sessions.offset()['top'] <= $(window).scrollTop() && Root.cookies.offset()['top'] >= $(window).scrollTop()) {
+                Root.sessions_s.css({"text-shadow": "black 0 0 1px"});
+                Root.overview_s.css({"text-shadow": ""});
+                Root.directory_structure_s.css({"text-shadow": ""});
+                Root.configuration_s.css({"text-shadow": ""});
+                Root.environment_s.css({"text-shadow": ""});
+                Root.routing_s.css({"text-shadow": ""});
+                Root.controllers_s.css({"text-shadow": ""});
+                Root.models_s.css({"text-shadow": ""});
+                Root.views_s.css({"text-shadow": ""});
+                Root.middlewares_s.css({"text-shadow": ""});
+                Root.api_s.css({"text-shadow": ""});
+                Root.database_engine_s.css({"text-shadow": ""});
+                Root.pagination_s.css({"text-shadow": ""});
+                Root.mail_server_s.css({"text-shadow": ""});
+                Root.validation_service_s.css({"text-shadow": ""});
+                Root.filter_service_s.css({"text-shadow": ""});
+                Root.sanitize_service_s.css({"text-shadow": ""});
+                Root.debug_components_s.css({"text-shadow": ""});
+                Root.error_handling_s.css({"text-shadow": ""});
+                Root.inputs_s.css({"text-shadow": ""});
+                Root.cookies_s.css({"text-shadow": ""});
+                Root.crypt_tools_s.css({"text-shadow": ""});
+                Root.post_method_encryption_system_s.css({"text-shadow": ""});
+                Root.language_service_s.css({"text-shadow": ""});
+                Root.picture_tools_s.css({"text-shadow": ""});
+                Root.captcha_service_s.css({"text-shadow": ""});
+                Root.authentication_s.css({"text-shadow": ""});
+                Root.ajax_request_s.css({"text-shadow": ""});
+                Root.csrf_token_s.css({"text-shadow": ""});
+            } else if (Root.cookies.offset()['top'] <= $(window).scrollTop() && Root.crypt_tools.offset()['top'] >= $(window).scrollTop()) {
+                Root.cookies_s.css({"text-shadow": "black 0 0 1px"});
+                Root.overview_s.css({"text-shadow": ""});
+                Root.directory_structure_s.css({"text-shadow": ""});
+                Root.configuration_s.css({"text-shadow": ""});
+                Root.environment_s.css({"text-shadow": ""});
+                Root.routing_s.css({"text-shadow": ""});
+                Root.controllers_s.css({"text-shadow": ""});
+                Root.models_s.css({"text-shadow": ""});
+                Root.views_s.css({"text-shadow": ""});
+                Root.middlewares_s.css({"text-shadow": ""});
+                Root.api_s.css({"text-shadow": ""});
+                Root.database_engine_s.css({"text-shadow": ""});
+                Root.pagination_s.css({"text-shadow": ""});
+                Root.mail_server_s.css({"text-shadow": ""});
+                Root.validation_service_s.css({"text-shadow": ""});
+                Root.filter_service_s.css({"text-shadow": ""});
+                Root.sanitize_service_s.css({"text-shadow": ""});
+                Root.debug_components_s.css({"text-shadow": ""});
+                Root.error_handling_s.css({"text-shadow": ""});
+                Root.inputs_s.css({"text-shadow": ""});
+                Root.sessions_s.css({"text-shadow": ""});
+                Root.crypt_tools_s.css({"text-shadow": ""});
+                Root.post_method_encryption_system_s.css({"text-shadow": ""});
+                Root.language_service_s.css({"text-shadow": ""});
+                Root.picture_tools_s.css({"text-shadow": ""});
+                Root.captcha_service_s.css({"text-shadow": ""});
+                Root.authentication_s.css({"text-shadow": ""});
+                Root.ajax_request_s.css({"text-shadow": ""});
+                Root.csrf_token_s.css({"text-shadow": ""});
+            } else if (Root.crypt_tools.offset()['top'] <= $(window).scrollTop() && Root.post_method_encryption_system.offset()['top'] >= $(window).scrollTop()) {
+                Root.crypt_tools_s.css({"text-shadow": "black 0 0 1px"});
+                Root.overview_s.css({"text-shadow": ""});
+                Root.directory_structure_s.css({"text-shadow": ""});
+                Root.configuration_s.css({"text-shadow": ""});
+                Root.environment_s.css({"text-shadow": ""});
+                Root.routing_s.css({"text-shadow": ""});
+                Root.controllers_s.css({"text-shadow": ""});
+                Root.models_s.css({"text-shadow": ""});
+                Root.views_s.css({"text-shadow": ""});
+                Root.middlewares_s.css({"text-shadow": ""});
+                Root.api_s.css({"text-shadow": ""});
+                Root.database_engine_s.css({"text-shadow": ""});
+                Root.pagination_s.css({"text-shadow": ""});
+                Root.mail_server_s.css({"text-shadow": ""});
+                Root.validation_service_s.css({"text-shadow": ""});
+                Root.filter_service_s.css({"text-shadow": ""});
+                Root.sanitize_service_s.css({"text-shadow": ""});
+                Root.debug_components_s.css({"text-shadow": ""});
+                Root.error_handling_s.css({"text-shadow": ""});
+                Root.inputs_s.css({"text-shadow": ""});
+                Root.sessions_s.css({"text-shadow": ""});
+                Root.cookies_s.css({"text-shadow": ""});
+                Root.post_method_encryption_system_s.css({"text-shadow": ""});
+                Root.language_service_s.css({"text-shadow": ""});
+                Root.picture_tools_s.css({"text-shadow": ""});
+                Root.captcha_service_s.css({"text-shadow": ""});
+                Root.authentication_s.css({"text-shadow": ""});
+                Root.ajax_request_s.css({"text-shadow": ""});
+                Root.csrf_token_s.css({"text-shadow": ""});
+            } else if (Root.post_method_encryption_system.offset()['top'] <= $(window).scrollTop() && Root.language_service.offset()['top'] >= $(window).scrollTop()) {
+                Root.post_method_encryption_system_s.css({"text-shadow": "black 0 0 1px"});
+                Root.overview_s.css({"text-shadow": ""});
+                Root.directory_structure_s.css({"text-shadow": ""});
+                Root.configuration_s.css({"text-shadow": ""});
+                Root.environment_s.css({"text-shadow": ""});
+                Root.routing_s.css({"text-shadow": ""});
+                Root.controllers_s.css({"text-shadow": ""});
+                Root.models_s.css({"text-shadow": ""});
+                Root.views_s.css({"text-shadow": ""});
+                Root.middlewares_s.css({"text-shadow": ""});
+                Root.api_s.css({"text-shadow": ""});
+                Root.database_engine_s.css({"text-shadow": ""});
+                Root.pagination_s.css({"text-shadow": ""});
+                Root.mail_server_s.css({"text-shadow": ""});
+                Root.validation_service_s.css({"text-shadow": ""});
+                Root.filter_service_s.css({"text-shadow": ""});
+                Root.sanitize_service_s.css({"text-shadow": ""});
+                Root.debug_components_s.css({"text-shadow": ""});
+                Root.error_handling_s.css({"text-shadow": ""});
+                Root.inputs_s.css({"text-shadow": ""});
+                Root.sessions_s.css({"text-shadow": ""});
+                Root.cookies_s.css({"text-shadow": ""});
+                Root.crypt_tools_s.css({"text-shadow": ""});
+                Root.language_service_s.css({"text-shadow": ""});
+                Root.picture_tools_s.css({"text-shadow": ""});
+                Root.captcha_service_s.css({"text-shadow": ""});
+                Root.authentication_s.css({"text-shadow": ""});
+                Root.ajax_request_s.css({"text-shadow": ""});
+                Root.csrf_token_s.css({"text-shadow": ""});
+            } else if (Root.language_service.offset()['top'] <= $(window).scrollTop() && Root.picture_tools.offset()['top'] >= $(window).scrollTop()) {
+                Root.language_service_s.css({"text-shadow": "black 0 0 1px"});
+                Root.overview_s.css({"text-shadow": ""});
+                Root.directory_structure_s.css({"text-shadow": ""});
+                Root.configuration_s.css({"text-shadow": ""});
+                Root.environment_s.css({"text-shadow": ""});
+                Root.routing_s.css({"text-shadow": ""});
+                Root.controllers_s.css({"text-shadow": ""});
+                Root.models_s.css({"text-shadow": ""});
+                Root.views_s.css({"text-shadow": ""});
+                Root.middlewares_s.css({"text-shadow": ""});
+                Root.api_s.css({"text-shadow": ""});
+                Root.database_engine_s.css({"text-shadow": ""});
+                Root.pagination_s.css({"text-shadow": ""});
+                Root.mail_server_s.css({"text-shadow": ""});
+                Root.validation_service_s.css({"text-shadow": ""});
+                Root.filter_service_s.css({"text-shadow": ""});
+                Root.sanitize_service_s.css({"text-shadow": ""});
+                Root.debug_components_s.css({"text-shadow": ""});
+                Root.error_handling_s.css({"text-shadow": ""});
+                Root.inputs_s.css({"text-shadow": ""});
+                Root.sessions_s.css({"text-shadow": ""});
+                Root.cookies_s.css({"text-shadow": ""});
+                Root.crypt_tools_s.css({"text-shadow": ""});
+                Root.post_method_encryption_system_s.css({"text-shadow": ""});
+                Root.picture_tools_s.css({"text-shadow": ""});
+                Root.captcha_service_s.css({"text-shadow": ""});
+                Root.authentication_s.css({"text-shadow": ""});
+                Root.ajax_request_s.css({"text-shadow": ""});
+                Root.csrf_token_s.css({"text-shadow": ""});
+            } else if (Root.picture_tools.offset()['top'] <= $(window).scrollTop() && Root.captcha_service.offset()['top'] >= $(window).scrollTop()) {
+                Root.picture_tools_s.css({"text-shadow": "black 0 0 1px"});
+                Root.overview_s.css({"text-shadow": ""});
+                Root.directory_structure_s.css({"text-shadow": ""});
+                Root.configuration_s.css({"text-shadow": ""});
+                Root.environment_s.css({"text-shadow": ""});
+                Root.routing_s.css({"text-shadow": ""});
+                Root.controllers_s.css({"text-shadow": ""});
+                Root.models_s.css({"text-shadow": ""});
+                Root.views_s.css({"text-shadow": ""});
+                Root.middlewares_s.css({"text-shadow": ""});
+                Root.api_s.css({"text-shadow": ""});
+                Root.database_engine_s.css({"text-shadow": ""});
+                Root.pagination_s.css({"text-shadow": ""});
+                Root.mail_server_s.css({"text-shadow": ""});
+                Root.validation_service_s.css({"text-shadow": ""});
+                Root.filter_service_s.css({"text-shadow": ""});
+                Root.sanitize_service_s.css({"text-shadow": ""});
+                Root.debug_components_s.css({"text-shadow": ""});
+                Root.error_handling_s.css({"text-shadow": ""});
+                Root.inputs_s.css({"text-shadow": ""});
+                Root.sessions_s.css({"text-shadow": ""});
+                Root.cookies_s.css({"text-shadow": ""});
+                Root.crypt_tools_s.css({"text-shadow": ""});
+                Root.post_method_encryption_system_s.css({"text-shadow": ""});
+                Root.language_service_s.css({"text-shadow": ""});
+                Root.captcha_service_s.css({"text-shadow": ""});
+                Root.authentication_s.css({"text-shadow": ""});
+                Root.ajax_request_s.css({"text-shadow": ""});
+                Root.csrf_token_s.css({"text-shadow": ""});
+            } else if (Root.captcha_service.offset()['top'] <= $(window).scrollTop() && Root.authentication.offset()['top'] >= $(window).scrollTop()) {
+                Root.captcha_service_s.css({"text-shadow": "black 0 0 1px"});
+                Root.overview_s.css({"text-shadow": ""});
+                Root.directory_structure_s.css({"text-shadow": ""});
+                Root.configuration_s.css({"text-shadow": ""});
+                Root.environment_s.css({"text-shadow": ""});
+                Root.routing_s.css({"text-shadow": ""});
+                Root.controllers_s.css({"text-shadow": ""});
+                Root.models_s.css({"text-shadow": ""});
+                Root.views_s.css({"text-shadow": ""});
+                Root.middlewares_s.css({"text-shadow": ""});
+                Root.api_s.css({"text-shadow": ""});
+                Root.database_engine_s.css({"text-shadow": ""});
+                Root.pagination_s.css({"text-shadow": ""});
+                Root.mail_server_s.css({"text-shadow": ""});
+                Root.validation_service_s.css({"text-shadow": ""});
+                Root.filter_service_s.css({"text-shadow": ""});
+                Root.sanitize_service_s.css({"text-shadow": ""});
+                Root.debug_components_s.css({"text-shadow": ""});
+                Root.error_handling_s.css({"text-shadow": ""});
+                Root.inputs_s.css({"text-shadow": ""});
+                Root.sessions_s.css({"text-shadow": ""});
+                Root.cookies_s.css({"text-shadow": ""});
+                Root.crypt_tools_s.css({"text-shadow": ""});
+                Root.post_method_encryption_system_s.css({"text-shadow": ""});
+                Root.language_service_s.css({"text-shadow": ""});
+                Root.picture_tools_s.css({"text-shadow": ""});
+                Root.authentication_s.css({"text-shadow": ""});
+                Root.ajax_request_s.css({"text-shadow": ""});
+                Root.csrf_token_s.css({"text-shadow": ""});
+            } else if (Root.authentication.offset()['top'] <= $(window).scrollTop() && Root.ajax_request.offset()['top'] >= $(window).scrollTop()) {
+                Root.authentication_s.css({"text-shadow": "black 0 0 1px"});
+                Root.overview_s.css({"text-shadow": ""});
+                Root.directory_structure_s.css({"text-shadow": ""});
+                Root.configuration_s.css({"text-shadow": ""});
+                Root.environment_s.css({"text-shadow": ""});
+                Root.routing_s.css({"text-shadow": ""});
+                Root.controllers_s.css({"text-shadow": ""});
+                Root.models_s.css({"text-shadow": ""});
+                Root.views_s.css({"text-shadow": ""});
+                Root.middlewares_s.css({"text-shadow": ""});
+                Root.api_s.css({"text-shadow": ""});
+                Root.database_engine_s.css({"text-shadow": ""});
+                Root.pagination_s.css({"text-shadow": ""});
+                Root.mail_server_s.css({"text-shadow": ""});
+                Root.validation_service_s.css({"text-shadow": ""});
+                Root.filter_service_s.css({"text-shadow": ""});
+                Root.sanitize_service_s.css({"text-shadow": ""});
+                Root.debug_components_s.css({"text-shadow": ""});
+                Root.error_handling_s.css({"text-shadow": ""});
+                Root.inputs_s.css({"text-shadow": ""});
+                Root.sessions_s.css({"text-shadow": ""});
+                Root.cookies_s.css({"text-shadow": ""});
+                Root.crypt_tools_s.css({"text-shadow": ""});
+                Root.post_method_encryption_system_s.css({"text-shadow": ""});
+                Root.language_service_s.css({"text-shadow": ""});
+                Root.picture_tools_s.css({"text-shadow": ""});
+                Root.captcha_service_s.css({"text-shadow": ""});
+                Root.ajax_request_s.css({"text-shadow": ""});
+                Root.csrf_token_s.css({"text-shadow": ""});
+            } else if (Root.ajax_request.offset()['top'] <= $(window).scrollTop() && Root.csrf_token.offset()['top'] >= $(window).scrollTop()) {
+                Root.ajax_request_s.css({"text-shadow": "black 0 0 1px"});
+                Root.overview_s.css({"text-shadow": ""});
+                Root.directory_structure_s.css({"text-shadow": ""});
+                Root.configuration_s.css({"text-shadow": ""});
+                Root.environment_s.css({"text-shadow": ""});
+                Root.routing_s.css({"text-shadow": ""});
+                Root.controllers_s.css({"text-shadow": ""});
+                Root.models_s.css({"text-shadow": ""});
+                Root.views_s.css({"text-shadow": ""});
+                Root.middlewares_s.css({"text-shadow": ""});
+                Root.api_s.css({"text-shadow": ""});
+                Root.database_engine_s.css({"text-shadow": ""});
+                Root.pagination_s.css({"text-shadow": ""});
+                Root.mail_server_s.css({"text-shadow": ""});
+                Root.validation_service_s.css({"text-shadow": ""});
+                Root.filter_service_s.css({"text-shadow": ""});
+                Root.sanitize_service_s.css({"text-shadow": ""});
+                Root.debug_components_s.css({"text-shadow": ""});
+                Root.error_handling_s.css({"text-shadow": ""});
+                Root.inputs_s.css({"text-shadow": ""});
+                Root.sessions_s.css({"text-shadow": ""});
+                Root.cookies_s.css({"text-shadow": ""});
+                Root.crypt_tools_s.css({"text-shadow": ""});
+                Root.post_method_encryption_system_s.css({"text-shadow": ""});
+                Root.language_service_s.css({"text-shadow": ""});
+                Root.picture_tools_s.css({"text-shadow": ""});
+                Root.captcha_service_s.css({"text-shadow": ""});
+                Root.authentication_s.css({"text-shadow": ""});
+                Root.csrf_token_s.css({"text-shadow": ""});
+            } else if (Root.csrf_token.offset()['top'] <= $(window).scrollTop()) {
+                Root.csrf_token_s.css({"text-shadow": "black 0 0 1px"});
+                Root.overview_s.css({"text-shadow": ""});
+                Root.directory_structure_s.css({"text-shadow": ""});
+                Root.configuration_s.css({"text-shadow": ""});
+                Root.environment_s.css({"text-shadow": ""});
+                Root.routing_s.css({"text-shadow": ""});
+                Root.controllers_s.css({"text-shadow": ""});
+                Root.models_s.css({"text-shadow": ""});
+                Root.views_s.css({"text-shadow": ""});
+                Root.middlewares_s.css({"text-shadow": ""});
+                Root.api_s.css({"text-shadow": ""});
+                Root.database_engine_s.css({"text-shadow": ""});
+                Root.pagination_s.css({"text-shadow": ""});
+                Root.mail_server_s.css({"text-shadow": ""});
+                Root.validation_service_s.css({"text-shadow": ""});
+                Root.filter_service_s.css({"text-shadow": ""});
+                Root.sanitize_service_s.css({"text-shadow": ""});
+                Root.debug_components_s.css({"text-shadow": ""});
+                Root.error_handling_s.css({"text-shadow": ""});
+                Root.inputs_s.css({"text-shadow": ""});
+                Root.sessions_s.css({"text-shadow": ""});
+                Root.cookies_s.css({"text-shadow": ""});
+                Root.crypt_tools_s.css({"text-shadow": ""});
+                Root.post_method_encryption_system_s.css({"text-shadow": ""});
+                Root.language_service_s.css({"text-shadow": ""});
+                Root.picture_tools_s.css({"text-shadow": ""});
+                Root.captcha_service_s.css({"text-shadow": ""});
+                Root.authentication_s.css({"text-shadow": ""});
+                Root.ajax_request_s.css({"text-shadow": ""});
+            }
+        }
+
+    };
+
+</script>
+
+
+</body>
+</html>
+

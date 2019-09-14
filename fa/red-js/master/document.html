@@ -1,0 +1,1021 @@
+<!doctype html>
+<html lang="en">
+<link rel="icon" type="image/png" href="../../../Dependencies/Images/favicon.png"/>
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>مستندات رد فریم ورک - رد جی اس</title>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .block::after {
+            clear: both;
+        }
+
+        .nav-item {
+            color: rgba(211, 211, 211, 0.22);
+            text-decoration: none;
+            margin-right: 20px;
+            transition: 0.2s;
+            text-align: right;
+        }
+
+        .nav-item:hover {
+            color: white;
+            transition: 0.6s;
+        }
+
+        #nav-first-item {
+            margin-right: 20px;
+            padding-bottom: 7px;
+            border-radius: 2px;
+            padding-left: 6px;
+            padding-right: 6px;
+            margin-left: 10px;
+        }
+
+        #nav-item-current {
+            color: white;
+            text-decoration: none;
+        }
+
+        .lang {
+            color: rgba(211, 211, 211, 0.22);
+            font-size: 13px;
+        }
+
+        .lang:hover {
+            color: white;
+            transition: 0.6s;
+        }
+
+        .codebox {
+            line-height: 32px;
+            margin-right: 4%;
+            margin-left: 4%;
+            padding: 15px;
+            font-family: Courier, sans-serif;
+            font-size: 13px;
+            color: #fff;
+            background-color: rgba(61, 61, 61, 0.96);
+            -webkit-border-radius: 0 0 6px 6px;
+            -moz-border-radius: 0 0 6px 6px;
+            border-radius: 0 0 4px 4px;
+            margin-bottom: 10px;
+            overflow: auto;
+        }
+
+        .codeheader {
+            margin-right: 4%;
+            margin-left: 4%;
+            padding: 5px 5px 5px 10px;
+            font-family: 'Roboto', sans-serif;
+            font-size: 16px;
+            color: #fff;
+            -webkit-border-radius: 6px 6px 0 0;
+            -moz-border-radius: 6px 6px 0 0;
+            border-radius: 4px 4px 0 0;
+            background-color: rgba(226, 90, 90, 0.8);
+        }
+
+        .box {
+            box-shadow: 0 0 0.625vw 0 rgba(0, 0, 0, 0.04);
+            padding: 8px;
+            border-radius: 5px;
+            background-color: rgba(192, 192, 192, 0.35);
+            overflow: auto;
+        }
+
+        .content-box {
+            margin: 40px;
+            background-color: white;
+            padding: 15px;
+            box-shadow: 0 0 0.625vw 0 rgba(0, 0, 0, 0.24);
+            border-radius: 4px;
+        }
+
+        .content-title {
+            text-align: right;
+            text-shadow: black 0 0 1px;
+            font-family: 'Segoe UI Light', sans-serif;
+        }
+
+        p {
+            direction: rtl;
+            text-align: right;
+            font-family: Calibri, sans-serif;
+        }
+    </style>
+
+    <meta name="theme-color" content="rgba(226, 90, 90, 0.8)">
+
+    <meta name="keywords"
+          content="رد فریم ورک,فریم ورک جاوا اسکریپت,رد جی اس,برنامه نویسی,چهارچوب توسعه,جاوا اسکریپت,توسعه نرم افزار,Framework,JavaScript,Red JS,Programming, Javascript Framework">
+
+    <meta name="description" content="مستندات رد فریم ورک - تجربه جاوا اسکریپت با Red JS">
+
+    <meta name="author" content="RedCoder">
+
+    <meta name="robots" content="index, follow">
+
+    <meta name="revisit-after" content="3 days">
+</head>
+
+<body red-app="main" red-controller="red_js_doc_fa"
+      style="box-shadow: 0 0 0.625vw 0 rgba(0,0,0,0.24);border-radius: 5px">
+
+<div id="loader"
+     style="direction: rtl;text-shadow: black 0 0 1px;background-color: white;height: 100%;width: 100%;position: fixed;z-index: 25;right: 0;left: 0;text-align: center;margin-top: -8px">
+    <img style="position: relative;top: 23%;width: 200px;height: 200px" src="../../../Dependencies/Images/loading.gif"
+         alt="Loading">
+    <br/>
+    <span style="position: relative;top: 26%;">در حال بارگیری اطلاعات ...</span>
+    <br/>
+    <span style="position: relative;top: 32%;">از صبر و شکیبایی شما سپاس گذاریم</span>
+</div>
+
+<div id="header"
+     style="z-index: 1;box-shadow: 0 0 0.625vw 0 rgba(0,0,0,0.24);-moz-user-select: -moz-none;-webkit-user-select: none;-ms-user-select: none;user-select: none;position:sticky;top: 0;height: 220px;max-height: 220px;background-image: url('../../../Dependencies/Images/Header_Background.jpg');
+                 background-size: cover;width: 100%;margin: auto;border-radius: 5px 5px 0 0;">
+    <img id="header-logo" alt="Red Framework" draggable="false"
+         src="../../../Dependencies/Images/Red_Framework_Logo_For_Header.png"
+         style="opacity: 0.80;height: 120px;width: 120px;margin-top: 30px;float: right">
+    <div id="header-title"
+         style="font-family: Calibri, sans-serif;text-align: right;font-size: 22px;text-shadow: 0 0 0.625vw 0 rgba(0,0,0,0.50);color:#ffffff;padding-top: 60px;">
+        رد فریم ورک
+    </div>
+    <div id="header-caption"
+         style="font-family: Calibri, sans-serif;text-align: right;text-shadow: 0 0 0.625vw 0 rgba(0,0,0,0.50);color:#ffffff;padding-top: 14px;">
+        میزبان اپلیکیشن های جامع
+    </div>
+    <div id="navbar"
+         style="box-shadow: 0 0 0.625vw 0 rgba(0,0,0,0.35);position: absolute;left: 0;top: 170px;z-index: 3;color: white;width: 100%;height: 50px;background-color: rgba(226,90,90,0.55);">
+        <span id="navbar-header"
+              style="display: none;font-family: Calibri, sans-serif;position:relative;top: 14px;right: 12px;float: right;">مستندات رد فریم ورک</span>
+        <span id="navbar-toggle"
+              style="width: 26px;height: 26px;cursor: pointer;display: none;position:relative;top: 9px;left: 8px;float: left"><img
+                src="../../../Dependencies/Images/menu_rtl.png" alt="Expand Menu"></span>
+        <div id="navbar-items" style="padding: 15px 9px;font-size: 15px;color: #000;text-shadow: white 0 0 1px">
+            <hr id="navbar-separator"
+                style="color: white;text-align: center;margin: auto;position:relative;top: 20px;width: 100%;display: none">
+
+            <a href="#!home" class="nav-item" id="nav-first-item" style="float: right;">
+                خانه
+                <img style="opacity: 0.5;width: 15px;height: 15px;margin-left: 4px;position:relative;top: 2.5px;"
+                     src="../../../Dependencies/Images/home.png" alt="Home">
+            </a>
+            <a href="#!documentation" class="nav-item" style="float: right;">
+                مستندات
+                <img style="opacity: 0.5;width: 15px;height: 15px;margin-left: 4px;position:relative;top: 2.5px;"
+                     src="../../../Dependencies/Images/document.png" alt="Document">
+            </a>
+
+            <a href="#!enterprise_doc" class="nav-item" style="float: right;">
+
+                کیت نوسعه جامع
+                <img style="opacity: 0.5;width: 15px;height: 15px;margin-left: 4px;position:relative;top: 2.5px"
+                     src="../../../Dependencies/Images/app.png" alt="App">
+            </a>
+
+
+            <a href="#!console_doc" class="nav-item" style="float: right;">
+                کیت کنسول اپلیکیشن
+                <img style="opacity: 0.5;width: 15px;height: 15px;margin-left: 4px;position:relative;top: 2.5px"
+                     src="../../../Dependencies/Images/console.png" alt="Console">
+            </a>
+
+            <a href="#!red_js_doc" id="nav-item-current" class="nav-item" style="float: right;">
+                رد جی اس
+                <img style="width: 15px;height: 15px;margin-left: 4px;position:relative;top: 2.5px"
+                     src="../../../Dependencies/Images/java-script.png" alt="Red JS">
+            </a>
+
+            <span id="language"
+                  style="cursor: pointer;color: white;text-decoration: none;margin-left: 20px;font-size: 12px;position:relative;left: 0;top: -2px;">
+                <img style="width: 15px;height: 15px;margin-right: 6px;position:relative;top: 1px"
+                     src="../../../Dependencies/Images/language.png" alt="Language">
+                <span id="current-language">FA</span>
+
+                <img style="margin-left: 3px;width: 10px;height: 10px;margin-right: 6px;position:relative;top: 1px"
+                     src="../../../Dependencies/Images/drop-down-arrow.png" alt="Drop Down">
+                <div id="lang-list"
+                     style="text-shadow: white 0 0 1px;padding: 5px;display: none;width: 140px;text-align: center;background-color: rgba(226,90,90,0.95);box-shadow: 0 0 0.625vw 0 rgba(0,0,0,0.24);height: 50px;position:absolute;left: 0;margin-top: 10px;border-radius: 0 0 4px 4px;">
+                    <div id="lang-fa" class="lang" style="font-family: Calibri, sans-serif">Persian - Fa</div>
+                    <div id="lang-en" class="lang"
+                         style="font-family: Calibri, sans-serif;margin-bottom: 7px;margin-top: 6px;">English - En</div>
+                </div>
+            </span>
+
+            <span id="version" style="position:relative;top: -3px;margin-left: 20px;">
+                 <img style="width: 18px;height: 18px;margin-right: 10px;position:relative;top: 4px"
+                      src="../../../Dependencies/Images/version.png" alt="Version">
+                <select style="border-color: white;height: 27px;width: 140px;box-shadow: 0 0 0.625vw 0 rgba(0,0,0,0.10);border-radius: 5px;"
+                        name="version" id="select-version">
+                    <option value="1.0.0">1.0.0</option>
+                </select>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div id="subjects-container" style="width: 22%;float: right;
+margin-bottom: 20px;position:sticky;right: 0;top: 55px;z-index: 2;">
+
+    <div id="subjects" style="overflow: auto;max-height: 90vh;margin-top: 10px;">
+        <ul style="direction: rtl;font-family: 'Segoe UI Light', sans-serif;margin-right: 11px;color: rgba(226,90,90,0.70);line-height: 19px;">
+            <li id="preparing-document-s"><a href="#preparing-document"
+                                             style="text-shadow: black 0 0 1px;text-decoration: none;color: black;">آماده
+                سازی مستندات</a></li>
+        </ul>
+    </div>
+</div>
+
+<div id="subjects-toggle"
+     style="display: none;cursor: pointer;box-shadow: 0 4px 2px -2px rgba(0,0,0,0.30);background-color: white;height: 50px;position: fixed;right: 0;margin-top: 40px;border-radius: 3px 0 0 3px">
+    <img src="../../../Dependencies/Images/subjects_menu.png" style="margin: 3px;width: 38px;height: 40px;"
+         alt="Subjects Menu">
+</div>
+
+<div id="content-container" class="block"
+     style="box-shadow: 0 4px 2px -2px rgba(0,0,0,0.24);margin-bottom: auto;width: 70%;float: left;margin-top: auto;background: url('../../../Dependencies/Images/background.png') no-repeat center center fixed;
+     background-size: 100% 100%;border-radius: 0 0 5px 0">
+
+    <div id="preparing-document"
+         class="content-box">
+        <h3 class="content-title">آماده سازی مستندات</h3>
+        <hr>
+        <p>
+            متاسفانه مستندات رد جی اس هنوز به زبان فارسی منتشر نشده است .
+        </p>
+
+    </div>
+
+</div>
+
+
+<hr style="clear: both;opacity: 0;width: 95%;text-align: center;margin-top: 20px;">
+
+<div id="footer" style="height: 65px;margin-top: 20px;">
+    <div style="text-shadow: black 0 0 1px;text-align: center">
+        مفتخر از میزبانی اپلیکیشن شما
+        <br/>
+        <br/>
+        رد فریم ورک - 1398
+    </div>
+</div>
+
+
+<script src="../../../Dependencies/Library/jquery-3.3.1.min.js"></script>
+<script src="../../../Dependencies/Library/Red.min.js"></script>
+
+<script>
+
+    Red.app.module("main");
+
+    Red.app.addController("main", "red_js_doc_fa", function () {
+
+    });
+
+    Red.ready(function () {
+        Root.initialize();
+    });
+
+    var Root = {
+
+        header: $("#header"),
+        header_title: $("#header-title"),
+        header_caption: $("#header-caption"),
+        header_logo: $("#header-logo"),
+        navbar: $("#navbar"),
+        language_element: $("#language"),
+        language_list: $("#lang-list"),
+        subjects_title: $("#subjects-title"),
+
+        subjects_container: $("#subjects-container"),
+        subjects: $("#subjects"),
+        content_container: $("#content-container"),
+        navbar_items_container: $("#navbar-items"),
+        navbar_items: $(".nav-item"),
+        navbar_header: $("#navbar-header"),
+        navbar_toggle: $("#navbar-toggle"),
+        nav_first_item: $("#nav-first-item"),
+        navbar_separator: $("#navbar-separator"),
+        subjects_toggle: $("#subjects-toggle"),
+        timerHandler: null,
+        lang_en: $("#lang-en"),
+        lang_fa: $("#lang-fa"),
+
+        initialize: function () {
+            $(window).on("scroll", Root.handleComponentsOnScroll);
+
+
+            Root.handleComponentsOnSize();
+
+            if ($(window).scrollTop() >= 31) {
+
+                Root.header.css({
+                    height: "50px",
+                });
+                Root.header_title.hide(0);
+                Root.header_caption.hide(0);
+                Root.header_logo.hide(0);
+                Root.navbar.css({top: 0});
+                Root.language_list.hide(0);
+                Root.subjects_title.hide(0);
+            }
+
+
+            $(window).on("resize", Root.handleComponentsOnSize);
+
+            Root.languageHandler();
+            Root.subjectsToggle();
+            Root.navbarToggle();
+            Root.handleRoutes();
+
+            $("#loader").fadeOut(500);
+        },
+
+        handleRoutes: function () {
+
+            var current_lang = $("#current-language").html();
+
+            var home_path;
+            var document_path;
+            var enterprise_path;
+            var console_path;
+            var red_js_path;
+
+            if (current_lang == "EN") {
+                home_path = "http://redframework.ir/lang/en";
+                document_path = "../../../en/document.html";
+                enterprise_path = "../../../en/enterprise/master/document.html";
+                console_path = "../../../en/console-kit/master/document.html";
+                red_js_path = "../../../en/red-js/master/document.html";
+            } else if (current_lang == "FA") {
+                home_path = "http://redframework.ir/lang/fa";
+                document_path = "../../../fa/document.html";
+                enterprise_path = "../../../fa/enterprise/master/document.html";
+                console_path = "../../../fa/console-kit/master/document.html";
+                red_js_path = "../../../fa/red-js/master/document.html";
+            }
+
+            Red.app.registerRoute("main", {
+                home: home_path,
+                documentation: document_path,
+                enterprise_doc: enterprise_path,
+                console_doc: console_path,
+                red_js_doc: red_js_path,
+
+            })
+
+        },
+
+        languageHandler: function () {
+
+            Root.language_element.click(function () {
+                if (Root.language_list.css("display") === "none") {
+                    Root.language_list.stop(true).fadeIn(1000);
+                } else {
+                    Root.language_list.stop(true).fadeOut(1000);
+                }
+            });
+
+            Root.lang_en.click(function () {
+                Red.setCookie("language", "en", 30);
+                Red.redirect("../../../en/red-js/master/document.html");
+            });
+
+            Root.lang_fa.click(function () {
+                Red.setCookie("language", "fa", 30);
+                Red.redirect("../../../fa/red-js/master/document.html");
+            });
+        },
+
+        subjectsToggle: function () {
+            Root.subjects_toggle.click(function () {
+                if (Root.subjects_container.css("display") === "none") {
+
+                    Root.subjects_toggle.show();
+                    Root.navbar_separator.hide();
+                    if (Root.header_logo.css("display") === "none") {
+                        Root.header.css({
+                            height: "50px",
+                        });
+                    } else {
+                        Root.header.css({
+                            height: "220px",
+                        });
+                    }
+
+                    Root.nav_first_item.css({
+                        marginTop: "20px",
+                        position: "",
+                        top: "",
+                        marginLeft: "10px",
+                    });
+
+                    Root.subjects.css({
+                        overflow: ""
+                    });
+
+                    Root.navbar.css({
+                        height: "50px",
+                        backgroundColor: "rgba(226,90,90,0.55)"
+                    });
+
+                    Root.navbar_items.css({
+                        display: "",
+                        marginTop: "",
+                        marginRight: "20px",
+                        paddingRight: "6px",
+                        float: "right",
+                    });
+                    Root.navbar_items_container.stop(true).fadeOut(0);
+
+                    if ($(window).scrollTop() <= 31) {
+                        Root.subjects_container.css({
+                            width: "87%",
+                            height: "65vh",
+                            maxHeight: "65vh",
+                            overflow: "auto",
+                            float: "",
+                            position: "fixed",
+                            top: "234px",
+                            right: "8px",
+                            backgroundColor: "white",
+                            boxShadow: "0 0 0.625vw 0 rgba(0,0,0,0.55)",
+                            borderRadius: "4px 0 0 4px"
+                        });
+                    } else {
+                        Root.subjects_container.css({
+                            width: "87%",
+                            height: "65vh",
+                            maxHeight: "65vh",
+                            overflow: "auto",
+                            float: "",
+                            position: "fixed",
+                            top: "80px",
+                            right: "8px",
+                            backgroundColor: "white",
+                            boxShadow: "0 0 0.625vw 0 rgba(0,0,0,0.55)",
+                            borderRadius: "4px 0 0 4px"
+                        });
+                    }
+
+                    Root.subjects_toggle.css({
+                        zIndex: "2"
+                    });
+                    Root.subjects_toggle.animate({right: "87.9%"}, 400);
+                    Root.subjects_container.show(400);
+                    Root.subjects.show(400);
+                } else {
+
+
+                    Root.subjects.css({
+                        overflow: "auto"
+                    });
+
+                    Root.subjects_container.hide(400);
+                    Root.subjects.hide(400);
+                    Root.subjects_toggle.animate({right: "0"}, 400);
+                    Root.subjects_toggle.css({
+                        right: "",
+                        zIndex: "0"
+                    });
+
+                }
+
+            });
+        },
+
+        navbarToggle: function () {
+            Root.navbar_toggle.click(function () {
+                if (Root.navbar_items_container.css("display") === "none") {
+
+                    Root.subjects_container.hide(400);
+                    Root.subjects.hide(400);
+                    Root.subjects_toggle.animate({right: "0"}, 400);
+                    Root.subjects_toggle.css({
+                        left: "",
+                        zIndex: "0"
+                    });
+
+
+                    setTimeout(function () {
+
+                        Root.subjects_container.css({
+                            width: "22%",
+                            height: "",
+                            maxHeight: "",
+                            overflow: "",
+                            float: "right",
+                            position: "sticky",
+                            top: "55px",
+                            right: "0",
+                            backgroundColor: "",
+                            boxShadow: "",
+                            borderRadius: ""
+                        });
+                    }, 400);
+
+
+                    Root.navbar_separator.show();
+
+                    Root.navbar.css({
+                        height: "223px",
+                        backgroundColor: "rgba(226,90,90,0.95)"
+                    });
+
+
+                    Root.navbar_items.css({
+                        display: "block",
+                        marginTop: "10px",
+                        marginLeft: "",
+                        paddingRight: "0",
+                        float: "",
+                    });
+                    Root.nav_first_item.css({
+                        marginTop: "20px",
+                        position: "relative",
+                        top: "7px",
+                        marginLeft: "-4px",
+                    });
+                    Root.navbar_items_container.stop(true).fadeIn(400);
+                } else {
+                    Root.subjects_toggle.show();
+                    Root.navbar_separator.hide();
+                    if (Root.header_logo.css("display") === "none") {
+                        Root.header.css({
+                            height: "50px",
+                        });
+                    } else {
+                        Root.header.css({
+                            height: "220px",
+                        });
+                    }
+
+                    Root.nav_first_item.css({
+                        marginTop: "20px",
+                        position: "",
+                        top: "",
+                        marginLeft: "10px",
+                    });
+
+                    Root.navbar.css({
+                        height: "50px",
+                        backgroundColor: "rgba(226,90,90,0.55)"
+                    });
+
+                    Root.navbar_items.css({
+                        display: "",
+                        marginTop: "",
+                        marginRight: "20px",
+                        paddingRight: "6px",
+                        float: "right",
+                    });
+                    Root.navbar_items_container.stop(true).fadeOut(0);
+                }
+            });
+        },
+
+        handleComponentsOnScroll: function () {
+            clearInterval(Root.timerHandler);
+
+            if ($(document).scrollTop() >= 8) {
+                Root.timerHandler = setTimeout(function handler() {
+                    Root.header_title.hide(0);
+                    Root.header_caption.hide(0);
+                    Root.header_logo.hide(0);
+                    Root.navbar.animate({top: 0});
+                    Root.header.css({height: "50px"});
+
+                    Root.language_list.hide(0);
+                }, 0);
+
+
+                if (Root.subjects_container.css("position") === "fixed") {
+                    Root.subjects_container.css({
+                        width: "87%",
+                        height: "65vh",
+                        float: "",
+                        position: "fixed",
+                        top: "80px",
+                        right: "8px",
+                        backgroundColor: "white",
+                        boxShadow: "0 0 0.625vw 0 rgba(0,0,0,0.55)",
+                        borderRadius: "4px 0 0 4px"
+                    });
+                }
+
+            } else {
+                Root.timerHandler = setTimeout(function () {
+                    Root.header.stop(true).animate({height: "220px"}, 200);
+                    Root.header_title.stop(true).show(0);
+                    Root.header_caption.stop(true).show(0);
+                    Root.header_logo.stop(true).show(0);
+                    Root.navbar.stop(true).animate({top: "170px"});
+                    Root.language_list.hide(0);
+
+                    if (Root.subjects_container.css("position") === "fixed") {
+                        Root.subjects_container.css({
+                            width: "87%",
+                            height: "65vh",
+                            float: "",
+                            position: "fixed",
+                            top: "234px",
+                            right: "8px",
+                            backgroundColor: "white",
+                            boxShadow: "0 0 0.625vw 0 rgba(0,0,0,0.55)",
+                            borderRadius: "4px 0 0 4px"
+                        });
+                    }
+                }, 200);
+
+            }
+
+
+        },
+
+        handleComponentsOnSize: function () {
+
+            if ($(window).innerWidth() <= 500) {
+
+                Root.subjects.css({
+                    overflow: ""
+                });
+
+                if (Root.subjects_container.css("position") === "fixed") {
+                    Root.subjects_container.hide(0);
+                    Root.subjects.hide(0);
+                    Root.subjects_toggle.css({right: "0"});
+                    Root.subjects_toggle.css({
+                        left: "",
+                        zIndex: "0"
+                    });
+
+
+                    Root.subjects_container.css({
+                        width: "22%",
+                        height: "",
+                        maxHeight: "",
+                        overflow: "",
+                        float: "right",
+                        position: "sticky",
+                        top: "55px",
+                        right: "0",
+                        backgroundColor: "",
+                        boxShadow: "",
+                        borderRadius: ""
+                    });
+                }
+
+                Root.content_container.css({
+                    float: "",
+                    marginTop: "-5px",
+                    marginBottom: "-40px",
+                    paddingTop: "40px",
+                    paddingBottom: "40px",
+                });
+
+                Root.navbar_header.show();
+                Root.subjects_toggle.show();
+                Root.navbar_toggle.show();
+                Root.navbar_items_container.hide();
+                Root.subjects_container.hide();
+                Root.subjects.hide();
+                Root.content_container.css({
+                    width: "100%",
+                    position: "relative",
+                    top: "-35px",
+                    zIndex: -5
+                });
+
+            } else if ($(window).innerWidth() <= 900) {
+
+                Root.subjects.css({
+                    overflow: ""
+                });
+
+                if (Root.subjects_container.css("position") === "fixed") {
+                    Root.subjects_container.hide(0);
+                    Root.subjects.hide(0);
+                    Root.subjects_toggle.css({right: "0"});
+                    Root.subjects_toggle.css({
+                        left: "",
+                        zIndex: "0"
+                    });
+
+
+                    Root.subjects_container.css({
+                        width: "22%",
+                        height: "",
+                        maxHeight: "",
+                        overflow: "",
+                        float: "right",
+                        position: "sticky",
+                        top: "55px",
+                        right: "0",
+                        backgroundColor: "",
+                        boxShadow: "",
+                        borderRadius: ""
+                    });
+                }
+
+                Root.content_container.css({
+                    float: "",
+                    marginTop: "-5px",
+                    marginBottom: "-40px",
+                    paddingTop: "40px",
+                    paddingBottom: "40px",
+                });
+
+                Root.navbar_header.show();
+                Root.subjects_toggle.show();
+                Root.navbar_toggle.show();
+                Root.navbar_items_container.hide();
+                Root.subjects_container.hide();
+                Root.subjects.hide();
+                Root.content_container.css({
+                    width: "100%",
+                    position: "relative",
+                    top: "-35px",
+                    zIndex: -5
+                });
+
+            } else if ($(window).innerWidth() <= 930) {
+
+
+                Root.subjects.css({
+                    overflow: "auto"
+                });
+
+                if (Root.subjects_container.css("position") === "fixed") {
+                    Root.subjects_container.hide(0);
+                    Root.subjects.hide(0);
+                    Root.subjects_toggle.css({right: "0"});
+                    Root.subjects_toggle.css({
+                        left: "",
+                        zIndex: "0"
+                    });
+
+
+                    Root.subjects_container.css({
+                        width: "22%",
+                        height: "",
+                        maxHeight: "",
+                        overflow: "",
+                        float: "right",
+                        position: "sticky",
+                        top: "55px",
+                        right: "0",
+                        backgroundColor: "",
+                        boxShadow: "",
+                        borderRadius: ""
+                    });
+                }
+
+                Root.subjects_toggle.show();
+
+                Root.content_container.css({
+                    float: "",
+                    marginTop: "-5px",
+                    marginBottom: "-40px",
+                    paddingTop: "40px",
+                    paddingBottom: "40px",
+                });
+
+                Root.navbar_separator.hide();
+                if (Root.header_logo.css("display") === "none") {
+                    Root.header.css({
+                        height: "50px",
+                    });
+                } else {
+                    Root.header.css({
+                        height: "220px",
+                    });
+                }
+
+                Root.nav_first_item.css({
+                    marginTop: "20px",
+                    position: "",
+                    top: "",
+                    marginLeft: "10px",
+                });
+
+                Root.navbar.css({
+                    height: "50px",
+                    backgroundColor: "rgba(226,90,90,0.55)"
+                });
+
+                Root.navbar_items.css({
+                    display: "",
+                    marginTop: "",
+                    marginRight: "20px",
+                });
+
+                Root.navbar_header.hide();
+                Root.navbar_toggle.hide();
+                Root.navbar_items_container.show();
+
+                Root.subjects_container.hide();
+                Root.subjects.hide();
+                Root.content_container.css({
+                    width: "100%",
+                    position: "relative",
+                    top: "-35px",
+                    zIndex: -5
+                });
+
+            } else if ($(window).innerWidth() <= 1022) {
+
+                Root.subjects.css({
+                    overflow: "auto"
+                });
+
+                if (Root.subjects_container.css("position") === "fixed") {
+                    Root.subjects_container.hide(0);
+                    Root.subjects.hide(0);
+                    Root.subjects_toggle.css({right: "0"});
+                    Root.subjects_toggle.css({
+                        left: "",
+                        zIndex: "0"
+                    });
+
+
+                    Root.subjects_container.css({
+                        width: "22%",
+                        height: "",
+                        maxHeight: "",
+                        overflow: "",
+                        float: "right",
+                        position: "sticky",
+                        top: "55px",
+                        right: "0",
+                        backgroundColor: "",
+                        boxShadow: "",
+                        borderRadius: ""
+                    });
+                }
+
+                Root.subjects_toggle.hide();
+
+                Root.content_container.css({
+                    float: "left",
+                    marginTop: "",
+                    marginBottom: "",
+                    margin: "auto",
+                    paddingTop: "",
+                    paddingBottom: "",
+                    padding: "auto"
+                });
+
+
+                Root.navbar_separator.hide();
+                if (Root.header_logo.css("display") === "none") {
+                    Root.header.css({
+                        height: "50px",
+                    });
+                } else {
+                    Root.header.css({
+                        height: "220px",
+                    });
+                }
+
+                Root.nav_first_item.css({
+                    marginTop: "20px",
+                    position: "",
+                    top: "",
+                    marginLeft: "10px",
+                });
+
+                Root.navbar.css({
+                    height: "50px",
+                    backgroundColor: "rgba(226,90,90,0.55)"
+                });
+
+                Root.navbar_items.css({
+                    display: "",
+                    marginTop: "",
+                    marginRight: "20px",
+                    paddingRight: "6px",
+                    float: "right",
+                });
+
+                Root.navbar_header.hide();
+                Root.navbar_toggle.hide();
+                Root.navbar_items_container.show();
+                Root.subjects_container.show();
+                Root.subjects.show();
+                Root.content_container.css({
+                    width: "70%",
+                    float: "left",
+                    position: "",
+                    top: ""
+                });
+
+            } else {
+
+                Root.subjects.css({
+                    overflow: "auto"
+                });
+
+                if (Root.subjects_container.css("position") === "fixed") {
+                    Root.subjects_toggle.css({right: "0"});
+                    Root.subjects_toggle.css({
+                        left: "",
+                        zIndex: "0"
+                    });
+
+
+                    Root.subjects_container.css({
+                        width: "22%",
+                        height: "",
+                        maxHeight: "",
+                        overflow: "",
+                        float: "right",
+                        position: "sticky",
+                        top: "55px",
+                        right: "0",
+                        backgroundColor: "",
+                        boxShadow: "",
+                        borderRadius: ""
+                    });
+                    Root.subjects_container.show();
+                }
+
+                Root.subjects_toggle.hide();
+
+                Root.content_container.css({
+                    float: "left",
+                    marginTop: "",
+                    marginBottom: "",
+                    margin: "auto",
+                    paddingTop: "",
+                    paddingBottom: "",
+                    padding: "auto"
+                });
+
+
+                Root.navbar_separator.hide();
+                if (Root.header_logo.css("display") === "none") {
+                    Root.header.css({
+                        height: "50px",
+                    });
+                } else {
+                    Root.header.css({
+                        height: "220px",
+                    });
+                }
+
+                Root.nav_first_item.css({
+                    marginTop: "20px",
+                    marginBottom: "",
+                    position: "",
+                    top: "",
+                    marginLeft: "10px",
+                });
+
+                Root.navbar.css({
+                    height: "50px",
+                    backgroundColor: "rgba(226,90,90,0.55)"
+                });
+
+                Root.navbar_items.css({
+                    display: "",
+                    marginTop: "",
+                    marginRight: "20px",
+                    paddingRight: "6px",
+                    float: "right",
+                });
+
+                Root.navbar_header.hide();
+                Root.navbar_toggle.hide();
+                Root.navbar_items_container.show();
+                Root.subjects_container.show();
+                Root.subjects.show();
+
+                Root.content_container.css({
+                    width: "70%",
+                    float: "left",
+                    position: "",
+                    top: ""
+                });
+            }
+
+        },
+
+
+    };
+
+</script>
+
+
+</body>
+
+</html>
+

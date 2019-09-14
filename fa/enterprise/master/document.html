@@ -1,0 +1,4932 @@
+<!doctype html>
+<html lang="en">
+<link rel="icon" type="image/png" href="../../../Dependencies/Images/favicon.png"/>
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>مستندات رد فریم ورک - کیت جامع</title>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .block::after {
+            clear: both;
+        }
+
+        .nav-item {
+            color: rgba(211, 211, 211, 0.22);
+            text-decoration: none;
+            margin-right: 20px;
+            transition: 0.2s;
+            text-align: right;
+        }
+
+        .nav-item:hover {
+            color: white;
+            transition: 0.6s;
+        }
+
+        #nav-first-item {
+            margin-right: 20px;
+            padding-bottom: 7px;
+            border-radius: 2px;
+            padding-left: 6px;
+            padding-right: 6px;
+            margin-left: 10px;
+        }
+
+        #nav-item-current {
+            color: white;
+            text-decoration: none;
+        }
+
+        .lang {
+            color: rgba(211, 211, 211, 0.22);
+            font-size: 13px;
+        }
+
+        .lang:hover {
+            color: white;
+            transition: 0.6s;
+        }
+
+        .codebox {
+            line-height: 32px;
+            margin-right: 4%;
+            margin-left: 4%;
+            padding: 15px;
+            font-family: Courier, sans-serif;
+            font-size: 13px;
+            color: #fff;
+            background-color: rgba(61, 61, 61, 0.96);
+            -webkit-border-radius: 0 0 6px 6px;
+            -moz-border-radius: 0 0 6px 6px;
+            border-radius: 0 0 4px 4px;
+            margin-bottom: 10px;
+            overflow: auto;
+        }
+
+        .codeheader {
+            text-align: right;
+            direction: rtl;
+            margin-right: 4%;
+            margin-left: 4%;
+            padding: 5px 5px 5px 10px;
+            font-family: 'Roboto', sans-serif;
+            font-size: 16px;
+            color: #fff;
+            -webkit-border-radius: 6px 6px 0 0;
+            -moz-border-radius: 6px 6px 0 0;
+            border-radius: 4px 4px 0 0;
+            background-color: rgba(226, 90, 90, 0.8);
+        }
+
+        .box {
+            box-shadow: 0 0 0.625vw 0 rgba(0, 0, 0, 0.04);
+            padding: 8px;
+            border-radius: 5px;
+            background-color: rgba(192, 192, 192, 0.35);
+            overflow: auto;
+            font-family: Calibri, sans-serif;
+            text-align: right;
+            direction: rtl;
+        }
+
+        .content-title {
+            text-align: right;
+            direction: rtl;
+            text-shadow: black 0 0 1px;
+            font-family: 'Segoe UI Light', sans-serif;
+        }
+
+        .content-box {
+            margin: 40px;
+            background-color: white;
+            padding: 15px;
+            box-shadow: 0 0 0.625vw 0 rgba(0, 0, 0, 0.24);
+            border-radius: 4px;
+        }
+
+        p {
+            direction: rtl;
+            text-align: right;
+            font-family: Calibri, sans-serif;
+        }
+    </style>
+
+    <meta name="theme-color" content="rgba(226, 90, 90, 0.8)">
+
+    <meta name="keywords"
+          content="رد فریم ورک,فریم ورک پی اچ پی,فریم ورک PHP, پی اچ پی,PHP,چهارچوب توسعه پی اچ پی,برنامه نویسی,توسعه نرم افزار,Framework,PHP Framework,Red Framework,Programming,Software Development">
+
+    <meta name="description" content="رد فریم ورک - مستندات کامل کیت جامع">
+
+    <meta name="author" content="RedCoder">
+
+    <meta name="robots" content="index, follow">
+
+    <meta name="revisit-after" content="3 days">
+</head>
+
+<body red-app="main" red-controller="enterprise_doc_fa"
+      style="box-shadow: 0 0 0.625vw 0 rgba(0,0,0,0.24);border-radius: 5px">
+
+<div id="loader"
+     style="direction: rtl;text-shadow: black 0 0 1px;background-color: white;height: 100%;width: 100%;position: fixed;z-index: 25;right: 0;left: 0;text-align: center;margin-top: -8px">
+    <img style="position: relative;top: 23%;width: 200px;height: 200px" src="../../../Dependencies/Images/loading.gif"
+         alt="Loading">
+    <br/>
+    <span style="position: relative;top: 26%;">در حال بارگیری اطلاعات ...</span>
+    <br/>
+    <span style="position: relative;top: 32%;">از صبر و شکیبایی شما سپاس گذاریم</span>
+</div>
+
+<div id="header"
+     style="z-index: 1;box-shadow: 0 0 0.625vw 0 rgba(0,0,0,0.24);-moz-user-select: -moz-none;-webkit-user-select: none;-ms-user-select: none;user-select: none;position:sticky;top: 0;height: 220px;max-height: 220px;background-image: url('../../../Dependencies/Images/Header_Background.jpg');
+                 background-size: cover;width: 100%;margin: auto;border-radius: 5px 5px 0 0;">
+    <img id="header-logo" alt="Red Framework" draggable="false"
+         src="../../../Dependencies/Images/Red_Framework_Logo_For_Header.png"
+         style="opacity: 0.80;height: 120px;width: 120px;margin-top: 30px;float: right">
+    <div id="header-title"
+         style="font-family: Calibri, sans-serif;text-align: right;font-size: 22px;text-shadow: 0 0 0.625vw 0 rgba(0,0,0,0.50);color:#ffffff;padding-top: 60px;">
+        رد فریم ورک
+    </div>
+    <div id="header-caption"
+         style="font-family: Calibri, sans-serif;text-align: right;text-shadow: 0 0 0.625vw 0 rgba(0,0,0,0.50);color:#ffffff;padding-top: 14px;">
+        میزبان اپلیکیشن های جامع
+    </div>
+    <div id="navbar"
+         style="box-shadow: 0 0 0.625vw 0 rgba(0,0,0,0.35);position: absolute;left: 0;top: 170px;z-index: 3;color: white;width: 100%;height: 50px;background-color: rgba(226,90,90,0.55);">
+        <span id="navbar-header"
+              style="display: none;font-family: Calibri, sans-serif;position:relative;top: 14px;right: 12px;float: right;">مستندات رد فریم ورک</span>
+        <span id="navbar-toggle"
+              style="width: 26px;height: 26px;cursor: pointer;display: none;position:relative;top: 9px;left: 8px;float: left"><img
+                src="../../../Dependencies/Images/menu_rtl.png" alt="Expand Menu"></span>
+        <div id="navbar-items" style="padding: 15px 9px;font-size: 15px;color: #000;text-shadow: white 0 0 1px">
+            <hr id="navbar-separator"
+                style="color: white;text-align: center;margin: auto;position:relative;top: 20px;width: 100%;display: none">
+
+            <a href="#!home" class="nav-item" id="nav-first-item" style="float: right;">
+                خانه
+                <img style="opacity: 0.5;width: 15px;height: 15px;margin-left: 4px;position:relative;top: 2.5px;"
+                     src="../../../Dependencies/Images/home.png" alt="Home">
+            </a>
+
+            <a href="#!documentation" class="nav-item" style="float: right;">
+                مستندات
+                <img style="opacity: 0.5;width: 15px;height: 15px;margin-left: 4px;position:relative;top: 2.5px;"
+                     src="../../../Dependencies/Images/document.png" alt="Document">
+            </a>
+
+            <a href="#!enterprise_doc" id="nav-item-current" class="nav-item" style="float: right;">
+
+                کیت نوسعه جامع
+                <img style="width: 15px;height: 15px;margin-left: 4px;position:relative;top: 2.5px"
+                     src="../../../Dependencies/Images/app.png" alt="App">
+            </a>
+
+
+            <a href="#!console_doc" class="nav-item" style="float: right;">
+                کیت کنسول اپلیکیشن
+                <img style="opacity: 0.5;width: 15px;height: 15px;margin-left: 4px;position:relative;top: 2.5px"
+                     src="../../../Dependencies/Images/console.png" alt="Console">
+            </a>
+
+            <a href="#!red_js_doc" class="nav-item" style="float: right;">
+                رد جی اس
+                <img style="opacity: 0.5;width: 15px;height: 15px;margin-left: 4px;position:relative;top: 2.5px"
+                     src="../../../Dependencies/Images/java-script.png" alt="Red JS">
+            </a>
+
+            <span id="language"
+                  style="cursor: pointer;color: white;text-decoration: none;margin-left: 20px;font-size: 12px;position:relative;left: 0;top: -2px;">
+                <img style="width: 15px;height: 15px;margin-right: 6px;position:relative;top: 1px"
+                     src="../../../Dependencies/Images/language.png" alt="Language">
+                <span id="current-language">FA</span>
+
+                <img style="margin-left: 3px;width: 10px;height: 10px;margin-right: 6px;position:relative;top: 1px"
+                     src="../../../Dependencies/Images/drop-down-arrow.png" alt="Drop Down">
+                <div id="lang-list"
+                     style="text-shadow: white 0 0 1px;padding: 5px;display: none;width: 140px;text-align: center;background-color: rgba(226,90,90,0.95);box-shadow: 0 0 0.625vw 0 rgba(0,0,0,0.24);height: 50px;position:absolute;left: 0;margin-top: 10px;border-radius: 0 0 4px 4px;">
+                    <div id="lang-fa" class="lang" style="font-family: Calibri, sans-serif">Persian - Fa</div>
+                    <div id="lang-en" class="lang"
+                         style="font-family: Calibri, sans-serif;margin-bottom: 7px;margin-top: 6px;">English - En</div>
+                </div>
+            </span>
+
+            <span id="version" style="position:relative;top: -3px;margin-left: 20px;">
+                 <img style="width: 18px;height: 18px;margin-right: 10px;position:relative;top: 4px"
+                      src="../../../Dependencies/Images/version.png" alt="Version">
+                <select style="border-color: white;height: 27px;width: 140px;box-shadow: 0 0 0.625vw 0 rgba(0,0,0,0.10);border-radius: 5px;"
+                        name="version" id="select-version">
+                    <option value="1.0.0">1.0.0</option>
+                </select>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div id="subjects-container" style="width: 22%;float: right;
+margin-bottom: 20px;position:sticky;right: 0;top: 55px;z-index: 0;">
+
+    <div id="subjects" style="overflow: auto;max-height: 90vh;margin-top: 10px;">
+        <ul style="direction: rtl;font-family: 'Segoe UI Light', sans-serif;margin-right: 11px;color: rgba(226,90,90,0.70);line-height: 19px;">
+            <li id="overview-s"><a href="#overview" style="text-decoration: none;color: black;">نمای کلی</a></li>
+            <li id="directory-structure-s"><a href="#directory-structure" style="text-decoration: none;color: black;">ساختار
+                پوشه ها</a></li>
+            <li id="configuration-s"><a href="#configuration"
+                                        style="text-decoration: none;color: black">پیکربندی</a></li>
+            <li id="environment-s"><a href="#environment" style="text-decoration: none;color: black">متغیر های محیط
+                توسعه</a></li>
+            <li id="routing-s"><a href="#routing" style="text-decoration: none;color: black">مسیر یابی</a></li>
+            <li id="controllers-s"><a href="#controllers" style="text-decoration: none;color: black">کنترلر</a>
+            </li>
+            <li id="models-s"><a href="#models" style="text-decoration: none;color: black">مدل</a></li>
+            <li id="views-s"><a href="#views" style="text-decoration: none;color: black">ویو</a></li>
+            <li id="middlewares-s"><a href="#middlewares" style="text-decoration: none;color: black">میان راهی (فرانت
+                کنترلر)</a>
+            </li>
+            <li id="api-s"><a href="#api" style="text-decoration: none;color: black">ای پی آی</a></li>
+            <li id="database-engine-s"><a href="#database-engine" style="text-decoration: none;color: black">موتور
+                پایگاه داده</a></li>
+            <li id="pagination-s"><a href="#pagination" style="text-decoration: none;color: black">صفحه بندی</a></li>
+            <li id="mail-server-s"><a href="#mail-server" style="text-decoration: none;color: black">ایمیل سرور</a>
+            </li>
+            <li id="validation-service-s"><a href="#validation-service" style="text-decoration: none;color: black">سرویس
+                ارزیابی اعتبار رشته</a></li>
+            <li id="filter-service-s"><a href="#filter-service" style="text-decoration: none;color: black">سرویس فیلتر
+                رشته</a></li>
+            <li id="sanitize-service-s"><a href="#sanitize-service" style="text-decoration: none;color: black">سرویس
+                زدودن رشته</a></li>
+            <li id="debug-components-s"><a href="#debug-components" style="text-decoration: none;color: black">کامپونت
+                های عیب یابی</a></li>
+            <li id="error-handling-s"><a href="#error-handling" style="text-decoration: none;color: black">مدیریت
+                خطا</a></li>
+            <li id="inputs-s"><a href="#inputs" style="text-decoration: none;color: black">داده های ورودی</a></li>
+            <li id="sessions-s"><a href="#sessions" style="text-decoration: none;color: black">نشست</a></li>
+            <li id="cookies-s"><a href="#cookies" style="text-decoration: none;color: black">کوکی</a></li>
+            <li id="crypt-tools-s"><a href="#crypt-tools" style="text-decoration: none;color: black">رمز گذاری</a></li>
+            <li id="post-method-encryption-system-s">
+                <a href="#post-method-encryption-system"
+                   style="text-decoration: none;color: black">سیستم رمز گذاری مند POST</a></li>
+            <li id="language-service-s"><a href="#language-service" style="text-decoration: none;color: black">سرویس
+                زبان ساختار یافته</a></li>
+            <li id="picture-tools-s"><a href="#picture-tools" style="text-decoration: none;color: black">ابزار های
+                عکس</a></li>
+            <li id="captcha-service-s"><a href="#captcha-service" style="text-decoration: none;color: black">سرویس کد
+                امنیتی</a></li>
+            <li id="authentication-s"><a href="#authentication"
+                                         style="text-decoration: none;color: black">ارزیابی اعتبار کاربر</a></li>
+            <li id="ajax-request-s"><a href="#ajax-request" style="text-decoration: none;color: black">درخواست AJAX</a>
+            </li>
+            <li id="csrf-token-s"><a href="#csrf-token" style="text-decoration: none;color: black">جلوگیری از حملات
+                CSRF</a></li>
+
+            <li id="ir-date-s"><a href="#ir-date" style="text-decoration: none;color: black">تاریخ ایران</a></li>
+        </ul>
+    </div>
+</div>
+
+<div id="subjects-toggle"
+     style="display: none;cursor: pointer;box-shadow: 0 4px 2px -2px rgba(0,0,0,0.30);background-color: white;height: 50px;position: fixed;right: 0;margin-top: 40px;border-radius: 3px 0 0 3px">
+    <img src="../../../Dependencies/Images/subjects_menu.png" style="margin: 3px;width: 38px;height: 40px;"
+         alt="Subjects Menu">
+</div>
+
+<div id="content-container" class="block"
+     style="box-shadow: 0 4px 2px -2px rgba(0,0,0,0.24);margin-bottom: auto;width: 70%;float: left;margin-top: auto;background: url('../../../Dependencies/Images/background.png') no-repeat center center fixed;
+     background-size: 100% 100%;border-radius: 0 0 5px 0">
+
+    <div id="overview"
+         class="content-box">
+        <h3 class="content-title">نمای کلی</h3>
+        <hr>
+        <div style="text-align: center">
+            <img id="enterprise-app" style="width: 600px;height: 300px;margin-top: 15px"
+                 src="../../../Dependencies/Images/enterprise_app.png" alt="Enterprise SDK Structure">
+        </div>
+        <p>
+            کیت توسعه جامع یک فریم ورک همه منظوره مدل - ویو - کنترلر به جهت بالا بردن سرعت توسعه و ساماندهی کل سیستم می
+            باشد
+            <br/>
+            این کیت شامل اجزای با کیفیتی از جمله گزینه های زیر می باشد :
+            <br/>
+            <br/>
+            - موتور دیتابیس قدرتمند که قادر به پشتیبانی از سه دیتابیس معروف (MySQL, SQLServer, SQLite) ، سه جایگاه
+            دیتابیس در طول برنامه و ORM با عملکرد بالا که قادر به پشتیبانی CRUD و چندین عملکرد دیگر می باشد.
+            <br/>
+            <br/>
+            - سرویس کد امنیتی
+            <br/>
+            <br/>
+            - ایمیل سرور
+            <br/>
+            <br/>
+            - سرویس آپلود امن
+            <br/>
+            <br/>
+            - سرویس ارزیابی ، فیلتر و زدودن رشته
+            <br/>
+            <br/>
+            - سرویس زبان ساختار یافته
+            <br/>
+            <br/>
+            - سیستم مسیر یابی با عملکرد بالا ، با پشتیبانی از میان راهی (فرانت کنترلر)
+            <br/>
+            <br/>
+            - ورودی های مدیریت شده (پارامتر های URL ، متد GET ، متد POST و غیره)
+            <br/>
+            <br/>
+            - نشست های رمز گذاری شده و ساختار یافته
+            <br/>
+            <br/>
+            - کامپوننت های عیب زدایی از جمله دیباگر و دیباگ بار
+            <br>
+            <br>
+            و ...
+        </p>
+
+    </div>
+
+    <div id="directory-structure"
+         class="content-box">
+        <h3 class="content-title">ساختار
+            پوشه ها</h3>
+        <hr>
+
+        <h4 style="font-family: 'Segoe UI Light', sans-serif">APP :</h4>
+        <div class="box">
+            <q>اپ دایرکتوری پایه اپلیکیشن شما رو تشکیل
+                میده ؛ تمامی کنترلر ها ، مدل ها ، میان راهی و API های شما در این پوشه نگه داری میشه .
+            </q>
+        </div>
+
+        <h4 style="font-family: 'Segoe UI Light', sans-serif">CONFIG :</h4>
+        <div class="box">
+            <q>تنظیمات اپلیکیشن ، تنظیمات نشست ، تنظیمات
+                سرویس مسیر یاب و متغیر های مسیر در این پوشه نگه داری میشه .
+            </q>
+        </div>
+
+
+        <h4 style="font-family: 'Segoe UI Light', sans-serif">DATABASE :</h4>
+        <div class="box">
+            <q>بک آپ های دیتابیس ، فایل های Migrate
+                دیتابیس ، Schema های دیتابیس و فایل دیتابیس درون برنامه ای SQLite در این پوشه نگه داری میشه .
+            </q>
+        </div>
+
+        <h4 style="font-family: 'Segoe UI Light', sans-serif">PUBLIC :</h4>
+        <div class="box">
+            <q>پوشه پابلیک از سمت کلاینت کاملا قابل دسترسی
+                خواهد بود .
+                <br/>
+                استفاده رایج اون می تونه نگه داری منابع سمت فرانت مثل جاوا اسکریپت ، CSS و ... باشه .
+            </q>
+        </div>
+
+
+        <h4 style="font-family: 'Segoe UI Light', sans-serif">RESOURCES :</h4>
+        <div class="box">
+            <q>پوشه ریسورس نگه دارنده منابع اپلیکیشن شما
+                از جمله زبان های از پیش تعیین شده است
+            </q>
+        </div>
+
+        <h4 style="font-family: 'Segoe UI Light', sans-serif">ROUTES :</h4>
+        <div class="box">
+            <q>نگه دارنده مسیر های ثبت شده در اپلیکیشن شما
+            </q>
+        </div>
+
+        <h4 style="font-family: 'Segoe UI Light', sans-serif">STORAGE :</h4>
+        <div class="box">
+            <q>این پوشه حاوی کش های اپلیکیشن شما می باشد
+            </q>
+        </div>
+
+        <h4 style="font-family: 'Segoe UI Light', sans-serif">VENDOR :</h4>
+        <div class="box">
+            <q>دایرکتوری Composer ؛ نگه دارنده پکیج ها و
+                استاندارد PSR4 برای Autoloading
+            </q>
+        </div>
+
+        <h4 style="font-family: 'Segoe UI Light', sans-serif">VIEWS :</h4>
+        <div class="box">
+            <q>این دایرکیتوری حاوی ویو های می باشد که توسط
+                موتور قالب ، رندر خواهند شد .
+            </q>
+        </div>
+
+        <ul style="font-family: Calibri, sans-serif;font-size: 18px;color: rgb(226,90,90);cursor: pointer">
+            <li><span style="color: black">app</span>
+                <ul style="font-family: Calibri, sans-serif;font-size: 16px;color: rgb(226,90,90);padding-left: 22px">
+                    <li><span style="color: black">APIs</span></li>
+                    <li><span style="color: black">Bootstrap</span></li>
+                    <li><span style="color: black">Controllers</span></li>
+                    <li><span style="color: black">Models</span></li>
+                    <li><span style="color: black">Middlewares</span></li>
+                </ul>
+            </li>
+            <li><span style="color: black">config</span></li>
+            <li><span style="color: black">database</span>
+                <ul style="font-family: Calibri, sans-serif;font-size: 16px;color: rgb(226,90,90);padding-left: 22px">
+                    <li><span style="color: black">Backup</span></li>
+                    <li><span style="color: black">Migration</span></li>
+                    <li><span style="color: black">Schema</span></li>
+                    <li><span style="color: black">SQLite</span></li>
+                </ul>
+            </li>
+            <li><span style="color: black">public</span>
+                <ul style="font-family: Calibri, sans-serif;font-size: 16px;color: rgb(226,90,90);padding-left: 22px">
+                    <li><span style="color: black">CSS</span></li>
+                    <li><span style="color: black">Fonts</span></li>
+                    <li><span style="color: black">Images</span></li>
+                    <li><span style="color: black">JS</span></li>
+                    <li><span style="color: black">Library</span></li>
+                    <li><span style="color: black">Uploads</span></li>
+                    <li><span style="color: black">Red</span></li>
+                </ul>
+            </li>
+            <li><span style="color: black">resources</span>
+                <ul style="font-family: Calibri, sans-serif;font-size: 16px;color: rgb(226,90,90);padding-left: 22px">
+                    <li><span style="color: black">Language</span></li>
+                </ul>
+            </li>
+            <li><span style="color: black">routes</span></li>
+            <li><span style="color: black">storage</span>
+                <ul style="font-family: Calibri, sans-serif;font-size: 16px;color: rgb(226,90,90);padding-left: 22px">
+                    <li><span style="color: black">Analytics</span></li>
+                    <li><span style="color: black">Session</span></li>
+                    <li><span style="color: black">TemplateEngine</span></li>
+                </ul>
+            </li>
+            <li><span style="color: black">vendor</span></li>
+            <li><span style="color: black">views</span></li>
+        </ul>
+    </div>
+
+    <div id="configuration"
+         class="content-box">
+        <h3 class="content-title">پیکربندی</h3>
+        <hr>
+        <p>
+            برای شروع کار با رد فریم ورک ابتدا باید یک سری تنظیمات رو اعمال کنید ؛
+            اولین مرحله تولید کردن کلید امنیتی جدید برای رمز نگاری اپلیکیشن شما است .
+            <br/>
+            <br/>
+            برای این کار نرم افزار رد انالیتیکس رو باز کنید و بر روی منوی Project و تب Generate New Secret Key کلیک کنید
+            <br/>
+            <br/>
+            کلید امنیتی جدید شما آماده خواهد بود .
+        </p>
+
+        <div style="text-align: center">
+            <img id="red-analytics-new-key" style="width: 600px;height: 550px;margin-top: 15px"
+                 src="../../../Dependencies/Images/Red_Analytics_new_secret_key.png"
+                 alt="Red Analytics - New Secret Key">
+        </div>
+
+        <p>
+            تمامی تنظیمات نشست در Config -> Session.php در دسترس خواهند بود
+            <br/>
+            <br/>
+            <br/>
+            تمامی متغیر های مسیر در Config -> Path.php در دسترس خواهند بود
+            <br/>
+            <br/>
+            <span style="font-family: Calibri, sans-serif">*** هرگز متغیر های مسیر مربوط به هسته فریم ورک (کامپوننت های آماده) را شخصی سازی یا حذف نکنید .
+            </span>
+            <br/>
+            <br/>
+            متغیر های مسیری که باید توسط توسعه دهنده تعریف شوند :
+        </p>
+        <div class="codeheader">
+            تعریف کردن متغیر های مسیر ضروری - مثال
+        </div>
+        <div class="codebox" style="">
+            <code>
+                // ROOT_DIRECTORY
+                <br/>
+                define('ROOT_DIRECTORY', '/');
+                <br/>
+                <br/>
+                // PUBLIC_PATH
+                <br/>
+                define('PUBLIC_PATH', '/public/');
+                <br/>
+                <br/>
+                // MYSQL_PATH - اگر از یک دیتابیس مای اسکیو ال استفاده می کنید
+                <br/>
+                define('MYSQL_PATH', 'D:\Wamp\bin\mysql\mysql5.7.24\bin\mysql');
+                <br/>
+                <br/>
+                // MYSQL_DUMP_PATH - اگر از یک دیتابیس مای اس کیو ال استفاده می کنید
+                <br/>
+                define('MYSQL_DUMP_PATH', 'D:\Wamp\bin\mysql\mysql5.7.24\bin\mysqldump');
+                <br/>
+                <br/>
+                // SQL_CMD_PATH - اگر از یک دیتابیس اس کیو ال سرور استفاده می کنید
+                <br/>
+                define('SQL_CMD_PATH', '"C:\Program Files\Microsoft SQL Server\Client
+                SDK\ODBC\130\Tools\Binn\SQLCMD.exe"');
+                <br/>
+                <br/>
+                // SQLITE_CLI_PATH - اگر از یک دیتابیس اس کیو لایت استفاده می کنید
+                <br/>
+                define('SQLITE_CLI_PATH', ROOT_PATH . "database" . DS . "SQLite" . DS . 'sqlite3.exe');
+            </code>
+        </div>
+
+        <p>
+            تنظیمات مسیر یاب در Config -> Router.php در دسترس می باشد .
+            <br/>
+            نحوه ست کردن صفحه پیش فرض خطای 404 :
+        </p>
+
+        <div class="codeheader">
+            تنظیم کردن مسیر پیش فرض
+        </div>
+        <div class="codebox">
+            <code>
+                Router::setDefaultRoute(function () {
+                http_response_code('404');
+                \Red\View::render("Red.NotFoundError");
+                });
+            </code>
+        </div>
+
+
+        <p>
+            نحوه ست کردن صفحه پیش فرض خطای 403 (این خطا زمانی رخ می دهد که اچ تی تی پی متد یا سطح دسترسی کاربر درست
+            نباشد) :
+        </p>
+
+        <div class="codeheader">
+            تنظیم کردن خطای دسترسی
+        </div>
+        <div class="codebox">
+            <code>
+                Router::register('error/403', 'GET,POST,PUT,PATCH,DELETE', function (){
+                http_response_code('403');
+                \Red\View::render("Red.AccessError");
+                }, 'All');
+            </code>
+        </div>
+
+        <p>
+            برای تنطیم کردن خطای دسترسی در وب سرور ، فایل .htaccess در دایرکتوری ریشه ای خودتون رو باز کنید و نام دامنه
+            رو جایگزین دامنه خودتون کنید .
+        </p>
+
+        <div class="codeheader">
+            تنظیم کردن خطای دسترسی در وب سرور
+        </div>
+        <div class="codebox">
+            <code>
+                // نام دامنه خودتون رو جایگزین لوکال هاست کنید
+                <br/>
+                ErrorDocument 403 http://localhost/error/403
+            </code>
+        </div>
+    </div>
+
+    <div id="environment"
+         class="content-box">
+        <h3 class="content-title">متغیر های
+            محیط توسعه</h3>
+        <hr>
+        <p>
+            دو راه برای تنظیم کردن متغیر های محیط پیش روی شماست :
+            <br/>
+            <br/>
+            1 - فایل Environment.json در دایرکتوری ریشه ای
+            <br/>
+            <br/>
+            2 - فایل Config.php در دایرکتوری Config
+            <br/>
+
+            در شرایطی که شما راه دوم رو انتخاب کنید باید گزینه استفاده کردن از PHP Config رو فعال کنید :
+
+        </p>
+        <div style="direction: rtl" class="codeheader">
+            فعال کردن گزینه PHP Config
+        </div>
+        <div class="codebox">
+            <code>
+                Red::setPhpConfig(TRUE);
+            </code>
+        </div>
+
+
+        <h4 style="font-family: 'Segoe UI Light', sans-serif">PROJECT - Name :</h4>
+        <div class="box">
+            <p>
+                نام پروژه شما که در رد آنالیتیکس ، دیباگ بار و در دیگر ابزار ها نمایش داده خواهد شد .
+            </p>
+        </div>
+
+        <h4 style="font-family: 'Segoe UI Light', sans-serif">PROJECT - Version :</h4>
+        <div class="box">
+            <p>ورژن اپلیکیشن شما که در رد آنالیتیکس ،
+                دیباگ بار و دیگر ابزار ها نمایش داده خواد شد .
+            </p>
+        </div>
+
+        <h4 style="font-family: 'Segoe UI Light', sans-serif">PROJECT - State :</h4>
+        <div class="box">
+            <p>این فیلد حاوی مرحله فعلی پروژه شما هست که
+                میتونه یکی از سه گزینه زیر باشه :
+                <br/>
+                <br/>
+                1 - Production
+                <br/>
+                این مرحله به معنی "در حال توسعه" می باشد ؛ در این حالت تمامی کامپوننت های توسعه از جمله دیباگر و دیباگ
+                بار فعال خواهند بود .
+                <br/>
+                <br/>
+                2 - Maintenance
+                <br/>
+                این مرحله به معنی "در حال نگه داری" می باشد ؛ از این رو تمامی کامپوننت های عیب یابی غیر فعال خواهند بود
+                .
+                <br/>
+                <br/>
+                3 - Break :
+                <br/>
+                این مرحله به معنی "وقفه نگه داری" می باشد ؛ در این حالت سرور غیر فعال خواهد بود .
+            </p>
+        </div>
+
+
+        <h4 style="font-family: 'Segoe UI Light', sans-serif">PROJECT - SupervisorIP :</h4>
+        <div class="box">
+            <p>کاربری که آی پی آدرسش برابر با SupervisorIP
+                باشد به عنوان Supervisor شناخته شده و در طول "وقفه نگه داری" می تواند پروژه را رصد کند .
+            </p>
+        </div>
+
+        <h4 style="font-family: 'Segoe UI Light', sans-serif">PROJECT - SDK :</h4>
+        <div class="box">
+            <p>
+                SDK اشاره به کیت توسعه استاندارد دارد که کیت توسعه مورد استفاده برای این فریم ورک Red Framework
+                Enterprise Application می باشد.
+            </p>
+        </div>
+
+        <h4 style="font-family: 'Segoe UI Light', sans-serif">PROJECT - Language :</h4>
+        <div class="box">
+            <p>زبان فعلی اپلیکیشن شما ؛ زمانی که اپلیکشن
+                چند زبانه نوشته شود تمامی خطا ها و متن ها به این متغیر بستگی دارد و به اصطلاح Soft Text هستند .
+            </p>
+        </div>
+
+        <h4 style="font-family: 'Segoe UI Light', sans-serif">PROJECT - Programmer :</h4>
+        <div class="box">
+            <p>نام برنامه نویس یا تیم برنامه نویس پروژه
+                شما .
+            </p>
+        </div>
+
+        <h4 style="font-family: 'Segoe UI Light', sans-serif">PROJECT - Encryption :</h4>
+        <div class="box">
+            <p>سیستم رمزگذاری متد POST ؛ این مقدار می
+                تواند off یا on باشد .
+            </p>
+        </div>
+
+        <h4 style="font-family: 'Segoe UI Light', sans-serif">PROJECT - SecretKey :</h4>
+        <div class="box">
+            <p>
+                این متغیر حاوی Salt Key اپلیکیشن شما برای رمز گذاری است ؛ Salt اصطلاحی است که در کریپتوگرافی به کار می
+                رود و در اصل به اضافه کردن Salt Key به الگوریتم استاندارد عمل Salting می گویند .
+            </p>
+        </div>
+
+        <h4 style="font-family: 'Segoe UI Light', sans-serif">PROJECT - TimeZone :</h4>
+        <div class="box">
+            <p>موقعیت زمانی اپلیکیشن شما (PHP Timezone)
+            </p>
+        </div>
+
+        <h4 style="font-family: 'Segoe UI Light', sans-serif">PROJECT - Cache :</h4>
+        <div class="box">
+            <p>برای عمل کش کردن این گزینه را برابر on قرار
+                بدهید ؛
+                <br/>
+                با این کار فریم ورک و موتور قالب برای صرفه جویی در استفاده از منابع اعمال روتین خود را کش می کنند
+            </p>
+        </div>
+
+        <h4 style="font-family: 'Segoe UI Light', sans-serif">DATABASES Slot :</h4>
+        <div class="box">
+            <p>
+                رد فریم ورک سه جایگاه دیتابیس خالی برای توسعه دهنده فراهم می کند که در بخش "موتور پایگاه داده" کامل
+                توضیح داده خواهد شد .
+            </p>
+        </div>
+
+        <h4 style="font-family: 'Segoe UI Light', sans-serif">Mail Server :</h4>
+        <div class="box">
+            <p>
+                رد فریم ورک بستری برای ارسال آسان ایمیل (SMTP Mail Server) فراهم میاورد که در بخش "ایمیل سرور" کامل
+                توضیح داده خواهد شد .
+            </p>
+        </div>
+
+        <h4 style="font-family: 'Segoe UI Light', sans-serif"> DEBUG - DebugBar :</h4>
+        <div class="box">
+            <p>
+                دیباگ بار یک کامپوننت زیبا و کارامد در رد فریم ورک ست که به جهت کمک به توسعه دهنده برای برسی روند اجرای
+                برنامه طراحی شده است ؛ مقدار این متغیر می تواند on یا off باشد .
+            </p>
+        </div>
+
+        <h4 style="font-family: 'Segoe UI Light', sans-serif"> DEBUG - Errors :</h4>
+        <div class="box">
+            <p>
+                رد فریم ورک کامپوننت عیب یاب حرفه ای به جهت کمک به توسعه دهنده در روند عیب یابی برنامه فراهم میاورد ؛
+                مقدار این متغیر می تواند on یا off باشد .
+            </p>
+        </div>
+    </div>
+
+    <div id="routing"
+         class="content-box">
+        <h3 class="content-title">مسیر یابی</h3>
+        <hr>
+        <p>
+            مسیر در رد فریم ورک دارای خواص زیر است :
+            <br/>
+        </p>
+
+        <ul style="direction: rtl;text-align: right;font-family: Calibri, sans-serif;color: rgb(226,90,90);">
+            <li><span style="color: #000;">
+                خود مسیر (URL) + پارامتر های مسیر (اختیاری و غیر اختیاری)
+            </span></li>
+            <li><span style="color: #000;">
+                متد مسیر (که در واقع همان HTTP متد است)
+                </span></li>
+            <li><span style="color: #000;">اکشن مسیر (Controller@Method)</span></li>
+            <li><span style="color: #000;">میان راهی های مسیر (فرانت کنترلر)</span></li>
+        </ul>
+
+        <p>
+            برای ثبت مسیر جدید دو راه پیش روی شماست :
+            <br/>
+            <br/>
+            1 - ثبت مسیر به صورت دستی از Routes -> Routes.php
+            <br/>
+            2 - ثبت مسیر به وسیله رد آنالیتیکس
+            <br/>
+            <br/>
+            <br/>
+            در مثال رو به رو ما یک مسیر به صورت دستی و GET متد با دو پارامتر (که یکی غیر اختیاری و دیگری اختیاری است) به
+            همراه میان راهی ارزیابی اعتبار و یک مسیر با متد GET و POST که اکشن آن ابجکت است ثبت خواهیم کرد :
+        </p>
+
+        <div class="codeheader">
+            ثبت مسیر
+        </div>
+        <div class="codebox">
+            <code>
+                Router::register("panel/{param1}{?param2}", "GET", "PanelController@panel", ["Authentication:admin"]);
+                <br/>
+                <br/>
+                <br/>
+                Router::register("welcome/{name}", "GET, POST", function($name) { echo 'Welcome :' . $name; });
+            </code>
+        </div>
+
+        <p>
+            ثبت مسیر به وسیله رد آنالیتیکس :
+        </p>
+
+        <div style="text-align: center">
+            <img id="red-analytics-register-route" style="width: 694px;height: 418px"
+                 src="../../../Dependencies/Images/Red_Analytics_register_route.png"
+                 alt="Red Analytics - Register Route">
+        </div>
+
+    </div>
+
+
+    <div id="controllers"
+         class="content-box">
+        <h3 class="content-title">کنترلر</h3>
+        <hr>
+        <p>
+
+            کنترلر در الگو مدل - ویو - کنترلر نقش اصلی را بر عهده دارد ؛ یک کنترلر تمامی تصمیم گیری های نهایی و ارتباط
+            بین فرانت کنترلر (میان راهی / درخواست) ، مدل و ویو را مدیریت میکند .
+
+            <br/>
+            <br/>
+            نام یک کنترلر در رد فریم ورک از ساختار نوشتاری CamelCase (حرف اول هر کلمه حروف بزرگ می باشد) بهره می برد و
+            پسوند Controller را دارا می باشد .
+            <br/>
+            نام فضای کنترلر App\Controllers می باشد
+            <br/>
+            کنترلر جدید شما باید از کلاس کنترلر پایه ارث بری کند :
+        </p>
+
+        <div class="codeheader">
+            کنترلر جدید
+        </div>
+        <div class="codebox">
+            <code>
+                < ? php
+                <br/>
+                /** Red Framework Controller
+                <br/>
+                * Generated By Red Analytics
+                <br/>
+                *
+                <br/>
+                * Date: 26/08/2019
+                <br/>
+                * Time: 01:14:23
+                <br/>
+                * @author RedCoder
+                <br/>
+                */
+                <br/>
+                <br/>
+
+                namespace App\Controllers;
+                <br/>
+                <br/>
+
+                use Red\Base\Controller;
+
+                <br/>
+                <br/>
+
+                class TestController extends Controller
+                <br/>
+
+                {
+                <br/>
+                <br/>
+
+                }
+
+            </code>
+        </div>
+        <br/>
+        <p>
+            تولید کردن کنترلر جدید به وسیله رد آنالیتیکس :
+        </p>
+
+        <div style="text-align: center">
+            <img id="red-analytics-generate-controller" style="width: 600px;height: 550px;margin-top: 15px"
+                 src="../../../Dependencies/Images/Red_Analytics_generate_controller.png"
+                 alt="Red Analytics - Generate New Controller">
+        </div>
+
+        <p>
+            برای تولید کردن مدل تیک Generate Model رو بزنید .
+        </p>
+        <div class="box">
+            <p>
+                نکته : کلاس کنترلر به طور خودکار یک نمونه از کلاس مدل (با همین نام ، در شرایطی که وجود داشته باشد) گرفته
+                و در متغیر حفاظت شده model قرار می دهد .
+                <br/>
+                در شرایطی که شا بخواهید از این نمونه استفاده کنید و نمونه جدیدی نسازید ، باید کد خودتون رو برای ماشین
+                (در اینجا منظور IDE هست) قابل فهم کنید ؛ روش استانداردی که پی اچ پی برای این کار ارائه داده ، PHP Doc
+                هست که در ادامه توضیح داده خواهد شد .
+            </p>
+        </div>
+
+        <p>
+            مثال :
+        </p>
+
+        <div class="codeheader">
+            کنترلری که توان مسیر یابی ابجکت مدل را دارد
+        </div>
+        <div class="codebox">
+            <code>
+                < ? php
+                <br/>
+                /** Red Framework Controller
+                <br/>
+                * Generated By Red Analytics
+                <br/>
+                *
+                <br/>
+                * Date: 26/08/2019
+                <br/>
+                * Time: 01:14:23
+                <br/>
+                * @author RedCoder
+                <br/>
+                */
+                <br/>
+                <br/>
+
+                namespace App\Controllers;
+                <br/>
+                <br/>
+
+                use Red\Base\Controller;
+
+                <br/>
+                <br/>
+
+                class TestController extends Controller
+                <br/>
+
+                {
+                <br/>
+                &emsp;/**
+                <br/>
+                &emsp;* @var TestModel $this->model
+                <br/>
+                &emsp;*/
+                <br/>
+                &emsp;protected $model;
+                <br/>
+
+                }
+
+            </code>
+        </div>
+    </div>
+
+    <div id="models"
+         class="content-box">
+        <h3 class="content-title">مدل</h3>
+        <hr>
+        <p>
+            مدل در الگوی مدل - ویو - کنترلر نقش لایه ی میانی بین کنترلر و داده ها رو بر عهده دارد .
+            <br/>
+            <br/>
+            نام یک مدل در رد فریم ورک از ساختار نوشتاری CamelCase (حرف اول هر کلمه حروف بزرگ می باشد) بهره می برد و
+            پسوند Model را دارا می باشد .
+            <br/>
+            نام فضای مدل App\Models می باشد
+            <br/>
+            مدل جدید شما باید از کلاس مدل پایه ارث بری کند :
+        </p>
+
+        <div class="codeheader">
+            مدل جدید
+        </div>
+        <div class="codebox">
+            <code>
+                < ? php
+                <br/>
+                /** Red Framework Model
+                <br/>
+                * Generated By Red Analytics
+                <br/>
+                *
+                <br/>
+                * Date: 26/08/2019
+                <br/>
+                * Time: 01:49:10
+                <br/>
+                * @author RedCoder
+                <br/>
+                */
+                <br/>
+                <br/>
+
+                namespace App\Models;
+                <br/>
+                <br/>
+
+                use Red\Base\Model;
+
+                <br/>
+                <br/>
+
+                class TestModel extends Model
+                <br/>
+
+                {
+                <br/>
+                <br/>
+
+                }
+
+            </code>
+        </div>
+
+        <br/>
+        <p>
+            تولید مدل جدید به وسیله رد آنالیتیکس :
+        </p>
+
+        <div style="text-align: center">
+            <img id="red-analytics-generate-model" style="width: 600px;height: 550px;margin-top: 15px"
+                 src="../../../Dependencies/Images/Red_Analytics_generate_model.png"
+                 alt="Red Analytics - Generate New Model">
+        </div>
+
+    </div>
+
+    <div id="views"
+         class="content-box">
+        <h3 class="content-title">ویو</h3>
+        <hr>
+        <p>
+            ویو ها مشابه قالب هستند ؛ تمامی ویو ها در دایرکتوری ویو نگه داری و توسط موتور قالب رندر می شوند .
+            <br/>
+            <br/>
+            موتور قالب به شما این توانایی رو میده تا به راحتی با یک ساختار دستوری مرتب تر میان تگ های HTML از PHP
+            استفاده کنید .
+            <br/>
+            <br/>
+            در حال حاضر رد فریم ورک از موتور قالب Twig که موتور قدرتمند و سریعی هست بهره می بره .
+            <br/>
+            <br/>
+            تمامی مستندات موتور قالب در <a href="https://twig.symfony.com/">وبسایت رسمی Twig
+        </a>
+            قابل دسترس عموم قرار دارد .
+        </p>
+
+        <div class="box">
+            <p>
+                دلیل اصلی من برای انتخاب Twig به عنوان موتور قالب این بود که حدود 90 درصد IDE ها و توسعه دهندگان در حال
+                حاضر قابلیت درک ساختار دستوری Twig رو دارند .
+                <br/>
+                <br/>
+                احتمال توسعه موتور قالب شخصی رد فریم ورک در ورژن های آینده هنوز باقی هست ؛ ولی من این اطمینان رو به تمام
+                توسعه دهندگان میدم که حتی در صورت توسعه موتور قالب شخصی ، سینتکس موتور قالب فعلی باقی بمونه تا ساختار رد
+                فریم ورک یک پارچه نگه داشته بشه .
+            </p>
+        </div>
+
+        <br/>
+        <p>
+            تولید ویو به وسیله رد آنالیتیکس :
+        </p>
+
+        <div style="text-align: center">
+            <img id="red-analytics-generate-view" style="width: 600px;height: 550px;margin-top: 15px"
+                 src="../../../Dependencies/Images/Red_Analytics_generate_view.png" alt="Red Analytics - Generate View">
+        </div>
+
+        <br/>
+
+        <p>
+            رندر کردن ویو :
+            <br/>
+            <br/>
+            نکته : کاراکتر "." عملکرد مشابه جدا کننده دایرکتوری را خواهد داشت .
+        </p>
+
+        <div class="codeheader">
+            رندر کردن ویو
+        </div>
+        <div class="codebox">
+            <code>
+                View::render("Partials.Footer");
+            </code>
+        </div>
+
+    </div>
+
+    <div id="middlewares"
+         class="content-box">
+        <h3 class="content-title">میان
+            راهی</h3>
+        <hr>
+        <p>
+            میان راهی (Middleware) در واقع نام دیگر فرانت کنترلر در الگوی مدل - ویو - کنترلر می باشد .
+            <br/>
+            <br/>
+            در مفهوم ساده تر یک میان راهی کلاسی هست که قبل از پردازش اکشن اصلی در روند مسیر یابی پردازش شده .
+            <br/>
+            <br/>
+            نام فضای میان راهی App\Middlewares می باشد
+            <br/>
+            <br/>
+            برای ساخت یک میان راهی جدید ابتدا باید کلاس انتزاعی Middleware رو ارث بری کنید و سپس متد انتزاعی run رو
+            پیاده سازی کنید .
+            <br/>
+            <br/>
+            متد run بی نهایت پارامتر دریافت می کند و مقدار بازگشتی اون داده ای از نوع Boolean است .
+            <br/>
+            <br/>
+            توجه داشته باشید که اگر متد run مقدار بازگشتی FALSE رو برگرداند پردازش کل اپلیکیشن مختل خواهد شد و اگر مقدار
+            بازگشتی TRUE را برگرداند اپلیکیشن به پردازش ادامه خواهد داد .
+        </p>
+
+
+        <div class="codeheader">
+            میان راهی جدید
+        </div>
+        <div class="codebox">
+            <code>
+                < ? php
+                <br/>
+                /** Red Framework Middleware
+                <br/>
+                * Generated By Red Analytics
+                <br/>
+                *
+                <br/>
+                * Date: 26/08/2019
+                <br/>
+                * Time: 05:25:17
+                <br/>
+                * @author RedCoder
+                <br/>
+                */
+                <br/>
+                <br/>
+                namespace App\Middlewares;
+                <br/>
+                <br/>
+                use Red\Base\Middleware;
+                <br/>
+                <br/>
+
+                class Test extends Middleware
+                <br/>
+                {
+                <br/>
+                &emsp;public function run(... $parameters)
+                &emsp;{
+                <br/>
+                &emsp;// TODO: Implement run() method.
+                <br/>
+                &emsp;}
+                <br/>
+                }
+                <br/>
+            </code>
+        </div>
+
+        <br/>
+        <p>
+            تولید کردن میان راهی به وسیله رد آنالیتیکس :
+        </p>
+
+        <div style="text-align: center">
+            <img id="red-analytics-generate-middleware" style="width: 600px;height: 550px;margin-top: 15px"
+                 src="../../../Dependencies/Images/Red_Analytics_generate_middleware.png"
+                 alt="Red Analytics - Generate Middleware">
+        </div>
+
+        <br/>
+
+        <p>
+            ارسال دو پارامتر 'Admin' و 'Supporter' به میان راهی ارزیابی اعتبار کاربر :
+        </p>
+
+        <div class="codeheader">
+            ارسال پارامتر به میان راهی
+        </div>
+        <div class="codebox">
+            <code>
+                Router::register("panel/{param1}{?param2}", "GET", "PanelController@panel",
+                ["Authentication:admin,supporter"]);
+            </code>
+        </div>
+
+    </div>
+
+    <div id="api"
+         class="content-box">
+        <h3 class="content-title">سرویس ای پی آی</h3>
+        <hr>
+        <p>
+            سرویس ای پی آی در واقع کلاسی هست برای دسته بندی مسیر هایی که ارائه دهنده API خاصی هستند ؛
+            نام فضای این کلاس App\APIs می باشد .
+            <br/>
+            <br/>
+            در مثال رو به رو متد API از کلاس APIService رو در فرایند مسیر یابی صدا خواهیم زد :
+            <br/>
+        </p>
+
+        <div class="codeheader">
+            سرویس ای پی آی
+        </div>
+        <div class="codebox">
+            <code>
+                Router::register("api/", "GET", "APIService@API");
+            </code>
+        </div>
+
+    </div>
+
+    <div id="database-engine"
+         class="content-box">
+        <h3 class="content-title">موتور
+            پایگاه داده</h3>
+        <hr>
+        <p>
+            رد فریم ورک از موتور پایگاه داده قدرتمندی برخوردار است که از سه پایگاه داده معروف (MySQL, SQLServer, SQLite)
+            و ORM با عملکرد بالا پشتیبانی می کند ؛
+            <br/>
+            این موتور پایگاه داده قابلیت استفاده از سه پایگاه داده به طور هم زمان در طول اجرای برنامه فراهم میاورد .
+            <br/>
+            <br/>
+            <br/>
+            برای شروع کار با موتور پایگاه داده رد فریم ورک ابتدا باید متغیر های محیطی را مقدار دهی کنید :
+            <br/>
+            <br/>
+        </p>
+
+
+        <div class="codeheader">
+            متغیر های میحیطی - جایگاه دیتابیس 1
+        </div>
+        <div class="codebox">
+            <code>
+                "DATABASE_1":
+                <br/>
+                {
+                <br/>
+                "Status": "off",
+                <br/>
+                "Driver": "mysql",
+                <br/>
+                "Host": "localhost",
+                <br/>
+                "Port": "3306",
+                <br/>
+                "Name": "red",
+                <br/>
+                "User": "root",
+                <br/>
+                "Password": "red",
+                <br/>
+                "Charset": "utf8",
+                <br/>
+                "Backup": "off",
+                <br/>
+                "BackupTime": "23",
+                <br/>
+                "Migration": "off"
+                <br/>
+                }
+                <br/>
+            </code>
+        </div>
+
+        <br/>
+
+
+        <h4 style="font-family: 'Segoe UI Light', sans-serif">STATUS :</h4>
+        <div class="box">
+            <p>برای استفاده از این جایگاه پایگاه داده
+                مقدار این فیلد رو برابر on قرار بدهید
+            </p>
+        </div>
+
+
+        <h4 style="font-family: 'Segoe UI Light', sans-serif">DRIVER :</h4>
+        <div class="box">
+            <p>
+                از اونجایی که رد فریم ورک از سه پایگاه داده پشتیبانی میکنه پس درایور پایگاه داده میتونه یکی از سه مورد
+                زیر باشه :
+                <br/>
+                <br/>
+                برای دیتابیس مای اس کیو ال : mysql
+                <br/>
+                برای دیتابیس اس کیو ال سرور : sqlsrv
+                <br/>
+                برای دیتابیس اس کیو لایت : sqlite
+                <br/>
+            </p>
+        </div>
+
+        <h4 style="font-family: 'Segoe UI Light', sans-serif">HOST :</h4>
+        <div class="box">
+            <p>هاست پایگاه داده
+            </p>
+        </div>
+
+        <h4 style="font-family: 'Segoe UI Light', sans-serif">PORT :</h4>
+        <div class="box">
+            <p>پورت پایگاه داده
+            </p>
+        </div>
+
+        <h4 style="font-family: 'Segoe UI Light', sans-serif">NAME :</h4>
+        <div class="box">
+            <p>نام پایگاه داده
+            </p>
+        </div>
+
+        <h4 style="font-family: 'Segoe UI Light', sans-serif">USER :</h4>
+        <div class="box">
+            <p>نام کاربری پایگاه داده
+            </p>
+        </div>
+
+        <h4 style="font-family: 'Segoe UI Light', sans-serif">PASSWORD :</h4>
+        <div class="box">
+            <p>رمز عبور پایگاه داده
+            </p>
+        </div>
+
+        <h4 style="font-family: 'Segoe UI Light', sans-serif">CHARSET :</h4>
+        <div class="box">
+            <p>
+                Charset پایگاه داده (پیش فرض آن UTF-8 است)
+            </p>
+        </div>
+
+        <h4 style="font-family: 'Segoe UI Light', sans-serif">BACKUP :</h4>
+        <div class="box">
+            <p>
+                اگر مقدار این فیلد on باشد ، رد فریم ورک به طور خودکار از دیتابیس شما در زمان BackupTime ، بک آپ خواهد
+                گرفت .
+                <br/>
+                <br/>
+                توجه داشته باشید که عملیات پشتیبان گیری توسط خط فرمان انجام خواهد شد ؛ پس باید قبل از پشتیبان گیری 4
+                متغیر مسیر زیر را مقدار دهی کنید :
+                <br/>
+                <br/>
+                MYSQL_DUMP_PATH & MYSQL_PATH - اگر از دیتابیس مای اس کیو ال استفاده می کنید
+                <br/>
+                SQL_CMD_PATH - اگر از دیتابیس اس کیو ال سرور استفاده می کنید
+                <br/>
+                SQLITE_CLI_PATH - اگر از دیتابیس اس کیو لایت استفاده می کنید
+            </p>
+        </div>
+
+        <h4 style="font-family: 'Segoe UI Light', sans-serif">BACKUPTIME :</h4>
+        <div class="box">
+            <p>
+                زمان پشتیبان گیری بر اساس موقعیت زمانی اپلیکیشن شما و فرمت آن HH می باشد
+            </p>
+        </div>
+
+        <h4 style="font-family: 'Segoe UI Light', sans-serif">MIGRATION :</h4>
+        <div class="box">
+            <p>
+                اگر مقدار این فیلد برابر on باشد فریم ورک ، فایل Migrate شما را در database -> Migration ->
+                migration_of_db1.sql پردازش کرده و در دیتابیس متصل شما قرار می دهد .
+                <br/>
+                <br/>
+                توجه داشته باشید که این عملیات توسط خط فرمان انجام خواهد شد ؛ پس باید قبل از آن 4 متغیر مسیر زیر را
+                مقدار دهی کنید :
+                <br/>
+                <br/>
+                MYSQL_DUMP_PATH & MYSQL_PATH - اگر از دیتابیس مای اس کیو ال استفاده می کنید
+                <br/>
+                SQL_CMD_PATH - اگر از دیتابیس اس کیو ال سرور استفاده می کنید
+                <br/>
+                SQLITE_CLI_PATH - اگر از دیتابیس اس کیو لایت استفاده می کنید
+            </p>
+        </div>
+
+
+        <h4 style="direction: rtl;text-align: center;margin-top: 50px;text-shadow: black 0 0 1px;font-family: 'Segoe UI Light', sans-serif">
+            کار کردن با ORM</h4>
+        <hr style="width: 95%"/>
+
+
+        <p>
+            ORM رد فریم ورک چهار عملیات پایه CRUD (ساخت ، خواندن ، به روز رسانی ، حذف) و دو عملیات اضافه (شمارش ،
+            میانگین)
+            را فراهم می کند .
+            <br/>
+            <br/>
+            <br/>
+            در کد باکس رو به رو تمامی پرچم های موتور پایگاه داده توضیح داده شده است :
+            <br/>
+            * پرچم (Flag) ثابت از پیش تعیین شده برای راحت تر کردن فهم فریم ورک برای توسعه دهنده می باشد
+        </p>
+
+        <div style="margin-top: 20px" class="codeheader">پرچم های موتور پایگاه داده</div>
+        <div class="codebox">
+            <code>
+                /* DB1 - اشاره به پایگاه داده شماره 1 دارد
+                <br/>
+                DB2 - اشاره به پایگاه داده شماره 2 دارد
+                <br/>
+                DB3 - اشاره به پایگاه داده شماره 3 دارد
+                <br/>
+                CREATE - اشاره به عملیات ساخت دارد
+                <br/>
+                READ - اشاره به عملیات خواندن دارد
+                <br/>
+                READ_CONDITION - اشاره به عملیات خواندن بر اساس شرط دارد
+                <br/>
+                UPDATE - اشاره به عملیات به روز رسانی دارد
+                <br/>
+                UPDATE_CONDITION - اشاره به عملیات به روز رسانی بر اساس شرط دارد
+                <br/>
+                DELETE - اشاره به عملیات حذف دارد
+                <br/>
+                DELETE_CONDITION - اشاره به عملیات حذف بر اساس شرط دارد
+                <br/>
+                COUNT - اشاره به عملیات شمارش دارد
+                <br/>
+                COUNT_CONDITION - اشاره به عملیات شمارش بر اساس شرط دارد
+                <br/>
+                AVG - اشاره به عملیات میانگین دارد
+                <br/>
+                AVG_CONDITION - اشاره به عملیات میانگین بر اساس شرط دارد
+                <br/>
+                FREE - اشاره به کوئری آزاد دارد */
+            </code>
+        </div>
+
+        <p>
+            <br/>
+            <br/>
+            نکته : تمامی عملیات ORM باید در یک کلاس مدل که از مدل پایه ارث برده شده به انجام برسد .
+            <br/>
+            <br/>
+            <span style="direction: rtl;text-align: right;text-shadow: black 0 0 1px">عملیات ساخت :</span>
+        </p>
+
+
+        <div class="codeheader" style="margin-top: 30px">
+            ORM - ساخت
+        </div>
+
+        <div class="codebox">
+            <code>$this->setFields([
+                <br/>
+                'page' => 'any',
+                <br/>
+                'hits' => 'any',
+                <br/>
+                ]);
+                <br/>
+                <br/>
+                $this->setParameters([
+                <br/>
+                'page' => 'singup',
+                <br/>
+                'hits' => '0',
+                <br/>]);
+                <br/>
+                <br/>
+                $this->query("hits", CREATE, DB1);
+            </code>
+        </div>
+        <br/>
+        <p style="text-align: right;direction: rtl">
+            توضیح :
+        </p>
+
+        <br/>
+
+        <div class="box">
+            <p>
+                در دستور اول با فراخوانی متد 'setFields' از کلاس مدل با یک پارامتر (از نوع آرایه) که حاوی نام فیلد در
+                Key و شروط ارزیابی اعتبار مدل در Value بود ، فیلد هامون رو ست کردیم .
+                <br/>
+                توجه داشته باشید که 'any' در شروط ارزیابی اعتبار مدل به معنی این هست که نیازی به ارزیابی اعتبار نیست .
+                <br/>
+                <br/>
+                <br/>
+                در دستور دوم با فراخوانی متد 'setParameters' از کلاس مدل با یک پارامتر (از نوع آرایه) که حاوی نام فیلد
+                در Key و مقدار فیلد در Value است مقادیرمون رو در فیلد ها بایند کردیم .
+
+                <br/>
+                <br/>
+                <br/>
+
+                در دستور سوم و نهایی با فراخوانی متد query از کلاس مدل با سه پارامتر (به ترتیب از راست به چپ : نام جدول
+                ، پرچم عملیات ، نام پایگاه داده) کوئری رو اجرا کردیم .
+            </p>
+        </div>
+
+        <p>
+            <span style="text-shadow: black 0 0 1px">عملیات خواندن :</span>
+        </p>
+
+
+        <div class="codeheader" style="margin-top: 30px">
+            ORM - خواندن
+        </div>
+
+        <div class="codebox">
+            <code>$this->setFields([
+                <br/>
+                'page' => 'any',
+                <br/>
+                'hits' => 'any',
+                <br/>
+                ]);
+                <br/>
+                <br/>
+                $this->query("hits", READ, DB1, "id DESC", $offset, $limit);
+            </code>
+        </div>
+        <br/>
+
+        <p style="text-align: right;direction: rtl">
+            توضیح :
+        </p>
+
+        <br/>
+
+        <div class="box">
+            <p>
+                به وسیله متد 'setFields' دو فیلد Page و Hits رو در نظر گرفته ایم تا از اون ها داده دریافت کنیم .
+                <br/>
+                <br/>
+                <br/>
+                و در نهایت با فراخونی متد query با شش پارامتر (به ترتیب از راست به چپ : نام جدول ، پرچم موتور پایگاه
+                داده ، پرچم دیتابیس مورد نظر ، ترتیب ، آفست شروع و محدودیت دریافت داده) کوئری را اجرا کردیم .
+
+                <br>
+                <br>
+                ترتیب صعودی : FieldName ASC
+                <br>
+                ترتیب نزولی : FieldName DESC
+                <br>
+                * سه پارمتر آخر اختیاری می باشد
+            </p>
+        </div>
+
+        <p>
+            <span style="text-shadow: black 0 0 1px">عملیات خواندن بر اساس شرط :</span>
+            <br/>
+            <br/>
+            در مثال رو به رو به کمک الگوی طراحی بر اساس شرط داده ها را دریافت و خوانده :
+        </p>
+
+        <div class="codeheader" style="margin-top: 30px">
+            ORM - خواندن یر اساس شرط
+        </div>
+
+        <div class="codebox">
+            <code>
+                $this->setFields(['id' => 'any', 'page' => 'any', 'hits' => 'any', ])->
+                <br/>setConditionFields(['page' => 'any|equal|operator:and', 'hits' => 'any|equal'])->
+                <br/>setConditionParams(['page' => 'singup', 'hits' => '60'])->
+                <br/>query("hits", READ_CONDITION, DB1, "id DESC");
+            </code>
+        </div>
+        <br/>
+
+        <p style="text-align: right;direction: rtl">
+            توضیح :
+        </p>
+
+        <br/>
+
+        <div class="box">
+            <p>
+                به وسیله متود 'setFields' سه فیلد را درخواست کرده ایم .
+                <br/>
+                <br/>
+                <br/>
+
+                سپس با متود setConditionFields شروط و خواص فیلد های شروط را مشخص نموده ایم .
+                <br/>
+                توکن اول ، 'any' به این معنی می باشد که نیازی به ارزیابی اعتبار نیست . توکن دوم 'equal' ، عملگر شرطی است
+                (که میتواند یکی از مقادیر رو به رو باشد : (greater,
+                smaller, equal, like, not_like)
+                <br>
+                توکن سوم عملگر رابطه ای است (که می تواند یکی از مقادیر رو به رو باشد :(and, or)
+                <br/>
+                <br/>
+                * نیازی به عملگر رابطه ای برای شرط آخر نیست
+                <br>
+                <br>
+                <br>
+                نکته : تمامی خواص ارزیابی اعتبار مدل در آخر این بخش کامل توضیح داده خواهد شد .
+
+                <br>
+                <br>
+                بعد از ست کردن فیلد های شروط ، نوبت به بایند کردن پارمتر های شروط با متد setConditionParams می باشد .
+                <br/>
+                <br/>
+                و در نهایت با فراخوانی متد query و با ترتیب نزولی بر اساس فیلد 'id' کوئری خودمون رو اجرا می کنیم .
+
+                <br/>
+                <br/>
+                <br/>
+                بعد از اجرای کوئری با دستور زیر به راحتی میتوانید نتیجه کوئری رو دریافت کنید :
+            </p>
+        </div>
+
+        <div class="codeheader" style="margin-top: 30px">
+            ORM - خواندن بر اساس شرط (دریافت اطلاعات)
+        </div>
+
+        <div class="codebox">
+            <code>
+                $result = $this->getContent(DB1);
+            </code>
+        </div>
+
+        <p>
+            <span style="text-shadow: black 0 0 1px">عملیات به روز رسانی</span>
+            <br/>
+            <br/>
+            به مثال رو به رو توجه کنید :
+        </p>
+
+        <div class="codeheader" style="margin-top: 30px">
+            ORM - به روز رسانی
+        </div>
+
+        <div class="codebox">
+            <code>
+                $this->setFields(['email' => 'any'])->
+                <br/>
+                setParameters(['email' => 'mahbod@gmail.com'])->
+                <br/>
+                query("users", UPDATE, DB1);
+            </code>
+        </div>
+
+        <br/>
+
+        <p style="text-align: right;direction: rtl">
+            توضیح :
+        </p>
+
+        <br/>
+
+        <div class="box">
+            <p>
+                در مثال بالا فیلد 'email' تمامی رکورد ها را با مقدار 'mahbod@gmail.com' به روز رسانی کردیم .
+            </p>
+        </div>
+
+        <p>
+            <span style="text-shadow: black 0 0 1px">عملیات به روز رسانی بر اساس شرط</span>
+            <br/>
+            <br/>
+            به مثال رو به رو توجه کنید :
+        </p>
+
+        <div class="codeheader" style="margin-top: 30px">
+            ORM - به روز رسانی بر اساس شرط
+        </div>
+
+        <div class="codebox">
+            <code>
+                $this->setFields(['email' => 'any'])->
+                <br/>
+                setParameters(['email' => 'mahbod@gmail.com'])->
+                <br/>
+                setConditionFields(['username' => 'required|method:en_digit|limit:5-25|sanitize_space:yes|equal',])->
+                <br/>
+                setConditionParams(['username' => 'mahbod'])->
+                <br/>
+                query("users", UPDATE_CONDITION, DB1);
+            </code>
+        </div>
+
+        <br/>
+
+        <p style="text-align: right;direction: rtl">
+            توضیح :
+        </p>
+
+        <br/>
+
+        <div class="box">
+            <p>
+                در مثال بالا فیلد 'email' رکوردی که فیلد 'username' آن برابر با 'mahbod' است را با مقدار
+                'mahbod@gmail.com' به روز رسانی کردیم .
+
+                <br/>
+                <br/>
+                نکته ارزیابی اعتبار مدل : در این مثال فیلد 'username' رو با متود انگلیسی و اعداد ، بین 5 تا 25 حرف ،
+                زدودن space اضافه ارزیابی کردیم که در پایان این بخش به طور کامل توضیح داده خواهد شد .
+            </p>
+        </div>
+
+        <p>
+            <span style="text-shadow: black 0 0 1px">عملیات حذف :</span>
+            <br/>
+            <br/>
+            در مثال رو به رو تمامی رکورد های موجود در جدول را حذف می کنیم :
+        </p>
+
+
+        <div class="codeheader" style="margin-top: 30px">
+            ORM - حذف
+        </div>
+
+        <div class="codebox">
+            <code>
+                $this->query('hits', DELETE, DB1);
+            </code>
+        </div>
+
+        <p>
+            <span style="text-shadow: black 0 0 1px">عملیات حذف بر اساس شرط</span>
+            <br/>
+            <br/>
+            به مثال رو به رو توجه کنید :
+        </p>
+
+
+        <div class="codeheader" style="margin-top: 30px">
+            ORM - حذف بر اساس شرط
+        </div>
+
+        <div class="codebox">
+            <code>
+                $this->setFields(['hits'=> 'any']);
+                <br/>
+                $this->setConditionFields(['hits' => 'any|equal']);
+                <br/>
+                $this->setConditionParams(['hits'=>'mahi']);
+                <br/>
+                <br/>
+                $this->query('hits', DELETE, DB1);
+            </code>
+        </div>
+
+        <p>
+            <span style="text-shadow: black 0 0 1px">عملیات شمارش</span>
+        </p>
+
+
+        <div class="codeheader" style="margin-top: 30px">
+            ORM - شمارش
+        </div>
+
+        <div class="codebox">
+            <code>
+                $this->query('hits', COUNT, DB1);
+                <br/>
+                <br/>
+                $result = $this->getContent(DB1);
+            </code>
+        </div>
+
+        <p>
+            <span style="text-shadow: black 0 0 1px">عملیات شمارش بر اساس شرط :</span>
+        </p>
+
+
+        <div class="codeheader" style="margin-top: 30px">
+            ORM - شمارش بر اساس شرط
+        </div>
+
+        <div class="codebox">
+            <code>
+                $this->setConditionFields(['id' => 'any|equal']);
+                <br/>
+                $this->setConditionParams(['id' => '12']);
+                <br/>
+                $this->query('test', COUNT_CONDITION, DB2);
+                <br/>
+                $result = $this->getContent(DB2);
+            </code>
+        </div>
+
+        <p>
+            <span style="text-shadow: black 0 0 1px">عملیات میانگین :</span>
+        </p>
+
+
+        <div class="codeheader" style="margin-top: 30px">
+            ORM - میانگین
+        </div>
+
+        <div class="codebox">
+            <code>
+                $this->setFields(['rate' => 'any', ]);
+                <br/>
+                $this->query('post_votes', AVG, DB1);
+            </code>
+        </div>
+
+
+        <p>
+            <span style="text-shadow: black 0 0 1px">عملیات میانگین بر اساس شرط :</span>
+        </p>
+
+
+        <div class="codeheader" style="margin-top: 30px">
+            ORM - میانگین
+        </div>
+
+        <div class="codebox">
+            <code>
+                $this->setFields(['rate' => 'any', ]);
+                <br/>
+                $this->setConditionFields(['post_id' => 'any|equal|operator:and',]);
+                <br/>
+                $this->setConditionParams(['post_id' => $id['id'],]);
+                <br/>
+                <br/>
+                $this->query('post_votes', AVG_CONDITION, DB1);
+            </code>
+        </div>
+
+        <p>
+            <span style="text-shadow: black 0 0 1px">کوئری آزاد :</span>
+        </p>
+
+
+        <div class="codeheader" style="margin-top: 30px">
+            ORM - کوئری آزاد
+        </div>
+
+        <div class="codebox">
+            <code>
+                $this->freeQuery("UPDATE `users` SET `email` = 'mzero651@gmail.com' WHERE `username` = 'mahbod'",
+                READ_CONDITION, DB1);
+                <br/>
+                <br/>
+                $result = $this->getContent(DB1);
+            </code>
+        </div>
+
+        <br/>
+
+        <p style="text-align: right;direction: rtl">
+            توضیح :
+        </p>
+
+        <br/>
+
+        <div class="box">
+            <p>
+                در مثال بالا با متد خواندن بر اساس شرط یک کوئری آزاد رو با پایگاه داده شماره یک اجرا کردیم و نتیجه اون
+                رو در متغیر result ریختیم .
+            </p>
+        </div>
+
+        <p>
+            <span style="text-shadow: black 0 0 1px">ارزیابی اعتبار مدل :</span>
+        </p>
+
+        <p>
+            در این تاپیک به توضیح ارزیالی اعتبار مدل و خواص آن می پردازیم .
+        </p>
+
+
+        <div class="codeheader" style="margin-top: 30px">
+            ORM - ارزیابی اعتبار مدل
+        </div>
+
+        <div class="codebox">
+            <code>
+                $this->setFields(['username' => 'required|method:en_digit|limit:5-25|sanitize_space:yes']);
+            </code>
+        </div>
+
+
+        <p>
+            خاصیت اول به منظور نوع فیلد است :
+            <br/>
+            <br/>
+            سه نوع فیلد داریم :
+
+        </p>
+
+        <div class="box" style="text-align: left;direction: ltr">
+
+            required (نمی تواند خالی باشد)
+            <br/>
+            optional (اختیاری)
+            <br/>
+            any (بدون ارزیابی اعتبار)
+        </div>
+
+        <p>
+
+            <br/>
+            خاصیت دوم به منظور متد ارزیابی اعتبار است :
+            <br/>
+            <br/>
+            17 نوع متد استاندارد ارزیابی اعتبار داریم :
+        </p>
+        <br/>
+        <div class="box" style="text-align: left;direction: ltr">
+
+            digit
+            <br/>
+            en
+            <br/>
+            en_digit
+            <br/>
+            fa
+            <br/>
+            fa_digit
+            <br/>
+            mix: فارسی و انگلیسی به همراه اعداد
+            <br/>
+            email: ارزیابی اعتبار ایمیل
+            <br/>
+            username: ارزیابی اعتبار استاندارد نام کاربری (انگلیسی ، اعداد و کاراکتر های خاص .-_)
+            <br/>
+            password: ارزیابی اعتبار استاندارد رمز عبور (انگلیسی ، اعداد و کاراکتر های خاص .@*)
+            <br/>
+            address: آدرس میکس (انگلیسی, فارسی و کاراکتر خاص -)
+            <br/>
+            address_en: آدرس انگلیسی (انگلیسی و کاراکتر خاص -)
+            <br/>
+            address_fa: آدرس فارسی (فارسی و کاراکتر خاص -)
+            <br/>
+            phone
+            <br/>
+            IP: ارزیابی اعتبار آی پی - محدودیت نمی پذیرد
+            <br/>
+            text
+            <br/>
+            text_en
+            <br/>
+            text_fa
+        </div>
+        <br/>
+        <p>
+            خاصیت سوم به منظور محدودیت و تعداد حرف می باشد :
+        </p>
+        <br/>
+
+        <div class="box" style="text-align: left;direction: ltr">
+
+            limit:1-10
+        </div>
+        <br/>
+
+        <p> خاصیت چهارم به منظور زدودن space اضافه می باشد
+        </p>
+        <br/>
+
+        <div class="box">
+            مقدار آن می تواند yes یا no باشد
+        </div>
+
+
+
+    </div>
+
+    <div id="pagination"
+         class="content-box">
+        <h3 class="content-title">صفحه بندی</h3>
+        <hr>
+        <p>
+            عملیات محاسبه تعداد صفحات به جهت صفحه بندی راحت تر درست بعد از اجرای کوئری خواندن یا خواندن بر اساس شرط شما
+            که دارای آفست و محدودیت باشد ، انجام می شود .
+            <br/>
+            <br/>
+            برای مثال :
+
+
+        </p>
+
+        <div class="codeheader">
+            صفحه بندی
+        </div>
+
+        <div class="codebox">
+            <code>$this->setFields([
+                <br/>
+                'page' => 'any',
+                <br/>
+                'hits' => 'any',
+                <br/>
+                ]);
+                <br/>
+                <br/>
+                $this->query("hits", READ, DB1, "id DESC", 0, 10);
+
+                <br/>
+                <br/>
+                $pages = $this->getPagesCount(DB1);
+            </code>
+        </div>
+
+    </div>
+
+    <div id="mail-server"
+         class="content-box">
+        <h3 class="content-title">ایمیل سرور</h3>
+        <hr>
+        <p>
+
+            رد فریم ورک سیستمی آسان جهت ارسال ایمیل از طریق سرور SMTP با استفاده از کتابخانه PEAR فراهم میاورد .
+
+            <br/>
+            <br/>
+            برای استفاده از این سیستم ابتدا شما باید اطلاعات اولیه سرور رو در فایل Environment.json پیکربندی کنید
+            <br/>
+            <br/>
+            بعد از این که عمل پیکربندی رو کامل انجام دادید ، به کمک سینتکس دستوری زیر می توانید به راحتی ایمیل ارسال
+            کنید :
+        </p>
+
+        <div class="codeheader">ایمیل</div>
+
+        <div class="codebox">
+            <code>
+                use Red\MailService\Mail;
+
+                <br/>
+                <br/>
+                $subject = "test";
+                <br>
+                $target = "mzero651@gmail.com";
+                <br>
+                $body = "&lt;body&gt;&lt;h1&gt;test&lt;/h1&gt;&lt;/body&gt;";
+                <br>
+                $flag = Mail::HTML_Header;
+                <br>
+                <br>
+                Mail::send($subject, $target, $body, $flag);
+            </code>
+        </div>
+
+    </div>
+
+    <div id="validation-service"
+         class="content-box">
+        <h3 class="content-title">سرویس ارزیابی اعتبار
+            رشته</h3>
+        <hr>
+        <p>
+            نحوه کار کردن با سرویس ارزیابی اعتبار رشته :
+            <br/>
+            <br/>
+            سرویس ارزیابی اعتبار در فضای نام Red\ValidateService\Validate نگه داری می شود .
+
+            <br/>
+            <br/>
+            عملکرد :
+        </p>
+
+        <div class="codeheader">سرویس ارزیابی اعتبار رشته</div>
+        <div class="codebox">
+            Validate::validate('test', 'required|method:en|limit:0-4|sanitize_space:yes');
+        </div>
+
+        <p>
+            خاصیت اول به منظور نوع فیلد است :
+            <br/>
+            <br/>
+            دو نوع فیلد داریم :
+
+        </p>
+
+        <div class="box" style="text-align: left;direction: ltr">
+
+            required (نمی تواند خالی باشد)
+            <br/>
+            optional (اختیاری)
+
+        </div>
+
+        <p>
+
+            <br/>
+            خاصیت دوم به منظور متد ارزیابی اعتبار است :
+            <br/>
+            <br/>
+            17 نوع متد استاندارد ارزیابی اعتبار داریم :
+        </p>
+        <br/>
+        <div class="box" style="text-align: left;direction: ltr">
+
+            digit
+            <br/>
+            en
+            <br/>
+            en_digit
+            <br/>
+            fa
+            <br/>
+            fa_digit
+            <br/>
+            mix: فارسی و انگلیسی به همراه اعداد
+            <br/>
+            email: ارزیابی اعتبار ایمیل
+            <br/>
+            username: ارزیابی اعتبار استاندارد نام کاربری (انگلیسی ، اعداد و کاراکتر های خاص .-_)
+            <br/>
+            password: ارزیابی اعتبار استاندارد رمز عبور (انگلیسی ، اعداد و کاراکتر های خاص .@*)
+            <br/>
+            address: آدرس میکس (انگلیسی, فارسی و کاراکتر خاص -)
+            <br/>
+            address_en: آدرس انگلیسی (انگلیسی و کاراکتر خاص -)
+            <br/>
+            address_fa: آدرس فارسی (فارسی و کاراکتر خاص -)
+            <br/>
+            phone
+            <br/>
+            IP: ارزیابی اعتبار آی پی - محدودیت نمی پذیرد
+            <br/>
+            text
+            <br/>
+            text_en
+            <br/>
+            text_fa
+        </div>
+        <br/>
+        <p style="direction: rtl;text-align: right">
+            خاصیت سوم به منظور محدودیت و تعداد حرف می باشد :
+        </p>
+        <br/>
+
+        <div class="box" style="text-align: left;direction: ltr">
+
+            limit:1-10
+        </div>
+        <br/>
+
+        <p> خاصیت چهارم به منظور زدودن space اضافه می باشد
+        </p>
+        <br/>
+
+        <div class="box">
+            مقدار آن می تواند yes یا no باشد
+        </div>
+
+
+        <p>
+            <span style="text-shadow: black 0 0 1px">اضافه کردن متد (قانون) به سرویس ارزیابی اعتبار :</span>
+            <br/>
+            <br/>
+            فایل پی اچ پی در مسیر رو به رو را باز کنید :
+        </p>
+
+        <div class="box" style="text-align: left;direction: ltr">
+            vendor\redframework\enterprise-core\src\Red\ValidateService\Rules.php
+        </div>
+
+        <br>
+        <br>
+        <div class="codeheader">اضافه کردن متد به سرویس ارزیابی اعتبار</div>
+        <div class="codebox">
+            Validate::addRule("test", function ($no, $min, $max, $string) {
+            <br>
+            // عملیات ارزیابی اعتبار خودتون رو به کمک عبارت های منظم انجام بدهید و نتیجه آن رو به صورت داده درست / غلط
+            بر گردونید
+            <br/>
+            // توجه داشته باشید که این کال بک برای ارزیابی اعتبار استاندارد است .
+            <br>
+            },
+            <br>
+            function ($no, $min, $max, $string) {
+            <br>
+            // عملیات ارزیابی خودتون رو به کمک عبارت های منظم انجام بدهید ؛ بعد از Push کردن خطا بر اساس نتیجه ، درست با
+            غلط رو بر گردونید
+            <br/>
+            // توجه داشته باشید که این کال بک برای ارزیابی اعتبار مدل است .
+            <br>
+            });
+        </div>
+
+    </div>
+
+
+    <div id="filter-service"
+         class="content-box">
+        <h3 class="content-title">سرویس فیلتر رشته</h3>
+        <hr>
+        <p>
+            نحوه کار کردن با سرویس فیلتر رشته :
+            <br/>
+            <br/>
+            سرویس فیلتر در فضای نام Red\FilterService\Filter نگه داری می شود .
+            <br>
+            <br>
+        </p>
+
+        <div class="codeheader">فیلتر کردن رشته</div>
+        <div class="codebox">
+
+            $string = "#redcoder";
+            <br/>
+            $method = "username";
+            <br/>
+            <br/>
+            $filtered_string = Filter::filter($string, $method);
+        </div>
+
+        <p>
+            17 نوع متد استاندارد فیلتر داریم :
+            <br/>
+        </p>
+
+        <div class="box" style="text-align: left;direction: ltr">
+
+            digit
+            <br/>
+            en
+            <br/>
+            en_digit
+            <br/>
+            fa
+            <br/>
+            fa_digit
+            <br/>
+            mix: فارسی و انگلیسی به همراه اعداد
+            <br/>
+            email: فیلتر ایمیل
+            <br/>
+            username: فیلتر استاندارد نام کاربری (انگلیسی ، اعداد و کاراکتر های خاص .-_)
+            <br/>
+            password: فیلتر استاندارد رمز عبور (انگلیسی ، اعداد و کاراکتر های خاص .@*)
+            <br/>
+            address: آدرس میکس (انگلیسی, فارسی و کاراکتر خاص -)
+            <br/>
+            address_en: آدرس انگلیسی (انگلیسی و کاراکتر خاص -)
+            <br/>
+            address_fa: آدرس فارسی (فارسی و کاراکتر خاص -)
+            <br/>
+            phone
+            <br/>
+            IP: فیلتر آی پی
+            <br/>
+            text
+            <br/>
+            text_en
+            <br/>
+            text_fa
+        </div>
+
+
+        <p>
+            <span style="text-shadow: black 0 0 1px;text-align: right;direction: rtl">اضافه کردن متد (قانون) به سرویس فیلتر :</span>
+            <br/>
+            <br/>
+            فایل پی اچ پی در مسیر رو به رو را باز کنید :
+        </p>
+
+        <div class="box" style="text-align: left;direction: ltr">
+            vendor\redframework\enterprise-core\src\Red\FilterService\Rules.php
+        </div>
+
+        <br>
+        <br>
+        <div class="codeheader">اضافه کردن متد به سرویس فیلتر</div>
+        <div class="codebox">
+            Filter::addRule("test", function ($string) {
+            <br/>
+            // فیلتر خودتون رو بر روی رشته اعمال کنید سپس نتیجه اون رو در خروجی تابع برگردونید
+            <br/>
+            });
+            <br/>
+        </div>
+
+    </div>
+
+
+    <div id="sanitize-service"
+         class="content-box">
+        <h3 class="content-title">سرویس زدودن رشته</h3>
+        <hr>
+        <p>
+            نحوه کار کردن با سرویس فیلتر رشته :
+            <br/>
+            <br/>
+            سرویس زدودن رشته در فضای نام Red\SanitizeService\Sanitize نگه داری می شود .
+            <br>
+            <br>
+        </p>
+
+        <div class="codeheader">زدودن رشته</div>
+        <div class="codebox">
+
+            $string = "redcoder927";
+            <br/>
+            $method = "digit";
+            <br/>
+            <br/>
+            $filtered_string = Filter::filter($string, $method);
+        </div>
+
+        <p>
+            2 نوع متد استاندارد زدودن رشته داریم :
+            <br/>
+        </p>
+
+        <div class="box" style="text-align: left;direction: ltr">
+
+            digit
+            <br/>
+            space
+        </div>
+
+
+        <p>
+            <span style="text-shadow: black 0 0 1px;text-align: right;direction: rtl">اضافه کردن متد (قانون) به سرویس زدودن رشته :</span>
+            <br/>
+            <br/>
+            فایل پی اچ پی در مسیر رو به رو را باز کنید :
+        </p>
+
+        <div class="box" style="text-align: left;direction: ltr">
+            vendor\redframework\enterprise-core\src\Red\SanitizeService\Rules.php
+        </div>
+
+        <br>
+        <br>
+        <div class="codeheader">اضافه کردن متد به سرویس زدودن رشته</div>
+        <div class="codebox">
+            Sanitize::addRule("test", function ($string) {
+            <br/>
+            // کاراکتر زدایی خودتون رو بر روی رشته اعمال کنید سپس نتیجه اون رو در خروجی تابع برگردونید
+            <br/>
+            });
+            <br/>
+        </div>
+
+    </div>
+
+
+    <div id="debug-components"
+         class="content-box">
+        <h3 class="content-title">کامپوننت
+            های عیب یابی</h3>
+        <hr>
+        <p>
+            در نسل فعلی رد فریم ورک (1.0) دو ابزار عیب یابی در اختیار توسعه دهنده قرار گرفته است :
+            <br/>
+            <br/>
+            1- دیباگر رد فریم ورک
+            <br/>
+            2- دیباگ بار رد فریم ورک
+
+            <br/>
+            <br/>
+            برای فعال سازی و شروع استفاده از این قابلیت ها باید از متغیر های محیطی وضعیت آن ها را به روشن (on) تغییر داد
+            .
+
+            <br/>
+            <br/>
+            <br/>
+            دیباگر وظیفه دسته بندی و نمایش مشکلاتی که منجر به خطا شده اند را بر عهده دارد .
+            <br/>
+            <br/>
+            <br/>
+            دیباگ بار وضعیت اپلیکیشن از زمان اجرا تا پایان پردازش را ثبت و در دسترس توسعه دهنده قرار می دهد .
+        </p>
+
+        <div class="codeheader">اضافه کردن پیام به دیباگ بار</div>
+        <div class="codebox">
+            use Red\DebugBar\DebugBar;
+            <br/>
+            <br/>
+            $message = "test";
+            <br/>
+            DebugBar::addMessage($message);
+        </div>
+
+    </div>
+
+    <div id="error-handling"
+         class="content-box">
+        <h3 class="content-title">مدیریت خطا</h3>
+        <hr>
+        <p>
+            نحوه مدیریت خطا در رد فریم ورک :
+            <br/>
+            <br/>
+            انداختن خطایی که باعث متوقف شدن کل اپلیکیشن نمی شود (در اصل این نوع خطا به منظور جلوگیری از انجام عملیات مدل
+            طراحی شده) :
+        </p>
+
+        <div class="codeheader">خطای غیر حتمی</div>
+        <div class="codebox">
+            use Red\Red;
+            <br/>
+            <br/>
+            Red::pushError($error);
+        </div>
+
+        <p>
+            انداختن خطایی که باعث متوقف شدن پردازش و کل اپلیکیشن می شود :
+        </p>
+
+        <div class="codeheader">خطای حتمی</div>
+        <div class="codebox">
+            use Red\Red;
+            <br/>
+            <br/>
+            Red::generateError($error_no, $error_message);
+        </div>
+
+    </div>
+
+    <div id="inputs"
+         class="content-box">
+        <h3 class="content-title">داده های
+            ورودی</h3>
+        <hr>
+        <p>
+            فضای نام کلاس داده های ورودی :
+        </p>
+        <div class="box" style="text-align: left;direction: ltr">
+            Red\InputProvider\Input
+        </div>
+
+        <br/>
+        <br/>
+
+
+        <div class="codeheader">متغیر های GET</div>
+
+        <div class="codebox">
+            // دریافت یک متغیر :
+            <br/>
+            Input::get($variable);
+            <br/>
+            // دریافت همه متغیر ها :
+            <br/>
+            Input::getAll();
+            <br/>
+            // آن ست کردن یک متغیر :
+            <br/>
+            Input::getUnset($variable);
+
+        </div>
+
+
+        <br>
+
+        <div class="codeheader">متغیر های POST</div>
+
+        <div class="codebox">
+            // دریافت یک متغیر :
+            <br/>
+            Input::post($variable);
+            <br/>
+            // دریافت همه متغیر ها :
+            <br/>
+            Input::postAll();
+            <br/>
+            // آن ست کردن یک متغیر :
+            <br/>
+            Input::postUnset($variable);
+
+        </div>
+
+        <br>
+
+        <div class="codeheader">متغیر های FILE</div>
+
+        <div class="codebox">
+            // دریافت یک فایل :
+            <br/>
+            Input::file($file);
+            <br/>
+            // آن ست کردن یک فایل :
+            <br/>
+            Input::fileUnset($file);
+        </div>
+
+    </div>
+
+    <div id="sessions"
+         class="content-box">
+        <h3 class="content-title">نشست</h3>
+        <hr>
+        <p>
+            نشست ها در رد فریم ورک پیکر بندی شده و با تنظیمات خاص به جهت امنیت و عملکرد بیشتر شروع می شوند ؛
+            فایل پیکربندی نشست در مسیر زیر در دسترس است :
+        </p>
+
+        <div class="box" style="text-align: left;direction: ltr">
+            Config -> Config.php
+        </div>
+
+        <p>
+            مدت زمان استاندارد یک نشست سی 30 دقیقه می باشد .
+            <br/>
+            <br/>
+            نشست ها با یک الگوریتم مناسب ، با ترکیب شدن با کلید امنیتی شما رمز گذاری شده ؛
+            <br/>
+            به دلیل این رمز گذاری و رمز گشایی حداکثر آرایه قابل پذیرش در نشست ، آرایه سه بعدی می باشد .
+            <br/>
+            <br/>
+            فضای نام کلاس نشست :
+        </p>
+        <br/>
+
+        <div class="box" style="text-align: left;direction: ltr">
+            Red\SessionProvider\Session
+        </div>
+
+
+        <br/>
+        <br/>
+
+        <div class="codeheader">نشست</div>
+        <div class="codebox">
+            // ست کردن نشست :
+            <br/>
+            Session::set($value, $first_dimension);
+            <br/>
+            <br/>
+            // آن ست کردن نشست :
+            <br/>
+            Session::remove($first_dimension);
+            <br/>
+            <br/>
+            // دریافت یک نشست :
+            <br/>
+            Session::get($first_dimension);
+            <br/>
+            <br/>
+            // دریافت همه متغیر های نشست :
+            <br/>
+            Session::getAll();
+        </div>
+
+    </div>
+
+    <div id="cookies"
+         class="content-box">
+        <h3 class="content-title">کوکی</h3>
+        <hr>
+        <p>
+            کلاس کمک کننده کوکی به جهت دسترسی و اجرای عملیات آسان تر بر روی کوکی ارائه شده .
+            <br/>
+            <br/>
+            فضای نام کلاس کوکی :
+        </p>
+
+        <div class="box" style="text-align: left;direction: ltr">
+            Red\CookieProvider\Cookie
+        </div>
+
+        <br/>
+
+        <div class="codeheader">کوکی</div>
+        <div class="codebox">
+            // ست کردن یک کوکی :
+            <br/>
+            Cookie::set($cookie, $value, $expire_days);
+            <br/>
+            <br/>
+            // آن ست کردن یک کوکی :
+            <br/>
+            Cookie::remove($cookie);
+            <br/>
+            <br/>
+            // دریافت یک کوکی :
+            <br/>
+            Cookie::get($cookie);
+        </div>
+
+    </div>
+
+
+    <div id="crypt-tools"
+         class="content-box">
+        <h3 class="content-title">رمز گذاری</h3>
+        <hr>
+        <p>
+            رد فریم ورک از سیستم رمز گذاری منحصر به خودش که با کلید امنیتی شما Salt شده بهره می برد.
+            <br/>
+            <br/>
+            کلید امنیتی باید در پیکربندی متغیر های محیطی تعیین شود .
+            <br/>
+            <br/>
+            قابلیت رمز گذاری و رمز نگاری رشته و آرایه (تا حداکثر 3 بعد) برای شما فراهم گردیده است .
+            <br/>
+            <br/>
+            <br/>
+            فضای نام کلاس رمز گذاری :
+
+        </p>
+
+        <div class="box" style="text-align: left;direction: ltr">
+            Red\Encryption\Crypter
+        </div>
+
+        <br/>
+
+        <div class="codeheader">رمز گذاری / نگاری</div>
+        <div class="codebox">
+            // رمز گذاری :
+            <br/>
+            $encrypted_data = Crypter::encrypt($data);
+            <br/>
+            <br/>
+            // رمز نگاری :
+            <br/>
+            $decrypted_data = Crypter::decrypt($data);
+        </div>
+
+    </div>
+
+    <div id="post-method-encryption-system"
+         class="content-box">
+        <h3 class="content-title">سیستم رمز
+            گذاری مند POST</h3>
+        <hr>
+        <p>
+            یکی از امکانات قابل توجه رد فریم ورک ، سیستم رمز گذاری متد POST هست که برای کسب و کار های کوچکی که توانایی
+            خرید SSL ندارند شدیدا کارآمد هست .
+            <br/>
+            این سیستم تمامی متغیر هایی که از طریق متد POST ارسال میشوند ، ابتدا رمز گذاری ، سپس ارسال و در نهایت در سمت
+            بک اند رمز نگاری می کند .
+
+            <br/>
+            <br/>
+            برای استفاده از این سیستم ابتدا باید گزینه اون رو در متغیر های محیطی فعال کنید .
+            <br/>
+            <br/>
+            برای اضافه شدن وابستگی ها به صفحه از متد رو به رو در بخش Head ویو خودتون استفاده کنید :
+        </p>
+
+        <div class="codeheader">اضافه کردن وابستگی ها به صفحه</div>
+        <div class="codebox">
+            {{ encryption() | raw }}
+        </div>
+
+        <p>
+            فرم باید دارای ID و متد آن POST باشد ؛ سپس کار به تنظیم رخداد می کشد :
+        </p>
+
+        <div class="codeheader">تنظیم رخداد با جاوا اسکریپت خالص</div>
+        <div class="codebox">
+            &lt;form id="form1" action="{{ self() }}" method="post" onsubmit="return RedCryption.encrypt('form1');"&gt;
+        </div>
+        <br/>
+        <div class="codeheader">تنظیم رخداد با Red JS</div>
+        <div class="codebox"><pre>&lt;form id="form1" action="{{ self() }}" method="post"&gt;
+
+
+&lt;script&gt;
+Red.ready(function () {
+    Red.select("#form1").submit(function () {
+        RedCryption.encrypt("form1");
+    });
+});
+&lt;/script&gt;
+</pre>
+        </div>
+
+    </div>
+
+    <div id="language-service"
+         class="content-box">
+        <h3 class="content-title">سرویس زبان
+            ساختار یافته</h3>
+        <hr>
+        <p>
+            رد فریم ورک سیستم زبان ساختار یافته در اختیار توسعه دهنده قرار می دهد تا به راحتی اپلیکیشن های بین المللی
+            توسعه دهد .
+            <br/>
+            <br/>
+            به کمک این سیستم شما قادرید برای هر زبان متن مربوطه خودش را فراهم اورید .
+            <br/>
+            زبان پیش فرض باید در پیکربندی متغیر های محیطی تعیین شود .
+            <br/>
+            <br/>
+            متن های اپلیکیشن در مسیر زیر نگه داری می شود :
+        </p>
+
+        <div class="box" style="text-align: left;direction: ltr">
+            resources -> Language -> Your Language Directory (En, Fa and etc) -> Your Language JSON File .
+        </div>
+
+        <p>کلاس زبان در فضای نام زیر نگه داری می شود :
+        </p>
+
+        <div class="box" style="text-align: left;direction: ltr">
+            Red\LanguageService\Language
+        </div>
+        <br>
+
+        <div class="codeheader">زبان</div>
+        <div class="codebox">
+            // ست کردن زبان فعلی :
+            <br/>
+            Language::set('en');
+            <br/>
+            <br/>
+            // دریافت کردن زبان فعلی :
+            <br/>
+            Language::getCurrentLanguage();
+            <br/>
+            <br/>
+            // دریافت کردن فیلد از زبان فعلی :
+            <br/>
+            Language::get($no, $field);
+        </div>
+
+    </div>
+
+    <div id="picture-tools"
+         class="content-box">
+        <h3 class="content-title">ابزار های عکس</h3>
+        <hr>
+        <p>
+            یکی از کلاس های کمکی رد فریم ورک ، کلاس Picture می باشد ؛ این کلاس متد هایی را برای آپلود و تغییر ابعاد آسان
+            عکس در اختیار توسعه دهنده قرار می دهد .
+            <br/>
+            <br/>
+            کلاس ابزار های عکس در فضای نام پیش رو نگه داری می شود :
+
+        </p>
+        <div class="box" style="text-align: left;direction: ltr">Red\PictureTools\Picture</div>
+
+        <br/>
+
+        <div class="codeheader">بارگذاری عکس</div>
+        <div class="codebox">
+            Picture::uploadImage($file, $upload_path, $new_file_name, $target_width, $target_height);
+        </div>
+
+        <br>
+
+        <div class="codeheader">تغییر ابعاد عکس</div>
+        <div class="codebox">
+            Picture::imageResize($image_resource_id, $width, $height, $target_width, $target_height);
+        </div>
+
+        <br/>
+
+        <div class="box" style="direction: rtl">
+            نکته : برای امنیت بیشتر عکس های خودتون رو در مسیر ثابت UPLOAD_PATH بارگذاری کنید ؛ فایل پیکربندی سرور
+            (htaccess) هر گونه دسترسی غیر مجاز به دایرکتوری آپلود را بلاک می کند .
+        </div>
+
+    </div>
+
+
+    <div id="captcha-service"
+         class="content-box">
+        <h3 class="content-title">سرویس کد امنیتی</h3>
+        <hr>
+        <p>
+            سرویس کد امنیتی به جهت آسان تر شدن کار توسعه دهنده ، فراهم شده است .
+            <br/>
+            <br/>
+            اضافه کردن وابستگی های سرویس کد امنیتی به ویو :
+        </p>
+
+        <div class="codeheader">وابستگی های سرویس کد امنیتی</div>
+        <div class="codebox">
+            {{ RedJS() | raw }}
+        </div>
+
+        <p>
+            اضافه کردن خروجی کد امنیتی به ویو :
+        </p>
+
+        <div class="codeheader">کد امنیتی</div>
+        <div class="codebox">
+            {{ captchaCode() | raw }}
+        </div>
+
+        <p>
+            ورودی کد امنیتی :
+        </p>
+
+        <div class="codeheader">ورودی کد امنیتی</div>
+        <div class="codebox">
+            &lt;input type="text" name="captcha_code" placeholder="captcha"&gt;
+        </div>
+
+        <p>
+            ارزیابی و تایید کد امنیتی در کنترلر :
+        </p>
+
+        <div class="codeheader">ارزیابی و تایید کد امنیتی</div>
+        <div class="codebox">
+            use Red\CaptchaService\Captcha;
+            <br/>
+            <br/>
+            if (Captcha::verify() == TRUE) {
+            <br/>
+            //do process
+            <br/>
+            }
+        </div>
+
+
+    </div>
+
+
+    <div id="authentication"
+         class="content-box">
+        <h3 class="content-title">ارزیابی اعتبار کاربر</h3>
+        <hr>
+        <p>
+            ارزیابی اعتبار کاربر یک میان راهی از پیش تعیین شده در رد فریم ورک است .
+            <br/>
+            برای شروع کار با این میان راهی باید فرایند ورود کاربر به اپلیکیشن را شخصی سازی کنید ؛
+            <br/>
+            <br/>
+            بعد از ورود یک کاربر به سیستم ، سطح دسترسی اون باید در یک متعیر نشست ذخیره شود تا سیستم بر اساس اون سطح
+            دسترسی محتوای قابل دسترس کاربر رو تعیین کنه .
+            <br/>
+            <br/>
+            بعد از گذشت از مرحله قبل حالا نوبت به آدرس دهی متغیر نشست در میان راهی ارزیابی اعتبار میرسه :
+        </p>
+
+        <div class="codeheader">آدرس دهی متغیر نشست</div>
+        <div class="codebox">self::setAuthenticationVariable('user_logged_in', 'access_level');</div>
+
+        <p>
+            در مثال رو به رو نحوه استفاده از میان راهی ارزیابی اعتبار در مسیر یاب رو خواهیم دید :
+        </p>
+
+        <div class="codeheader">نحوه استفاده از میان راهی ارزیابی اعتبار کاربر</div>
+        <div class="codebox">
+            Router::register("panel/{param1}{?param2}", "GET", "PanelController@panel",
+            ["Authentication:admin,master"]);
+        </div>
+
+    </div>
+
+    <div id="ajax-request"
+         class="content-box">
+        <h3 class="content-title">درخواست
+            AJAX</h3>
+        <hr>
+        <p>
+            درخواست AJAX یک میان راهی از پیش تعیین شده است که شما را قادر می سازد درخواست های HTTP عادی را از درخواست
+            های AJAX تشخیص بدهید .
+            <br/>
+            <br/>
+            تمامی درخواست ها با سر برگ (header) ، 'AJAX-Request' از این میان راهی گذر خواهند کرد .
+        </p>
+
+        <div class="codeheader">نحوه عملکرد میان راهی درخواست AJAX</div>
+        <div class="codebox">
+            Router::register("last-posts-api", "GET", "postController@lastPosts", ["AJAXRequest"]);
+        </div>
+
+        <p>
+            شما می توانید برای ارسال سر برگ AJAX-Request از جاوا اسکریپت خالص یا از متد AJAX در Red JS استفاده کنید :
+        </p>
+
+        <div class="codeheader">درخواست AJAX به کمک Red JS</div>
+        <div class="codebox"><pre>Red.ready(function () {
+    Red.ajax({
+            type: 'GET',
+            url: 'http://localhost/,
+            contentType: 'text/html',
+            success: function () {
+                Red.select('#content').innerHTML(this.response)
+            },
+    });
+
+});
+</pre>
+        </div>
+
+    </div>
+
+    <div id="csrf-token"
+         class="content-box">
+        <h3 class="content-title">جلوگیری از
+            حملات CSRF</h3>
+        <hr>
+        <p>
+            محافظ CSRF یک میان راهی از پیش تعیین شده در رد فریم ورک است .
+            <br/>
+            <br/>
+            CSRF (Cross-Site Request Forgery) یک ضعف امنیتی شناخته شده است که به نفوذگر این امکان را می دهد تا درخواستی
+            به صورت نا خواسته بر روی سیستم مشتری اجرا شود .
+            <br/>
+            فرض کنید اپلیکیشن شما مسیر GET ای داره که قراره پسورد کاربر رو از این طریق عوض کنه (توجه داشته باشید که هرگز
+            همچین مسیری پیشنهاد شده نیست ؛ فقط برای مثال) :
+        </p>
+        <br/>
+
+        <div class="box" style="text-align: left;direction: ltr">
+            http://app.com/user-area/reset-password/?new-password=newpass1232
+        </div>
+        <br/>
+        <p>
+
+            در صورتی که کاربر به اپلیکیشن وارد شده باشد و نشست فعال داشته باشید و نفوذگر درخواستی از سوی کامپیوتر کاربر
+            ارسال کند (توسط مشاهده کردن یک وبسایت نا امن ، می تواند چند خط کد جاوا اسکریپت باشد) گذر واژه کاربر به راحتی
+            عوض خواهد شد .
+            <br/>
+            <br/>
+            برای جلوگیری از این حملات بهترین راه استفاده از توکن CSRF در فرم ها است .
+            <br/>
+            <br/>
+            به جهت تولید توکن از متد CSRFToken در ویو خود استفاده کنید ؛ حتما توکن رو در یک hidden input قرار بدهید تا
+            همراه فرم ارسال بشه و از سمت بک اند به آن دسترسی داشته باشید .
+        </p>
+
+        <div class="codeheader">نحوه کارکرد توکن CSRF</div>
+        <div class="codebox">
+            &lt;input type="hidden" name="CSRF_Token" value="{{ CSRFToken() }}"&gt;
+        </div>
+
+        <p>
+            نحوه کارکرد میان راهی توکن CSRF :
+        </p>
+
+        <div class="codeheader">میان راهی محافط CSRF</div>
+        <div class="codebox">
+            Router::register("user-area/reset-password/{new-password}", "GET", "UserController@resetPass",
+            ["Authentication:user", "CSRFToken"]);
+        </div>
+
+    </div>
+
+
+    <div id="ir-date"
+         class="content-box">
+        <h3 class="content-title">تاریخ
+            ایران</h3>
+        <hr>
+        <p>
+            تاریخ ایران یک کلاس از پیش تعیین شده بر گفته و شخصی سازی شده از کتابخانه JDF است .
+            <br/>
+            <br/>
+            این کلاس در فضای نام پیش رو نگه داری می شود :
+        </p>
+        <br/>
+
+        <div class="box" style="text-align: left;direction: ltr">
+            Red\Date\IRDate
+        </div>
+        <br/>
+        <p>
+            دریافت تاریخ :
+        </p>
+
+        <div class="codeheader">تاریخ ایران</div>
+        <div class="codebox">
+            IRDate::getDate();
+        </div>
+
+        <p>
+            تبدیل تاریخ gregorian به جلالی :
+        </p>
+
+        <div class="codeheader">تبدیل تاریخ gregorian به جلالی</div>
+        <div class="codebox">
+            date_default_timezone_set("America/New_York");
+            <br/>
+            <br/>
+            list($gy,$gm,$gd)=explode('-',date('Y-n-d'));
+            <br/>
+            $date = IRDate::gregorianToJalali($gy, $gm, $gd, '/');
+        </div>
+
+        <p>
+            تبدیل تاریخ جلالی به gregorian :
+        </p>
+
+        <div class="codeheader">تبدیل تاریخ جلالی به gregorian</div>
+        <div class="codebox">
+            date_default_timezone_set("Asia/Tehran");
+            <br/>
+            <br/>
+            list($gy,$gm,$gd)=explode('-',date('Y-n-d'));
+            <br/>
+            $date = $this->jalaliToGregorian($gy, $gm, $gd, '/');
+        </div>
+
+    </div>
+
+</div>
+
+
+<hr style="clear: both;opacity: 0;width: 95%;text-align: center;margin-top: 20px;">
+
+<div id="footer" style="height: 65px;margin-top: 20px;">
+    <div style="text-shadow: black 0 0 1px;text-align: center">
+        مفتخر از میزبانی اپلیکیشن شما
+        <br/>
+        <br/>
+        رد فریم ورک - 1398
+    </div>
+</div>
+
+
+<script src="../../../Dependencies/Library/jquery-3.3.1.min.js"></script>
+<script src="../../../Dependencies/Library/Red.min.js"></script>
+
+<script>
+
+    Red.app.module("main");
+
+    Red.app.addController("main", "enterprise_doc_fa", function () {
+
+    });
+
+    Red.ready(function () {
+        Root.initialize();
+    });
+
+    var Root = {
+
+        header: $("#header"),
+        header_title: $("#header-title"),
+        header_caption: $("#header-caption"),
+        header_logo: $("#header-logo"),
+        navbar: $("#navbar"),
+        language_element: $("#language"),
+        language_list: $("#lang-list"),
+        subjects_title: $("#subjects-title"),
+
+        overview_s: $("#overview-s"),
+        directory_structure_s: $("#directory-structure-s"),
+        configuration_s: $("#configuration-s"),
+        environment_s: $("#environment-s"),
+        routing_s: $("#routing-s"),
+        controllers_s: $("#controllers-s"),
+        models_s: $("#models-s"),
+        views_s: $("#views-s"),
+        middlewares_s: $("#middlewares-s"),
+        api_s: $("#api-s"),
+        database_engine_s: $("#database-engine-s"),
+        pagination_s: $("#pagination-s"),
+        mail_server_s: $("#mail-server-s"),
+        validation_service_s: $("#validation-service-s"),
+        filter_service_s: $("#filter-service-s"),
+        sanitize_service_s: $("#sanitize-service-s"),
+        debug_components_s: $("#debug-components-s"),
+        error_handling_s: $("#error-handling-s"),
+        inputs_s: $("#inputs-s"),
+        sessions_s: $("#sessions-s"),
+        cookies_s: $("#cookies-s"),
+        crypt_tools_s: $("#crypt-tools-s"),
+        post_method_encryption_system_s: $("#post-method-encryption-system-s"),
+        language_service_s: $("#language-service-s"),
+        picture_tools_s: $("#picture-tools-s"),
+        captcha_service_s: $("#captcha-service-s"),
+        authentication_s: $("#authentication-s"),
+        ajax_request_s: $("#ajax-request-s"),
+        csrf_token_s: $("#csrf-token-s"),
+        ir_date_s: $("#ir-date-s"),
+
+
+        overview: $("#overview"),
+        directory_structure: $("#directory-structure"),
+        configuration: $("#configuration"),
+        environment: $("#environment"),
+        routing: $("#routing"),
+        controllers: $("#controllers"),
+        models: $("#models"),
+        views: $("#views"),
+        middlewares: $("#middlewares"),
+        api: $("#api"),
+        database_engine: $("#database-engine"),
+        pagination: $("#pagination"),
+        mail_server: $("#mail-server"),
+        validation_service: $("#validation-service"),
+        filter_service: $("#filter-service"),
+        sanitize_service: $("#sanitize-service"),
+        debug_components: $("#debug-components"),
+        error_handling: $("#error-handling"),
+        inputs: $("#inputs"),
+        sessions: $("#sessions"),
+        cookies: $("#cookies"),
+        crypt_tools: $("#crypt-tools"),
+        post_method_encryption_system: $("#post-method-encryption-system"),
+        language_service: $("#language-service"),
+        picture_tools: $("#picture-tools"),
+        captcha_service: $("#captcha-service"),
+        authentication: $("#authentication"),
+        ajax_request: $("#ajax-request"),
+        csrf_token: $("#csrf-token"),
+        ir_date: $("#ir-date"),
+
+        enterprise_app: $("#enterprise-app"),
+        red_analytics_new_key: $("#red-analytics-new-key"),
+        red_analytics_register_route: $("#red-analytics-register-route"),
+        red_analytics_generate_controller: $("#red-analytics-generate-controller"),
+        red_analytics_generate_model: $("#red-analytics-generate-model"),
+        red_analytics_generate_view: $("#red-analytics-generate-view"),
+        red_analytics_generate_middleware: $("#red-analytics-generate-middleware"),
+
+        subjects_container: $("#subjects-container"),
+        subjects: $("#subjects"),
+        content_container: $("#content-container"),
+        navbar_items_container: $("#navbar-items"),
+        navbar_items: $(".nav-item"),
+        navbar_header: $("#navbar-header"),
+        navbar_toggle: $("#navbar-toggle"),
+        nav_first_item: $("#nav-first-item"),
+        navbar_separator: $("#navbar-separator"),
+        subjects_toggle: $("#subjects-toggle"),
+        timerHandler: null,
+        lang_en: $("#lang-en"),
+        lang_fa: $("#lang-fa"),
+
+        initialize: function () {
+            $(window).on("scroll", Root.handleComponentsOnScroll);
+
+
+            Root.handleComponentsOnSize();
+
+            if ($(window).scrollTop() >= 31) {
+
+                Root.header.css({
+                    height: "50px",
+                });
+                Root.header_title.hide(0);
+                Root.header_caption.hide(0);
+                Root.header_logo.hide(0);
+                Root.navbar.css({top: 0});
+                Root.language_list.hide(0);
+                Root.subjects_title.hide(0);
+            }
+
+            Root.subjectPager();
+
+
+            $(window).on("resize", Root.handleComponentsOnSize);
+
+            Root.languageHandler();
+            Root.subjectsToggle();
+            Root.navbarToggle();
+            Root.handleRoutes();
+
+            $("#loader").fadeOut(500);
+        },
+
+        handleRoutes: function () {
+
+            var current_lang = $("#current-language").html();
+
+            var home_path;
+            var document_path;
+            var enterprise_path;
+            var console_path;
+            var red_js_path;
+
+            if (current_lang == "EN") {
+                home_path = "http://redframework.ir/lang/en";
+                document_path = "../../../en/document.html";
+                enterprise_path = "../../../en/enterprise/master/document.html";
+                console_path = "../../../en/console-kit/master/document.html";
+                red_js_path = "../../../en/red-js/master/document.html";
+            } else if (current_lang == "FA") {
+                home_path = "http://redframework.ir/lang/fa";
+                document_path = "../../../fa/document.html";
+                enterprise_path = "../../../fa/enterprise/master/document.html";
+                console_path = "../../../fa/console-kit/master/document.html";
+                red_js_path = "../../../fa/red-js/master/document.html";
+            }
+
+            Red.app.registerRoute("main", {
+                home: home_path,
+                documentation: document_path,
+                enterprise_doc: enterprise_path,
+                console_doc: console_path,
+                red_js_doc: red_js_path,
+
+            })
+
+        },
+
+        languageHandler: function () {
+
+            Root.language_element.click(function () {
+                if (Root.language_list.css("display") === "none") {
+                    Root.language_list.stop(true).fadeIn(1000);
+                } else {
+                    Root.language_list.stop(true).fadeOut(1000);
+                }
+            });
+
+            Root.lang_en.click(function () {
+                Red.setCookie("language", "en", 30);
+                Red.redirect("../../../en/enterprise/master/document.html");
+            });
+
+            Root.lang_fa.click(function () {
+                Red.setCookie("language", "fa", 30);
+                Red.redirect("../../../fa/enterprise/master/document.html");
+            });
+        },
+
+        subjectsToggle: function () {
+            Root.subjects_toggle.click(function () {
+                if (Root.subjects_container.css("display") === "none") {
+
+                    Root.subjects_toggle.show();
+                    Root.navbar_separator.hide();
+                    if (Root.header_logo.css("display") === "none") {
+                        Root.header.css({
+                            height: "50px",
+                        });
+                    } else {
+                        Root.header.css({
+                            height: "220px",
+                        });
+                    }
+
+                    Root.nav_first_item.css({
+                        marginTop: "20px",
+                        position: "",
+                        top: "",
+                        marginLeft: "10px",
+                    });
+
+                    Root.subjects.css({
+                        overflow: ""
+                    });
+
+                    Root.navbar.css({
+                        height: "50px",
+                        backgroundColor: "rgba(226,90,90,0.55)"
+                    });
+
+                    Root.navbar_items.css({
+                        display: "",
+                        marginTop: "",
+                        marginRight: "20px",
+                        paddingRight: "6px",
+                        float: "right",
+                    });
+                    Root.navbar_items_container.stop(true).fadeOut(0);
+
+                    if ($(window).scrollTop() <= 31) {
+                        Root.subjects_container.css({
+                            width: "87%",
+                            height: "65vh",
+                            maxHeight: "65vh",
+                            overflow: "auto",
+                            float: "",
+                            position: "fixed",
+                            top: "234px",
+                            right: "8px",
+                            backgroundColor: "white",
+                            boxShadow: "0 0 0.625vw 0 rgba(0,0,0,0.55)",
+                            borderRadius: "4px 0 0 4px"
+                        });
+                    } else {
+                        Root.subjects_container.css({
+                            width: "87%",
+                            height: "65vh",
+                            maxHeight: "65vh",
+                            overflow: "auto",
+                            float: "",
+                            position: "fixed",
+                            top: "80px",
+                            right: "8px",
+                            backgroundColor: "white",
+                            boxShadow: "0 0 0.625vw 0 rgba(0,0,0,0.55)",
+                            borderRadius: "4px 0 0 4px"
+                        });
+                    }
+
+                    Root.subjects_toggle.css({
+                        zIndex: "2"
+                    });
+                    Root.subjects_toggle.animate({right: "87.9%"}, 400);
+                    Root.subjects_container.show(400);
+                    Root.subjects.show(400);
+                } else {
+
+
+                    Root.subjects.css({
+                        overflow: "auto"
+                    });
+
+                    Root.subjects_container.hide(400);
+                    Root.subjects.hide(400);
+                    Root.subjects_toggle.animate({right: "0"}, 400);
+                    Root.subjects_toggle.css({
+                        right: "",
+                        zIndex: "0"
+                    });
+
+                }
+
+            });
+        },
+
+        navbarToggle: function () {
+            Root.navbar_toggle.click(function () {
+                if (Root.navbar_items_container.css("display") === "none") {
+
+                    Root.subjects_container.hide(400);
+                    Root.subjects.hide(400);
+                    Root.subjects_toggle.animate({right: "0"}, 400);
+                    Root.subjects_toggle.css({
+                        left: "",
+                        zIndex: "0"
+                    });
+
+
+                    setTimeout(function () {
+
+                        Root.subjects_container.css({
+                            width: "22%",
+                            height: "",
+                            maxHeight: "",
+                            overflow: "",
+                            float: "right",
+                            position: "sticky",
+                            top: "55px",
+                            right: "0",
+                            backgroundColor: "",
+                            boxShadow: "",
+                            borderRadius: ""
+                        });
+                    }, 400);
+
+
+                    Root.navbar_separator.show();
+
+                    Root.navbar.css({
+                        height: "223px",
+                        backgroundColor: "rgba(226,90,90,0.95)"
+                    });
+
+
+                    Root.navbar_items.css({
+                        display: "block",
+                        marginTop: "10px",
+                        marginLeft: "",
+                        paddingRight: "0",
+                        float: "",
+                    });
+                    Root.nav_first_item.css({
+                        marginTop: "20px",
+                        position: "relative",
+                        top: "7px",
+                        marginLeft: "-4px",
+                    });
+                    Root.navbar_items_container.stop(true).fadeIn(400);
+                } else {
+                    Root.subjects_toggle.show();
+                    Root.navbar_separator.hide();
+                    if (Root.header_logo.css("display") === "none") {
+                        Root.header.css({
+                            height: "50px",
+                        });
+                    } else {
+                        Root.header.css({
+                            height: "220px",
+                        });
+                    }
+
+                    Root.nav_first_item.css({
+                        marginTop: "20px",
+                        position: "",
+                        top: "",
+                        marginLeft: "10px",
+                    });
+
+                    Root.navbar.css({
+                        height: "50px",
+                        backgroundColor: "rgba(226,90,90,0.55)"
+                    });
+
+                    Root.navbar_items.css({
+                        display: "",
+                        marginTop: "",
+                        marginRight: "20px",
+                        paddingRight: "6px",
+                        float: "right",
+                    });
+                    Root.navbar_items_container.stop(true).fadeOut(0);
+                }
+            });
+        },
+
+        handleComponentsOnScroll: function () {
+            clearInterval(Root.timerHandler);
+
+            if ($(document).scrollTop() >= 8) {
+                Root.timerHandler = setTimeout(function handler() {
+                    Root.header_title.hide(0);
+                    Root.header_caption.hide(0);
+                    Root.header_logo.hide(0);
+                    Root.navbar.animate({top: 0});
+                    Root.header.css({height: "50px"});
+
+                    Root.language_list.hide(0);
+                }, 0);
+
+
+                if (Root.subjects_container.css("position") === "fixed") {
+                    Root.subjects_container.css({
+                        width: "87%",
+                        height: "65vh",
+                        float: "",
+                        position: "fixed",
+                        top: "80px",
+                        right: "8px",
+                        backgroundColor: "white",
+                        boxShadow: "0 0 0.625vw 0 rgba(0,0,0,0.55)",
+                        borderRadius: "4px 0 0 4px"
+                    });
+                }
+
+            } else {
+                Root.timerHandler = setTimeout(function () {
+                    Root.header.stop(true).animate({height: "220px"}, 200);
+                    Root.header_title.stop(true).show(0);
+                    Root.header_caption.stop(true).show(0);
+                    Root.header_logo.stop(true).show(0);
+                    Root.navbar.stop(true).animate({top: "170px"});
+                    Root.language_list.hide(0);
+
+                    if (Root.subjects_container.css("position") === "fixed") {
+                        Root.subjects_container.css({
+                            width: "87%",
+                            height: "65vh",
+                            float: "",
+                            position: "fixed",
+                            top: "234px",
+                            right: "8px",
+                            backgroundColor: "white",
+                            boxShadow: "0 0 0.625vw 0 rgba(0,0,0,0.55)",
+                            borderRadius: "4px 0 0 4px"
+                        });
+                    }
+                }, 200);
+
+            }
+
+
+            Root.subjectPager();
+        },
+
+        handleComponentsOnSize: function () {
+
+            if ($(window).innerWidth() <= 500) {
+
+                Root.subjects.css({
+                    overflow: ""
+                });
+
+                if (Root.subjects_container.css("position") === "fixed") {
+                    Root.subjects_container.hide(0);
+                    Root.subjects.hide(0);
+                    Root.subjects_toggle.css({right: "0"});
+                    Root.subjects_toggle.css({
+                        left: "",
+                        zIndex: "0"
+                    });
+
+
+                    Root.subjects_container.css({
+                        width: "22%",
+                        height: "",
+                        maxHeight: "",
+                        overflow: "",
+                        float: "right",
+                        position: "sticky",
+                        top: "55px",
+                        right: "0",
+                        backgroundColor: "",
+                        boxShadow: "",
+                        borderRadius: ""
+                    });
+                }
+
+                Root.content_container.css({
+                    float: "",
+                    marginTop: "-5px",
+                    marginBottom: "-40px",
+                    paddingTop: "40px",
+                    paddingBottom: "40px",
+                });
+
+                Root.navbar_header.show();
+                Root.subjects_toggle.show();
+                Root.navbar_toggle.show();
+                Root.navbar_items_container.hide();
+                Root.subjects_container.hide();
+                Root.subjects.hide();
+                Root.content_container.css({
+                    width: "100%",
+                    position: "relative",
+                    top: "-35px",
+                    zIndex: -5
+                });
+
+                Root.enterprise_app.css({
+                    width: "200px",
+                    height: "110px",
+                });
+
+                Root.red_analytics_new_key.css({
+                    width: "200px",
+                    height: "150px",
+                });
+
+                Root.red_analytics_register_route.css({
+                    width: "200px",
+                    height: "150px",
+                });
+
+                Root.red_analytics_generate_controller.css({
+                    width: "200px",
+                    height: "150px",
+                });
+
+                Root.red_analytics_generate_model.css({
+                    width: "200px",
+                    height: "150px",
+                });
+
+                Root.red_analytics_generate_view.css({
+                    width: "200px",
+                    height: "150px",
+                });
+
+                Root.red_analytics_generate_middleware.css({
+                    width: "200px",
+                    height: "150px",
+                });
+
+            } else if ($(window).innerWidth() <= 900) {
+
+                Root.subjects.css({
+                    overflow: ""
+                });
+
+                if (Root.subjects_container.css("position") === "fixed") {
+                    Root.subjects_container.hide(0);
+                    Root.subjects.hide(0);
+                    Root.subjects_toggle.css({right: "0"});
+                    Root.subjects_toggle.css({
+                        left: "",
+                        zIndex: "0"
+                    });
+
+
+                    Root.subjects_container.css({
+                        width: "22%",
+                        height: "",
+                        maxHeight: "",
+                        overflow: "",
+                        float: "right",
+                        position: "sticky",
+                        top: "55px",
+                        right: "0",
+                        backgroundColor: "",
+                        boxShadow: "",
+                        borderRadius: ""
+                    });
+                }
+
+                Root.content_container.css({
+                    float: "",
+                    marginTop: "-5px",
+                    marginBottom: "-40px",
+                    paddingTop: "40px",
+                    paddingBottom: "40px",
+                });
+
+                Root.navbar_header.show();
+                Root.subjects_toggle.show();
+                Root.navbar_toggle.show();
+                Root.navbar_items_container.hide();
+                Root.subjects_container.hide();
+                Root.subjects.hide();
+                Root.content_container.css({
+                    width: "100%",
+                    position: "relative",
+                    top: "-35px",
+                    zIndex: -5
+                });
+
+                Root.enterprise_app.css({
+                    width: "320px",
+                    height: "150px",
+                });
+
+                Root.red_analytics_new_key.css({
+                    width: "300px",
+                    height: "250px",
+                });
+
+                Root.red_analytics_register_route.css({
+                    width: "300px",
+                    height: "250px",
+                });
+
+                Root.red_analytics_generate_controller.css({
+                    width: "300px",
+                    height: "250px",
+                });
+
+                Root.red_analytics_generate_model.css({
+                    width: "300px",
+                    height: "250px",
+                });
+
+                Root.red_analytics_generate_view.css({
+                    width: "300px",
+                    height: "250px",
+                });
+
+                Root.red_analytics_generate_middleware.css({
+                    width: "300px",
+                    height: "250px",
+                });
+
+            } else if ($(window).innerWidth() <= 930) {
+
+
+                Root.subjects.css({
+                    overflow: "auto"
+                });
+
+                if (Root.subjects_container.css("position") === "fixed") {
+                    Root.subjects_container.hide(0);
+                    Root.subjects.hide(0);
+                    Root.subjects_toggle.css({right: "0"});
+                    Root.subjects_toggle.css({
+                        left: "",
+                        zIndex: "0"
+                    });
+
+
+                    Root.subjects_container.css({
+                        width: "22%",
+                        height: "",
+                        maxHeight: "",
+                        overflow: "",
+                        float: "right",
+                        position: "sticky",
+                        top: "55px",
+                        right: "0",
+                        backgroundColor: "",
+                        boxShadow: "",
+                        borderRadius: ""
+                    });
+                }
+
+                Root.subjects_toggle.show();
+
+                Root.content_container.css({
+                    float: "",
+                    marginTop: "-5px",
+                    marginBottom: "-40px",
+                    paddingTop: "40px",
+                    paddingBottom: "40px",
+                });
+
+                Root.navbar_separator.hide();
+                if (Root.header_logo.css("display") === "none") {
+                    Root.header.css({
+                        height: "50px",
+                    });
+                } else {
+                    Root.header.css({
+                        height: "220px",
+                    });
+                }
+
+                Root.nav_first_item.css({
+                    marginTop: "20px",
+                    position: "",
+                    top: "",
+                    marginLeft: "10px",
+                });
+
+                Root.navbar.css({
+                    height: "50px",
+                    backgroundColor: "rgba(226,90,90,0.55)"
+                });
+
+                Root.navbar_items.css({
+                    display: "",
+                    marginTop: "",
+                    marginRight: "20px",
+                });
+
+                Root.navbar_header.hide();
+                Root.navbar_toggle.hide();
+                Root.navbar_items_container.show();
+
+                Root.subjects_container.hide();
+                Root.subjects.hide();
+                Root.content_container.css({
+                    width: "100%",
+                    position: "relative",
+                    top: "-35px",
+                    zIndex: -5
+                });
+
+                Root.enterprise_app.css({
+                    width: "520px",
+                    height: "250px",
+                });
+
+                Root.red_analytics_new_key.css({
+                    width: "500px",
+                    height: "450px",
+                });
+
+                Root.red_analytics_register_route.css({
+                    width: "400px",
+                    height: "250px",
+                });
+
+                Root.red_analytics_generate_controller.css({
+                    width: "500px",
+                    height: "450px",
+                });
+
+                Root.red_analytics_generate_model.css({
+                    width: "500px",
+                    height: "450px",
+                });
+
+                Root.red_analytics_generate_view.css({
+                    width: "500px",
+                    height: "450px",
+                });
+
+                Root.red_analytics_generate_middleware.css({
+                    width: "500px",
+                    height: "450px",
+                });
+            } else if ($(window).innerWidth() <= 1022) {
+
+                Root.subjects.css({
+                    overflow: "auto"
+                });
+
+                if (Root.subjects_container.css("position") === "fixed") {
+                    Root.subjects_container.hide(0);
+                    Root.subjects.hide(0);
+                    Root.subjects_toggle.css({right: "0"});
+                    Root.subjects_toggle.css({
+                        left: "",
+                        zIndex: "0"
+                    });
+
+
+                    Root.subjects_container.css({
+                        width: "22%",
+                        height: "",
+                        maxHeight: "",
+                        overflow: "",
+                        float: "right",
+                        position: "sticky",
+                        top: "55px",
+                        right: "0",
+                        backgroundColor: "",
+                        boxShadow: "",
+                        borderRadius: ""
+                    });
+                }
+
+                Root.subjects_toggle.hide();
+
+                Root.content_container.css({
+                    float: "left",
+                    marginTop: "",
+                    marginBottom: "",
+                    margin: "auto",
+                    paddingTop: "",
+                    paddingBottom: "",
+                    padding: "auto"
+                });
+
+
+                Root.navbar_separator.hide();
+                if (Root.header_logo.css("display") === "none") {
+                    Root.header.css({
+                        height: "50px",
+                    });
+                } else {
+                    Root.header.css({
+                        height: "220px",
+                    });
+                }
+
+                Root.nav_first_item.css({
+                    marginTop: "20px",
+                    position: "",
+                    top: "",
+                    marginLeft: "10px",
+                });
+
+                Root.navbar.css({
+                    height: "50px",
+                    backgroundColor: "rgba(226,90,90,0.55)"
+                });
+
+                Root.navbar_items.css({
+                    display: "",
+                    marginTop: "",
+                    marginRight: "20px",
+                    paddingRight: "6px",
+                    float: "right",
+                });
+
+                Root.navbar_header.hide();
+                Root.navbar_toggle.hide();
+                Root.navbar_items_container.show();
+                Root.subjects_container.show();
+                Root.subjects.show();
+                Root.content_container.css({
+                    width: "70%",
+                    float: "left",
+                    position: "",
+                    top: ""
+                });
+
+                Root.enterprise_app.css({
+                    width: "520px",
+                    height: "250px",
+                });
+
+                Root.red_analytics_new_key.css({
+                    width: "500px",
+                    height: "450px",
+                });
+
+                Root.red_analytics_register_route.css({
+                    width: "600px",
+                    height: "350px",
+                });
+
+                Root.red_analytics_generate_controller.css({
+                    width: "500px",
+                    height: "450px",
+                });
+
+                Root.red_analytics_generate_model.css({
+                    width: "500px",
+                    height: "450px",
+                });
+
+                Root.red_analytics_generate_view.css({
+                    width: "500px",
+                    height: "450px",
+                });
+
+                Root.red_analytics_generate_middleware.css({
+                    width: "500px",
+                    height: "450px",
+                });
+
+            } else {
+
+                Root.subjects.css({
+                    overflow: "auto"
+                });
+
+                if (Root.subjects_container.css("position") === "fixed") {
+                    Root.subjects_toggle.css({right: "0"});
+                    Root.subjects_toggle.css({
+                        left: "",
+                        zIndex: "0"
+                    });
+
+
+                    Root.subjects_container.css({
+                        width: "22%",
+                        height: "",
+                        maxHeight: "",
+                        overflow: "",
+                        float: "right",
+                        position: "sticky",
+                        top: "55px",
+                        right: "0",
+                        backgroundColor: "",
+                        boxShadow: "",
+                        borderRadius: ""
+                    });
+                    Root.subjects_container.show();
+                }
+
+                Root.subjects_toggle.hide();
+
+                Root.content_container.css({
+                    float: "left",
+                    marginTop: "",
+                    marginBottom: "",
+                    margin: "auto",
+                    paddingTop: "",
+                    paddingBottom: "",
+                    padding: "auto"
+                });
+
+
+                Root.navbar_separator.hide();
+                if (Root.header_logo.css("display") === "none") {
+                    Root.header.css({
+                        height: "50px",
+                    });
+                } else {
+                    Root.header.css({
+                        height: "220px",
+                    });
+                }
+
+                Root.nav_first_item.css({
+                    marginTop: "20px",
+                    marginBottom: "",
+                    position: "",
+                    top: "",
+                    marginLeft: "10px",
+                });
+
+                Root.navbar.css({
+                    height: "50px",
+                    backgroundColor: "rgba(226,90,90,0.55)"
+                });
+
+                Root.navbar_items.css({
+                    display: "",
+                    marginTop: "",
+                    marginRight: "20px",
+                    paddingRight: "6px",
+                    float: "right",
+                });
+
+                Root.navbar_header.hide();
+                Root.navbar_toggle.hide();
+                Root.navbar_items_container.show();
+                Root.subjects_container.show();
+                Root.subjects.show();
+
+                Root.content_container.css({
+                    width: "70%",
+                    float: "left",
+                    position: "",
+                    top: ""
+                });
+
+                Root.enterprise_app.css({
+                    width: "600px",
+                    height: "300px",
+                });
+
+                Root.red_analytics_new_key.css({
+                    width: "600px",
+                    height: "550px",
+                });
+
+                Root.red_analytics_register_route.css({
+                    width: "600px",
+                    height: "350px",
+                });
+
+                Root.red_analytics_generate_controller.css({
+                    width: "600px",
+                    height: "550px",
+                });
+
+                Root.red_analytics_generate_model.css({
+                    width: "600px",
+                    height: "550px",
+                });
+
+                Root.red_analytics_generate_view.css({
+                    width: "600px",
+                    height: "550px",
+                });
+
+                Root.red_analytics_generate_middleware.css({
+                    width: "600px",
+                    height: "550px",
+                });
+            }
+
+        },
+
+        subjectPager: function () {
+            if (Root.overview.offset()['top'] <= $(window).scrollTop() && Root.directory_structure.offset()['top'] >= $(window).scrollTop()) {
+                Root.overview_s.css({"text-shadow": "black 0 0 1px"});
+                Root.directory_structure_s.css({"text-shadow": ""});
+                Root.configuration_s.css({"text-shadow": ""});
+                Root.environment_s.css({"text-shadow": ""});
+                Root.routing_s.css({"text-shadow": ""});
+                Root.controllers_s.css({"text-shadow": ""});
+                Root.models_s.css({"text-shadow": ""});
+                Root.views_s.css({"text-shadow": ""});
+                Root.middlewares_s.css({"text-shadow": ""});
+                Root.api_s.css({"text-shadow": ""});
+                Root.database_engine_s.css({"text-shadow": ""});
+                Root.pagination_s.css({"text-shadow": ""});
+                Root.mail_server_s.css({"text-shadow": ""});
+                Root.validation_service_s.css({"text-shadow": ""});
+                Root.filter_service_s.css({"text-shadow": ""});
+                Root.sanitize_service_s.css({"text-shadow": ""});
+                Root.debug_components_s.css({"text-shadow": ""});
+                Root.error_handling_s.css({"text-shadow": ""});
+                Root.inputs_s.css({"text-shadow": ""});
+                Root.sessions_s.css({"text-shadow": ""});
+                Root.cookies_s.css({"text-shadow": ""});
+                Root.crypt_tools_s.css({"text-shadow": ""});
+                Root.post_method_encryption_system_s.css({"text-shadow": ""});
+                Root.language_service_s.css({"text-shadow": ""});
+                Root.picture_tools_s.css({"text-shadow": ""});
+                Root.captcha_service_s.css({"text-shadow": ""});
+                Root.authentication_s.css({"text-shadow": ""});
+                Root.ajax_request_s.css({"text-shadow": ""});
+                Root.csrf_token_s.css({"text-shadow": ""});
+                Root.ir_date_s.css({"text-shadow": ""});
+            } else if (Root.directory_structure.offset()['top'] <= $(window).scrollTop() && Root.configuration.offset()['top'] >= $(window).scrollTop()) {
+                Root.directory_structure_s.css({"text-shadow": "black 0 0 1px"});
+                Root.overview_s.css({"text-shadow": ""});
+                Root.configuration_s.css({"text-shadow": ""});
+                Root.environment_s.css({"text-shadow": ""});
+                Root.routing_s.css({"text-shadow": ""});
+                Root.controllers_s.css({"text-shadow": ""});
+                Root.models_s.css({"text-shadow": ""});
+                Root.views_s.css({"text-shadow": ""});
+                Root.middlewares_s.css({"text-shadow": ""});
+                Root.api_s.css({"text-shadow": ""});
+                Root.database_engine_s.css({"text-shadow": ""});
+                Root.pagination_s.css({"text-shadow": ""});
+                Root.mail_server_s.css({"text-shadow": ""});
+                Root.validation_service_s.css({"text-shadow": ""});
+                Root.filter_service_s.css({"text-shadow": ""});
+                Root.sanitize_service_s.css({"text-shadow": ""});
+                Root.debug_components_s.css({"text-shadow": ""});
+                Root.error_handling_s.css({"text-shadow": ""});
+                Root.inputs_s.css({"text-shadow": ""});
+                Root.sessions_s.css({"text-shadow": ""});
+                Root.cookies_s.css({"text-shadow": ""});
+                Root.crypt_tools_s.css({"text-shadow": ""});
+                Root.post_method_encryption_system_s.css({"text-shadow": ""});
+                Root.language_service_s.css({"text-shadow": ""});
+                Root.picture_tools_s.css({"text-shadow": ""});
+                Root.captcha_service_s.css({"text-shadow": ""});
+                Root.authentication_s.css({"text-shadow": ""});
+                Root.ajax_request_s.css({"text-shadow": ""});
+                Root.csrf_token_s.css({"text-shadow": ""});
+                Root.ir_date_s.css({"text-shadow": ""});
+            } else if (Root.configuration.offset()['top'] <= $(window).scrollTop() && Root.environment.offset()['top'] >= $(window).scrollTop()) {
+                Root.configuration_s.css({"text-shadow": "black 0 0 1px"});
+                Root.overview_s.css({"text-shadow": ""});
+                Root.directory_structure_s.css({"text-shadow": ""});
+                Root.environment_s.css({"text-shadow": ""});
+                Root.routing_s.css({"text-shadow": ""});
+                Root.controllers_s.css({"text-shadow": ""});
+                Root.models_s.css({"text-shadow": ""});
+                Root.views_s.css({"text-shadow": ""});
+                Root.middlewares_s.css({"text-shadow": ""});
+                Root.api_s.css({"text-shadow": ""});
+                Root.database_engine_s.css({"text-shadow": ""});
+                Root.pagination_s.css({"text-shadow": ""});
+                Root.mail_server_s.css({"text-shadow": ""});
+                Root.validation_service_s.css({"text-shadow": ""});
+                Root.filter_service_s.css({"text-shadow": ""});
+                Root.sanitize_service_s.css({"text-shadow": ""});
+                Root.debug_components_s.css({"text-shadow": ""});
+                Root.error_handling_s.css({"text-shadow": ""});
+                Root.inputs_s.css({"text-shadow": ""});
+                Root.sessions_s.css({"text-shadow": ""});
+                Root.cookies_s.css({"text-shadow": ""});
+                Root.crypt_tools_s.css({"text-shadow": ""});
+                Root.post_method_encryption_system_s.css({"text-shadow": ""});
+                Root.language_service_s.css({"text-shadow": ""});
+                Root.picture_tools_s.css({"text-shadow": ""});
+                Root.captcha_service_s.css({"text-shadow": ""});
+                Root.authentication_s.css({"text-shadow": ""});
+                Root.ajax_request_s.css({"text-shadow": ""});
+                Root.csrf_token_s.css({"text-shadow": ""});
+                Root.ir_date_s.css({"text-shadow": ""});
+            } else if (Root.environment.offset()['top'] <= $(window).scrollTop() && Root.routing.offset()['top'] >= $(window).scrollTop()) {
+                Root.environment_s.css({"text-shadow": "black 0 0 1px"});
+                Root.overview_s.css({"text-shadow": ""});
+                Root.directory_structure_s.css({"text-shadow": ""});
+                Root.configuration_s.css({"text-shadow": ""});
+                Root.routing_s.css({"text-shadow": ""});
+                Root.controllers_s.css({"text-shadow": ""});
+                Root.models_s.css({"text-shadow": ""});
+                Root.views_s.css({"text-shadow": ""});
+                Root.middlewares_s.css({"text-shadow": ""});
+                Root.api_s.css({"text-shadow": ""});
+                Root.database_engine_s.css({"text-shadow": ""});
+                Root.pagination_s.css({"text-shadow": ""});
+                Root.mail_server_s.css({"text-shadow": ""});
+                Root.validation_service_s.css({"text-shadow": ""});
+                Root.filter_service_s.css({"text-shadow": ""});
+                Root.sanitize_service_s.css({"text-shadow": ""});
+                Root.debug_components_s.css({"text-shadow": ""});
+                Root.error_handling_s.css({"text-shadow": ""});
+                Root.inputs_s.css({"text-shadow": ""});
+                Root.sessions_s.css({"text-shadow": ""});
+                Root.cookies_s.css({"text-shadow": ""});
+                Root.crypt_tools_s.css({"text-shadow": ""});
+                Root.post_method_encryption_system_s.css({"text-shadow": ""});
+                Root.language_service_s.css({"text-shadow": ""});
+                Root.picture_tools_s.css({"text-shadow": ""});
+                Root.captcha_service_s.css({"text-shadow": ""});
+                Root.authentication_s.css({"text-shadow": ""});
+                Root.ajax_request_s.css({"text-shadow": ""});
+                Root.csrf_token_s.css({"text-shadow": ""});
+                Root.ir_date_s.css({"text-shadow": ""});
+            } else if (Root.routing.offset()['top'] <= $(window).scrollTop() && Root.controllers.offset()['top'] >= $(window).scrollTop()) {
+                Root.routing_s.css({"text-shadow": "black 0 0 1px"});
+                Root.overview_s.css({"text-shadow": ""});
+                Root.directory_structure_s.css({"text-shadow": ""});
+                Root.configuration_s.css({"text-shadow": ""});
+                Root.environment_s.css({"text-shadow": ""});
+                Root.controllers_s.css({"text-shadow": ""});
+                Root.models_s.css({"text-shadow": ""});
+                Root.views_s.css({"text-shadow": ""});
+                Root.middlewares_s.css({"text-shadow": ""});
+                Root.api_s.css({"text-shadow": ""});
+                Root.database_engine_s.css({"text-shadow": ""});
+                Root.pagination_s.css({"text-shadow": ""});
+                Root.mail_server_s.css({"text-shadow": ""});
+                Root.validation_service_s.css({"text-shadow": ""});
+                Root.filter_service_s.css({"text-shadow": ""});
+                Root.sanitize_service_s.css({"text-shadow": ""});
+                Root.debug_components_s.css({"text-shadow": ""});
+                Root.error_handling_s.css({"text-shadow": ""});
+                Root.inputs_s.css({"text-shadow": ""});
+                Root.sessions_s.css({"text-shadow": ""});
+                Root.cookies_s.css({"text-shadow": ""});
+                Root.crypt_tools_s.css({"text-shadow": ""});
+                Root.post_method_encryption_system_s.css({"text-shadow": ""});
+                Root.language_service_s.css({"text-shadow": ""});
+                Root.picture_tools_s.css({"text-shadow": ""});
+                Root.captcha_service_s.css({"text-shadow": ""});
+                Root.authentication_s.css({"text-shadow": ""});
+                Root.ajax_request_s.css({"text-shadow": ""});
+                Root.csrf_token_s.css({"text-shadow": ""});
+                Root.ir_date_s.css({"text-shadow": ""});
+            } else if (Root.controllers.offset()['top'] <= $(window).scrollTop() && Root.models.offset()['top'] >= $(window).scrollTop()) {
+                Root.controllers_s.css({"text-shadow": "black 0 0 1px"});
+                Root.overview_s.css({"text-shadow": ""});
+                Root.directory_structure_s.css({"text-shadow": ""});
+                Root.configuration_s.css({"text-shadow": ""});
+                Root.environment_s.css({"text-shadow": ""});
+                Root.routing_s.css({"text-shadow": ""});
+                Root.models_s.css({"text-shadow": ""});
+                Root.views_s.css({"text-shadow": ""});
+                Root.middlewares_s.css({"text-shadow": ""});
+                Root.api_s.css({"text-shadow": ""});
+                Root.database_engine_s.css({"text-shadow": ""});
+                Root.pagination_s.css({"text-shadow": ""});
+                Root.mail_server_s.css({"text-shadow": ""});
+                Root.validation_service_s.css({"text-shadow": ""});
+                Root.filter_service_s.css({"text-shadow": ""});
+                Root.sanitize_service_s.css({"text-shadow": ""});
+                Root.debug_components_s.css({"text-shadow": ""});
+                Root.error_handling_s.css({"text-shadow": ""});
+                Root.inputs_s.css({"text-shadow": ""});
+                Root.sessions_s.css({"text-shadow": ""});
+                Root.cookies_s.css({"text-shadow": ""});
+                Root.crypt_tools_s.css({"text-shadow": ""});
+                Root.post_method_encryption_system_s.css({"text-shadow": ""});
+                Root.language_service_s.css({"text-shadow": ""});
+                Root.picture_tools_s.css({"text-shadow": ""});
+                Root.captcha_service_s.css({"text-shadow": ""});
+                Root.authentication_s.css({"text-shadow": ""});
+                Root.ajax_request_s.css({"text-shadow": ""});
+                Root.csrf_token_s.css({"text-shadow": ""});
+                Root.ir_date_s.css({"text-shadow": ""});
+            } else if (Root.models.offset()['top'] <= $(window).scrollTop() && Root.views.offset()['top'] >= $(window).scrollTop()) {
+                Root.models_s.css({"text-shadow": "black 0 0 1px"});
+                Root.overview_s.css({"text-shadow": ""});
+                Root.directory_structure_s.css({"text-shadow": ""});
+                Root.configuration_s.css({"text-shadow": ""});
+                Root.environment_s.css({"text-shadow": ""});
+                Root.routing_s.css({"text-shadow": ""});
+                Root.controllers_s.css({"text-shadow": ""});
+                Root.views_s.css({"text-shadow": ""});
+                Root.middlewares_s.css({"text-shadow": ""});
+                Root.api_s.css({"text-shadow": ""});
+                Root.database_engine_s.css({"text-shadow": ""});
+                Root.pagination_s.css({"text-shadow": ""});
+                Root.mail_server_s.css({"text-shadow": ""});
+                Root.validation_service_s.css({"text-shadow": ""});
+                Root.filter_service_s.css({"text-shadow": ""});
+                Root.sanitize_service_s.css({"text-shadow": ""});
+                Root.debug_components_s.css({"text-shadow": ""});
+                Root.error_handling_s.css({"text-shadow": ""});
+                Root.inputs_s.css({"text-shadow": ""});
+                Root.sessions_s.css({"text-shadow": ""});
+                Root.cookies_s.css({"text-shadow": ""});
+                Root.crypt_tools_s.css({"text-shadow": ""});
+                Root.post_method_encryption_system_s.css({"text-shadow": ""});
+                Root.language_service_s.css({"text-shadow": ""});
+                Root.picture_tools_s.css({"text-shadow": ""});
+                Root.captcha_service_s.css({"text-shadow": ""});
+                Root.authentication_s.css({"text-shadow": ""});
+                Root.ajax_request_s.css({"text-shadow": ""});
+                Root.csrf_token_s.css({"text-shadow": ""});
+                Root.ir_date_s.css({"text-shadow": ""});
+            } else if (Root.views.offset()['top'] <= $(window).scrollTop() && Root.middlewares.offset()['top'] >= $(window).scrollTop()) {
+                Root.views_s.css({"text-shadow": "black 0 0 1px"});
+                Root.overview_s.css({"text-shadow": ""});
+                Root.directory_structure_s.css({"text-shadow": ""});
+                Root.configuration_s.css({"text-shadow": ""});
+                Root.environment_s.css({"text-shadow": ""});
+                Root.routing_s.css({"text-shadow": ""});
+                Root.controllers_s.css({"text-shadow": ""});
+                Root.models_s.css({"text-shadow": ""});
+                Root.middlewares_s.css({"text-shadow": ""});
+                Root.api_s.css({"text-shadow": ""});
+                Root.database_engine_s.css({"text-shadow": ""});
+                Root.pagination_s.css({"text-shadow": ""});
+                Root.mail_server_s.css({"text-shadow": ""});
+                Root.validation_service_s.css({"text-shadow": ""});
+                Root.filter_service_s.css({"text-shadow": ""});
+                Root.sanitize_service_s.css({"text-shadow": ""});
+                Root.debug_components_s.css({"text-shadow": ""});
+                Root.error_handling_s.css({"text-shadow": ""});
+                Root.inputs_s.css({"text-shadow": ""});
+                Root.sessions_s.css({"text-shadow": ""});
+                Root.cookies_s.css({"text-shadow": ""});
+                Root.crypt_tools_s.css({"text-shadow": ""});
+                Root.post_method_encryption_system_s.css({"text-shadow": ""});
+                Root.language_service_s.css({"text-shadow": ""});
+                Root.picture_tools_s.css({"text-shadow": ""});
+                Root.captcha_service_s.css({"text-shadow": ""});
+                Root.authentication_s.css({"text-shadow": ""});
+                Root.ajax_request_s.css({"text-shadow": ""});
+                Root.csrf_token_s.css({"text-shadow": ""});
+                Root.ir_date_s.css({"text-shadow": ""});
+            } else if (Root.middlewares.offset()['top'] <= $(window).scrollTop() && Root.api.offset()['top'] >= $(window).scrollTop()) {
+                Root.middlewares_s.css({"text-shadow": "black 0 0 1px"});
+                Root.overview_s.css({"text-shadow": ""});
+                Root.directory_structure_s.css({"text-shadow": ""});
+                Root.configuration_s.css({"text-shadow": ""});
+                Root.environment_s.css({"text-shadow": ""});
+                Root.routing_s.css({"text-shadow": ""});
+                Root.controllers_s.css({"text-shadow": ""});
+                Root.models_s.css({"text-shadow": ""});
+                Root.views_s.css({"text-shadow": ""});
+                Root.api_s.css({"text-shadow": ""});
+                Root.database_engine_s.css({"text-shadow": ""});
+                Root.pagination_s.css({"text-shadow": ""});
+                Root.mail_server_s.css({"text-shadow": ""});
+                Root.validation_service_s.css({"text-shadow": ""});
+                Root.filter_service_s.css({"text-shadow": ""});
+                Root.sanitize_service_s.css({"text-shadow": ""});
+                Root.debug_components_s.css({"text-shadow": ""});
+                Root.error_handling_s.css({"text-shadow": ""});
+                Root.inputs_s.css({"text-shadow": ""});
+                Root.sessions_s.css({"text-shadow": ""});
+                Root.cookies_s.css({"text-shadow": ""});
+                Root.crypt_tools_s.css({"text-shadow": ""});
+                Root.post_method_encryption_system_s.css({"text-shadow": ""});
+                Root.language_service_s.css({"text-shadow": ""});
+                Root.picture_tools_s.css({"text-shadow": ""});
+                Root.captcha_service_s.css({"text-shadow": ""});
+                Root.authentication_s.css({"text-shadow": ""});
+                Root.ajax_request_s.css({"text-shadow": ""});
+                Root.csrf_token_s.css({"text-shadow": ""});
+                Root.ir_date_s.css({"text-shadow": ""});
+            } else if (Root.api.offset()['top'] <= $(window).scrollTop() && Root.database_engine.offset()['top'] >= $(window).scrollTop()) {
+                Root.api_s.css({"text-shadow": "black 0 0 1px"});
+                Root.overview_s.css({"text-shadow": ""});
+                Root.directory_structure_s.css({"text-shadow": ""});
+                Root.configuration_s.css({"text-shadow": ""});
+                Root.environment_s.css({"text-shadow": ""});
+                Root.routing_s.css({"text-shadow": ""});
+                Root.controllers_s.css({"text-shadow": ""});
+                Root.models_s.css({"text-shadow": ""});
+                Root.views_s.css({"text-shadow": ""});
+                Root.middlewares_s.css({"text-shadow": ""});
+                Root.database_engine_s.css({"text-shadow": ""});
+                Root.pagination_s.css({"text-shadow": ""});
+                Root.mail_server_s.css({"text-shadow": ""});
+                Root.validation_service_s.css({"text-shadow": ""});
+                Root.filter_service_s.css({"text-shadow": ""});
+                Root.sanitize_service_s.css({"text-shadow": ""});
+                Root.debug_components_s.css({"text-shadow": ""});
+                Root.error_handling_s.css({"text-shadow": ""});
+                Root.inputs_s.css({"text-shadow": ""});
+                Root.sessions_s.css({"text-shadow": ""});
+                Root.cookies_s.css({"text-shadow": ""});
+                Root.crypt_tools_s.css({"text-shadow": ""});
+                Root.post_method_encryption_system_s.css({"text-shadow": ""});
+                Root.language_service_s.css({"text-shadow": ""});
+                Root.picture_tools_s.css({"text-shadow": ""});
+                Root.captcha_service_s.css({"text-shadow": ""});
+                Root.authentication_s.css({"text-shadow": ""});
+                Root.ajax_request_s.css({"text-shadow": ""});
+                Root.csrf_token_s.css({"text-shadow": ""});
+                Root.ir_date_s.css({"text-shadow": ""});
+            } else if (Root.database_engine.offset()['top'] <= $(window).scrollTop() && Root.pagination.offset()['top'] >= $(window).scrollTop()) {
+                Root.database_engine_s.css({"text-shadow": "black 0 0 1px"});
+                Root.overview_s.css({"text-shadow": ""});
+                Root.directory_structure_s.css({"text-shadow": ""});
+                Root.configuration_s.css({"text-shadow": ""});
+                Root.environment_s.css({"text-shadow": ""});
+                Root.routing_s.css({"text-shadow": ""});
+                Root.controllers_s.css({"text-shadow": ""});
+                Root.models_s.css({"text-shadow": ""});
+                Root.views_s.css({"text-shadow": ""});
+                Root.middlewares_s.css({"text-shadow": ""});
+                Root.api_s.css({"text-shadow": ""});
+                Root.pagination_s.css({"text-shadow": ""});
+                Root.mail_server_s.css({"text-shadow": ""});
+                Root.validation_service_s.css({"text-shadow": ""});
+                Root.filter_service_s.css({"text-shadow": ""});
+                Root.sanitize_service_s.css({"text-shadow": ""});
+                Root.debug_components_s.css({"text-shadow": ""});
+                Root.error_handling_s.css({"text-shadow": ""});
+                Root.inputs_s.css({"text-shadow": ""});
+                Root.sessions_s.css({"text-shadow": ""});
+                Root.cookies_s.css({"text-shadow": ""});
+                Root.crypt_tools_s.css({"text-shadow": ""});
+                Root.post_method_encryption_system_s.css({"text-shadow": ""});
+                Root.language_service_s.css({"text-shadow": ""});
+                Root.picture_tools_s.css({"text-shadow": ""});
+                Root.captcha_service_s.css({"text-shadow": ""});
+                Root.authentication_s.css({"text-shadow": ""});
+                Root.ajax_request_s.css({"text-shadow": ""});
+                Root.csrf_token_s.css({"text-shadow": ""});
+                Root.ir_date_s.css({"text-shadow": ""});
+            } else if (Root.pagination.offset()['top'] <= $(window).scrollTop() && Root.mail_server.offset()['top'] >= $(window).scrollTop()) {
+                Root.pagination_s.css({"text-shadow": "black 0 0 1px"});
+                Root.overview_s.css({"text-shadow": ""});
+                Root.directory_structure_s.css({"text-shadow": ""});
+                Root.configuration_s.css({"text-shadow": ""});
+                Root.environment_s.css({"text-shadow": ""});
+                Root.routing_s.css({"text-shadow": ""});
+                Root.controllers_s.css({"text-shadow": ""});
+                Root.models_s.css({"text-shadow": ""});
+                Root.views_s.css({"text-shadow": ""});
+                Root.middlewares_s.css({"text-shadow": ""});
+                Root.api_s.css({"text-shadow": ""});
+                Root.database_engine_s.css({"text-shadow": ""});
+                Root.mail_server_s.css({"text-shadow": ""});
+                Root.validation_service_s.css({"text-shadow": ""});
+                Root.filter_service_s.css({"text-shadow": ""});
+                Root.sanitize_service_s.css({"text-shadow": ""});
+                Root.debug_components_s.css({"text-shadow": ""});
+                Root.error_handling_s.css({"text-shadow": ""});
+                Root.inputs_s.css({"text-shadow": ""});
+                Root.sessions_s.css({"text-shadow": ""});
+                Root.cookies_s.css({"text-shadow": ""});
+                Root.crypt_tools_s.css({"text-shadow": ""});
+                Root.post_method_encryption_system_s.css({"text-shadow": ""});
+                Root.language_service_s.css({"text-shadow": ""});
+                Root.picture_tools_s.css({"text-shadow": ""});
+                Root.captcha_service_s.css({"text-shadow": ""});
+                Root.authentication_s.css({"text-shadow": ""});
+                Root.ajax_request_s.css({"text-shadow": ""});
+                Root.csrf_token_s.css({"text-shadow": ""});
+                Root.ir_date_s.css({"text-shadow": ""});
+            } else if (Root.mail_server.offset()['top'] <= $(window).scrollTop() && Root.validation_service.offset()['top'] >= $(window).scrollTop()) {
+                Root.mail_server_s.css({"text-shadow": "black 0 0 1px"});
+                Root.overview_s.css({"text-shadow": ""});
+                Root.directory_structure_s.css({"text-shadow": ""});
+                Root.configuration_s.css({"text-shadow": ""});
+                Root.environment_s.css({"text-shadow": ""});
+                Root.routing_s.css({"text-shadow": ""});
+                Root.controllers_s.css({"text-shadow": ""});
+                Root.models_s.css({"text-shadow": ""});
+                Root.views_s.css({"text-shadow": ""});
+                Root.middlewares_s.css({"text-shadow": ""});
+                Root.api_s.css({"text-shadow": ""});
+                Root.database_engine_s.css({"text-shadow": ""});
+                Root.pagination_s.css({"text-shadow": ""});
+                Root.validation_service_s.css({"text-shadow": ""});
+                Root.filter_service_s.css({"text-shadow": ""});
+                Root.sanitize_service_s.css({"text-shadow": ""});
+                Root.debug_components_s.css({"text-shadow": ""});
+                Root.error_handling_s.css({"text-shadow": ""});
+                Root.inputs_s.css({"text-shadow": ""});
+                Root.sessions_s.css({"text-shadow": ""});
+                Root.cookies_s.css({"text-shadow": ""});
+                Root.crypt_tools_s.css({"text-shadow": ""});
+                Root.post_method_encryption_system_s.css({"text-shadow": ""});
+                Root.language_service_s.css({"text-shadow": ""});
+                Root.picture_tools_s.css({"text-shadow": ""});
+                Root.captcha_service_s.css({"text-shadow": ""});
+                Root.authentication_s.css({"text-shadow": ""});
+                Root.ajax_request_s.css({"text-shadow": ""});
+                Root.csrf_token_s.css({"text-shadow": ""});
+                Root.ir_date_s.css({"text-shadow": ""});
+            } else if (Root.validation_service.offset()['top'] <= $(window).scrollTop() && Root.filter_service.offset()['top'] >= $(window).scrollTop()) {
+                Root.validation_service_s.css({"text-shadow": "black 0 0 1px"});
+                Root.overview_s.css({"text-shadow": ""});
+                Root.directory_structure_s.css({"text-shadow": ""});
+                Root.configuration_s.css({"text-shadow": ""});
+                Root.environment_s.css({"text-shadow": ""});
+                Root.routing_s.css({"text-shadow": ""});
+                Root.controllers_s.css({"text-shadow": ""});
+                Root.models_s.css({"text-shadow": ""});
+                Root.views_s.css({"text-shadow": ""});
+                Root.middlewares_s.css({"text-shadow": ""});
+                Root.api_s.css({"text-shadow": ""});
+                Root.database_engine_s.css({"text-shadow": ""});
+                Root.pagination_s.css({"text-shadow": ""});
+                Root.mail_server_s.css({"text-shadow": ""});
+                Root.filter_service_s.css({"text-shadow": ""});
+                Root.sanitize_service_s.css({"text-shadow": ""});
+                Root.debug_components_s.css({"text-shadow": ""});
+                Root.error_handling_s.css({"text-shadow": ""});
+                Root.inputs_s.css({"text-shadow": ""});
+                Root.sessions_s.css({"text-shadow": ""});
+                Root.cookies_s.css({"text-shadow": ""});
+                Root.crypt_tools_s.css({"text-shadow": ""});
+                Root.post_method_encryption_system_s.css({"text-shadow": ""});
+                Root.language_service_s.css({"text-shadow": ""});
+                Root.picture_tools_s.css({"text-shadow": ""});
+                Root.captcha_service_s.css({"text-shadow": ""});
+                Root.authentication_s.css({"text-shadow": ""});
+                Root.ajax_request_s.css({"text-shadow": ""});
+                Root.csrf_token_s.css({"text-shadow": ""});
+                Root.ir_date_s.css({"text-shadow": ""});
+            } else if (Root.filter_service.offset()['top'] <= $(window).scrollTop() && Root.sanitize_service.offset()['top'] >= $(window).scrollTop()) {
+                Root.filter_service_s.css({"text-shadow": "black 0 0 1px"});
+                Root.overview_s.css({"text-shadow": ""});
+                Root.directory_structure_s.css({"text-shadow": ""});
+                Root.configuration_s.css({"text-shadow": ""});
+                Root.environment_s.css({"text-shadow": ""});
+                Root.routing_s.css({"text-shadow": ""});
+                Root.controllers_s.css({"text-shadow": ""});
+                Root.models_s.css({"text-shadow": ""});
+                Root.views_s.css({"text-shadow": ""});
+                Root.middlewares_s.css({"text-shadow": ""});
+                Root.api_s.css({"text-shadow": ""});
+                Root.database_engine_s.css({"text-shadow": ""});
+                Root.pagination_s.css({"text-shadow": ""});
+                Root.mail_server_s.css({"text-shadow": ""});
+                Root.validation_service_s.css({"text-shadow": ""});
+                Root.sanitize_service_s.css({"text-shadow": ""});
+                Root.debug_components_s.css({"text-shadow": ""});
+                Root.error_handling_s.css({"text-shadow": ""});
+                Root.inputs_s.css({"text-shadow": ""});
+                Root.sessions_s.css({"text-shadow": ""});
+                Root.cookies_s.css({"text-shadow": ""});
+                Root.crypt_tools_s.css({"text-shadow": ""});
+                Root.post_method_encryption_system_s.css({"text-shadow": ""});
+                Root.language_service_s.css({"text-shadow": ""});
+                Root.picture_tools_s.css({"text-shadow": ""});
+                Root.captcha_service_s.css({"text-shadow": ""});
+                Root.authentication_s.css({"text-shadow": ""});
+                Root.ajax_request_s.css({"text-shadow": ""});
+                Root.csrf_token_s.css({"text-shadow": ""});
+                Root.ir_date_s.css({"text-shadow": ""});
+            } else if (Root.sanitize_service.offset()['top'] <= $(window).scrollTop() && Root.debug_components.offset()['top'] >= $(window).scrollTop()) {
+                Root.sanitize_service_s.css({"text-shadow": "black 0 0 1px"});
+                Root.overview_s.css({"text-shadow": ""});
+                Root.directory_structure_s.css({"text-shadow": ""});
+                Root.configuration_s.css({"text-shadow": ""});
+                Root.environment_s.css({"text-shadow": ""});
+                Root.routing_s.css({"text-shadow": ""});
+                Root.controllers_s.css({"text-shadow": ""});
+                Root.models_s.css({"text-shadow": ""});
+                Root.views_s.css({"text-shadow": ""});
+                Root.middlewares_s.css({"text-shadow": ""});
+                Root.api_s.css({"text-shadow": ""});
+                Root.database_engine_s.css({"text-shadow": ""});
+                Root.pagination_s.css({"text-shadow": ""});
+                Root.mail_server_s.css({"text-shadow": ""});
+                Root.validation_service_s.css({"text-shadow": ""});
+                Root.filter_service_s.css({"text-shadow": ""});
+                Root.debug_components_s.css({"text-shadow": ""});
+                Root.error_handling_s.css({"text-shadow": ""});
+                Root.inputs_s.css({"text-shadow": ""});
+                Root.sessions_s.css({"text-shadow": ""});
+                Root.cookies_s.css({"text-shadow": ""});
+                Root.crypt_tools_s.css({"text-shadow": ""});
+                Root.post_method_encryption_system_s.css({"text-shadow": ""});
+                Root.language_service_s.css({"text-shadow": ""});
+                Root.picture_tools_s.css({"text-shadow": ""});
+                Root.captcha_service_s.css({"text-shadow": ""});
+                Root.authentication_s.css({"text-shadow": ""});
+                Root.ajax_request_s.css({"text-shadow": ""});
+                Root.csrf_token_s.css({"text-shadow": ""});
+                Root.ir_date_s.css({"text-shadow": ""});
+            } else if (Root.debug_components.offset()['top'] <= $(window).scrollTop() && Root.error_handling.offset()['top'] >= $(window).scrollTop()) {
+                Root.debug_components_s.css({"text-shadow": "black 0 0 1px"});
+                Root.overview_s.css({"text-shadow": ""});
+                Root.directory_structure_s.css({"text-shadow": ""});
+                Root.configuration_s.css({"text-shadow": ""});
+                Root.environment_s.css({"text-shadow": ""});
+                Root.routing_s.css({"text-shadow": ""});
+                Root.controllers_s.css({"text-shadow": ""});
+                Root.models_s.css({"text-shadow": ""});
+                Root.views_s.css({"text-shadow": ""});
+                Root.middlewares_s.css({"text-shadow": ""});
+                Root.api_s.css({"text-shadow": ""});
+                Root.database_engine_s.css({"text-shadow": ""});
+                Root.pagination_s.css({"text-shadow": ""});
+                Root.mail_server_s.css({"text-shadow": ""});
+                Root.validation_service_s.css({"text-shadow": ""});
+                Root.filter_service_s.css({"text-shadow": ""});
+                Root.sanitize_service_s.css({"text-shadow": ""});
+                Root.error_handling_s.css({"text-shadow": ""});
+                Root.inputs_s.css({"text-shadow": ""});
+                Root.sessions_s.css({"text-shadow": ""});
+                Root.cookies_s.css({"text-shadow": ""});
+                Root.crypt_tools_s.css({"text-shadow": ""});
+                Root.post_method_encryption_system_s.css({"text-shadow": ""});
+                Root.language_service_s.css({"text-shadow": ""});
+                Root.picture_tools_s.css({"text-shadow": ""});
+                Root.captcha_service_s.css({"text-shadow": ""});
+                Root.authentication_s.css({"text-shadow": ""});
+                Root.ajax_request_s.css({"text-shadow": ""});
+                Root.csrf_token_s.css({"text-shadow": ""});
+                Root.ir_date_s.css({"text-shadow": ""});
+            } else if (Root.error_handling.offset()['top'] <= $(window).scrollTop() && Root.inputs.offset()['top'] >= $(window).scrollTop()) {
+                Root.error_handling_s.css({"text-shadow": "black 0 0 1px"});
+                Root.overview_s.css({"text-shadow": ""});
+                Root.directory_structure_s.css({"text-shadow": ""});
+                Root.configuration_s.css({"text-shadow": ""});
+                Root.environment_s.css({"text-shadow": ""});
+                Root.routing_s.css({"text-shadow": ""});
+                Root.controllers_s.css({"text-shadow": ""});
+                Root.models_s.css({"text-shadow": ""});
+                Root.views_s.css({"text-shadow": ""});
+                Root.middlewares_s.css({"text-shadow": ""});
+                Root.api_s.css({"text-shadow": ""});
+                Root.database_engine_s.css({"text-shadow": ""});
+                Root.pagination_s.css({"text-shadow": ""});
+                Root.mail_server_s.css({"text-shadow": ""});
+                Root.validation_service_s.css({"text-shadow": ""});
+                Root.filter_service_s.css({"text-shadow": ""});
+                Root.sanitize_service_s.css({"text-shadow": ""});
+                Root.debug_components_s.css({"text-shadow": ""});
+                Root.inputs_s.css({"text-shadow": ""});
+                Root.sessions_s.css({"text-shadow": ""});
+                Root.cookies_s.css({"text-shadow": ""});
+                Root.crypt_tools_s.css({"text-shadow": ""});
+                Root.post_method_encryption_system_s.css({"text-shadow": ""});
+                Root.language_service_s.css({"text-shadow": ""});
+                Root.picture_tools_s.css({"text-shadow": ""});
+                Root.captcha_service_s.css({"text-shadow": ""});
+                Root.authentication_s.css({"text-shadow": ""});
+                Root.ajax_request_s.css({"text-shadow": ""});
+                Root.csrf_token_s.css({"text-shadow": ""});
+                Root.ir_date_s.css({"text-shadow": ""});
+            } else if (Root.inputs.offset()['top'] <= $(window).scrollTop() && Root.sessions.offset()['top'] >= $(window).scrollTop()) {
+                Root.inputs_s.css({"text-shadow": "black 0 0 1px"});
+                Root.overview_s.css({"text-shadow": ""});
+                Root.directory_structure_s.css({"text-shadow": ""});
+                Root.configuration_s.css({"text-shadow": ""});
+                Root.environment_s.css({"text-shadow": ""});
+                Root.routing_s.css({"text-shadow": ""});
+                Root.controllers_s.css({"text-shadow": ""});
+                Root.models_s.css({"text-shadow": ""});
+                Root.views_s.css({"text-shadow": ""});
+                Root.middlewares_s.css({"text-shadow": ""});
+                Root.api_s.css({"text-shadow": ""});
+                Root.database_engine_s.css({"text-shadow": ""});
+                Root.pagination_s.css({"text-shadow": ""});
+                Root.mail_server_s.css({"text-shadow": ""});
+                Root.validation_service_s.css({"text-shadow": ""});
+                Root.filter_service_s.css({"text-shadow": ""});
+                Root.sanitize_service_s.css({"text-shadow": ""});
+                Root.debug_components_s.css({"text-shadow": ""});
+                Root.error_handling_s.css({"text-shadow": ""});
+                Root.sessions_s.css({"text-shadow": ""});
+                Root.cookies_s.css({"text-shadow": ""});
+                Root.crypt_tools_s.css({"text-shadow": ""});
+                Root.post_method_encryption_system_s.css({"text-shadow": ""});
+                Root.language_service_s.css({"text-shadow": ""});
+                Root.picture_tools_s.css({"text-shadow": ""});
+                Root.captcha_service_s.css({"text-shadow": ""});
+                Root.authentication_s.css({"text-shadow": ""});
+                Root.ajax_request_s.css({"text-shadow": ""});
+                Root.csrf_token_s.css({"text-shadow": ""});
+                Root.ir_date_s.css({"text-shadow": ""});
+            } else if (Root.sessions.offset()['top'] <= $(window).scrollTop() && Root.cookies.offset()['top'] >= $(window).scrollTop()) {
+                Root.sessions_s.css({"text-shadow": "black 0 0 1px"});
+                Root.overview_s.css({"text-shadow": ""});
+                Root.directory_structure_s.css({"text-shadow": ""});
+                Root.configuration_s.css({"text-shadow": ""});
+                Root.environment_s.css({"text-shadow": ""});
+                Root.routing_s.css({"text-shadow": ""});
+                Root.controllers_s.css({"text-shadow": ""});
+                Root.models_s.css({"text-shadow": ""});
+                Root.views_s.css({"text-shadow": ""});
+                Root.middlewares_s.css({"text-shadow": ""});
+                Root.api_s.css({"text-shadow": ""});
+                Root.database_engine_s.css({"text-shadow": ""});
+                Root.pagination_s.css({"text-shadow": ""});
+                Root.mail_server_s.css({"text-shadow": ""});
+                Root.validation_service_s.css({"text-shadow": ""});
+                Root.filter_service_s.css({"text-shadow": ""});
+                Root.sanitize_service_s.css({"text-shadow": ""});
+                Root.debug_components_s.css({"text-shadow": ""});
+                Root.error_handling_s.css({"text-shadow": ""});
+                Root.inputs_s.css({"text-shadow": ""});
+                Root.cookies_s.css({"text-shadow": ""});
+                Root.crypt_tools_s.css({"text-shadow": ""});
+                Root.post_method_encryption_system_s.css({"text-shadow": ""});
+                Root.language_service_s.css({"text-shadow": ""});
+                Root.picture_tools_s.css({"text-shadow": ""});
+                Root.captcha_service_s.css({"text-shadow": ""});
+                Root.authentication_s.css({"text-shadow": ""});
+                Root.ajax_request_s.css({"text-shadow": ""});
+                Root.csrf_token_s.css({"text-shadow": ""});
+                Root.ir_date_s.css({"text-shadow": ""});
+            } else if (Root.cookies.offset()['top'] <= $(window).scrollTop() && Root.crypt_tools.offset()['top'] >= $(window).scrollTop()) {
+                Root.cookies_s.css({"text-shadow": "black 0 0 1px"});
+                Root.overview_s.css({"text-shadow": ""});
+                Root.directory_structure_s.css({"text-shadow": ""});
+                Root.configuration_s.css({"text-shadow": ""});
+                Root.environment_s.css({"text-shadow": ""});
+                Root.routing_s.css({"text-shadow": ""});
+                Root.controllers_s.css({"text-shadow": ""});
+                Root.models_s.css({"text-shadow": ""});
+                Root.views_s.css({"text-shadow": ""});
+                Root.middlewares_s.css({"text-shadow": ""});
+                Root.api_s.css({"text-shadow": ""});
+                Root.database_engine_s.css({"text-shadow": ""});
+                Root.pagination_s.css({"text-shadow": ""});
+                Root.mail_server_s.css({"text-shadow": ""});
+                Root.validation_service_s.css({"text-shadow": ""});
+                Root.filter_service_s.css({"text-shadow": ""});
+                Root.sanitize_service_s.css({"text-shadow": ""});
+                Root.debug_components_s.css({"text-shadow": ""});
+                Root.error_handling_s.css({"text-shadow": ""});
+                Root.inputs_s.css({"text-shadow": ""});
+                Root.sessions_s.css({"text-shadow": ""});
+                Root.crypt_tools_s.css({"text-shadow": ""});
+                Root.post_method_encryption_system_s.css({"text-shadow": ""});
+                Root.language_service_s.css({"text-shadow": ""});
+                Root.picture_tools_s.css({"text-shadow": ""});
+                Root.captcha_service_s.css({"text-shadow": ""});
+                Root.authentication_s.css({"text-shadow": ""});
+                Root.ajax_request_s.css({"text-shadow": ""});
+                Root.csrf_token_s.css({"text-shadow": ""});
+                Root.ir_date_s.css({"text-shadow": ""});
+            } else if (Root.crypt_tools.offset()['top'] <= $(window).scrollTop() && Root.post_method_encryption_system.offset()['top'] >= $(window).scrollTop()) {
+                Root.crypt_tools_s.css({"text-shadow": "black 0 0 1px"});
+                Root.overview_s.css({"text-shadow": ""});
+                Root.directory_structure_s.css({"text-shadow": ""});
+                Root.configuration_s.css({"text-shadow": ""});
+                Root.environment_s.css({"text-shadow": ""});
+                Root.routing_s.css({"text-shadow": ""});
+                Root.controllers_s.css({"text-shadow": ""});
+                Root.models_s.css({"text-shadow": ""});
+                Root.views_s.css({"text-shadow": ""});
+                Root.middlewares_s.css({"text-shadow": ""});
+                Root.api_s.css({"text-shadow": ""});
+                Root.database_engine_s.css({"text-shadow": ""});
+                Root.pagination_s.css({"text-shadow": ""});
+                Root.mail_server_s.css({"text-shadow": ""});
+                Root.validation_service_s.css({"text-shadow": ""});
+                Root.filter_service_s.css({"text-shadow": ""});
+                Root.sanitize_service_s.css({"text-shadow": ""});
+                Root.debug_components_s.css({"text-shadow": ""});
+                Root.error_handling_s.css({"text-shadow": ""});
+                Root.inputs_s.css({"text-shadow": ""});
+                Root.sessions_s.css({"text-shadow": ""});
+                Root.cookies_s.css({"text-shadow": ""});
+                Root.post_method_encryption_system_s.css({"text-shadow": ""});
+                Root.language_service_s.css({"text-shadow": ""});
+                Root.picture_tools_s.css({"text-shadow": ""});
+                Root.captcha_service_s.css({"text-shadow": ""});
+                Root.authentication_s.css({"text-shadow": ""});
+                Root.ajax_request_s.css({"text-shadow": ""});
+                Root.csrf_token_s.css({"text-shadow": ""});
+                Root.ir_date_s.css({"text-shadow": ""});
+            } else if (Root.post_method_encryption_system.offset()['top'] <= $(window).scrollTop() && Root.language_service.offset()['top'] >= $(window).scrollTop()) {
+                Root.post_method_encryption_system_s.css({"text-shadow": "black 0 0 1px"});
+                Root.overview_s.css({"text-shadow": ""});
+                Root.directory_structure_s.css({"text-shadow": ""});
+                Root.configuration_s.css({"text-shadow": ""});
+                Root.environment_s.css({"text-shadow": ""});
+                Root.routing_s.css({"text-shadow": ""});
+                Root.controllers_s.css({"text-shadow": ""});
+                Root.models_s.css({"text-shadow": ""});
+                Root.views_s.css({"text-shadow": ""});
+                Root.middlewares_s.css({"text-shadow": ""});
+                Root.api_s.css({"text-shadow": ""});
+                Root.database_engine_s.css({"text-shadow": ""});
+                Root.pagination_s.css({"text-shadow": ""});
+                Root.mail_server_s.css({"text-shadow": ""});
+                Root.validation_service_s.css({"text-shadow": ""});
+                Root.filter_service_s.css({"text-shadow": ""});
+                Root.sanitize_service_s.css({"text-shadow": ""});
+                Root.debug_components_s.css({"text-shadow": ""});
+                Root.error_handling_s.css({"text-shadow": ""});
+                Root.inputs_s.css({"text-shadow": ""});
+                Root.sessions_s.css({"text-shadow": ""});
+                Root.cookies_s.css({"text-shadow": ""});
+                Root.crypt_tools_s.css({"text-shadow": ""});
+                Root.language_service_s.css({"text-shadow": ""});
+                Root.picture_tools_s.css({"text-shadow": ""});
+                Root.captcha_service_s.css({"text-shadow": ""});
+                Root.authentication_s.css({"text-shadow": ""});
+                Root.ajax_request_s.css({"text-shadow": ""});
+                Root.csrf_token_s.css({"text-shadow": ""});
+                Root.ir_date_s.css({"text-shadow": ""});
+            } else if (Root.language_service.offset()['top'] <= $(window).scrollTop() && Root.picture_tools.offset()['top'] >= $(window).scrollTop()) {
+                Root.language_service_s.css({"text-shadow": "black 0 0 1px"});
+                Root.overview_s.css({"text-shadow": ""});
+                Root.directory_structure_s.css({"text-shadow": ""});
+                Root.configuration_s.css({"text-shadow": ""});
+                Root.environment_s.css({"text-shadow": ""});
+                Root.routing_s.css({"text-shadow": ""});
+                Root.controllers_s.css({"text-shadow": ""});
+                Root.models_s.css({"text-shadow": ""});
+                Root.views_s.css({"text-shadow": ""});
+                Root.middlewares_s.css({"text-shadow": ""});
+                Root.api_s.css({"text-shadow": ""});
+                Root.database_engine_s.css({"text-shadow": ""});
+                Root.pagination_s.css({"text-shadow": ""});
+                Root.mail_server_s.css({"text-shadow": ""});
+                Root.validation_service_s.css({"text-shadow": ""});
+                Root.filter_service_s.css({"text-shadow": ""});
+                Root.sanitize_service_s.css({"text-shadow": ""});
+                Root.debug_components_s.css({"text-shadow": ""});
+                Root.error_handling_s.css({"text-shadow": ""});
+                Root.inputs_s.css({"text-shadow": ""});
+                Root.sessions_s.css({"text-shadow": ""});
+                Root.cookies_s.css({"text-shadow": ""});
+                Root.crypt_tools_s.css({"text-shadow": ""});
+                Root.post_method_encryption_system_s.css({"text-shadow": ""});
+                Root.picture_tools_s.css({"text-shadow": ""});
+                Root.captcha_service_s.css({"text-shadow": ""});
+                Root.authentication_s.css({"text-shadow": ""});
+                Root.ajax_request_s.css({"text-shadow": ""});
+                Root.csrf_token_s.css({"text-shadow": ""});
+                Root.ir_date_s.css({"text-shadow": ""});
+            } else if (Root.picture_tools.offset()['top'] <= $(window).scrollTop() && Root.captcha_service.offset()['top'] >= $(window).scrollTop()) {
+                Root.picture_tools_s.css({"text-shadow": "black 0 0 1px"});
+                Root.overview_s.css({"text-shadow": ""});
+                Root.directory_structure_s.css({"text-shadow": ""});
+                Root.configuration_s.css({"text-shadow": ""});
+                Root.environment_s.css({"text-shadow": ""});
+                Root.routing_s.css({"text-shadow": ""});
+                Root.controllers_s.css({"text-shadow": ""});
+                Root.models_s.css({"text-shadow": ""});
+                Root.views_s.css({"text-shadow": ""});
+                Root.middlewares_s.css({"text-shadow": ""});
+                Root.api_s.css({"text-shadow": ""});
+                Root.database_engine_s.css({"text-shadow": ""});
+                Root.pagination_s.css({"text-shadow": ""});
+                Root.mail_server_s.css({"text-shadow": ""});
+                Root.validation_service_s.css({"text-shadow": ""});
+                Root.filter_service_s.css({"text-shadow": ""});
+                Root.sanitize_service_s.css({"text-shadow": ""});
+                Root.debug_components_s.css({"text-shadow": ""});
+                Root.error_handling_s.css({"text-shadow": ""});
+                Root.inputs_s.css({"text-shadow": ""});
+                Root.sessions_s.css({"text-shadow": ""});
+                Root.cookies_s.css({"text-shadow": ""});
+                Root.crypt_tools_s.css({"text-shadow": ""});
+                Root.post_method_encryption_system_s.css({"text-shadow": ""});
+                Root.language_service_s.css({"text-shadow": ""});
+                Root.captcha_service_s.css({"text-shadow": ""});
+                Root.authentication_s.css({"text-shadow": ""});
+                Root.ajax_request_s.css({"text-shadow": ""});
+                Root.csrf_token_s.css({"text-shadow": ""});
+                Root.ir_date_s.css({"text-shadow": ""});
+            } else if (Root.captcha_service.offset()['top'] <= $(window).scrollTop() && Root.authentication.offset()['top'] >= $(window).scrollTop()) {
+                Root.captcha_service_s.css({"text-shadow": "black 0 0 1px"});
+                Root.overview_s.css({"text-shadow": ""});
+                Root.directory_structure_s.css({"text-shadow": ""});
+                Root.configuration_s.css({"text-shadow": ""});
+                Root.environment_s.css({"text-shadow": ""});
+                Root.routing_s.css({"text-shadow": ""});
+                Root.controllers_s.css({"text-shadow": ""});
+                Root.models_s.css({"text-shadow": ""});
+                Root.views_s.css({"text-shadow": ""});
+                Root.middlewares_s.css({"text-shadow": ""});
+                Root.api_s.css({"text-shadow": ""});
+                Root.database_engine_s.css({"text-shadow": ""});
+                Root.pagination_s.css({"text-shadow": ""});
+                Root.mail_server_s.css({"text-shadow": ""});
+                Root.validation_service_s.css({"text-shadow": ""});
+                Root.filter_service_s.css({"text-shadow": ""});
+                Root.sanitize_service_s.css({"text-shadow": ""});
+                Root.debug_components_s.css({"text-shadow": ""});
+                Root.error_handling_s.css({"text-shadow": ""});
+                Root.inputs_s.css({"text-shadow": ""});
+                Root.sessions_s.css({"text-shadow": ""});
+                Root.cookies_s.css({"text-shadow": ""});
+                Root.crypt_tools_s.css({"text-shadow": ""});
+                Root.post_method_encryption_system_s.css({"text-shadow": ""});
+                Root.language_service_s.css({"text-shadow": ""});
+                Root.picture_tools_s.css({"text-shadow": ""});
+                Root.authentication_s.css({"text-shadow": ""});
+                Root.ajax_request_s.css({"text-shadow": ""});
+                Root.csrf_token_s.css({"text-shadow": ""});
+                Root.ir_date_s.css({"text-shadow": ""});
+            } else if (Root.authentication.offset()['top'] <= $(window).scrollTop() && Root.ajax_request.offset()['top'] >= $(window).scrollTop()) {
+                Root.authentication_s.css({"text-shadow": "black 0 0 1px"});
+                Root.overview_s.css({"text-shadow": ""});
+                Root.directory_structure_s.css({"text-shadow": ""});
+                Root.configuration_s.css({"text-shadow": ""});
+                Root.environment_s.css({"text-shadow": ""});
+                Root.routing_s.css({"text-shadow": ""});
+                Root.controllers_s.css({"text-shadow": ""});
+                Root.models_s.css({"text-shadow": ""});
+                Root.views_s.css({"text-shadow": ""});
+                Root.middlewares_s.css({"text-shadow": ""});
+                Root.api_s.css({"text-shadow": ""});
+                Root.database_engine_s.css({"text-shadow": ""});
+                Root.pagination_s.css({"text-shadow": ""});
+                Root.mail_server_s.css({"text-shadow": ""});
+                Root.validation_service_s.css({"text-shadow": ""});
+                Root.filter_service_s.css({"text-shadow": ""});
+                Root.sanitize_service_s.css({"text-shadow": ""});
+                Root.debug_components_s.css({"text-shadow": ""});
+                Root.error_handling_s.css({"text-shadow": ""});
+                Root.inputs_s.css({"text-shadow": ""});
+                Root.sessions_s.css({"text-shadow": ""});
+                Root.cookies_s.css({"text-shadow": ""});
+                Root.crypt_tools_s.css({"text-shadow": ""});
+                Root.post_method_encryption_system_s.css({"text-shadow": ""});
+                Root.language_service_s.css({"text-shadow": ""});
+                Root.picture_tools_s.css({"text-shadow": ""});
+                Root.captcha_service_s.css({"text-shadow": ""});
+                Root.ajax_request_s.css({"text-shadow": ""});
+                Root.csrf_token_s.css({"text-shadow": ""});
+                Root.ir_date_s.css({"text-shadow": ""});
+            } else if (Root.ajax_request.offset()['top'] <= $(window).scrollTop() && Root.csrf_token.offset()['top'] >= $(window).scrollTop()) {
+                Root.ajax_request_s.css({"text-shadow": "black 0 0 1px"});
+                Root.overview_s.css({"text-shadow": ""});
+                Root.directory_structure_s.css({"text-shadow": ""});
+                Root.configuration_s.css({"text-shadow": ""});
+                Root.environment_s.css({"text-shadow": ""});
+                Root.routing_s.css({"text-shadow": ""});
+                Root.controllers_s.css({"text-shadow": ""});
+                Root.models_s.css({"text-shadow": ""});
+                Root.views_s.css({"text-shadow": ""});
+                Root.middlewares_s.css({"text-shadow": ""});
+                Root.api_s.css({"text-shadow": ""});
+                Root.database_engine_s.css({"text-shadow": ""});
+                Root.pagination_s.css({"text-shadow": ""});
+                Root.mail_server_s.css({"text-shadow": ""});
+                Root.validation_service_s.css({"text-shadow": ""});
+                Root.filter_service_s.css({"text-shadow": ""});
+                Root.sanitize_service_s.css({"text-shadow": ""});
+                Root.debug_components_s.css({"text-shadow": ""});
+                Root.error_handling_s.css({"text-shadow": ""});
+                Root.inputs_s.css({"text-shadow": ""});
+                Root.sessions_s.css({"text-shadow": ""});
+                Root.cookies_s.css({"text-shadow": ""});
+                Root.crypt_tools_s.css({"text-shadow": ""});
+                Root.post_method_encryption_system_s.css({"text-shadow": ""});
+                Root.language_service_s.css({"text-shadow": ""});
+                Root.picture_tools_s.css({"text-shadow": ""});
+                Root.captcha_service_s.css({"text-shadow": ""});
+                Root.authentication_s.css({"text-shadow": ""});
+                Root.csrf_token_s.css({"text-shadow": ""});
+                Root.ir_date_s.css({"text-shadow": ""});
+            } else if (Root.csrf_token.offset()['top'] <= $(window).scrollTop() && Root.ir_date.offset()['top'] >= $(window).scrollTop()) {
+                Root.csrf_token_s.css({"text-shadow": "black 0 0 1px"});
+                Root.overview_s.css({"text-shadow": ""});
+                Root.directory_structure_s.css({"text-shadow": ""});
+                Root.configuration_s.css({"text-shadow": ""});
+                Root.environment_s.css({"text-shadow": ""});
+                Root.routing_s.css({"text-shadow": ""});
+                Root.controllers_s.css({"text-shadow": ""});
+                Root.models_s.css({"text-shadow": ""});
+                Root.views_s.css({"text-shadow": ""});
+                Root.middlewares_s.css({"text-shadow": ""});
+                Root.api_s.css({"text-shadow": ""});
+                Root.database_engine_s.css({"text-shadow": ""});
+                Root.pagination_s.css({"text-shadow": ""});
+                Root.mail_server_s.css({"text-shadow": ""});
+                Root.validation_service_s.css({"text-shadow": ""});
+                Root.filter_service_s.css({"text-shadow": ""});
+                Root.sanitize_service_s.css({"text-shadow": ""});
+                Root.debug_components_s.css({"text-shadow": ""});
+                Root.error_handling_s.css({"text-shadow": ""});
+                Root.inputs_s.css({"text-shadow": ""});
+                Root.sessions_s.css({"text-shadow": ""});
+                Root.cookies_s.css({"text-shadow": ""});
+                Root.crypt_tools_s.css({"text-shadow": ""});
+                Root.post_method_encryption_system_s.css({"text-shadow": ""});
+                Root.language_service_s.css({"text-shadow": ""});
+                Root.picture_tools_s.css({"text-shadow": ""});
+                Root.captcha_service_s.css({"text-shadow": ""});
+                Root.authentication_s.css({"text-shadow": ""});
+                Root.ajax_request_s.css({"text-shadow": ""});
+                Root.ir_date_s.css({"text-shadow": ""});
+            } else if (Root.ir_date.offset()['top'] <= $(window).scrollTop()) {
+                Root.ir_date_s.css({"text-shadow": "black 0 0 1px"});
+                Root.ajax_request_s.css({"text-shadow": ""});
+                Root.overview_s.css({"text-shadow": ""});
+                Root.directory_structure_s.css({"text-shadow": ""});
+                Root.configuration_s.css({"text-shadow": ""});
+                Root.environment_s.css({"text-shadow": ""});
+                Root.routing_s.css({"text-shadow": ""});
+                Root.controllers_s.css({"text-shadow": ""});
+                Root.models_s.css({"text-shadow": ""});
+                Root.views_s.css({"text-shadow": ""});
+                Root.middlewares_s.css({"text-shadow": ""});
+                Root.api_s.css({"text-shadow": ""});
+                Root.database_engine_s.css({"text-shadow": ""});
+                Root.pagination_s.css({"text-shadow": ""});
+                Root.mail_server_s.css({"text-shadow": ""});
+                Root.validation_service_s.css({"text-shadow": ""});
+                Root.filter_service_s.css({"text-shadow": ""});
+                Root.sanitize_service_s.css({"text-shadow": ""});
+                Root.debug_components_s.css({"text-shadow": ""});
+                Root.error_handling_s.css({"text-shadow": ""});
+                Root.inputs_s.css({"text-shadow": ""});
+                Root.sessions_s.css({"text-shadow": ""});
+                Root.cookies_s.css({"text-shadow": ""});
+                Root.crypt_tools_s.css({"text-shadow": ""});
+                Root.post_method_encryption_system_s.css({"text-shadow": ""});
+                Root.language_service_s.css({"text-shadow": ""});
+                Root.picture_tools_s.css({"text-shadow": ""});
+                Root.captcha_service_s.css({"text-shadow": ""});
+                Root.authentication_s.css({"text-shadow": ""});
+                Root.csrf_token_s.css({"text-shadow": ""});
+            }
+
+
+        }
+
+    };
+
+</script>
+
+
+</body>
+</html>
+

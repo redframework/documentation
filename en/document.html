@@ -1,0 +1,1339 @@
+<!doctype html>
+<html lang="en">
+<link rel="icon" type="image/png" href="../Dependencies/Images/favicon.png"/>
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Red Framework Documentation</title>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .block::after {
+            clear: both;
+        }
+
+        .nav-item {
+            color: rgba(211, 211, 211, 0.22);
+            text-decoration: none;
+            margin-right: 20px;
+            transition: 0.2s;
+        }
+
+        .nav-item:hover {
+            color: white;
+            transition: 0.6s;
+        }
+
+        #nav-first-item {
+            margin-right: 20px;
+            padding-bottom: 7px;
+            border-radius: 2px;
+            padding-left: 6px;
+            padding-right: 6px;
+            margin-left: 10px;
+        }
+
+        #nav-item-current {
+            color: white;
+            text-decoration: none;
+        }
+
+        .lang {
+            color: rgba(211, 211, 211, 0.22);
+            font-size: 13px;
+        }
+
+        .lang:hover {
+            color: white;
+            transition: 0.6s;
+        }
+
+        .content-title {
+            text-shadow: black 0 0 1px;
+            font-family: 'Segoe UI Light', sans-serif;
+        }
+
+        .content-box {
+            margin: 40px;
+            background-color: white;
+            padding: 15px;
+            box-shadow: 0 0 0.625vw 0 rgba(0, 0, 0, 0.24);
+            border-radius: 4px;
+        }
+
+        p {
+            font-family: Calibri, sans-serif;
+        }
+    </style>
+
+    <meta name="theme-color" content="rgba(226, 90, 90, 0.8)">
+
+    <meta name="keywords"
+          content="رد فریم ورک,فریم ورک پی اچ پی,فریم ورک PHP, پی اچ پی,PHP,چهارچوب توسعه پی اچ پی,برنامه نویسی,توسعه نرم افزار,
+          Framework,PHP Framework,Red Framework,Programming,Software Development,
+    فریم ورک جاوا اسکریپت,رد جی اس,جاوا اسکریپت,JavaScript,Red JS,Javascript Framework">
+
+    <meta name="description" content="رد فریم ورک - مستندات">
+
+    <meta name="author" content="RedCoder">
+
+    <meta name="robots" content="index, follow">
+
+    <meta name="revisit-after" content="3 days">
+</head>
+
+<body red-app="main" red-controller="doc" style="box-shadow: 0 0 0.625vw 0 rgba(0,0,0,0.24);border-radius: 5px">
+
+<div id="loader"
+     style="text-shadow: black 0 0 1px;background-color: white;height: 100%;width: 100%;position: fixed;z-index: 25;right: 0;left: 0;text-align: center;margin-top: -8px">
+    <img style="position: relative;top: 23%;width: 200px;height: 200px" src="../Dependencies/Images/loading.gif"
+         alt="Loading">
+    <br/>
+    <span style="position: relative;top: 26%;">Loading Data ...</span>
+    <br/>
+    <span style="position: relative;top: 32%;">Thanks for Your Patient</span>
+</div>
+
+<div id="header"
+     style="z-index: 1;box-shadow: 0 0 0.625vw 0 rgba(0,0,0,0.24);-moz-user-select: -moz-none;-webkit-user-select: none;-ms-user-select: none;user-select: none;position:sticky;top: 0;height: 220px;max-height: 220px;background-image: url('../Dependencies/Images/Header_Background.jpg');
+                 background-size: cover;width: 100%;margin: auto;border-radius: 5px 5px 0 0;">
+    <img id="header-logo" alt="Red Framework" draggable="false"
+         src="../Dependencies/Images/Red_Framework_Logo_For_Header.png"
+         style="opacity: 0.80;height: 120px;width: 120px;margin-top: 30px;float: left">
+    <div id="header-title"
+         style="font-size: 22px;text-shadow: 0 0 0.625vw 0 rgba(0,0,0,0.50);color:#ffffff;padding-top: 60px;">Red
+        Framework
+    </div>
+    <div id="header-caption" style="text-shadow: 0 0 0.625vw 0 rgba(0,0,0,0.50);color:#ffffff;padding-top: 14px;">
+        Enterprise Applications Host
+    </div>
+    <div id="navbar"
+         style="box-shadow: 0 0 0.625vw 0 rgba(0,0,0,0.35);position: absolute;left: 0;top: 170px;z-index: 3;color: white;width: 100%;height: 50px;background-color: rgba(226,90,90,0.55);">
+        <span id="navbar-header"
+              style="display: none;font-family: Calibri, sans-serif;position:relative;top: 14px;left: 12px;">Red Framework Documentation</span>
+        <span id="navbar-toggle"
+              style="cursor: pointer;display: none;position:relative;top: 9px;right: 8px;float: right"><img
+                src="../Dependencies/Images/menu.png" alt="Expand Menu"></span>
+        <div id="navbar-items" style="padding: 15px 9px;font-size: 15px;color: #000;text-shadow: white 0 0 1px">
+            <hr id="navbar-separator"
+                style="color: white;text-align: center;margin: auto;position:relative;top: 14px;width: 100%;display: none">
+
+            <a href="#!home" class="nav-item" id="nav-first-item" style="">
+                <img style="opacity: 0.5;width: 15px;height: 15px;margin-right: 4px;position:relative;top: 2.5px"
+                     src="../Dependencies/Images/home.png" alt="Home">
+                Home</a>
+
+            <a href="#!documentation" class="nav-item" id="nav-item-current" style="">
+                <img style="width: 15px;height: 15px;margin-right: 4px;position:relative;top: 2.5px"
+                     src="../Dependencies/Images/document.png" alt="Document">
+                Documentation</a>
+            <a href="#!enterprise_doc" class="nav-item" style="">
+                <img style="opacity: 0.5;width: 15px;height: 15px;margin-right: 4px;position:relative;top: 2.5px"
+                     src="../Dependencies/Images/app.png" alt="App">
+                Enterprise SDK</a>
+            <a href="#!console_doc" class="nav-item" style="">
+                <img style="opacity: 0.5;width: 15px;height: 15px;margin-right: 4px;position:relative;top: 2.5px"
+                     src="../Dependencies/Images/console.png" alt="Console">
+                Console Kit</a>
+            <a href="#!red_js_doc" class="nav-item" style="">
+                <img style="opacity: 0.5;width: 15px;height: 15px;margin-right: 4px;position:relative;top: 2.5px"
+                     src="../Dependencies/Images/java-script.png" alt="Red JS">
+                Red JS</a>
+
+            <span id="language"
+                  style="cursor: pointer;color: white;text-decoration: none;margin-right: 20px;font-size: 12px;position:absolute;right: 0">
+                <img style="width: 15px;height: 15px;margin-right: 6px;position:relative;top: 1px"
+                     src="../Dependencies/Images/language.png" alt="Language">
+                <span id="current-language">EN</span>
+
+                <img style="margin-left: 3px;width: 10px;height: 10px;margin-right: 6px;position:relative;top: 1px"
+                     src="../Dependencies/Images/drop-down-arrow.png" alt="Drop Down">
+                <div id="lang-list"
+                     style="text-shadow: white 0 0 1px;padding: 5px;display: none;width: 140px;text-align: center;background-color: rgba(226,90,90,0.95);box-shadow: 0 0 0.625vw 0 rgba(0,0,0,0.24);height: 50px;position:absolute;right: 0;margin-top: 16px;border-radius: 0 0 4px 4px;">
+                    <div id="lang-en" class="lang"
+                         style="font-family: Calibri, sans-serif;margin-bottom: 7px;margin-top: 6px;">English - En</div>
+                    <div id="lang-fa" class="lang" style="font-family: Calibri, sans-serif">Persian - Fa</div>
+                </div>
+            </span>
+        </div>
+    </div>
+</div>
+
+
+<div id="subjects-container" style="width: 22%;float: left;
+margin-bottom: 20px;position:sticky;left: 0;top: 55px;z-index: 2;">
+
+    <div id="subjects" style="max-height: 100vh;overflow: auto;min-width: 27vw;margin-top: 20px">
+        <ul style="font-family: 'Segoe UI Light', sans-serif;margin-left: 11px;color: rgba(226,90,90,0.70);line-height: 19px;">
+            <li id="intro-s"><a href="#intro" style="text-decoration: none;color: black;">Intro</a></li>
+            <li id="enterprise-sdk-s"><a href="#enterprise-sdk" style="text-decoration: none;color: black;">Enterprise
+                SDK</a></li>
+            <li id="console-dk-s"><a href="#console-dk" style="text-decoration: none;color: black">Console App
+                Development Kit</a>
+            </li>
+            <li id="red-analytics-s"><a href="#red-analytics" style="text-decoration: none;color: black">Red
+                Analytics</a></li>
+            <li id="red-js-s"><a href="#red-js" style="text-decoration: none;color: black">Red JS</a></li>
+        </ul>
+    </div>
+</div>
+
+<div id="subjects-toggle"
+     style="display: none;cursor: pointer;box-shadow: 0 4px 2px -2px rgba(0,0,0,0.30);background-color: white;height: 50px;position: fixed;left: 0;margin-top: 40px;border-radius: 0 3px 3px 0">
+    <img src="../Dependencies/Images/subjects_menu.png" style="margin: 3px;width: 38px;height: 40px;"
+         alt="Subjects Menu">
+</div>
+
+<div id="content-container" class="block"
+     style="box-shadow: 0 4px 2px -2px rgba(0,0,0,0.24);margin-bottom: auto;width: 70%;float: right;margin-top: auto;background: url('../Dependencies/Images/background.png') no-repeat center center fixed;
+     background-size: 100% 100%;border-radius: 0 0 0 5px">
+    <div id="intro"
+         class="content-box">
+        <h3 class="content-title">Introduce</h3>
+        <hr>
+        <p>
+            Red Framework is a Modern PHP, JS MVC Framework Merged with Special Tools and Components Developed by Mahbod
+            Azizkhani
+            (RedCoder).
+            <br/>
+            <img id="redcoder" style="border-radius: 4px;margin-right: 10px;float: right;width: 200px;height: 200px"
+                 src="../Dependencies/Images/redcoder.png" alt="RedCoder">
+            <br/>
+            After Passing a year it has Been reached to Version 1.0.0
+            <br/>
+            and released in 2 Development Kits :
+            <br/>
+            <br/>
+            <img id="kits" style="border-radius: 4px;margin: 10px;width: 300px;height: 86px"
+                 src="../Dependencies/Images/Development_Kits.png" alt="Development Kits">
+        </p>
+        <br/>
+        <h3>Enterprise SDK :</h3>
+        <p>
+            Containing all Red Framework Components to Develop Enterprise Web Applications with PHP as Back-end and JS
+            as
+            Front-end
+        </p>
+        <br/>
+        <h3>Console App Development Kit :</h3>
+        <p>
+            Containing Necessary Components to Develop Console Applications with PHP as Fast as Possible
+        </p>
+
+    </div>
+
+    <div id="enterprise-sdk"
+         class="content-box">
+        <h3 class="content-title">Enterprise SDK</h3>
+        <hr>
+        <div style="text-align: center;">
+            <img id="enterprise-app" style="width: 600px;height: 300px;margin-top: 15px"
+                 src="../Dependencies/Images/enterprise_app.png" alt="Enterprise SDK Structure">
+        </div>
+        <p>
+            <br/>
+            Enterprise SDK is a full-featured and Modern MVC Framework to Speed up and Organize Development
+            <br/>
+            it Contains High Quality Components such As:
+            <br/>
+            <br/>
+            Perfect Database Engine which Supports 3 Famous Databases (MySQL, SQLServer, SQLite), 3 Available Database
+            Slot, and High-Performance ORM which Supports CRUD Operations
+            <br/>
+            <br/>
+            Captcha Service
+            <br/>
+            <br/>
+            SMTP Mail Service
+            <br/>
+            <br/>
+            Safe Upload Service
+            <br/>
+            <br/>
+            Validate, Filter, Sanitize Service
+            <br/>
+            <br/>
+            Organized Language Service
+            <br/>
+            <br/>
+            High-Quality Routing System with Middleware
+            <br/>
+            <br/>
+            Organized Inputs(URL Parameters, GET, POST Variables and Etc)
+            <br/>
+            <br/>
+            Configured And Crypted Sessions
+            <br/>
+            <br/>
+            Debug Components Such as Debugger, DebugBar and a lot More ... !
+            <br>
+            <br>
+            <br>
+            Here is Enterprise SDK Structure :
+        </p>
+
+        <br/>
+
+        <ul style="font-family: Calibri, sans-serif;font-size: 18px;color: rgb(226,90,90);cursor: pointer">
+            <li><span style="color: black">app</span>
+            </li>
+            <li><span style="color: black">config</span></li>
+            <li><span style="color: black">database</span>
+            </li>
+            <li><span style="color: black">public</span>
+            </li>
+            <li><span style="color: black">resources</span>
+            </li>
+            <li><span style="color: black">routes</span></li>
+            <li><span style="color: black">storage</span>
+            </li>
+            <li><span style="color: black">vendor</span></li>
+            <li><span style="color: black">views</span></li>
+        </ul>
+
+    </div>
+
+    <div id="console-dk"
+         class="content-box">
+        <h3 class="content-title">Console App Development Kit</h3>
+        <hr>
+        <div style="text-align: center">
+            <img id="console-app" style="width: 600px;height: 300px;margin-top: 15px"
+                 src="../Dependencies/Images/console_app.png" alt="Enterprise SDK Structure">
+        </div>
+        <br/>
+        <p>
+            Console App Development Kit Contain all Necessary Component and Command System to Create Console App with
+            PHP as Fast as Possible
+            <br/>
+            <br/>
+            Here is Console Kit Structure
+        </p>
+
+        <br/>
+
+        <ul style="font-family: Calibri, sans-serif;font-size: 18px;color: rgb(226,90,90);cursor: pointer">
+            <li><span style="color: black">app</span>
+            </li>
+            <li><span style="color: black">commands</span></li>
+            <li><span style="color: black">config</span></li>
+            <li><span style="color: black">database</span>
+            </li>
+            <li><span style="color: black">resources</span>
+            </li>
+            <li><span style="color: black">storage</span>
+            </li>
+            <li><span style="color: black">vendor</span></li>
+        </ul>
+
+    </div>
+
+
+    <div id="red-analytics"
+         class="content-box">
+        <h3 class="content-title">Red Analytics</h3>
+        <hr>
+        <p>
+            Red Framework Comes with a Powerful tool Named 'Red Analytics'
+            <br/>
+            Red Analytics Comes with general purposes : Speed Up the Development; Such as running Development Server,
+            generating Controller, Model, View, Middleware ... and Analysing the Application such as Route and Command
+            Controls
+            <br>
+            Red Analytics has been written with JAVA as a Cross Platform Application; so in any where you can create
+            your new projects with Red Analytics
+            <br>
+            this tool has compatibility with both Development kits
+            <br/>
+            <br/>
+            Creating New Project with Red Analytics :
+        </p>
+        <div style="text-align: center">
+            <img id="red-analytics-1" style="width: 600px;height: 550px;margin-top: 15px"
+                 src="../Dependencies/Images/Red_Analytics_new_project.png" alt="Red Analytics - New Project">
+        </div>
+        <br/>
+        <p>
+            Red Analytics on Enterprise SDK
+        </p>
+        <div style="text-align: center">
+            <img id="red-analytics-2" style="width: 600px;height: 550px;margin-top: 15px"
+                 src="../Dependencies/Images/Red_Analytics_for_enterprise.png"
+                 alt="Red Analytics for Enterprise SDK">
+        </div>
+        <br/>
+        <p>
+            Red Analytics on Console App Development Kit
+        </p>
+
+        <div style="text-align: center">
+            <img id="red-analytics-3" style="width: 600px;height: 550px;margin-top: 15px"
+                 src="../Dependencies/Images/Red_Analytics_for_console.png" alt="Red Analytics for Console App">
+        </div>
+
+    </div>
+    <div id="red-js"
+         class="content-box">
+        <h3 class="content-title">Red JS</h3>
+        <hr>
+        <p>
+            Red Framework has a Interesting interact with Java Script
+            <br/>
+            I have Been Developed a Java Script Framework (Currently Version 1.4) to keep Back End - Front End Relation
+            Close and Easy
+            <br/>
+            Red JS has Many features such as Coding JS inside HTML Tags which will be Introduced in its own Section
+        </p>
+
+    </div>
+
+</div>
+
+<hr style="clear: both;opacity: 0;width: 95%;text-align: center;margin-top: 20px;">
+
+<div id="footer" style="padding-bottom: 15px;margin-top: 20px;">
+    <div style="text-shadow: black 0 0 1px;text-align: center">Honored to host your Application, Red Framework
+        2019
+    </div>
+</div>
+
+
+<script src="../Dependencies/Library/jquery-3.3.1.min.js"></script>
+<script src="../Dependencies/Library/Red.min.js"></script>
+
+<script>
+
+    Red.app.module("main");
+
+    Red.app.addController("main", "doc", function () {
+
+    });
+
+    Red.ready(function () {
+        Root.initialize();
+    });
+
+    var Root = {
+
+        header: $("#header"),
+        header_title: $("#header-title"),
+        header_caption: $("#header-caption"),
+        header_logo: $("#header-logo"),
+        navbar: $("#navbar"),
+        language_element: $("#language"),
+        language_list: $("#lang-list"),
+        subjects_title: $("#subjects-title"),
+
+        intro_s: $("#intro-s"),
+        enterprise_s: $("#enterprise-sdk-s"),
+        console_s: $("#console-dk-s"),
+        red_analytics_s: $("#red-analytics-s"),
+        red_js_s: $("#red-js-s"),
+
+        intro: $("#intro"),
+        enterprise: $("#enterprise-sdk"),
+        console_element: $("#console-dk"),
+        red_analytics: $("#red-analytics"),
+        red_js: $("#red-js"),
+
+        redcoder: $("#redcoder"),
+        enterprise_app: $("#enterprise-app"),
+        console_app: $("#console-app"),
+        red_analytics1: $("#red-analytics-1"),
+        red_analytics2: $("#red-analytics-2"),
+        red_analytics3: $("#red-analytics-3"),
+        enterprise_structure: $("#enterprise-structure"),
+        kits: $("#kits"),
+        subjects_container: $("#subjects-container"),
+        subjects: $("#subjects"),
+        content_container: $("#content-container"),
+        navbar_items_container: $("#navbar-items"),
+        navbar_items: $(".nav-item"),
+        navbar_header: $("#navbar-header"),
+        navbar_toggle: $("#navbar-toggle"),
+        nav_first_item: $("#nav-first-item"),
+        navbar_separator: $("#navbar-separator"),
+        subjects_toggle: $("#subjects-toggle"),
+        timerHandler: null,
+        lang_en: $("#lang-en"),
+        lang_fa: $("#lang-fa"),
+
+        initialize: function () {
+            $(window).on("scroll", Root.handleComponentsOnScroll);
+
+
+            Root.handleComponentsOnSize();
+
+            if ($(window).scrollTop() >= 31) {
+
+                Root.header.css({
+                    height: "50px",
+                });
+                Root.header_title.hide(0);
+                Root.header_caption.hide(0);
+                Root.header_logo.hide(0);
+                Root.navbar.css({top: 0});
+                Root.language_list.hide(0);
+                Root.subjects_title.hide(0);
+            }
+
+            Root.subjectPager();
+
+
+            $(window).on("resize", Root.handleComponentsOnSize);
+
+            Root.languageHandler();
+            Root.subjectsToggle();
+            Root.navbarToggle();
+            Root.handleRoutes();
+
+            $("#loader").fadeOut(500);
+        },
+
+        handleRoutes: function () {
+
+            var current_lang = $("#current-language").html();
+
+            var home_path;
+            var document_path;
+            var enterprise_path;
+            var console_path;
+            var red_js_path;
+
+            if (current_lang == "EN") {
+                home_path = "http://redframework.ir/lang/en";
+                document_path = "../en/document.html";
+                enterprise_path = "../en/enterprise/master/document.html";
+                console_path = "../en/console-kit/master/document.html";
+                red_js_path = "../en/red-js/master/document.html";
+            } else if (current_lang == "FA") {
+                home_path = "http://redframework.ir/lang/fa";
+                document_path = "../fa/document.html";
+                enterprise_path = "../fa/enterprise/master/document.html";
+                console_path = "../fa/console-kit/master/document.html";
+                red_js_path = "../fa/red-js/master/document.html";
+            }
+
+            Red.app.registerRoute("main", {
+                home: home_path,
+                documentation: document_path,
+                enterprise_doc: enterprise_path,
+                console_doc: console_path,
+                red_js_doc: red_js_path,
+            })
+
+        },
+
+        languageHandler: function () {
+
+            Root.language_element.click(function () {
+                if (Root.language_list.css("display") === "none") {
+                    Root.language_list.stop(true).fadeIn(1000);
+                } else {
+                    Root.language_list.stop(true).fadeOut(1000);
+                }
+            });
+
+            Root.lang_en.click(function () {
+                Red.setCookie("language", "en", 30);
+                Red.redirect("../en/document.html");
+            });
+
+            Root.lang_fa.click(function () {
+                Red.setCookie("language", "fa", 30);
+                Red.redirect("../fa/document.html");
+            });
+        },
+
+        subjectsToggle: function () {
+            Root.subjects_toggle.click(function () {
+                if (Root.subjects_container.css("display") === "none") {
+
+                    Root.subjects_toggle.show();
+                    Root.navbar_separator.hide();
+                    if (Root.header_logo.css("display") === "none") {
+                        Root.header.css({
+                            height: "50px",
+                        });
+                    } else {
+                        Root.header.css({
+                            height: "220px",
+                        });
+                    }
+
+                    Root.nav_first_item.css({
+                        marginTop: "20px",
+                        position: "",
+                        top: "",
+                        marginLeft: "10px",
+                    });
+
+                    Root.navbar.css({
+                        height: "50px",
+                        backgroundColor: "rgba(226,90,90,0.55)"
+                    });
+
+                    Root.navbar_items.css({
+                        display: "",
+                        marginTop: "",
+                        marginRight: "20px",
+                    });
+                    Root.navbar_items_container.stop(true).fadeOut(0);
+
+                    if ($(window).scrollTop() <= 31) {
+                        Root.subjects_container.css({
+                            width: "87%",
+                            height: "65vh",
+                            maxHeight: "65vh",
+                            overflow: "auto",
+                            float: "",
+                            position: "fixed",
+                            top: "234px",
+                            left: "8px",
+                            backgroundColor: "white",
+                            boxShadow: "0 0 0.625vw 0 rgba(0,0,0,0.55)",
+                            borderRadius: "0 4px 4px 0"
+                        });
+                    } else {
+                        Root.subjects_container.css({
+                            width: "87%",
+                            height: "65vh",
+                            maxHeight: "65vh",
+                            overflow: "auto",
+                            float: "",
+                            position: "fixed",
+                            top: "80px",
+                            left: "8px",
+                            backgroundColor: "white",
+                            boxShadow: "0 0 0.625vw 0 rgba(0,0,0,0.55)",
+                            borderRadius: "0 4px 4px 0"
+                        });
+                    }
+
+                    Root.subjects_toggle.css({
+                        zIndex: "2"
+                    });
+                    Root.subjects_toggle.animate({left: "87.9%"}, 400);
+                    Root.subjects_container.show(400);
+                    Root.subjects.show(400);
+                } else {
+
+                    Root.subjects_container.hide(400);
+                    Root.subjects.hide(400);
+                    Root.subjects_toggle.animate({left: "0"}, 400);
+                    Root.subjects_toggle.css({
+                        right: "",
+                        zIndex: "0"
+                    });
+
+                }
+
+            });
+        },
+
+        navbarToggle: function () {
+            Root.navbar_toggle.click(function () {
+                if (Root.navbar_items_container.css("display") === "none") {
+
+                    Root.subjects_container.hide(400);
+                    Root.subjects.hide(400);
+                    Root.subjects_toggle.animate({left: "0"}, 400);
+                    Root.subjects_toggle.css({
+                        right: "",
+                        zIndex: "0"
+                    });
+
+
+                    setTimeout(function () {
+
+                        Root.subjects_container.css({
+                            width: "22%",
+                            height: "",
+                            maxHeight: "",
+                            overflow: "",
+                            float: "left",
+                            position: "sticky",
+                            top: "55px",
+                            left: "0",
+                            backgroundColor: "",
+                            boxShadow: "",
+                            borderRadius: ""
+                        });
+                    }, 400);
+
+
+                    Root.navbar_separator.show();
+
+                    Root.navbar.css({
+                        height: "233px",
+                        backgroundColor: "rgba(226,90,90,0.95)"
+                    });
+
+
+                    Root.navbar_items.css({
+                        display: "block",
+                        marginTop: "10px",
+                        marginLeft: "",
+                    });
+                    Root.nav_first_item.css({
+                        marginTop: "20px",
+                        position: "relative",
+                        top: "7px",
+                        marginLeft: "-4px",
+                    });
+                    Root.navbar_items_container.stop(true).fadeIn(400);
+                } else {
+                    Root.subjects_toggle.show();
+                    Root.navbar_separator.hide();
+                    if (Root.header_logo.css("display") === "none") {
+                        Root.header.css({
+                            height: "50px",
+                        });
+                    } else {
+                        Root.header.css({
+                            height: "220px",
+                        });
+                    }
+
+                    Root.nav_first_item.css({
+                        marginTop: "20px",
+                        position: "",
+                        top: "",
+                        marginLeft: "10px",
+                    });
+
+                    Root.navbar.css({
+                        height: "50px",
+                        backgroundColor: "rgba(226,90,90,0.55)"
+                    });
+
+                    Root.navbar_items.css({
+                        display: "",
+                        marginTop: "",
+                        marginRight: "20px",
+                    });
+                    Root.navbar_items_container.stop(true).fadeOut(0);
+                }
+            });
+        },
+
+        handleComponentsOnScroll: function () {
+            clearInterval(Root.timerHandler);
+
+            if ($(document).scrollTop() >= 8) {
+                Root.timerHandler = setTimeout(function handler() {
+                    Root.header_title.hide(0);
+                    Root.header_caption.hide(0);
+                    Root.header_logo.hide(0);
+                    Root.navbar.animate({top: 0});
+                    Root.header.css({height: "50px"});
+
+                    Root.language_list.hide(0);
+                }, 0);
+
+
+                if (Root.subjects_container.css("position") === "fixed") {
+                    Root.subjects_container.css({
+                        width: "87%",
+                        height: "65vh",
+                        float: "",
+                        position: "fixed",
+                        top: "80px",
+                        left: "8px",
+                        backgroundColor: "white",
+                        boxShadow: "0 0 0.625vw 0 rgba(0,0,0,0.55)",
+                        borderRadius: "0 4px 4px 0"
+                    });
+                }
+
+            } else {
+                Root.timerHandler = setTimeout(function () {
+                    Root.header.stop(true).animate({height: "220px"}, 200);
+                    Root.header_title.stop(true).show(0);
+                    Root.header_caption.stop(true).show(0);
+                    Root.header_logo.stop(true).show(0);
+                    Root.navbar.stop(true).animate({top: "170px"});
+                    Root.language_list.hide(0);
+
+                    if (Root.subjects_container.css("position") === "fixed") {
+                        Root.subjects_container.css({
+                            width: "87%",
+                            height: "65vh",
+                            float: "",
+                            position: "fixed",
+                            top: "234px",
+                            left: "8px",
+                            backgroundColor: "white",
+                            boxShadow: "0 0 0.625vw 0 rgba(0,0,0,0.55)",
+                            borderRadius: "0 4px 4px 0"
+                        });
+                    }
+                }, 200);
+
+            }
+
+
+            Root.subjectPager();
+        },
+
+        handleComponentsOnSize: function () {
+
+            if ($(window).innerWidth() <= 500) {
+
+                if (Root.subjects_container.css("position") === "fixed") {
+                    Root.subjects_container.hide(0);
+                    Root.subjects.hide(0);
+                    Root.subjects_toggle.css({left: "0"});
+                    Root.subjects_toggle.css({
+                        right: "",
+                        zIndex: "0"
+                    });
+
+
+                    Root.subjects_container.css({
+                        width: "22%",
+                        height: "",
+                        maxHeight: "",
+                        overflow: "",
+                        float: "left",
+                        position: "sticky",
+                        top: "55px",
+                        left: "0",
+                        backgroundColor: "",
+                        boxShadow: "",
+                        borderRadius: ""
+                    });
+                }
+
+                Root.content_container.css({
+                    float: "",
+                    marginTop: "-5px",
+                    marginBottom: "-40px",
+                    paddingTop: "40px",
+                    paddingBottom: "40px",
+                });
+
+                Root.navbar_header.show();
+                Root.subjects_toggle.show();
+                Root.navbar_toggle.show();
+                Root.navbar_items_container.hide();
+                Root.subjects_container.hide();
+                Root.subjects.hide();
+                Root.content_container.css({
+                    width: "100%",
+                    position: "relative",
+                    top: "-35px",
+                    zIndex: -5
+                });
+
+                Root.redcoder.css({
+                    float: "",
+                    margin: "10px",
+                });
+
+                Root.kits.css({
+                    width: "200px",
+                    height: "50px",
+                });
+
+                Root.enterprise_app.css({
+                    width: "200px",
+                    height: "110px",
+                });
+
+                Root.console_app.css({
+                    width: "200px",
+                    height: "110px",
+                });
+
+                Root.red_analytics1.css({
+                    width: "200px",
+                    height: "150px",
+                });
+
+                Root.red_analytics2.css({
+                    width: "200px",
+                    height: "150px",
+                });
+
+                Root.red_analytics3.css({
+                    width: "200px",
+                    height: "150px",
+                });
+            } else if ($(window).innerWidth() <= 760) {
+
+                if (Root.subjects_container.css("position") === "fixed") {
+                    Root.subjects_container.hide(0);
+                    Root.subjects.hide(0);
+                    Root.subjects_toggle.css({left: "0"});
+                    Root.subjects_toggle.css({
+                        right: "",
+                        zIndex: "0"
+                    });
+
+
+                    Root.subjects_container.css({
+                        width: "22%",
+                        height: "",
+                        maxHeight: "",
+                        overflow: "",
+                        float: "left",
+                        position: "sticky",
+                        top: "55px",
+                        left: "0",
+                        backgroundColor: "",
+                        boxShadow: "",
+                        borderRadius: ""
+                    });
+                }
+
+                Root.content_container.css({
+                    float: "",
+                    marginTop: "-5px",
+                    marginBottom: "-40px",
+                    paddingTop: "40px",
+                    paddingBottom: "40px",
+                });
+
+                Root.navbar_header.show();
+                Root.subjects_toggle.show();
+                Root.navbar_toggle.show();
+                Root.navbar_items_container.hide();
+                Root.subjects_container.hide();
+                Root.subjects.hide();
+                Root.content_container.css({
+                    width: "100%",
+                    position: "relative",
+                    top: "-35px",
+                    zIndex: -5
+                });
+
+                Root.redcoder.css({
+                    float: "",
+                    margin: "10px",
+                });
+
+                Root.kits.css({
+                    width: "300px",
+                    height: "86px",
+                });
+
+                Root.enterprise_app.css({
+                    width: "320px",
+                    height: "150px",
+                });
+
+                Root.console_app.css({
+                    width: "320px",
+                    height: "150px",
+                });
+
+                Root.red_analytics1.css({
+                    width: "300px",
+                    height: "250px",
+                });
+
+                Root.red_analytics2.css({
+                    width: "300px",
+                    height: "250px",
+                });
+
+                Root.red_analytics3.css({
+                    width: "300px",
+                    height: "250px",
+                });
+            } else if ($(window).innerWidth() <= 930) {
+
+                if (Root.subjects_container.css("position") === "fixed") {
+                    Root.subjects_container.hide(0);
+                    Root.subjects.hide(0);
+                    Root.subjects_toggle.css({left: "0"});
+                    Root.subjects_toggle.css({
+                        right: "",
+                        zIndex: "0"
+                    });
+
+
+                    Root.subjects_container.css({
+                        width: "22%",
+                        height: "",
+                        maxHeight: "",
+                        overflow: "",
+                        float: "left",
+                        position: "sticky",
+                        top: "55px",
+                        left: "0",
+                        backgroundColor: "",
+                        boxShadow: "",
+                        borderRadius: ""
+                    });
+                }
+
+                Root.subjects_toggle.show();
+
+                Root.content_container.css({
+                    float: "",
+                    marginTop: "-5px",
+                    marginBottom: "-40px",
+                    paddingTop: "40px",
+                    paddingBottom: "40px",
+                });
+
+                Root.navbar_separator.hide();
+                if (Root.header_logo.css("display") === "none") {
+                    Root.header.css({
+                        height: "50px",
+                    });
+                } else {
+                    Root.header.css({
+                        height: "220px",
+                    });
+                }
+
+                Root.nav_first_item.css({
+                    marginTop: "20px",
+                    position: "",
+                    top: "",
+                    marginLeft: "10px",
+                });
+
+                Root.navbar.css({
+                    height: "50px",
+                    backgroundColor: "rgba(226,90,90,0.55)"
+                });
+
+                Root.navbar_items.css({
+                    display: "",
+                    marginTop: "",
+                    marginRight: "20px",
+                });
+
+                Root.navbar_header.hide();
+                Root.navbar_toggle.hide();
+                Root.navbar_items_container.show();
+
+                Root.subjects_container.hide();
+                Root.subjects.hide();
+                Root.content_container.css({
+                    width: "100%",
+                    position: "relative",
+                    top: "-35px",
+                    zIndex: -5
+                });
+
+                Root.redcoder.css({
+                    float: "",
+                    margin: "10px",
+                });
+
+                Root.kits.css({
+                    width: "300px",
+                    height: "86px",
+                });
+
+                Root.enterprise_app.css({
+                    width: "520px",
+                    height: "250px",
+                });
+
+                Root.console_app.css({
+                    width: "520px",
+                    height: "250px",
+                });
+
+                Root.red_analytics1.css({
+                    width: "500px",
+                    height: "450px",
+                });
+
+                Root.red_analytics2.css({
+                    width: "500px",
+                    height: "450px",
+                });
+
+                Root.red_analytics3.css({
+                    width: "500px",
+                    height: "450px",
+                });
+            } else if ($(window).innerWidth() <= 1022) {
+
+                if (Root.subjects_container.css("position") === "fixed") {
+                    Root.subjects_container.hide(0);
+                    Root.subjects.hide(0);
+                    Root.subjects_toggle.css({left: "0"});
+                    Root.subjects_toggle.css({
+                        right: "",
+                        zIndex: "0"
+                    });
+
+
+                    Root.subjects_container.css({
+                        width: "22%",
+                        height: "",
+                        maxHeight: "",
+                        overflow: "",
+                        float: "left",
+                        position: "sticky",
+                        top: "55px",
+                        left: "0",
+                        backgroundColor: "",
+                        boxShadow: "",
+                        borderRadius: ""
+                    });
+                }
+
+                Root.subjects_toggle.hide();
+
+                Root.content_container.css({
+                    float: "left",
+                    marginTop: "",
+                    marginBottom: "",
+                    margin: "auto",
+                    paddingTop: "",
+                    paddingBottom: "",
+                    padding: "auto"
+                });
+
+
+                Root.navbar_separator.hide();
+                if (Root.header_logo.css("display") === "none") {
+                    Root.header.css({
+                        height: "50px",
+                    });
+                } else {
+                    Root.header.css({
+                        height: "220px",
+                    });
+                }
+
+                Root.nav_first_item.css({
+                    marginTop: "20px",
+                    position: "",
+                    top: "",
+                    marginLeft: "10px",
+                });
+
+                Root.navbar.css({
+                    height: "50px",
+                    backgroundColor: "rgba(226,90,90,0.55)"
+                });
+
+                Root.navbar_items.css({
+                    display: "",
+                    marginTop: "",
+                    marginRight: "20px",
+                });
+
+                Root.navbar_header.hide();
+                Root.navbar_toggle.hide();
+                Root.navbar_items_container.show();
+                Root.subjects_container.show();
+                Root.subjects.show();
+                Root.content_container.css({
+                    width: "70%",
+                    float: "right",
+                    position: "",
+                    top: ""
+                });
+
+                Root.redcoder.css({
+                    float: "",
+                    margin: "10px",
+                });
+
+                Root.kits.css({
+                    width: "300px",
+                    height: "86px",
+                });
+
+                Root.enterprise_app.css({
+                    width: "520px",
+                    height: "250px",
+                });
+
+                Root.console_app.css({
+                    width: "520px",
+                    height: "250px",
+                });
+
+                Root.red_analytics1.css({
+                    width: "500px",
+                    height: "450px",
+                });
+
+                Root.red_analytics2.css({
+                    width: "500px",
+                    height: "450px",
+                });
+
+                Root.red_analytics3.css({
+                    width: "500px",
+                    height: "450px",
+                });
+            } else {
+
+                if (Root.subjects_container.css("position") === "fixed") {
+                    Root.subjects_toggle.css({left: "0"});
+                    Root.subjects_toggle.css({
+                        right: "",
+                        zIndex: "0"
+                    });
+
+
+                    Root.subjects_container.css({
+                        width: "22%",
+                        height: "",
+                        maxHeight: "",
+                        overflow: "",
+                        float: "left",
+                        position: "sticky",
+                        top: "55px",
+                        left: "0",
+                        backgroundColor: "",
+                        boxShadow: "",
+                        borderRadius: ""
+                    });
+                    Root.subjects_container.show();
+                }
+
+                Root.subjects_toggle.hide();
+
+                Root.content_container.css({
+                    float: "left",
+                    marginTop: "",
+                    marginBottom: "",
+                    margin: "auto",
+                    paddingTop: "",
+                    paddingBottom: "",
+                    padding: "auto"
+                });
+
+
+                Root.navbar_separator.hide();
+                if (Root.header_logo.css("display") === "none") {
+                    Root.header.css({
+                        height: "50px",
+                    });
+                } else {
+                    Root.header.css({
+                        height: "220px",
+                    });
+                }
+
+                Root.nav_first_item.css({
+                    marginTop: "20px",
+                    marginBottom: "",
+                    position: "",
+                    top: "",
+                    marginLeft: "10px",
+                });
+
+                Root.navbar.css({
+                    height: "50px",
+                    backgroundColor: "rgba(226,90,90,0.55)"
+                });
+
+                Root.navbar_items.css({
+                    display: "",
+                    marginTop: "",
+                    marginRight: "20px",
+                });
+
+                Root.navbar_header.hide();
+                Root.navbar_toggle.hide();
+                Root.navbar_items_container.show();
+                Root.subjects_container.show();
+                Root.subjects.show();
+
+                Root.content_container.css({
+                    width: "70%",
+                    float: "right",
+                    position: "",
+                    top: ""
+                });
+
+                Root.redcoder.css({
+                    float: "right",
+                    margin: "",
+                });
+
+                Root.kits.css({
+                    width: "300px",
+                    height: "86px",
+                });
+
+                Root.enterprise_app.css({
+                    width: "600px",
+                    height: "300px",
+                });
+
+                Root.console_app.css({
+                    width: "600px",
+                    height: "300px",
+                });
+
+                Root.red_analytics1.css({
+                    width: "600px",
+                    height: "550px",
+                });
+
+                Root.red_analytics2.css({
+                    width: "600px",
+                    height: "550px",
+                });
+
+                Root.red_analytics3.css({
+                    width: "600px",
+                    height: "550px",
+                });
+            }
+
+        },
+
+        subjectPager: function () {
+            if (Root.intro.offset()['top'] <= $(window).scrollTop() && Root.enterprise.offset()['top'] >= $(window).scrollTop()) {
+                Root.intro_s.css({"text-shadow": "black 0 0 1px"});
+                Root.enterprise_s.css({"text-shadow": ""});
+                Root.console_s.css({"text-shadow": ""});
+                Root.red_analytics_s.css({"text-shadow": ""});
+                Root.red_js_s.css({"text-shadow": ""});
+            } else if (Root.enterprise.offset()['top'] <= $(window).scrollTop() && Root.console_element.offset()['top'] >= $(window).scrollTop()) {
+                Root.enterprise_s.css({"text-shadow": "black 0 0 1px"});
+                Root.intro_s.css({"text-shadow": ""});
+                Root.console_s.css({"text-shadow": ""});
+                Root.red_analytics_s.css({"text-shadow": ""});
+                Root.red_js_s.css({"text-shadow": ""});
+            } else if (Root.console_element.offset()['top'] <= $(window).scrollTop() && Root.red_analytics.offset()['top'] >= $(window).scrollTop()) {
+                Root.console_s.css({"text-shadow": "black 0 0 1px"});
+                Root.intro_s.css({"text-shadow": ""});
+                Root.enterprise_s.css({"text-shadow": ""});
+                Root.red_analytics_s.css({"text-shadow": ""});
+                Root.red_js_s.css({"text-shadow": ""});
+            } else if (Root.red_analytics.offset()['top'] <= $(window).scrollTop() + 400 && Root.red_js.offset()['top'] >= $(window).scrollTop() + 400) {
+                Root.red_analytics_s.css({"text-shadow": "black 0 0 1px"});
+                Root.intro_s.css({"text-shadow": ""});
+                Root.enterprise_s.css({"text-shadow": ""});
+                Root.console_s.css({"text-shadow": ""});
+                Root.red_js_s.css({"text-shadow": ""});
+            } else if (Root.red_js.offset()['top'] <= $(window).scrollTop() + 500) {
+                Root.red_js_s.css({"text-shadow": "black 0 0 1px"});
+                Root.intro_s.css({"text-shadow": ""});
+                Root.enterprise_s.css({"text-shadow": ""});
+                Root.console_s.css({"text-shadow": ""});
+                Root.red_analytics_s.css({"text-shadow": ""});
+            }
+        }
+
+    };
+
+</script>
+
+
+</body>
+</html>
+
