@@ -17,6 +17,7 @@
             clear: both;
         }
 
+
         .nav-item {
             color: rgba(211, 211, 211, 0.22);
             text-decoration: none;
@@ -45,12 +46,12 @@
         }
 
         .lang {
-            color: rgba(211, 211, 211, 0.22);
+            color: grey;
             font-size: 13px;
         }
 
         .lang:hover {
-            color: white;
+            color: black;
             transition: 0.6s;
         }
 
@@ -66,11 +67,12 @@
             -webkit-border-radius: 0 0 6px 6px;
             -moz-border-radius: 0 0 6px 6px;
             border-radius: 0 0 4px 4px;
-            margin-bottom: 10px;
+            margin-bottom: 35px;
             overflow: auto;
         }
 
         .codeheader {
+            margin-top: 35px;
             margin-right: 4%;
             margin-left: 4%;
             padding: 5px 5px 5px 10px;
@@ -81,15 +83,20 @@
             -moz-border-radius: 6px 6px 0 0;
             border-radius: 4px 4px 0 0;
             background-color: rgba(226, 90, 90, 0.8);
+            direction: rtl;
         }
 
         .box {
+            margin-bottom: 35px;
+            margin-top: 35px;
+            font-family: Calibri, sans-serif;
             box-shadow: 0 0 0.625vw 0 rgba(0, 0, 0, 0.04);
             padding: 8px;
             border-radius: 5px;
             background-color: rgba(192, 192, 192, 0.35);
             overflow: auto;
         }
+
 
         .content-box {
             margin: 40px;
@@ -109,6 +116,11 @@
             direction: rtl;
             text-align: right;
             font-family: Calibri, sans-serif;
+        }
+
+        .content-image {
+            margin-top: 20px;
+            margin-bottom: 20px;
         }
     </style>
 
@@ -140,7 +152,7 @@
 </div>
 
 <div id="header"
-     style="z-index: 1;box-shadow: 0 0 0.625vw 0 rgba(0,0,0,0.24);-moz-user-select: -moz-none;-webkit-user-select: none;-ms-user-select: none;user-select: none;position:sticky;top: 0;height: 220px;max-height: 220px;background-image: url('../../../Dependencies/Images/Header_Background.jpg');
+     style="z-index: 1;box-shadow: 0 0 0.625vw 0 rgba(0,0,0,0.24);-moz-user-select: -moz-none;-webkit-user-select: none;-ms-user-select: none;user-select: none;height: 180px;max-height: 180px;background-image: url('../../../Dependencies/Images/Header_Background.jpg');
                  background-size: cover;width: 100%;margin: auto;border-radius: 5px 5px 0 0;">
     <img id="header-logo" alt="Red Framework" draggable="false"
          src="../../../Dependencies/Images/Red_Framework_Logo_For_Header.png"
@@ -153,50 +165,55 @@
          style="font-family: Calibri, sans-serif;text-align: right;text-shadow: 0 0 0.625vw 0 rgba(0,0,0,0.50);color:#ffffff;padding-top: 14px;">
         میزبان اپلیکیشن های جامع
     </div>
-    <div id="navbar"
-         style="box-shadow: 0 0 0.625vw 0 rgba(0,0,0,0.35);position: absolute;left: 0;top: 170px;z-index: 3;color: white;width: 100%;height: 50px;background-color: rgba(226,90,90,0.55);">
+</div>
+
+<div id="navbar"
+     style="box-shadow: 0 0 0.625vw 0 rgba(0,0,0,0.35);position: sticky;top: 0;z-index: 3;color: white;height: 50px;background-color: rgb(210,90,90);">
         <span id="navbar-header"
               style="display: none;font-family: Calibri, sans-serif;position:relative;top: 14px;right: 12px;float: right;">مستندات رد فریم ورک</span>
-        <span id="navbar-toggle"
-              style="width: 26px;height: 26px;cursor: pointer;display: none;position:relative;top: 9px;left: 8px;float: left"><img
-                src="../../../Dependencies/Images/menu_rtl.png" alt="Expand Menu"></span>
-        <div id="navbar-items" style="padding: 15px 9px;font-size: 15px;color: #000;text-shadow: white 0 0 1px">
-            <hr id="navbar-separator"
-                style="color: white;text-align: center;margin: auto;position:relative;top: 20px;width: 100%;display: none">
+    <span id="navbar-toggle"
+          style="width: 26px;height: 26px;cursor: pointer;display: none;position:relative;top: 9px;left: 8px;float: left"><img
+            src="../../../Dependencies/Images/menu_rtl.png" alt="Expand Menu"></span>
+    <div id="navbar-items" style="padding: 15px 9px;font-size: 15px;color: #000;text-shadow: white 0 0 1px">
+        <hr id="navbar-separator"
+            style="color: white;text-align: center;margin: auto;margin-top: 11px;position:relative;top: 20px;width: 100%;display: none">
 
-            <a href="#!home" class="nav-item" id="nav-first-item" style="float: right;">
-                خانه
-                <img style="opacity: 0.5;width: 15px;height: 15px;margin-left: 4px;position:relative;top: 2.5px;"
-                     src="../../../Dependencies/Images/home.png" alt="Home">
-            </a>
-            <a href="#!documentation" class="nav-item" style="float: right;">
-                مستندات
-                <img style="opacity: 0.5;width: 15px;height: 15px;margin-left: 4px;position:relative;top: 2.5px;"
-                     src="../../../Dependencies/Images/document.png" alt="Document">
-            </a>
-
-            <a href="#!enterprise_doc" class="nav-item" style="float: right;">
-
-                کیت نوسعه جامع
-                <img style="opacity: 0.5;width: 15px;height: 15px;margin-left: 4px;position:relative;top: 2.5px"
-                     src="../../../Dependencies/Images/app.png" alt="App">
-            </a>
+        <a href="#!home" class="nav-item" id="nav-first-item" style="float: right;">
+            خانه
+            <img style="opacity: 0.5;width: 15px;height: 15px;margin-left: 4px;position:relative;top: 2.5px;"
+                 src="../../../Dependencies/Images/home.png" alt="Home">
+        </a>
 
 
-            <a href="#!console_doc" class="nav-item" style="float: right;">
-                کیت کنسول اپلیکیشن
-                <img style="opacity: 0.5;width: 15px;height: 15px;margin-left: 4px;position:relative;top: 2.5px"
-                     src="../../../Dependencies/Images/console.png" alt="Console">
-            </a>
+        <a href="#!documentation" class="nav-item" style="float: right;">
+            مستندات
+            <img style="opacity: 0.5;width: 15px;height: 15px;margin-left: 4px;position:relative;top: 2.5px;"
+                 src="../../../Dependencies/Images/document.png" alt="Document">
+        </a>
 
-            <a href="#!red_js_doc" id="nav-item-current" class="nav-item" style="float: right;">
-                رد جی اس
-                <img style="width: 15px;height: 15px;margin-left: 4px;position:relative;top: 2.5px"
-                     src="../../../Dependencies/Images/java-script.png" alt="Red JS">
-            </a>
+        <a href="#!enterprise_doc" class="nav-item" style="float: right;">
 
-            <span id="language"
-                  style="cursor: pointer;color: white;text-decoration: none;margin-left: 20px;font-size: 12px;position:relative;left: 0;top: -2px;">
+            کیت نوسعه جامع
+            <img style="opacity: 0.5;width: 15px;height: 15px;margin-left: 4px;position:relative;top: 2.5px"
+                 src="../../../Dependencies/Images/app.png" alt="App">
+        </a>
+
+
+        <a href="#!console_doc" class="nav-item" style="float: right;">
+            کیت کنسول اپلیکیشن
+            <img style="opacity: 0.5;width: 15px;height: 15px;margin-left: 4px;position:relative;top: 2.5px"
+                 src="../../../Dependencies/Images/console.png" alt="Console">
+        </a>
+
+        <a href="#!red_js_doc" class="nav-item" id="nav-item-current" style="float: right;">
+            رد جی اس
+            <img style="width: 15px;height: 15px;margin-left: 4px;position:relative;top: 2.5px"
+                 src="../../../Dependencies/Images/java-script.png" alt="Red JS">
+        </a>
+
+
+        <span id="language"
+              style="cursor: pointer;color: white;text-decoration: none;margin-left: 20px;font-size: 12px;position:relative;left: 0;top: -3px">
                 <img style="width: 15px;height: 15px;margin-right: 6px;position:relative;top: 1px"
                      src="../../../Dependencies/Images/language.png" alt="Language">
                 <span id="current-language">FA</span>
@@ -204,14 +221,16 @@
                 <img style="margin-left: 3px;width: 10px;height: 10px;margin-right: 6px;position:relative;top: 1px"
                      src="../../../Dependencies/Images/drop-down-arrow.png" alt="Drop Down">
                 <div id="lang-list"
-                     style="text-shadow: white 0 0 1px;padding: 5px;display: none;width: 140px;text-align: center;background-color: rgba(226,90,90,0.95);box-shadow: 0 0 0.625vw 0 rgba(0,0,0,0.24);height: 50px;position:absolute;left: 0;margin-top: 10px;border-radius: 0 0 4px 4px;">
-                    <div id="lang-fa" class="lang" style="font-family: Calibri, sans-serif">Persian - Fa</div>
+                     style="text-shadow: white 0 0 1px;padding: 5px;display: none;width: 140px;text-align: center;background-color: white;box-shadow: 0 0 0.625vw 0 rgba(0,0,0,0.24);height: 50px;position:absolute;left: 0;margin-top: 12px;border-radius: 0 0 4px 4px;padding-top: 10px">
+                    <div id="lang-fa" class="lang"
+                         style="font-family: Calibri, sans-serif">Persian - Fa</div>
                     <div id="lang-en" class="lang"
                          style="font-family: Calibri, sans-serif;margin-bottom: 7px;margin-top: 6px;">English - En</div>
                 </div>
             </span>
 
-            <span id="version" style="position:relative;top: -3px;margin-left: 20px;">
+
+        <span id="version" style="position:relative;top: -3px;margin-left: 20px;">
                  <img style="width: 18px;height: 18px;margin-right: 10px;position:relative;top: 4px"
                       src="../../../Dependencies/Images/version.png" alt="Version">
                 <select style="border-color: white;height: 27px;width: 140px;box-shadow: 0 0 0.625vw 0 rgba(0,0,0,0.10);border-radius: 5px;"
@@ -219,7 +238,6 @@
                     <option value="1.0.0">1.0.0</option>
                 </select>
             </span>
-        </div>
     </div>
 </div>
 
@@ -228,30 +246,1433 @@ margin-bottom: 20px;position:sticky;right: 0;top: 55px;z-index: 2;">
 
     <div id="subjects" style="overflow: auto;max-height: 90vh;margin-top: 10px;">
         <ul style="direction: rtl;font-family: 'Segoe UI Light', sans-serif;margin-right: 11px;color: rgba(226,90,90,0.70);line-height: 19px;">
-            <li id="preparing-document-s"><a href="#preparing-document"
-                                             style="text-shadow: black 0 0 1px;text-decoration: none;color: black;">آماده
-                سازی مستندات</a></li>
+            <li id="overview-s"><a href="#overview"
+                                   style="text-decoration: none;color: black;">نمای کلی</a></li>
+            <li id="document-ready-s"><a href="#document-ready"
+                                         style="text-decoration: none;color: black;">رخداد آماده بودن سند</a></li>
+            <li id="module-s"><a href="#module"
+                                 style="text-decoration: none;color: black;">ماژول</a></li>
+            <li id="controller-s"><a href="#controller"
+                                     style="text-decoration: none;color: black;">کنترلر</a></li>
+            <li id="model-s"><a href="#model"
+                                style="text-decoration: none;color: black;">مدل</a></li>
+
+            <li id="get-select-syntax-s"><a href="#get-select-syntax"
+                                            style="text-decoration: none;color: black;">دستور GET و SELECT</a></li>
+
+            <li id="select-element-s"><a href="#select-element"
+                                         style="text-decoration: none;color: black;">عملیات SELECT</a></li>
+
+            <li id="element-creation-s"><a href="#element-creation"
+                                           style="text-decoration: none;color: black;">ساخت المان</a></li>
+
+            <li id="ajax-request-s"><a href="#ajax-request"
+                                       style="text-decoration: none;color: black;">درخواست AJAX</a></li>
+
+            <li id="cookie-operations-s"><a href="#cookie-operations"
+                                            style="text-decoration: none;color: black;">عملیات کوکی</a></li>
+
+            <li id="parser-s"><a href="#parser"
+                                 style="text-decoration: none;color: black;">پارسر</a></li>
+
+
+            <li id="array-operations-s"><a href="#array-operations"
+                                           style="text-decoration: none;color: black;">عملیات آرایه</a></li>
+
+            <li id="type-detection-s"><a href="#type-detection"
+                                         style="text-decoration: none;color: black;">تشخیص نوع داده</a></li>
+
+            <li id="ie-detection-s"><a href="#ie-detection"
+                                       style="text-decoration: none;color: black;">تشخیص اینترنت اکسپلورر</a></li>
+
+            <li id="graphical-fade-s"><a href="#graphical-fade"
+                                         style="text-decoration: none;color: black;">محو گرافیکی</a></li>
+
+            <li id="custom-timer-s"><a href="#custom-timer"
+                                       style="text-decoration: none;color: black;">زمان سنج</a></li>
+
+            <li id="auto-complete-s"><a href="#auto-complete"
+                                        style="text-decoration: none;color: black;">اتو کمپلت</a></li>
+
+            <li id="validation-service-s"><a href="#validation-service"
+                                             style="text-decoration: none;color: black;">سرویس ارزیابی اعتبار رشته</a>
+            </li>
+
+            <li id="filter-service-s"><a href="#filter-service"
+                                         style="text-decoration: none;color: black;">سرویس فیلتر رشته</a></li>
+
+            <li id="sanitize-service-s"><a href="#sanitize-service"
+                                           style="text-decoration: none;color: black;">سرویس زدودن رشته</a></li>
+
+            <li id="extra-operations-s"><a href="#extra-operations"
+                                           style="text-decoration: none;color: black;">عملیات اضافه</a></li>
         </ul>
     </div>
 </div>
 
 <div id="subjects-toggle"
-     style="display: none;cursor: pointer;box-shadow: 0 4px 2px -2px rgba(0,0,0,0.30);background-color: white;height: 50px;position: fixed;right: 0;margin-top: 40px;border-radius: 3px 0 0 3px">
+     style="display: none;z-index: 1;cursor: pointer;box-shadow: 0 4px 2px -2px rgba(0,0,0,0.30);background-color: white;height: 50px;position: fixed;right: 0;margin-top: 40px;border-radius: 3px 0 0 3px">
     <img src="../../../Dependencies/Images/subjects_menu.png" style="margin: 3px;width: 38px;height: 40px;"
          alt="Subjects Menu">
 </div>
 
 <div id="content-container" class="block"
-     style="box-shadow: 0 4px 2px -2px rgba(0,0,0,0.24);margin-bottom: auto;width: 70%;float: left;margin-top: auto;background: url('../../../Dependencies/Images/background.png') no-repeat center center fixed;
-     background-size: 100% 100%;border-radius: 0 0 5px 0">
+     style="z-index: 0;box-shadow: 0 4px 2px -2px rgba(0,0,0,0.24);margin-bottom: auto;width: 70%;float: left;margin-top: auto;background: url('../../../Dependencies/Images/background.png') no-repeat center center fixed;
+     background-size: cover;border-radius: 0 0 5px 0">
 
-    <div id="preparing-document"
+    <div id="overview"
          class="content-box">
-        <h3 class="content-title">آماده سازی مستندات</h3>
+        <h3 class="content-title">نمای کلی</h3>
+        <hr>
+
+        <div style="text-align: center">
+            <img class="content-image" id="javascript-logo"
+                 style="border-radius: 3px;width: 500px;height: 300px;opacity: 0.8"
+                 src="../../../Dependencies/Images/js.png" alt="Java Script">
+        </div>
+        <p>
+            رد جی اس یک فریم ورک سبک جاوا اسکریپتی ، به جهت رابطه آسان تر Front و Back می باشد ؛
+            این فریم ورک در حال حاضر به نسخه 1.0 خودش رسیده و همراه با رد فریم ورک ارائه شده است .
+            <br/>
+            <br/>
+            از قابلیت های رد جی اس میتوان به موارد زیر اشاره کرد :
+            <br/>
+            <br/>
+            <br/>
+            - پیروی از الگوی طراحی MVC
+            <br/>
+            <br/>
+            - کد نویسی درون تگ های HTML
+            <br/>
+            <br/>
+            - دسترسی آسان به المان و تغییر ویژگی آن
+            <br/>
+            <br/>
+            - ارسال درخواست AJAX
+            <br/>
+            <br/>
+            - مدیریت کوکی ها
+            <br/>
+            <br/>
+            - افکت گرافیکی
+            <br/>
+            <br/>
+            - سرویس ارزیابی ، فیلتر و زدودن رشته
+
+        </p>
+
+    </div>
+
+    <div id="document-ready"
+         class="content-box">
+        <h3 class="content-title">رخداد آماده بودن سند</h3>
         <hr>
         <p>
-            متاسفانه مستندات رد جی اس هنوز به زبان فارسی منتشر نشده است .
+            آماده بودن سند ، یک رخداد از پیش تعیین شده در HTML است ؛ زمانی که سند به طور کامل دانلود و رندر شده این
+            رخداد فراخوانده می شود .
+            <br/>
+            <br/>
+            فرض کنید برای المانی که هنوز لود نشده Event Listener ثبت کنیم ؛ اگر از رخداد آماده بودن سند استفاده نکنیم
+            خطا رخ می دهد .
+            <br/>
+            از آنجا که استفاده از این رخداد بسیار رایج و مورد استفاده بوده رد جی اس تابع ای را به آن اختصاص داده است .
         </p>
+
+        <div class="codeheader">نحوه استفاده از تابع ready که آرگومان ورودی آن یک Callback است :</div>
+        <div class="codebox">
+            <pre>Red.ready(function () {
+    Root.initialize();
+});</pre>
+        </div>
+
+    </div>
+
+    <div id="module"
+         class="content-box">
+        <h3 class="content-title">ماژول</h3>
+        <hr>
+        <p>
+            در رد جی اس ، ماژول اشاره به فضای نام برنامه دارد و هدف آن جلوگیری از اشتباه گرفتن کنترلر های همنام است .
+            <br/>
+            یک سند می تواند دارای چندین ماژول و هر ماژول دارای چندین کنترلر باشد .
+        </p>
+
+        <div class="codeheader">اضافه کردن ماژول</div>
+        <div class="codebox">
+            <pre>&lt;body&gt;
+    &lt;div red-app="main"&gt;&lt;/div&gt;
+    &lt;script src="Dependencies/Library/Red.min.js"&gt;&lt;/script&gt;
+        &lt;script&gt;
+            Red.app.module("main");
+            Red.ready(function () {
+                // some code
+            });
+        &lt;/script&gt;
+&lt;/body&gt;</pre>
+        </div>
+
+        <p>
+            توجه داشته باشید که رد جی اس به کمک ویژگی المان شما را قادر می سازد تا درون HTML از جاوا اسکریپت استفاده
+            کنید ؛
+            <br/>
+            در قطعه کد بالا ، المان div رو با ویژگی red-app به عنوان ماژول main انتخاب کردیم و سپس به کمک تابع module آن
+            را در حافظه ثبت کرده ایم .
+
+        </p>
+
+    </div>
+
+    <div id="controller"
+         class="content-box">
+        <h3 class="content-title">کنترلر</h3>
+        <hr>
+        <p>
+            کنترلر در طراحی رد جی اس نقش دریافت داده از مدل (کلاینت) ، تصمیم گیری بر اساس شرایط ، ثبت داده در حافظه در
+            صورت لزوم و ارسال داده به لایه View رو بر عهده دارد .
+        </p>
+
+        <div class="codeheader">افزودن کنترلر</div>
+        <div class="codebox">
+            <pre>&lt;body&gt;
+    &lt;div red-app="main"&gt;
+        &lt;div red-controller="test"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;script src="Dependencies/Library/Red.min.js"&gt;&lt;/script&gt;
+        &lt;script&gt;
+            Red.app.module("main");
+            Red.app.addController("main", "test", function () {
+                // decisions
+            });
+
+            Red.ready(function () {
+                // some code
+            });
+        &lt;/script&gt;
+&lt;/body&gt;</pre>
+        </div>
+
+        <p>در مثال بالا ابتدا ماژول main رو ثبت کردیم ؛ سپس کنترلمون رو به ماژول main با تابع addController اضافه کردیم
+            .
+        </p>
+
+        <p class="box">توجه داشته باشید که پارامتر سوم تابع addController از نوع Callback می باشد و تمامی متغیر های
+            استفاده شده در این Callback در حافظه ثبت می شوند .
+        </p>
+
+
+        <p>
+            <br/>
+            تمامی این متغیر های ثبت شده در حافظه قابل استفاده در تگ های HTML می باشند .
+        </p>
+
+
+        <div class="codeheader">جای گذاری داده (Data Binding)</div>
+        <div class="codebox">
+            <pre>&lt;body&gt;
+    &lt;div red-app="main"&gt;
+        &lt;div red-controller="test"&gt
+          &lt;div id="result" red-bind="$calculation_result"&gt;&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;script src="Dependencies/Library/Red.min.js"&gt;&lt;/script&gt;
+        &lt;script&gt;
+            Red.app.module("main");
+            Red.app.addController("main", "test", function () {
+                $calculation_result = 3243;
+            });
+
+            Red.ready(function () {
+                // some code
+            });
+        &lt;/script&gt;
+&lt;/body&gt;</pre>
+        </div>
+
+        <p>
+            نتیجه در المان result id ظاهر خواهد شد .
+            <br/>
+            <br/>
+            <br/>
+            یک کنترلر میتواند علاوه بر متغیر هایی که در Callback ثبت می شوند ، مقادیر اولیه هم داشته باشد :
+        </p>
+
+
+        <div class="codeheader">مقادیر اولیه کنترلر</div>
+        <div class="codebox">
+            <pre>&lt;body&gt;
+    &lt;div red-app="main" red-controller="test" red-init="var user_id = 43;"&gt;
+        &lt;div id="user-id" red-bind="user_id"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;script src="Dependencies/Library/Red.min.js"&gt;&lt;/script&gt;
+        &lt;script&gt;
+            Red.app.module("main");
+            Red.app.addController("main", "test", function () {
+                // decisions
+            });
+
+            Red.ready(function () {
+                // some code
+            });
+        &lt;/script&gt;
+&lt;/body&gt;</pre>
+        </div>
+
+        <p>در مثال بالا کنترلر test رو به ماژول main اضافه کردیم ؛ سپس در مقدار دهی اولیه ، متغیر 'user_id' رو مقدار دهی
+            کرده
+            <br/>
+            <br/>
+            و در آخر متغیر 'user_id' رو در المان 'user-id' جای گذاری کردیم .
+        </p>
+    </div>
+
+
+    <div id="model"
+         class="content-box">
+        <h3 class="content-title">مدل</h3>
+        <hr>
+        <p>
+            در طراحی رد جی اس ، مدل نقش دریافت اطلاعات از سمت کاربر و انتقال آن به کنترلر یا مستقیم به ویو را بر عهده
+            دارد .
+        </p>
+
+        <div class="box" style="direction: rtl;padding-top: 20px;padding-bottom: 20px">
+            <span style="direction: rtl;text-align: right">داده دریافتی از سمت کلاینت :</span>
+            <span style="margin-left: 20px;float: left"><input red-model="test"
+                                                               style="padding: 2px;border-radius: 5px;text-align: center"
+                                                               type="text" name="model-example" id="model-example"
+                                                               value="تست"></span>
+            <br/>
+            <br/>
+            <hr style="width: 80%">
+            <br/>
+            <span style="direction: rtl;text-align: right">داده بازگشتی به ویو :</span>
+            <span style="margin-left: 20px;float: left"><input id="feeder" red-bind="model_test"
+                                                               style="padding: 2px;border-radius: 5px;text-align: center"
+                                                               type="text"
+                                                               disabled
+            ></span>
+        </div>
+
+
+        <p>برای درک بیشتر به قطعه کد زیر توجه کنید :</p>
+
+
+        <div class="codeheader">نحوه پیاده سازی مثال بالا</div>
+        <div class="codebox">
+            <pre>&lt;body&gt;
+    &lt;div red-app="main" red-controller="test" &gt;
+
+        &lt;input red-model="test"
+                  style="border-radius: 5px;text-align: center"
+                  type="text" name="model-example" id="model-example"
+                  value="تست"&gt;
+
+        &lt;input id="feeder" red-bind="model_test"
+                  style="border-radius: 5px;text-align: center"
+                  type="text" disabled&gt;
+    &lt;/div&gt;
+    &lt;script src="Dependencies/Library/Red.min.js"&gt;&lt;/script&gt;
+        &lt;script&gt;
+            Red.app.module("main");
+            Red.app.addController("main", "test", function () {
+                // decisions
+            });
+
+            Red.ready(function () {
+                // some code
+            });
+        &lt;/script&gt;
+&lt;/body&gt;</pre>
+        </div>
+
+
+        <p>ابتدا یک ماژول ساخته و کنترلر مربوطه رو بهش اضافه کردیم .
+            <br/>
+            <br/>
+            سپس با ساخت یک المان Text Input و اضافه کردن ویژگی red-model ، المان رو به عنوان مدل به سیستم معرفی کردیم .
+            <br/>
+            <br/>
+            حال محتوای این المان با نام model_modelname در حافظه در دسترس است ؛ توجه داشته باشید که modelname باید با
+            نام مدل شما جایگزین شود .
+            <br/>
+            <br/>
+            در مرحله آخر یک المان Feeder ساختیم با ویژگی red-bind به محتوای ثبت شده در حافظه دسترسی گرفیتم .
+        </p>
+
+    </div>
+
+
+    <div id="get-select-syntax"
+         class="content-box">
+        <h3 class="content-title" style="direction: rtl">دستور GET و SELECT</h3>
+        <hr>
+        <p>
+            رد جی اس دو راه برای دسترسی آسان به المان ها در اختیار برنامه نویس قرار می دهد :
+            <br/>
+            <br/>
+            1 - GET : دستور GET برای یافت المان یا المان ها استفاده می شود ؛ این دستور نسبت به دستور SELECT فضای کمتری
+            از حافظه را اشغال می کند .
+        </p>
+
+        <div class="codeheader">Get Elements</div>
+        <div class="codebox">
+            var elements = Red.get(".heading");
+        </div>
+
+
+        <p>
+            2 - SELECT : دستور SELECT ، ابجکتی را باز میگرداند که به واسطه آن قادر به انجام هرگونه عملیات HTML می باشید
+            .
+
+
+            <br/>
+            * تمامی عملیات SELECT در فصل بعد معرفی خواهند شد .
+        </p>
+
+    </div>
+
+    <div id="select-element"
+         class="content-box">
+        <h3 class="content-title" style="direction: rtl">عملیات SELECT</h3>
+        <hr>
+        <p>
+            دستور SELECT ، ابجکتی را باز میگرداند که به واسطه آن قادر به انجام هرگونه عملیات HTML می باشید .
+        </p>
+
+
+        <div class="codeheader">عملیات SELECT</div>
+        <div class="codebox">
+            var elements = Red.select(".heading");
+            <br/>
+            <br/>
+            // دسترسی مستقیم به المان های یافت شده
+            <br/>
+            var raw_elements = elements.elements;
+            <br/>
+            <br/>
+            // دریافت محتوای داخلی
+            <br/>
+            var result = elements.innerHTML();
+            <br/>
+            <br/>
+            // تغییر محتوای داخلی
+            <br/>
+            elements.innerHTML("New Content");
+            <br/>
+            <br/>
+            // دریافت محتوای بیرونی
+            <br/>
+            var result = elements.outerHTML();
+            <br/>
+            <br/>
+            // تغییر محتوای بیرونی
+            <br/>
+            elements.outerHTML("New Content");
+            <br/>
+            <br/>
+            // دریافت مقدار المان
+            <br/>
+            var result = elements.value();
+            <br/>
+            <br/>
+            // تغییر مقدار المان
+            <br/>
+            elements.value("New Value");
+            <br/>
+            <br/>
+            // تزریق داده بعد از المان
+            <br/>
+            elements.after("Data");
+            <br/>
+            <br/>
+            // تزریق داده قبل از المان
+            <br/>
+            elements.before("Data");
+            <br/>
+            <br/>
+            // دریافت ویژگی سی اس اس
+            <br/>
+            elements.CSS("color");
+            <br/>
+            <br/>
+            // تغییر ویژگی سی اس اس
+            <br/>
+            elements.CSS({color: "red"});
+            <br/>
+            <br/>
+            // اضافه کردن فرزند به المان
+            <br/>
+            elements.append(child);
+            <br/>
+            <br/>
+            // ساخت نمونه جدید از المان
+            <br/>
+            var new_element = elements.clone();
+            <br/>
+            <br/>
+            // دریافت المان والد
+            <br/>
+            var parent_element = elements.parent();
+            <br/>
+            <br/>
+            // خواهر / برادر قبلی المان
+            <br/>
+            var prev_sibling = elements.prev();
+            <br/>
+            <br/>
+            / خواهر / برادر بعدی المان
+            <br/>
+            var next_sibling = elements.next();
+            <br/>
+            <br/>
+            // دریافت فرزاندان المان
+            <br/>
+            var children = elements.children();
+            <br/>
+            <br/>
+            // برسی موجود بودن فرزند (مقدار بازگشتی درست / غلط)
+            <br/>
+            var result = elements.contains(child);
+            <br/>
+            <br/>
+            // اضافه کردن رویداد
+            <br/>
+            var event = "load";
+            <br/>
+            elements.on(event, function(){
+            <br/>
+            &nbsp;&nbsp;// some code
+            <br/>
+            });
+            <br/>
+            <br/>
+            // حذف رویداد
+            <br/>
+            var event = "load";
+            <br/>
+            elements.off(event, event_handler);
+            <br/>
+            <br/>
+            // Add Event Listener on Load :
+            <br/>
+            elements.load(event, event_handler);
+            <br/>
+            <br/>
+            // Add Event Listener on Resize :
+            <br/>
+            elements.resize(event, event_handler);
+            <br/>
+            <br/>
+            // Add Event Listener on Click :
+            <br/>
+            elements.click(event, event_handler);
+            <br/>
+            <br/>
+            // Add Event Listener on Submit :
+            <br/>
+            elements.submit(event, event_handler);
+            <br/>
+            <br/>
+            // Add Event Listener on Change :
+            <br/>
+            elements.change(event, event_handler);
+            <br/>
+            <br/>
+            // Add Event Listener on Keydown :
+            <br/>
+            elements.keydown(event, event_handler);
+            <br/>
+            <br/>
+            // Add Event Listener on Keyup :
+            <br/>
+            elements.keyup(event, event_handler);
+            <br/>
+            <br/>
+            // Add Event Listener on mouseEnter :
+            <br/>
+            elements.mouseEnter(event, event_handler);
+            <br/>
+            <br/>
+            // Add Event Listener on mouseLeave :
+            <br/>
+            elements.mouseLeave(event, event_handler);
+            <br/>
+            <br/>
+            // Add Event Listener on mouseOver :
+            <br/>
+            elements.hover(event, event_handler);
+            <br/>
+            <br/>
+            // تعویض متن محتوا
+            <br/>
+            elements.text("New Text");
+            <br/>
+            <br/>
+            // اضافه کردن کلاس
+            <br/>
+            elements.addClass("bg-light box");
+            <br/>
+            <br/>
+            // برسی دارا بودن کلاس (مقدار برگشتی از نوع درست / غلط)
+            <br/>
+            var result = elements.hasClass("box");
+            <br/>
+            <br/>
+            // حذف کلاس
+            <br/>
+            elements.removeClass("bg-light box");
+            <br/>
+            <br/>
+            // تنظیم آی دی
+            <br/>
+            elements.id("header");
+            <br/>
+            <br/>
+            // دریافت ویژگی
+            <br/>
+            var result = elements.attr("enabled");
+            <br/>
+            <br/>
+            // تنظیم ویژگی
+            <br/>
+            elements.attr("enabled", "true");
+            <br/>
+            <br/>
+            // حذف ویژگی
+            <br/>
+            elements.removeAttr("enabled");
+            <br/>
+            <br/>
+            // تنظیم اکشن فرم
+            <br/>
+            elements.action("/home.html");
+            <br/>
+            <br/>
+            // تنظیم منبع تصویر
+            <br/>
+            elements.source("images/logo.png");
+            <br/>
+            <br/>
+            // تنظیم توضیح تصویر
+            <br/>
+            elements.alt("Logo");
+            <br/>
+            <br/>
+            // حلقه forEach
+            <br/>
+            elements.each(function(){
+            <br/>
+            &nbsp;&nbsp; // Some Code
+            <br/>
+            });
+            <br/>
+            <br/>
+            // خالی کردن المان
+            <br/>
+            elements.empty();
+            <br/>
+            <br/>
+            // حذف فرزند
+            <br/>
+            elements.remove(child);
+            <br/>
+            <br/>
+            // طول المان
+            <br/>
+            var result = elements.width(margin);
+            <br/>
+            <br/>
+            // ارتفاع المان
+            <br/>
+            var result = elements.height(margin);
+            <br/>
+            <br/>
+            // موقعیت المان
+            <br/>
+            var result = elements.position();
+            <br/>
+            <br/>
+            // آفست المان
+            <br/>
+            var result = elements.offset();
+            <br/>
+            <br/>
+            // آفست المان والد
+            <br/>
+            var result = elements.offsetParent();
+            <br/>
+            <br/>
+            // ظاهر کردن المان
+            <br/>
+            elements.show();
+            <br/>
+            <br/>
+            // مخفی کردن المان
+            <br/>
+            elements.hide();
+            <br/>
+            <br/>
+            // ظاهر کردن گرافیکی
+            <br/>
+            var delay = 1000;
+            <br/>
+            elements.fadeIn(delay);
+            <br/>
+            <br/>
+            // محو گرافیکی
+            <br/>
+            var delay = 1000;
+            <br/>
+            elements.fadeOut(delay);
+            <br/>
+            <br/>
+            // اجرای المان اهنگ
+            <br/>
+            elements.play();
+        </div>
+
+
+    </div>
+
+    <div id="element-creation"
+         class="content-box">
+        <h3 class="content-title">ساخت المان</h3>
+        <hr>
+        <p>
+            همونطور که می دونید ، برای ساخت صفحات پویا لازمه بار ها یک المان جدید رو بسازید ،
+            خصوصیات سی اس اس اون رو تعیین کنید و در نهایت یک والد به اون اختصاص بدهید .
+            <br/>
+            <br/>
+            در رد جی اس ، تابعی به این منظور تعبیه شده تا به برنامه نویسی شما سرعت ببخشد .
+        </p>
+
+
+        <div class="codeheader">نحوه ساخت المان</div>
+        <div class="codebox">
+            var parent = Red.get("#container");
+            <br/>
+            var tag = "div";
+            <br/>
+            var css_props = {color: "red"};
+            <br/>
+            var element = Red.create(tag, parent, css_props);
+        </div>
+
+
+        <p>
+            پارامتر اول اشاره به نوع المان دارد
+            <br/>
+            <br/>
+            پارامتر دوم اشاره به والد آن المان دارد (المان - اختیاری)
+            <br/>
+            <br/>
+            پارامتر سوم اشاره به خصوصیات سی اس اس المان دارد (ابجکت - اختیاری)
+        </p>
+
+    </div>
+
+
+    <div id="ajax-request"
+         class="content-box">
+        <h3 class="content-title" style="direction: rtl">درخواست AJAX</h3>
+        <hr>
+
+        <div style="text-align: center;margin: auto;">
+            <img class="content-image" id="ajax-diagram" src="../../../Dependencies/Images/ajax_diagram.png" alt="AJAX Request"
+                 style="opacity: 0.8;width: 600px;height: 578px">
+        </div>
+
+        <p>
+            یکی از زیبایی های جاوا اسکریپت ، تکنولوژی AJAX است ؛
+            این تکنولوژی به زبان ساده ، با ارسال درخواست HTTP به CGI Application و برگرداندن نتیجه به شما در طراحی صفحات
+            پویا کمک زیادی می کند .
+            <br/>
+            <br/>
+            از آنجایی که استفاده از آن رایج و بر اساس اصول User Experience ضروری ، رد جی اس تابعی از پیش طراحی شده را به
+            آن اختصاص داده است :
+        </p>
+
+
+        <div class="codeheader">نحوه ارسال درخواست AJAX</div>
+        <div class="codebox">
+            var config = {
+            <br/>
+            &nbsp;&nbsp;type: "POST",
+            <br/>
+            &nbsp;&nbsp;url: "http://test.com",
+            <br/>
+            &nbsp;&nbsp;data: {
+            username: "admin"
+            },
+            <br/>
+            &nbsp;&nbsp;contentType: "application/json",
+            <br/>
+            &nbsp;&nbsp;dataType: "application/json"
+            <br/>
+            &nbsp;&nbsp;success: function() {
+            <br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;var result = this.response;
+            <br/>
+            &nbsp;&nbsp;}
+            <br/>
+            };
+            <br/>
+            <br/>
+            Red.ajax(config);
+        </div>
+
+
+        <p>
+            تابع ajax ، نیازمند ابجکتی حاوی پیکربندی درخواست است ؛
+            <br/>
+            <br/>
+            ویژگی type و url که به ترتیب اشاره به نوع و آدرس درخواست داشته ضروری است .
+            <br/>
+            <br/>
+            ویژگی data در واقع پارامتر های ارسالی درخواست می باشد .
+            <br/>
+            <br/>
+            ویژگی success تابع کال بکی است که در زمان درخواست موفق اجرا می شود .
+        </p>
+
+    </div>
+
+    <div id="cookie-operations"
+         class="content-box">
+        <h3 class="content-title">عملیات کوکی</h3>
+        <hr>
+        <p>
+            از کوکی ها برای ذخیره موقتی داده در کامپیوتر کاربر استفاده می شود .
+            <br/>
+            <br/>
+            کوکی به عنوان رشته با الگویی خاص ذخیره می شود :
+        </p>
+
+        <div class="box">analytics_token=c956c79e-7209-88ce-74fc-81115ff495ef; red_session_last_activity=11/19/2019
+        </div>
+
+        <p>
+            برای تسریع روند کد نویسی ، توابعی جهت مدیریت کردن کوکی ها در رد جی اس ارائه داده شده :
+
+        </p>
+
+
+        <div class="codeheader">مدیریت کوکی</div>
+        <div class="codebox">
+            // ثبت کوکی جدید
+            <br/>
+            var cookie_name = "user_logged_in";
+            <br/>
+            var cookie_value = "DSC32KJDEUAPCMJ4";
+            <br/>
+            var expire_days = 7;
+            <br/>
+            Red.setCookie(cookie_name, cookie_value, expire_days);
+            <br/>
+            <br/>
+            // دریافت کوکی
+            <br/>
+            var result = Red.getCookie(cookie_name);
+            <br/>
+            <br/>
+            // حذف کوکی
+            <br/>
+            Red.deleteCookie(cookie_name);
+        </div>
+
+    </div>
+
+    <div id="parser"
+         class="content-box">
+        <h3 class="content-title">پارسر</h3>
+        <hr>
+        <p>
+            دو تابع دسترسی آسان برای کمک به پردازش تجزیه و شکستن در رد جی اس ، در اختیار برنامه نویس قرار گرفته است .
+            <br/>
+            <br/>
+            1 - تجزیه HTML :
+        </p>
+
+        <div class="codeheader">تجزیه کننده اچ تی ام ال</div>
+        <div class="codebox">
+            Red.parseHTML(string);
+        </div>
+
+
+        <p>
+            1 - تجزیه JSON :
+        </p>
+
+
+        <div class="codeheader">تجزیه کننده جی سون</div>
+        <div class="codebox">
+            Red.parseJSON(string);
+        </div>
+    </div>
+
+    <div id="array-operations"
+         class="content-box">
+        <h3 class="content-title">عملیات آرایه</h3>
+        <hr>
+        <p>
+            در رد جی اس ، توابعی برای عملیات بر روی آرایه از جمله ForEach ، Map ، inArray و ... در اختیار برنامه نویس
+            قرار گرفته است .
+        </p>
+
+
+        <div class="codeheader">عملیات آرایه</div>
+        <div class="codebox">
+            // ForEach :
+            <br/>
+            Red.each(array, callback);
+            <br/>
+            <br/>
+            // Map :
+            <br/>
+            Red.map(array, callback);
+            <br/>
+            <br/>
+            // inArray :
+            <br/>
+            var result = Red.inArray(item, array);
+            <br/>
+            <br/>
+            // isArray :
+            <br/>
+            var result = Red.isArray(array);
+        </div>
+
+    </div>
+
+    <div id="type-detection"
+         class="content-box">
+        <h3 class="content-title">تشخیص نوع داده</h3>
+        <hr>
+        <p>
+            در رد جی اس ، تابعی از پیش طراحی شده برای تشخیص هر نوع داده ای در اختیار برنامه نویس قرار گرفته است .
+            <br/>
+            <br/>
+            نحوه استفاده :
+        </p>
+
+
+        <div class="codeheader">تشخیص نوع داده</div>
+        <div class="codebox">
+            var result = Red.type(new String("test"));
+            <br/>
+            <br/>
+            // The Result will be -> [object string]
+        </div>
+    </div>
+
+    <div id="ie-detection"
+         class="content-box">
+        <h3 class="content-title">تشخیص اینترنت اکسپلورر</h3>
+        <hr>
+        <p>
+            بخاطر تفاوت های اینترنت اکسپلورر با سایر مرورگر ها ، تابعی از پیش طراحی شده برای تشخیص کاربران اینترنت
+            اکسپلورر در اختیار برنامه نویس قرار گرفته است .
+        </p>
+
+        <div class="box">
+            <span style="float: right;direction: rtl">وضعیت :</span>
+            <span red-bind="ie_status" style="float: left;direction: rtl"></span>
+        </div>
+
+
+        <p>نحوه پیاده سازی :</p>
+
+
+        <div class="codeheader">تشخیص اینترنت اکسپلورر</div>
+        <div class="codebox">
+            var result = Red.IE();
+            <br/>
+            <br/>
+            // نتجیه از نوع داده صحیح یا غلط خواهد بود
+        </div>
+    </div>
+
+    <div id="graphical-fade"
+         class="content-box">
+        <h3 class="content-title">محو گرافیکی</h3>
+        <hr>
+
+        <div class="box" style="margin-top: 15px;">
+            <span id="hello-world" style="float: right;direction: rtl">سلام دنیا !</span>
+            <button id="fade-btn" style="float: left;direction: rtl;cursor: pointer;">محو کردن</button>
+        </div>
+
+
+
+        <p>نحوه پیاده سازی :</p>
+
+
+        <div class="codeheader">محو و ظاهر کردن گرافیکی</div>
+        <div class="codebox">
+            // ** از طریق دستور سلکت **
+            <br/>
+            <br/>
+            var fade_element = Red.select("#hello-world");
+            <br/>
+            var delay = 1000;
+            <br/>
+            <br/>
+            // محو کردن
+            <br/>
+            fade_element.fadeOut(delay);
+            <br/>
+            <br/>
+            // ظاهر کردن
+            <br/>
+            fade_element.fadeIn(delay);
+            <br/>
+            <br/>
+            // ** از طریق شی اصلی **
+            <br/>
+            <br/>
+            // محو کردن
+            <br/>
+            Red.fadeOut(fade_element.elements[0], delay);
+            <br/>
+            <br/>
+            // ظاهر کردن
+            <br/>
+            Red.fadeIn(fade_element.elements[0], delay);
+        </div>
+
+        <p>* تاخیر پردازش بر مبنای میلی ثانیه می باشد .</p>
+    </div>
+
+    <div id="custom-timer"
+         class="content-box">
+        <h3 class="content-title">زمان سنج</h3>
+        <hr>
+
+        <p>زمان سنج رد جی اس در دو حالت ارائه شده است .
+        </p>
+
+        <div class="box" style="margin-top: 15px;">
+            <span id="full-timer" style="float: left;cursor: pointer;">00:00</span>
+            <span style="float: right;cursor: pointer;">حالت فول (4 عدد)</span>
+            <br/>
+            <br/>
+            <br/>
+            <span id="light-timer" style="float: left;cursor: pointer;">00</span>
+            <span style="float: right;cursor: pointer;">حالت لایت (2 عدد)</span>
+        </div>
+
+
+        <p>نحوه پیاده سازی :</p>
+
+
+        <div class="codeheader">زمان سنج</div>
+        <div class="codebox">
+            // پیاده سازی حالت فول
+            <br/>
+            var full_timer_element = Red.get("#full-timer");
+            <br/>
+            Red.timer(1800, full_timer_element, "full");
+            <br/>
+            <br/>
+            // پیاده سازی حالت لایت
+            <br/>
+            var light_timer_element = Red.get("#light-timer");
+            <br/>
+            Red.timer(60, light_timer_element, "light");
+        </div>
+
+
+        <p>* حالت لایت فقط برای مدت زمان زیر 60 ثانیه پیشنهاد می شود .</p>
+    </div>
+
+
+    <div id="auto-complete"
+         class="content-box">
+        <h3 class="content-title">اتو کمپلت</h3>
+        <hr>
+
+        <p>
+            اتو کمپلت آپشن قابل استفاده بر روی فیلد های ورودی به جهت افزایش تجربه کاربری می باشد .
+        </p>
+
+        <div id="city-input-container" class="box" style="text-align: center">
+            <div style="margin-bottom: 10px;font-family: 'Segoe UI Light', sans-serif;direction: rtl">شهر :</div>
+            <input name="city_input" id="city-input"
+                   style="direction: rtl;font-family: 'Segoe UI Light', sans-serif;width: 70%;padding: 2px;border-radius: 5px;text-align: center"
+                   type="text"
+                   placeholder="نام شهر خود را وارد کنید !">
+        </div>
+
+
+        <p>نحوه پیاده سازی :</p>
+
+
+        <div class="box" style="direction: rtl">
+            کامپوننت های مورد نیاز :
+            <br/>
+            <br/>
+            <br/>
+            - المان ورودی -> تشخیص رویداد Keyup و مقایسه مقدار ورودی با لیست
+            <br/>
+            <br/>
+            - کانتینر المان ورودی -> برای به فرزندی قبول کردن المان لیست
+            <br/>
+            <br/>
+            - المان لیست -> کانتینر لیست
+            <br/>
+            <br/>
+            - المان آیتم -> هر آیتم با خصوصیات CSS این المان نمایش داده خواهد شد
+            <br/>
+            <br/>
+            - لیست -> یک آرایه حاوی لیست مربوطه
+            <br/>
+            <br/>
+            - پیغام یافت نشد -> در صورتی که نتیجه ای یافت نشد این پیغام نمایش داده خواهد شد
+        </div>
+
+
+
+        <div class="codeheader">اتو کمپلت</div>
+        <div class="codebox">
+            <pre>var city_input_container = Red.get("#city-input-container");
+var city_input = Red.get("#city-input");
+
+var list_element = Red.create("div", null, {
+                   "width": "71%",
+                   "height": "200px",
+                   "background-color": "white",
+                   "color": "black",
+                   "margin": "auto",
+                   "border-radius": "0 0 5px 5px",
+                   "padding-top": "4px",
+                   "padding-bottom": "4px",
+                   "font-family": "'Segoe UI Light', sans-serif",
+                   "font-size": "14px",
+                   });
+
+var item_element = Red.create("div", null, {
+                   "cursor": "pointer",
+                   "padding": "2px",
+                   "opacity": "0.7",
+                   });
+
+var city_list = ["تهران", "بابل", "ساری",
+                "زنجان", "اهواز", "مشهد", "بیرجند", "بوشهر"];
+
+var not_found_message = "نتیجه ای یافت نشد";
+
+Red.autoComplete(city_input, city_input_container, list_element, item_element,
+                city_list, not_found_message);</pre>
+        </div>
+
+
+        <p>* المان لیست و آیتم باید فاقد والد باشد !
+            <br/>
+            <br/>
+            * برای ساخت المان به آموزش ساخت المان مراجعه کنید .
+        </p>
+    </div>
+
+    <div id="validation-service"
+         class="content-box">
+        <h3 class="content-title">سرویس ارزیابی اعتبار
+            رشته</h3>
+        <hr>
+        <p>
+            نحوه کار کردن با سرویس ارزیابی اعتبار رشته :
+        </p>
+
+        <div class="codeheader">سرویس ارزیابی اعتبار رشته</div>
+        <div class="codebox">
+            var string = 'test';
+            <br/>
+            <br/>
+            var result = Red.validate(string, 'required|method:en|limit:0-4');
+        </div>
+
+
+        <p>
+            خاصیت اول به منظور نوع فیلد است :
+            <br/>
+            <br/>
+            دو نوع فیلد داریم :
+
+        </p>
+
+
+        <div class="box" style="text-align: left;direction: ltr">
+
+            required (نمی تواند خالی باشد)
+            <br/>
+            optional (اختیاری)
+
+        </div>
+
+        <p>
+
+            خاصیت دوم به منظور متد ارزیابی اعتبار است :
+            <br/>
+            <br/>
+            17 نوع متد استاندارد ارزیابی اعتبار داریم :
+        </p>
+
+
+        <div class="box" style="text-align: left;direction: ltr">
+
+            digit
+            <br/>
+            en
+            <br/>
+            en_digit
+            <br/>
+            fa
+            <br/>
+            fa_digit
+            <br/>
+            mix: فارسی و انگلیسی به همراه اعداد
+            <br/>
+            email: ارزیابی اعتبار ایمیل
+            <br/>
+            username: ارزیابی اعتبار استاندارد نام کاربری (انگلیسی ، اعداد و کاراکتر های خاص .-_)
+            <br/>
+            password: ارزیابی اعتبار استاندارد رمز عبور (انگلیسی ، اعداد و کاراکتر های خاص .@*)
+            <br/>
+            address: آدرس میکس (انگلیسی, فارسی و کاراکتر خاص -)
+            <br/>
+            address_en: آدرس انگلیسی (انگلیسی و کاراکتر خاص -)
+            <br/>
+            address_fa: آدرس فارسی (فارسی و کاراکتر خاص -)
+            <br/>
+            phone
+            <br/>
+            IP: ارزیابی اعتبار آی پی - محدودیت نمی پذیرد
+            <br/>
+            text
+            <br/>
+            text_en
+            <br/>
+            text_fa
+        </div>
+
+        <p style="direction: rtl;text-align: right">
+            خاصیت سوم به منظور محدودیت و تعداد حرف می باشد :
+        </p>
+
+
+        <div class="box" style="text-align: left;direction: ltr">
+
+            limit:1-10
+        </div>
+
+
+
+        <p>
+            <span style="text-shadow: black 0 0 1px">اضافه کردن متد (قانون) به سرویس ارزیابی اعتبار :</span>
+        </p>
+
+
+
+        <div class="codeheader">اضافه کردن متد به سرویس ارزیابی اعتبار</div>
+        <div class="codebox">
+            var method = "test";
+            <br/>
+            <br/>
+            Red.addValidateRule(method, function (no, min, max, string) {
+            <br>
+            // عملیات ارزیابی اعتبار خودتون رو به کمک عبارت های منظم انجام بدهید و نتیجه آن را به صورت داده درست یا غلط
+            بر گردونید
+            <br/>
+            });
+        </div>
+
+    </div>
+
+
+    <div id="filter-service"
+         class="content-box">
+        <h3 class="content-title">سرویس فیلتر رشته</h3>
+        <hr>
+        <p>
+            نحوه کار کردن با سرویس فیلتر رشته :
+        </p>
+
+        <div class="codeheader">فیلتر کردن رشته</div>
+        <div class="codebox">
+
+            var string = "#redcoder";
+            <br/>
+            var method = "username";
+            <br/>
+            <br/>
+            var filtered_string = Red.filter(string, method);
+        </div>
+
+
+        <p>
+            17 نوع متد استاندارد فیلتر داریم :
+        </p>
+
+
+        <div class="box" style="text-align: left;direction: ltr">
+
+            digit
+            <br/>
+            en
+            <br/>
+            en_digit
+            <br/>
+            fa
+            <br/>
+            fa_digit
+            <br/>
+            mix: فارسی و انگلیسی به همراه اعداد
+            <br/>
+            email: فیلتر ایمیل
+            <br/>
+            username: فیلتر استاندارد نام کاربری (انگلیسی ، اعداد و کاراکتر های خاص .-_)
+            <br/>
+            password: فیلتر استاندارد رمز عبور (انگلیسی ، اعداد و کاراکتر های خاص .@*)
+            <br/>
+            address: آدرس میکس (انگلیسی, فارسی و کاراکتر خاص -)
+            <br/>
+            address_en: آدرس انگلیسی (انگلیسی و کاراکتر خاص -)
+            <br/>
+            address_fa: آدرس فارسی (فارسی و کاراکتر خاص -)
+            <br/>
+            phone
+            <br/>
+            IP: فیلتر آی پی
+            <br/>
+            text
+            <br/>
+            text_en
+            <br/>
+            text_fa
+        </div>
+
+
+        <p>
+            <span style="text-shadow: black 0 0 1px;text-align: right;direction: rtl">اضافه کردن متد (قانون) به سرویس فیلتر :</span>
+        </p>
+
+
+
+        <div class="codeheader">اضافه کردن متد به سرویس فیلتر</div>
+        <div class="codebox">
+            var method = "test";
+            <br/>
+            <br/>
+            Red.addFilterRule(method, function (string) {
+            <br/>
+            // فیلتر خودتون رو بر روی رشته اعمال کنید سپس نتیجه اون رو در خروجی تابع برگردونید
+            <br/>
+            });
+            <br/>
+        </div>
+
+    </div>
+
+
+    <div id="sanitize-service"
+         class="content-box">
+        <h3 class="content-title">سرویس زدودن رشته</h3>
+        <hr>
+        <p>
+            نحوه کار کردن با سرویس فیلتر رشته :
+        </p>
+
+        <div class="codeheader">زدودن رشته</div>
+        <div class="codebox">
+
+            var string = "redcoder927";
+            <br/>
+            var method = "digit";
+            <br/>
+            <br/>
+            var sanitized_string = Red.sanitize(string, method);
+        </div>
+
+
+        <p>
+            2 نوع متد استاندارد زدودن رشته داریم :
+        </p>
+
+
+        <div class="box" style="text-align: left;direction: ltr">
+
+            digit
+            <br/>
+            space
+        </div>
+
+
+        <p>
+            <span style="text-shadow: black 0 0 1px;text-align: right;direction: rtl">اضافه کردن متد (قانون) به سرویس زدودن رشته :</span>
+        </p>
+
+
+        <div class="codeheader">اضافه کردن متد به سرویس زدودن رشته</div>
+        <div class="codebox">
+            var method = "test";
+            <br/>
+            <br/>
+            Red.addSanitizeRule(method, function (string) {
+            <br/>
+            // کاراکتر زدایی خودتون رو بر روی رشته اعمال کنید سپس نتیجه اون رو در خروجی تابع برگردونید
+            <br/>
+            });
+            <br/>
+        </div>
+
+    </div>
+
+    <div id="extra-operations"
+         class="content-box">
+        <h3 class="content-title">عملیات اضافه</h3>
+        <hr>
+        <p>
+            تعدادی توابع اضافه جهت کمک کردن به برنامه نویس در دسترس قرار داده شده است :
+        </p>
+
+
+        <div class="codeheader">توابع اضافه</div>
+        <div class="codebox">
+
+            // وضعیت اتصال ، در صورت آنلاین بودن مقدار صحیح برگردانده می شود
+            <br/>
+            var connection_status = Red.online();
+            <br/>
+            <br/>
+            // اطلاعات مرورگر کاربر
+            <br/>
+            var user_agent = Red.user();
+            <br/>
+            <br/>
+            // انتقال کاربر به صفحه دیگر
+            <br/>
+            Red.redirect("http://redframework.ir");
+            <br/>
+            <br/>
+            // بازگشت (آپشن مرورگر)
+            <br/>
+            Red.goBack();
+            <br/>
+            <br/>
+            // عدد تصادفی
+            <br/>
+            var min = 3;
+            <br/>
+            var max = 10;
+            <br/>
+            var rnd_int = Red.generateRandomInt(min, max);
+            <br/>
+            <br/>
+            // میلی ثانیه های سپری شده از ژانویه 1 , 1970 , 00:00:00
+            <br/>
+            var current_time = Red.now();
+        </div>
 
     </div>
 
@@ -260,7 +1681,7 @@ margin-bottom: 20px;position:sticky;right: 0;top: 55px;z-index: 2;">
 
 <hr style="clear: both;opacity: 0;width: 95%;text-align: center;margin-top: 20px;">
 
-<div id="footer" style="height: 65px;margin-top: 20px;">
+<div id="footer" style="height: 75px;margin-top: 20px;">
     <div style="text-shadow: black 0 0 1px;text-align: center">
         مفتخر از میزبانی اپلیکیشن شما
         <br/>
@@ -278,7 +1699,69 @@ margin-bottom: 20px;position:sticky;right: 0;top: 55px;z-index: 2;">
     Red.app.module("main");
 
     Red.app.addController("main", "red_js_doc_fa", function () {
+        this.ie_status = Red.IE();
 
+        if (this.ie_status === false) {
+            this.ie_status = "شما از اینترنت الکسپلورر استفاده نمی کنید !";
+        } else {
+            this.ie_status = "شما از اینترنت الکسپلورر استفاده می کنید !";
+        }
+
+        var fade_element = Red.select("#hello-world");
+        var fade_btn = Red.select("#fade-btn");
+
+        fade_btn.click(function () {
+            if (fade_element.CSS("opacity") == false) {
+                fade_btn.innerHTML("محو کردن");
+                fade_element.fadeIn(1000);
+            } else {
+                fade_btn.innerHTML("ظاهر کردن");
+                fade_element.fadeOut(1000);
+            }
+
+            fade_btn.attr("disabled", "true");
+
+            setTimeout(function () {
+                fade_btn.removeAttr("disabled");
+            }, 1000);
+        });
+
+
+        var full_timer_element = Red.get("#full-timer");
+        var light_timer_element = Red.get("#light-timer");
+        Red.timer(1800, full_timer_element, "full");
+        Red.timer(60, light_timer_element, "light");
+
+
+        var city_input_container = Red.get("#city-input-container");
+        var city_input = Red.get("#city-input");
+
+        var list_element = Red.create("div", null, {
+            "width": "71%",
+            "height": "200px",
+            "background-color": "white",
+            "color": "black",
+            "margin": "auto",
+            "border-radius": "0 0 5px 5px",
+            "padding-top": "4px",
+            "padding-bottom": "4px",
+            "font-family": "'Segoe UI Light', sans-serif",
+            "font-size": "14px",
+        });
+
+        var item_element = Red.create("div", null, {
+            "cursor": "pointer",
+            "padding": "2px",
+            "opacity": "0.7",
+        });
+
+        var city_list = ["تهران", "بابل", "ساری",
+            "زنجان", "اهواز", "مشهد", "بیرجند", "بوشهر"];
+
+        var not_found_message = "نتیجه ای یافت نشد";
+
+        Red.autoComplete(city_input, city_input_container, list_element, item_element,
+            city_list, not_found_message);
     });
 
     Red.ready(function () {
@@ -293,6 +1776,7 @@ margin-bottom: 20px;position:sticky;right: 0;top: 55px;z-index: 2;">
         header_logo: $("#header-logo"),
         navbar: $("#navbar"),
         language_element: $("#language"),
+        version_element: $("#version"),
         language_list: $("#lang-list"),
         subjects_title: $("#subjects-title"),
 
@@ -306,29 +1790,65 @@ margin-bottom: 20px;position:sticky;right: 0;top: 55px;z-index: 2;">
         nav_first_item: $("#nav-first-item"),
         navbar_separator: $("#navbar-separator"),
         subjects_toggle: $("#subjects-toggle"),
-        timerHandler: null,
         lang_en: $("#lang-en"),
         lang_fa: $("#lang-fa"),
+        last_size: 0,
+
+        overview_s: $("#overview-s"),
+        document_ready_s: $("#document-ready-s"),
+        module_s: $("#module-s"),
+        controller_s: $("#controller-s"),
+        model_s: $("#model-s"),
+        get_select_syntax_s: $("#get-select-syntax-s"),
+        select_element_s: $("#select-element-s"),
+        element_creation_s: $("#element-creation-s"),
+        ajax_request_s: $("#ajax-request-s"),
+        cookie_operations_s: $("#cookie-operations-s"),
+        parser_s: $("#parser-s"),
+        array_operations_s: $("#array-operations-s"),
+        type_detection_s: $("#type-detection-s"),
+        ie_detection_s: $("#ie-detection-s"),
+        graphical_fade_s: $("#graphical-fade-s"),
+        custom_timer_s: $("#custom-timer-s"),
+        auto_complete_s: $("#auto-complete-s"),
+        validation_service_s: $("#validation-service-s"),
+        filter_service_s: $("#filter-service-s"),
+        sanitize_service_s: $("#sanitize-service-s"),
+        extra_operations_s: $("#extra-operations-s"),
+
+        overview: $("#overview"),
+        document_ready: $("#document-ready"),
+        module: $("#module"),
+        controller: $("#controller"),
+        model: $("#model"),
+        get_select_syntax: $("#get-select-syntax"),
+        select_element: $("#select-element"),
+        element_creation: $("#element-creation"),
+        ajax_request: $("#ajax-request"),
+        cookie_operations: $("#cookie-operations"),
+        parser: $("#parser"),
+        array_operations: $("#array-operations"),
+        type_detection: $("#type-detection"),
+        ie_detection: $("#ie-detection"),
+        graphical_fade: $("#graphical-fade"),
+        custom_timer: $("#custom-timer"),
+        auto_complete: $("#auto-complete"),
+        validation_service: $("#validation-service"),
+        filter_service: $("#filter-service"),
+        sanitize_service: $("#sanitize-service"),
+        extra_operations: $("#extra-operations"),
+
+        js_logo: $("#javascript-logo"),
+        ajax_diagram: $("#ajax-diagram"),
 
         initialize: function () {
+
             $(window).on("scroll", Root.handleComponentsOnScroll);
 
 
             Root.handleComponentsOnSize();
 
-            if ($(window).scrollTop() >= 31) {
-
-                Root.header.css({
-                    height: "50px",
-                });
-                Root.header_title.hide(0);
-                Root.header_caption.hide(0);
-                Root.header_logo.hide(0);
-                Root.navbar.css({top: 0});
-                Root.language_list.hide(0);
-                Root.subjects_title.hide(0);
-            }
-
+            Root.subjectPager();
 
             $(window).on("resize", Root.handleComponentsOnSize);
 
@@ -336,6 +1856,12 @@ margin-bottom: 20px;position:sticky;right: 0;top: 55px;z-index: 2;">
             Root.subjectsToggle();
             Root.navbarToggle();
             Root.handleRoutes();
+
+            if ($(document).scrollTop() >= 20) {
+                Root.subjects_toggle.css("top", "110px");
+            } else {
+                Root.subjects_toggle.css("top", "238px");
+            }
 
             $("#loader").fadeOut(500);
         },
@@ -402,15 +1928,6 @@ margin-bottom: 20px;position:sticky;right: 0;top: 55px;z-index: 2;">
 
                     Root.subjects_toggle.show();
                     Root.navbar_separator.hide();
-                    if (Root.header_logo.css("display") === "none") {
-                        Root.header.css({
-                            height: "50px",
-                        });
-                    } else {
-                        Root.header.css({
-                            height: "220px",
-                        });
-                    }
 
                     Root.nav_first_item.css({
                         marginTop: "20px",
@@ -425,7 +1942,6 @@ margin-bottom: 20px;position:sticky;right: 0;top: 55px;z-index: 2;">
 
                     Root.navbar.css({
                         height: "50px",
-                        backgroundColor: "rgba(226,90,90,0.55)"
                     });
 
                     Root.navbar_items.css({
@@ -485,7 +2001,7 @@ margin-bottom: 20px;position:sticky;right: 0;top: 55px;z-index: 2;">
                     Root.subjects_toggle.animate({right: "0"}, 400);
                     Root.subjects_toggle.css({
                         right: "",
-                        zIndex: "0"
+                        zIndex: "1"
                     });
 
                 }
@@ -502,7 +2018,7 @@ margin-bottom: 20px;position:sticky;right: 0;top: 55px;z-index: 2;">
                     Root.subjects_toggle.animate({right: "0"}, 400);
                     Root.subjects_toggle.css({
                         left: "",
-                        zIndex: "0"
+                        zIndex: "1"
                     });
 
 
@@ -527,9 +2043,11 @@ margin-bottom: 20px;position:sticky;right: 0;top: 55px;z-index: 2;">
                     Root.navbar_separator.show();
 
                     Root.navbar.css({
-                        height: "223px",
-                        backgroundColor: "rgba(226,90,90,0.95)"
+                        height: "258px",
                     });
+
+                    Root.language_element.css("top", "12px");
+                    Root.version_element.css("top", "12px");
 
 
                     Root.navbar_items.css({
@@ -549,15 +2067,6 @@ margin-bottom: 20px;position:sticky;right: 0;top: 55px;z-index: 2;">
                 } else {
                     Root.subjects_toggle.show();
                     Root.navbar_separator.hide();
-                    if (Root.header_logo.css("display") === "none") {
-                        Root.header.css({
-                            height: "50px",
-                        });
-                    } else {
-                        Root.header.css({
-                            height: "220px",
-                        });
-                    }
 
                     Root.nav_first_item.css({
                         marginTop: "20px",
@@ -568,8 +2077,10 @@ margin-bottom: 20px;position:sticky;right: 0;top: 55px;z-index: 2;">
 
                     Root.navbar.css({
                         height: "50px",
-                        backgroundColor: "rgba(226,90,90,0.55)"
                     });
+
+                    Root.language_element.css("top", "-3px");
+                    Root.version_element.css("top", "-3px");
 
                     Root.navbar_items.css({
                         display: "",
@@ -584,19 +2095,8 @@ margin-bottom: 20px;position:sticky;right: 0;top: 55px;z-index: 2;">
         },
 
         handleComponentsOnScroll: function () {
-            clearInterval(Root.timerHandler);
 
-            if ($(document).scrollTop() >= 8) {
-                Root.timerHandler = setTimeout(function handler() {
-                    Root.header_title.hide(0);
-                    Root.header_caption.hide(0);
-                    Root.header_logo.hide(0);
-                    Root.navbar.animate({top: 0});
-                    Root.header.css({height: "50px"});
-
-                    Root.language_list.hide(0);
-                }, 0);
-
+            if ($(document).scrollTop() >= 70) {
 
                 if (Root.subjects_container.css("position") === "fixed") {
                     Root.subjects_container.css({
@@ -612,33 +2112,30 @@ margin-bottom: 20px;position:sticky;right: 0;top: 55px;z-index: 2;">
                     });
                 }
 
+                Root.subjects_toggle.css("top", "110px");
+
             } else {
-                Root.timerHandler = setTimeout(function () {
-                    Root.header.stop(true).animate({height: "220px"}, 200);
-                    Root.header_title.stop(true).show(0);
-                    Root.header_caption.stop(true).show(0);
-                    Root.header_logo.stop(true).show(0);
-                    Root.navbar.stop(true).animate({top: "170px"});
-                    Root.language_list.hide(0);
 
-                    if (Root.subjects_container.css("position") === "fixed") {
-                        Root.subjects_container.css({
-                            width: "87%",
-                            height: "65vh",
-                            float: "",
-                            position: "fixed",
-                            top: "234px",
-                            right: "8px",
-                            backgroundColor: "white",
-                            boxShadow: "0 0 0.625vw 0 rgba(0,0,0,0.55)",
-                            borderRadius: "4px 0 0 4px"
-                        });
-                    }
-                }, 200);
+                if (Root.subjects_container.css("position") === "fixed") {
+                    Root.subjects_container.css({
+                        width: "87%",
+                        height: "65vh",
+                        float: "",
+                        position: "fixed",
+                        top: "234px",
+                        right: "8px",
+                        backgroundColor: "white",
+                        boxShadow: "0 0 0.625vw 0 rgba(0,0,0,0.55)",
+                        borderRadius: "4px 0 0 4px"
+                    });
+                }
 
+                Root.subjects_toggle.css("top", "238px");
             }
 
+            Root.language_list.hide(0);
 
+            Root.subjectPager();
         },
 
         handleComponentsOnSize: function () {
@@ -655,7 +2152,7 @@ margin-bottom: 20px;position:sticky;right: 0;top: 55px;z-index: 2;">
                     Root.subjects_toggle.css({right: "0"});
                     Root.subjects_toggle.css({
                         left: "",
-                        zIndex: "0"
+                        zIndex: "1"
                     });
 
 
@@ -685,14 +2182,26 @@ margin-bottom: 20px;position:sticky;right: 0;top: 55px;z-index: 2;">
                 Root.navbar_header.show();
                 Root.subjects_toggle.show();
                 Root.navbar_toggle.show();
-                Root.navbar_items_container.hide();
+                if (Root.last_size >= 500 || Root.last_size === 0) {
+                    Root.navbar_items_container.hide();
+                }
                 Root.subjects_container.hide();
                 Root.subjects.hide();
                 Root.content_container.css({
                     width: "100%",
                     position: "relative",
                     top: "-35px",
-                    zIndex: -5
+                    zIndex: "0"
+                });
+
+                Root.js_logo.css({
+                    width: "170px",
+                    height: "100px",
+                });
+
+                Root.ajax_diagram.css({
+                    width: "200px",
+                    height: "178px",
                 });
 
             } else if ($(window).innerWidth() <= 900) {
@@ -707,7 +2216,7 @@ margin-bottom: 20px;position:sticky;right: 0;top: 55px;z-index: 2;">
                     Root.subjects_toggle.css({right: "0"});
                     Root.subjects_toggle.css({
                         left: "",
-                        zIndex: "0"
+                        zIndex: "1"
                     });
 
 
@@ -737,18 +2246,32 @@ margin-bottom: 20px;position:sticky;right: 0;top: 55px;z-index: 2;">
                 Root.navbar_header.show();
                 Root.subjects_toggle.show();
                 Root.navbar_toggle.show();
-                Root.navbar_items_container.hide();
+                if (Root.last_size >= 900 || Root.last_size === 0) {
+                    Root.navbar_items_container.hide();
+                }
                 Root.subjects_container.hide();
                 Root.subjects.hide();
                 Root.content_container.css({
                     width: "100%",
                     position: "relative",
                     top: "-35px",
-                    zIndex: -5
+                    zIndex: "0"
+                });
+
+                Root.js_logo.css({
+                    width: "400px",
+                    height: "200px",
+                });
+
+                Root.ajax_diagram.css({
+                    width: "400px",
+                    height: "378px",
                 });
 
             } else if ($(window).innerWidth() <= 930) {
 
+                Root.language_element.css("top", "-3px");
+                Root.version_element.css("top", "-3px");
 
                 Root.subjects.css({
                     overflow: "auto"
@@ -760,7 +2283,7 @@ margin-bottom: 20px;position:sticky;right: 0;top: 55px;z-index: 2;">
                     Root.subjects_toggle.css({right: "0"});
                     Root.subjects_toggle.css({
                         left: "",
-                        zIndex: "0"
+                        zIndex: "1"
                     });
 
 
@@ -790,15 +2313,6 @@ margin-bottom: 20px;position:sticky;right: 0;top: 55px;z-index: 2;">
                 });
 
                 Root.navbar_separator.hide();
-                if (Root.header_logo.css("display") === "none") {
-                    Root.header.css({
-                        height: "50px",
-                    });
-                } else {
-                    Root.header.css({
-                        height: "220px",
-                    });
-                }
 
                 Root.nav_first_item.css({
                     marginTop: "20px",
@@ -809,7 +2323,6 @@ margin-bottom: 20px;position:sticky;right: 0;top: 55px;z-index: 2;">
 
                 Root.navbar.css({
                     height: "50px",
-                    backgroundColor: "rgba(226,90,90,0.55)"
                 });
 
                 Root.navbar_items.css({
@@ -828,10 +2341,23 @@ margin-bottom: 20px;position:sticky;right: 0;top: 55px;z-index: 2;">
                     width: "100%",
                     position: "relative",
                     top: "-35px",
-                    zIndex: -5
+                    zIndex: "0"
+                });
+
+                Root.js_logo.css({
+                    width: "500px",
+                    height: "300px",
+                });
+
+                Root.ajax_diagram.css({
+                    width: "600px",
+                    height: "578px",
                 });
 
             } else if ($(window).innerWidth() <= 1022) {
+
+                Root.language_element.css("top", "-3px");
+                Root.version_element.css("top", "-3px");
 
                 Root.subjects.css({
                     overflow: "auto"
@@ -843,7 +2369,7 @@ margin-bottom: 20px;position:sticky;right: 0;top: 55px;z-index: 2;">
                     Root.subjects_toggle.css({right: "0"});
                     Root.subjects_toggle.css({
                         left: "",
-                        zIndex: "0"
+                        zIndex: "1"
                     });
 
 
@@ -876,15 +2402,6 @@ margin-bottom: 20px;position:sticky;right: 0;top: 55px;z-index: 2;">
 
 
                 Root.navbar_separator.hide();
-                if (Root.header_logo.css("display") === "none") {
-                    Root.header.css({
-                        height: "50px",
-                    });
-                } else {
-                    Root.header.css({
-                        height: "220px",
-                    });
-                }
 
                 Root.nav_first_item.css({
                     marginTop: "20px",
@@ -895,7 +2412,6 @@ margin-bottom: 20px;position:sticky;right: 0;top: 55px;z-index: 2;">
 
                 Root.navbar.css({
                     height: "50px",
-                    backgroundColor: "rgba(226,90,90,0.55)"
                 });
 
                 Root.navbar_items.css({
@@ -918,7 +2434,20 @@ margin-bottom: 20px;position:sticky;right: 0;top: 55px;z-index: 2;">
                     top: ""
                 });
 
+                Root.js_logo.css({
+                    width: "500px",
+                    height: "300px",
+                });
+
+                Root.ajax_diagram.css({
+                    width: "600px",
+                    height: "578px",
+                });
+
             } else {
+
+                Root.language_element.css("top", "-3px");
+                Root.version_element.css("top", "-3px");
 
                 Root.subjects.css({
                     overflow: "auto"
@@ -928,7 +2457,7 @@ margin-bottom: 20px;position:sticky;right: 0;top: 55px;z-index: 2;">
                     Root.subjects_toggle.css({right: "0"});
                     Root.subjects_toggle.css({
                         left: "",
-                        zIndex: "0"
+                        zIndex: "1"
                     });
 
 
@@ -962,15 +2491,6 @@ margin-bottom: 20px;position:sticky;right: 0;top: 55px;z-index: 2;">
 
 
                 Root.navbar_separator.hide();
-                if (Root.header_logo.css("display") === "none") {
-                    Root.header.css({
-                        height: "50px",
-                    });
-                } else {
-                    Root.header.css({
-                        height: "220px",
-                    });
-                }
 
                 Root.nav_first_item.css({
                     marginTop: "20px",
@@ -982,7 +2502,6 @@ margin-bottom: 20px;position:sticky;right: 0;top: 55px;z-index: 2;">
 
                 Root.navbar.css({
                     height: "50px",
-                    backgroundColor: "rgba(226,90,90,0.55)"
                 });
 
                 Root.navbar_items.css({
@@ -1005,8 +2524,488 @@ margin-bottom: 20px;position:sticky;right: 0;top: 55px;z-index: 2;">
                     position: "",
                     top: ""
                 });
+
+                Root.js_logo.css({
+                    width: "500px",
+                    height: "300px",
+                });
+
+                Root.ajax_diagram.css({
+                    width: "600px",
+                    height: "578px",
+                });
+
             }
 
+
+            Root.last_size = $(window).innerWidth();
+
+        },
+
+        subjectPager: function () {
+            if (Root.overview.offset()['top'] <= $(window).scrollTop() && Root.document_ready.offset()['top'] >= $(window).scrollTop()) {
+                Root.overview_s.css({"text-shadow": "black 0 0 1px"});
+                Root.document_ready_s.css({"text-shadow": ""});
+                Root.module_s.css({"text-shadow": ""});
+                Root.controller_s.css({"text-shadow": ""});
+                Root.model_s.css({"text-shadow": ""});
+                Root.get_select_syntax_s.css({"text-shadow": ""});
+                Root.select_element_s.css({"text-shadow": ""});
+                Root.element_creation_s.css({"text-shadow": ""});
+                Root.ajax_request_s.css({"text-shadow": ""});
+                Root.cookie_operations_s.css({"text-shadow": ""});
+                Root.parser_s.css({"text-shadow": ""});
+                Root.array_operations_s.css({"text-shadow": ""});
+                Root.type_detection_s.css({"text-shadow": ""});
+                Root.ie_detection_s.css({"text-shadow": ""});
+                Root.graphical_fade_s.css({"text-shadow": ""});
+                Root.custom_timer_s.css({"text-shadow": ""});
+                Root.auto_complete_s.css({"text-shadow": ""});
+                Root.validation_service_s.css({"text-shadow": ""});
+                Root.filter_service_s.css({"text-shadow": ""});
+                Root.sanitize_service_s.css({"text-shadow": ""});
+                Root.extra_operations_s.css({"text-shadow": ""});
+            } else if (Root.document_ready.offset()['top'] <= $(window).scrollTop() && Root.module.offset()['top'] >= $(window).scrollTop()) {
+                Root.document_ready_s.css({"text-shadow": "black 0 0 1px"});
+                Root.overview_s.css({"text-shadow": ""});
+                Root.module_s.css({"text-shadow": ""});
+                Root.controller_s.css({"text-shadow": ""});
+                Root.model_s.css({"text-shadow": ""});
+                Root.get_select_syntax_s.css({"text-shadow": ""});
+                Root.select_element_s.css({"text-shadow": ""});
+                Root.element_creation_s.css({"text-shadow": ""});
+                Root.ajax_request_s.css({"text-shadow": ""});
+                Root.cookie_operations_s.css({"text-shadow": ""});
+                Root.parser_s.css({"text-shadow": ""});
+                Root.array_operations_s.css({"text-shadow": ""});
+                Root.type_detection_s.css({"text-shadow": ""});
+                Root.ie_detection_s.css({"text-shadow": ""});
+                Root.graphical_fade_s.css({"text-shadow": ""});
+                Root.custom_timer_s.css({"text-shadow": ""});
+                Root.auto_complete_s.css({"text-shadow": ""});
+                Root.validation_service_s.css({"text-shadow": ""});
+                Root.filter_service_s.css({"text-shadow": ""});
+                Root.sanitize_service_s.css({"text-shadow": ""});
+                Root.extra_operations_s.css({"text-shadow": ""});
+            } else if (Root.module.offset()['top'] <= $(window).scrollTop() && Root.controller.offset()['top'] >= $(window).scrollTop()) {
+                Root.module_s.css({"text-shadow": "black 0 0 1px"});
+                Root.overview_s.css({"text-shadow": ""});
+                Root.document_ready_s.css({"text-shadow": ""});
+                Root.controller_s.css({"text-shadow": ""});
+                Root.model_s.css({"text-shadow": ""});
+                Root.get_select_syntax_s.css({"text-shadow": ""});
+                Root.select_element_s.css({"text-shadow": ""});
+                Root.element_creation_s.css({"text-shadow": ""});
+                Root.ajax_request_s.css({"text-shadow": ""});
+                Root.cookie_operations_s.css({"text-shadow": ""});
+                Root.parser_s.css({"text-shadow": ""});
+                Root.array_operations_s.css({"text-shadow": ""});
+                Root.type_detection_s.css({"text-shadow": ""});
+                Root.ie_detection_s.css({"text-shadow": ""});
+                Root.graphical_fade_s.css({"text-shadow": ""});
+                Root.custom_timer_s.css({"text-shadow": ""});
+                Root.auto_complete_s.css({"text-shadow": ""});
+                Root.validation_service_s.css({"text-shadow": ""});
+                Root.filter_service_s.css({"text-shadow": ""});
+                Root.sanitize_service_s.css({"text-shadow": ""});
+                Root.extra_operations_s.css({"text-shadow": ""});
+            } else if (Root.controller.offset()['top'] <= $(window).scrollTop() && Root.model.offset()['top'] >= $(window).scrollTop()) {
+                Root.controller_s.css({"text-shadow": "black 0 0 1px"});
+                Root.overview_s.css({"text-shadow": ""});
+                Root.document_ready_s.css({"text-shadow": ""});
+                Root.module_s.css({"text-shadow": ""});
+                Root.model_s.css({"text-shadow": ""});
+                Root.get_select_syntax_s.css({"text-shadow": ""});
+                Root.select_element_s.css({"text-shadow": ""});
+                Root.element_creation_s.css({"text-shadow": ""});
+                Root.ajax_request_s.css({"text-shadow": ""});
+                Root.cookie_operations_s.css({"text-shadow": ""});
+                Root.parser_s.css({"text-shadow": ""});
+                Root.array_operations_s.css({"text-shadow": ""});
+                Root.type_detection_s.css({"text-shadow": ""});
+                Root.ie_detection_s.css({"text-shadow": ""});
+                Root.graphical_fade_s.css({"text-shadow": ""});
+                Root.custom_timer_s.css({"text-shadow": ""});
+                Root.auto_complete_s.css({"text-shadow": ""});
+                Root.validation_service_s.css({"text-shadow": ""});
+                Root.filter_service_s.css({"text-shadow": ""});
+                Root.sanitize_service_s.css({"text-shadow": ""});
+                Root.extra_operations_s.css({"text-shadow": ""});
+            } else if (Root.model.offset()['top'] <= $(window).scrollTop() && Root.get_select_syntax.offset()['top'] >= $(window).scrollTop()) {
+                Root.model_s.css({"text-shadow": "black 0 0 1px"});
+                Root.overview_s.css({"text-shadow": ""});
+                Root.document_ready_s.css({"text-shadow": ""});
+                Root.module_s.css({"text-shadow": ""});
+                Root.controller_s.css({"text-shadow": ""});
+                Root.get_select_syntax_s.css({"text-shadow": ""});
+                Root.select_element_s.css({"text-shadow": ""});
+                Root.element_creation_s.css({"text-shadow": ""});
+                Root.ajax_request_s.css({"text-shadow": ""});
+                Root.cookie_operations_s.css({"text-shadow": ""});
+                Root.parser_s.css({"text-shadow": ""});
+                Root.array_operations_s.css({"text-shadow": ""});
+                Root.type_detection_s.css({"text-shadow": ""});
+                Root.ie_detection_s.css({"text-shadow": ""});
+                Root.graphical_fade_s.css({"text-shadow": ""});
+                Root.custom_timer_s.css({"text-shadow": ""});
+                Root.auto_complete_s.css({"text-shadow": ""});
+                Root.validation_service_s.css({"text-shadow": ""});
+                Root.filter_service_s.css({"text-shadow": ""});
+                Root.sanitize_service_s.css({"text-shadow": ""});
+                Root.extra_operations_s.css({"text-shadow": ""});
+            } else if (Root.get_select_syntax.offset()['top'] <= $(window).scrollTop() && Root.select_element.offset()['top'] >= $(window).scrollTop()) {
+                Root.get_select_syntax_s.css({"text-shadow": "black 0 0 1px"});
+                Root.overview_s.css({"text-shadow": ""});
+                Root.document_ready_s.css({"text-shadow": ""});
+                Root.module_s.css({"text-shadow": ""});
+                Root.controller_s.css({"text-shadow": ""});
+                Root.model_s.css({"text-shadow": ""});
+                Root.select_element_s.css({"text-shadow": ""});
+                Root.element_creation_s.css({"text-shadow": ""});
+                Root.ajax_request_s.css({"text-shadow": ""});
+                Root.cookie_operations_s.css({"text-shadow": ""});
+                Root.parser_s.css({"text-shadow": ""});
+                Root.array_operations_s.css({"text-shadow": ""});
+                Root.type_detection_s.css({"text-shadow": ""});
+                Root.ie_detection_s.css({"text-shadow": ""});
+                Root.graphical_fade_s.css({"text-shadow": ""});
+                Root.custom_timer_s.css({"text-shadow": ""});
+                Root.auto_complete_s.css({"text-shadow": ""});
+                Root.validation_service_s.css({"text-shadow": ""});
+                Root.filter_service_s.css({"text-shadow": ""});
+                Root.sanitize_service_s.css({"text-shadow": ""});
+                Root.extra_operations_s.css({"text-shadow": ""});
+            } else if (Root.select_element.offset()['top'] <= $(window).scrollTop() && Root.element_creation.offset()['top'] >= $(window).scrollTop()) {
+                Root.select_element_s.css({"text-shadow": "black 0 0 1px"});
+                Root.overview_s.css({"text-shadow": ""});
+                Root.document_ready_s.css({"text-shadow": ""});
+                Root.module_s.css({"text-shadow": ""});
+                Root.controller_s.css({"text-shadow": ""});
+                Root.model_s.css({"text-shadow": ""});
+                Root.get_select_syntax_s.css({"text-shadow": ""});
+                Root.element_creation_s.css({"text-shadow": ""});
+                Root.ajax_request_s.css({"text-shadow": ""});
+                Root.cookie_operations_s.css({"text-shadow": ""});
+                Root.parser_s.css({"text-shadow": ""});
+                Root.array_operations_s.css({"text-shadow": ""});
+                Root.type_detection_s.css({"text-shadow": ""});
+                Root.ie_detection_s.css({"text-shadow": ""});
+                Root.graphical_fade_s.css({"text-shadow": ""});
+                Root.custom_timer_s.css({"text-shadow": ""});
+                Root.auto_complete_s.css({"text-shadow": ""});
+                Root.validation_service_s.css({"text-shadow": ""});
+                Root.filter_service_s.css({"text-shadow": ""});
+                Root.sanitize_service_s.css({"text-shadow": ""});
+                Root.extra_operations_s.css({"text-shadow": ""});
+            } else if (Root.element_creation.offset()['top'] <= $(window).scrollTop() && Root.ajax_request.offset()['top'] >= $(window).scrollTop()) {
+                Root.element_creation_s.css({"text-shadow": "black 0 0 1px"});
+                Root.overview_s.css({"text-shadow": ""});
+                Root.document_ready_s.css({"text-shadow": ""});
+                Root.module_s.css({"text-shadow": ""});
+                Root.controller_s.css({"text-shadow": ""});
+                Root.model_s.css({"text-shadow": ""});
+                Root.select_element_s.css({"text-shadow": ""});
+                Root.select_element_s.css({"text-shadow": ""});
+                Root.ajax_request_s.css({"text-shadow": ""});
+                Root.cookie_operations_s.css({"text-shadow": ""});
+                Root.parser_s.css({"text-shadow": ""});
+                Root.array_operations_s.css({"text-shadow": ""});
+                Root.type_detection_s.css({"text-shadow": ""});
+                Root.ie_detection_s.css({"text-shadow": ""});
+                Root.graphical_fade_s.css({"text-shadow": ""});
+                Root.custom_timer_s.css({"text-shadow": ""});
+                Root.auto_complete_s.css({"text-shadow": ""});
+                Root.validation_service_s.css({"text-shadow": ""});
+                Root.filter_service_s.css({"text-shadow": ""});
+                Root.sanitize_service_s.css({"text-shadow": ""});
+                Root.extra_operations_s.css({"text-shadow": ""});
+            } else if (Root.ajax_request.offset()['top'] <= $(window).scrollTop() && Root.cookie_operations.offset()['top'] >= $(window).scrollTop()) {
+                Root.ajax_request_s.css({"text-shadow": "black 0 0 1px"});
+                Root.overview_s.css({"text-shadow": ""});
+                Root.document_ready_s.css({"text-shadow": ""});
+                Root.module_s.css({"text-shadow": ""});
+                Root.controller_s.css({"text-shadow": ""});
+                Root.model_s.css({"text-shadow": ""});
+                Root.select_element_s.css({"text-shadow": ""});
+                Root.element_creation_s.css({"text-shadow": ""});
+                Root.get_select_syntax_s.css({"text-shadow": ""});
+                Root.cookie_operations_s.css({"text-shadow": ""});
+                Root.parser_s.css({"text-shadow": ""});
+                Root.array_operations_s.css({"text-shadow": ""});
+                Root.type_detection_s.css({"text-shadow": ""});
+                Root.ie_detection_s.css({"text-shadow": ""});
+                Root.graphical_fade_s.css({"text-shadow": ""});
+                Root.custom_timer_s.css({"text-shadow": ""});
+                Root.auto_complete_s.css({"text-shadow": ""});
+                Root.validation_service_s.css({"text-shadow": ""});
+                Root.filter_service_s.css({"text-shadow": ""});
+                Root.sanitize_service_s.css({"text-shadow": ""});
+                Root.extra_operations_s.css({"text-shadow": ""});
+            } else if (Root.cookie_operations.offset()['top'] <= $(window).scrollTop() && Root.parser.offset()['top'] >= $(window).scrollTop()) {
+                Root.cookie_operations_s.css({"text-shadow": "black 0 0 1px"});
+                Root.overview_s.css({"text-shadow": ""});
+                Root.document_ready_s.css({"text-shadow": ""});
+                Root.module_s.css({"text-shadow": ""});
+                Root.controller_s.css({"text-shadow": ""});
+                Root.model_s.css({"text-shadow": ""});
+                Root.select_element_s.css({"text-shadow": ""});
+                Root.element_creation_s.css({"text-shadow": ""});
+                Root.ajax_request_s.css({"text-shadow": ""});
+                Root.get_select_syntax_s.css({"text-shadow": ""});
+                Root.parser_s.css({"text-shadow": ""});
+                Root.array_operations_s.css({"text-shadow": ""});
+                Root.type_detection_s.css({"text-shadow": ""});
+                Root.ie_detection_s.css({"text-shadow": ""});
+                Root.graphical_fade_s.css({"text-shadow": ""});
+                Root.custom_timer_s.css({"text-shadow": ""});
+                Root.auto_complete_s.css({"text-shadow": ""});
+                Root.validation_service_s.css({"text-shadow": ""});
+                Root.filter_service_s.css({"text-shadow": ""});
+                Root.sanitize_service_s.css({"text-shadow": ""});
+                Root.extra_operations_s.css({"text-shadow": ""});
+            } else if (Root.parser.offset()['top'] <= $(window).scrollTop() && Root.array_operations.offset()['top'] >= $(window).scrollTop()) {
+                Root.parser_s.css({"text-shadow": "black 0 0 1px"});
+                Root.overview_s.css({"text-shadow": ""});
+                Root.document_ready_s.css({"text-shadow": ""});
+                Root.module_s.css({"text-shadow": ""});
+                Root.controller_s.css({"text-shadow": ""});
+                Root.model_s.css({"text-shadow": ""});
+                Root.select_element_s.css({"text-shadow": ""});
+                Root.element_creation_s.css({"text-shadow": ""});
+                Root.ajax_request_s.css({"text-shadow": ""});
+                Root.cookie_operations_s.css({"text-shadow": ""});
+                Root.get_select_syntax_s.css({"text-shadow": ""});
+                Root.array_operations_s.css({"text-shadow": ""});
+                Root.type_detection_s.css({"text-shadow": ""});
+                Root.ie_detection_s.css({"text-shadow": ""});
+                Root.graphical_fade_s.css({"text-shadow": ""});
+                Root.custom_timer_s.css({"text-shadow": ""});
+                Root.auto_complete_s.css({"text-shadow": ""});
+                Root.validation_service_s.css({"text-shadow": ""});
+                Root.filter_service_s.css({"text-shadow": ""});
+                Root.sanitize_service_s.css({"text-shadow": ""});
+                Root.extra_operations_s.css({"text-shadow": ""});
+            } else if (Root.array_operations.offset()['top'] <= $(window).scrollTop() && Root.type_detection.offset()['top'] >= $(window).scrollTop()) {
+                Root.array_operations_s.css({"text-shadow": "black 0 0 1px"});
+                Root.overview_s.css({"text-shadow": ""});
+                Root.document_ready_s.css({"text-shadow": ""});
+                Root.module_s.css({"text-shadow": ""});
+                Root.controller_s.css({"text-shadow": ""});
+                Root.model_s.css({"text-shadow": ""});
+                Root.select_element_s.css({"text-shadow": ""});
+                Root.element_creation_s.css({"text-shadow": ""});
+                Root.ajax_request_s.css({"text-shadow": ""});
+                Root.cookie_operations_s.css({"text-shadow": ""});
+                Root.parser_s.css({"text-shadow": ""});
+                Root.get_select_syntax_s.css({"text-shadow": ""});
+                Root.type_detection_s.css({"text-shadow": ""});
+                Root.ie_detection_s.css({"text-shadow": ""});
+                Root.graphical_fade_s.css({"text-shadow": ""});
+                Root.custom_timer_s.css({"text-shadow": ""});
+                Root.auto_complete_s.css({"text-shadow": ""});
+                Root.validation_service_s.css({"text-shadow": ""});
+                Root.filter_service_s.css({"text-shadow": ""});
+                Root.sanitize_service_s.css({"text-shadow": ""});
+                Root.extra_operations_s.css({"text-shadow": ""});
+            } else if (Root.type_detection.offset()['top'] <= $(window).scrollTop() && Root.ie_detection.offset()['top'] >= $(window).scrollTop()) {
+                Root.type_detection_s.css({"text-shadow": "black 0 0 1px"});
+                Root.overview_s.css({"text-shadow": ""});
+                Root.document_ready_s.css({"text-shadow": ""});
+                Root.module_s.css({"text-shadow": ""});
+                Root.controller_s.css({"text-shadow": ""});
+                Root.model_s.css({"text-shadow": ""});
+                Root.select_element_s.css({"text-shadow": ""});
+                Root.element_creation_s.css({"text-shadow": ""});
+                Root.ajax_request_s.css({"text-shadow": ""});
+                Root.cookie_operations_s.css({"text-shadow": ""});
+                Root.parser_s.css({"text-shadow": ""});
+                Root.array_operations_s.css({"text-shadow": ""});
+                Root.get_select_syntax_s.css({"text-shadow": ""});
+                Root.ie_detection_s.css({"text-shadow": ""});
+                Root.graphical_fade_s.css({"text-shadow": ""});
+                Root.custom_timer_s.css({"text-shadow": ""});
+                Root.auto_complete_s.css({"text-shadow": ""});
+                Root.validation_service_s.css({"text-shadow": ""});
+                Root.filter_service_s.css({"text-shadow": ""});
+                Root.sanitize_service_s.css({"text-shadow": ""});
+                Root.extra_operations_s.css({"text-shadow": ""});
+            } else if (Root.ie_detection.offset()['top'] <= $(window).scrollTop() && Root.graphical_fade.offset()['top'] >= $(window).scrollTop()) {
+                Root.ie_detection_s.css({"text-shadow": "black 0 0 1px"});
+                Root.overview_s.css({"text-shadow": ""});
+                Root.document_ready_s.css({"text-shadow": ""});
+                Root.module_s.css({"text-shadow": ""});
+                Root.controller_s.css({"text-shadow": ""});
+                Root.model_s.css({"text-shadow": ""});
+                Root.select_element_s.css({"text-shadow": ""});
+                Root.element_creation_s.css({"text-shadow": ""});
+                Root.ajax_request_s.css({"text-shadow": ""});
+                Root.cookie_operations_s.css({"text-shadow": ""});
+                Root.parser_s.css({"text-shadow": ""});
+                Root.array_operations_s.css({"text-shadow": ""});
+                Root.type_detection_s.css({"text-shadow": ""});
+                Root.get_select_syntax_s.css({"text-shadow": ""});
+                Root.graphical_fade_s.css({"text-shadow": ""});
+                Root.custom_timer_s.css({"text-shadow": ""});
+                Root.auto_complete_s.css({"text-shadow": ""});
+                Root.validation_service_s.css({"text-shadow": ""});
+                Root.filter_service_s.css({"text-shadow": ""});
+                Root.sanitize_service_s.css({"text-shadow": ""});
+                Root.extra_operations_s.css({"text-shadow": ""});
+            } else if (Root.graphical_fade.offset()['top'] <= $(window).scrollTop() && Root.custom_timer.offset()['top'] >= $(window).scrollTop()) {
+                Root.graphical_fade_s.css({"text-shadow": "black 0 0 1px"});
+                Root.overview_s.css({"text-shadow": ""});
+                Root.document_ready_s.css({"text-shadow": ""});
+                Root.module_s.css({"text-shadow": ""});
+                Root.controller_s.css({"text-shadow": ""});
+                Root.model_s.css({"text-shadow": ""});
+                Root.select_element_s.css({"text-shadow": ""});
+                Root.element_creation_s.css({"text-shadow": ""});
+                Root.ajax_request_s.css({"text-shadow": ""});
+                Root.cookie_operations_s.css({"text-shadow": ""});
+                Root.parser_s.css({"text-shadow": ""});
+                Root.array_operations_s.css({"text-shadow": ""});
+                Root.type_detection_s.css({"text-shadow": ""});
+                Root.ie_detection_s.css({"text-shadow": ""});
+                Root.get_select_syntax_s.css({"text-shadow": ""});
+                Root.custom_timer_s.css({"text-shadow": ""});
+                Root.auto_complete_s.css({"text-shadow": ""});
+                Root.validation_service_s.css({"text-shadow": ""});
+                Root.filter_service_s.css({"text-shadow": ""});
+                Root.sanitize_service_s.css({"text-shadow": ""});
+                Root.extra_operations_s.css({"text-shadow": ""});
+            } else if (Root.custom_timer.offset()['top'] <= $(window).scrollTop() && Root.auto_complete.offset()['top'] >= $(window).scrollTop()) {
+                Root.custom_timer_s.css({"text-shadow": "black 0 0 1px"});
+                Root.overview_s.css({"text-shadow": ""});
+                Root.document_ready_s.css({"text-shadow": ""});
+                Root.module_s.css({"text-shadow": ""});
+                Root.controller_s.css({"text-shadow": ""});
+                Root.model_s.css({"text-shadow": ""});
+                Root.select_element_s.css({"text-shadow": ""});
+                Root.element_creation_s.css({"text-shadow": ""});
+                Root.ajax_request_s.css({"text-shadow": ""});
+                Root.cookie_operations_s.css({"text-shadow": ""});
+                Root.parser_s.css({"text-shadow": ""});
+                Root.array_operations_s.css({"text-shadow": ""});
+                Root.type_detection_s.css({"text-shadow": ""});
+                Root.ie_detection_s.css({"text-shadow": ""});
+                Root.graphical_fade_s.css({"text-shadow": ""});
+                Root.get_select_syntax_s.css({"text-shadow": ""});
+                Root.auto_complete_s.css({"text-shadow": ""});
+                Root.validation_service_s.css({"text-shadow": ""});
+                Root.filter_service_s.css({"text-shadow": ""});
+                Root.sanitize_service_s.css({"text-shadow": ""});
+                Root.extra_operations_s.css({"text-shadow": ""});
+            } else if (Root.auto_complete.offset()['top'] <= $(window).scrollTop() && Root.validation_service.offset()['top'] >= $(window).scrollTop()) {
+                Root.auto_complete_s.css({"text-shadow": "black 0 0 1px"});
+                Root.overview_s.css({"text-shadow": ""});
+                Root.document_ready_s.css({"text-shadow": ""});
+                Root.module_s.css({"text-shadow": ""});
+                Root.controller_s.css({"text-shadow": ""});
+                Root.model_s.css({"text-shadow": ""});
+                Root.select_element_s.css({"text-shadow": ""});
+                Root.element_creation_s.css({"text-shadow": ""});
+                Root.ajax_request_s.css({"text-shadow": ""});
+                Root.cookie_operations_s.css({"text-shadow": ""});
+                Root.parser_s.css({"text-shadow": ""});
+                Root.array_operations_s.css({"text-shadow": ""});
+                Root.type_detection_s.css({"text-shadow": ""});
+                Root.ie_detection_s.css({"text-shadow": ""});
+                Root.graphical_fade_s.css({"text-shadow": ""});
+                Root.custom_timer_s.css({"text-shadow": ""});
+                Root.get_select_syntax_s.css({"text-shadow": ""});
+                Root.validation_service_s.css({"text-shadow": ""});
+                Root.filter_service_s.css({"text-shadow": ""});
+                Root.sanitize_service_s.css({"text-shadow": ""});
+                Root.extra_operations_s.css({"text-shadow": ""});
+            } else if (Root.validation_service.offset()['top'] <= $(window).scrollTop() && Root.filter_service.offset()['top'] >= $(window).scrollTop()) {
+                Root.validation_service_s.css({"text-shadow": "black 0 0 1px"});
+                Root.overview_s.css({"text-shadow": ""});
+                Root.document_ready_s.css({"text-shadow": ""});
+                Root.module_s.css({"text-shadow": ""});
+                Root.controller_s.css({"text-shadow": ""});
+                Root.model_s.css({"text-shadow": ""});
+                Root.select_element_s.css({"text-shadow": ""});
+                Root.element_creation_s.css({"text-shadow": ""});
+                Root.ajax_request_s.css({"text-shadow": ""});
+                Root.cookie_operations_s.css({"text-shadow": ""});
+                Root.parser_s.css({"text-shadow": ""});
+                Root.array_operations_s.css({"text-shadow": ""});
+                Root.type_detection_s.css({"text-shadow": ""});
+                Root.ie_detection_s.css({"text-shadow": ""});
+                Root.graphical_fade_s.css({"text-shadow": ""});
+                Root.custom_timer_s.css({"text-shadow": ""});
+                Root.get_select_syntax_s.css({"text-shadow": ""});
+                Root.auto_complete_s.css({"text-shadow": ""});
+                Root.filter_service_s.css({"text-shadow": ""});
+                Root.sanitize_service_s.css({"text-shadow": ""});
+                Root.extra_operations_s.css({"text-shadow": ""});
+            } else if (Root.filter_service.offset()['top'] <= $(window).scrollTop() && Root.sanitize_service.offset()['top'] >= $(window).scrollTop()) {
+                Root.filter_service_s.css({"text-shadow": "black 0 0 1px"});
+                Root.overview_s.css({"text-shadow": ""});
+                Root.document_ready_s.css({"text-shadow": ""});
+                Root.module_s.css({"text-shadow": ""});
+                Root.controller_s.css({"text-shadow": ""});
+                Root.model_s.css({"text-shadow": ""});
+                Root.select_element_s.css({"text-shadow": ""});
+                Root.element_creation_s.css({"text-shadow": ""});
+                Root.ajax_request_s.css({"text-shadow": ""});
+                Root.cookie_operations_s.css({"text-shadow": ""});
+                Root.parser_s.css({"text-shadow": ""});
+                Root.array_operations_s.css({"text-shadow": ""});
+                Root.type_detection_s.css({"text-shadow": ""});
+                Root.ie_detection_s.css({"text-shadow": ""});
+                Root.graphical_fade_s.css({"text-shadow": ""});
+                Root.custom_timer_s.css({"text-shadow": ""});
+                Root.get_select_syntax_s.css({"text-shadow": ""});
+                Root.auto_complete_s.css({"text-shadow": ""});
+                Root.validation_service_s.css({"text-shadow": ""});
+                Root.sanitize_service_s.css({"text-shadow": ""});
+                Root.extra_operations_s.css({"text-shadow": ""});
+            } else if (Root.sanitize_service.offset()['top'] <= $(window).scrollTop() && Root.extra_operations.offset()['top'] >= $(window).scrollTop()) {
+                Root.sanitize_service_s.css({"text-shadow": "black 0 0 1px"});
+                Root.overview_s.css({"text-shadow": ""});
+                Root.document_ready_s.css({"text-shadow": ""});
+                Root.module_s.css({"text-shadow": ""});
+                Root.controller_s.css({"text-shadow": ""});
+                Root.model_s.css({"text-shadow": ""});
+                Root.select_element_s.css({"text-shadow": ""});
+                Root.element_creation_s.css({"text-shadow": ""});
+                Root.ajax_request_s.css({"text-shadow": ""});
+                Root.cookie_operations_s.css({"text-shadow": ""});
+                Root.parser_s.css({"text-shadow": ""});
+                Root.array_operations_s.css({"text-shadow": ""});
+                Root.type_detection_s.css({"text-shadow": ""});
+                Root.ie_detection_s.css({"text-shadow": ""});
+                Root.graphical_fade_s.css({"text-shadow": ""});
+                Root.custom_timer_s.css({"text-shadow": ""});
+                Root.get_select_syntax_s.css({"text-shadow": ""});
+                Root.auto_complete_s.css({"text-shadow": ""});
+                Root.validation_service_s.css({"text-shadow": ""});
+                Root.filter_service_s.css({"text-shadow": ""});
+                Root.extra_operations_s.css({"text-shadow": ""});
+            } else if (Root.extra_operations.offset()['top'] <= $(window).scrollTop()) {
+                Root.extra_operations_s.css({"text-shadow": "black 0 0 1px"});
+                Root.overview_s.css({"text-shadow": ""});
+                Root.document_ready_s.css({"text-shadow": ""});
+                Root.module_s.css({"text-shadow": ""});
+                Root.controller_s.css({"text-shadow": ""});
+                Root.model_s.css({"text-shadow": ""});
+                Root.select_element_s.css({"text-shadow": ""});
+                Root.element_creation_s.css({"text-shadow": ""});
+                Root.ajax_request_s.css({"text-shadow": ""});
+                Root.cookie_operations_s.css({"text-shadow": ""});
+                Root.parser_s.css({"text-shadow": ""});
+                Root.array_operations_s.css({"text-shadow": ""});
+                Root.type_detection_s.css({"text-shadow": ""});
+                Root.ie_detection_s.css({"text-shadow": ""});
+                Root.graphical_fade_s.css({"text-shadow": ""});
+                Root.custom_timer_s.css({"text-shadow": ""});
+                Root.auto_complete_s.css({"text-shadow": ""});
+                Root.get_select_syntax_s.css({"text-shadow": ""});
+                Root.filter_service_s.css({"text-shadow": ""});
+                Root.sanitize_service_s.css({"text-shadow": ""});
+                Root.validation_service_s.css({"text-shadow": ""});
+            }
         },
 
 

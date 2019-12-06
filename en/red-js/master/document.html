@@ -17,6 +17,7 @@
             clear: both;
         }
 
+
         .codebox {
             line-height: 32px;
             margin-right: 4%;
@@ -29,11 +30,12 @@
             -webkit-border-radius: 0 0 6px 6px;
             -moz-border-radius: 0 0 6px 6px;
             border-radius: 0 0 4px 4px;
-            margin-bottom: 10px;
+            margin-bottom: 35px;
             overflow: auto;
         }
 
         .codeheader {
+            margin-top: 35px;
             margin-right: 4%;
             margin-left: 4%;
             padding: 5px 5px 5px 10px;
@@ -73,22 +75,27 @@
         }
 
         .lang {
-            color: rgba(211, 211, 211, 0.22);
+            color: grey;
             font-size: 13px;
         }
 
         .lang:hover {
-            color: white;
+            color: black;
             transition: 0.6s;
         }
 
+
         .box {
+            margin-bottom: 35px;
+            margin-top: 35px;
+            font-family: Calibri, sans-serif;
             box-shadow: 0 0 0.625vw 0 rgba(0, 0, 0, 0.04);
             padding: 8px;
             border-radius: 5px;
             background-color: rgba(192, 192, 192, 0.35);
             overflow: auto;
         }
+
 
         .content-title {
             text-shadow: black 0 0 1px;
@@ -106,6 +113,13 @@
         p {
             font-family: Calibri, sans-serif;
         }
+
+        .content-image {
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+
     </style>
 
     <meta name="theme-color" content="rgba(226, 90, 90, 0.8)">
@@ -123,7 +137,7 @@
 </head>
 
 <body red-app="main" red-controller="red_js_doc"
-      style="box-shadow: 0 0 0.625vw 0 rgba(0,0,0,0.24);border-radius: 5px">
+      style="box-shadow: 0 0 0.625vw 0 rgba(0,0,0,0.24);border-radius: 5px;z-index: -4;">
 
 <div id="loader"
      style="text-shadow: black 0 0 1px;background-color: white;height: 100%;width: 100%;position: fixed;z-index: 25;right: 0;left: 0;text-align: center;margin-top: -8px">
@@ -136,7 +150,7 @@
 </div>
 
 <div id="header"
-     style="z-index: 1;box-shadow: 0 0 0.625vw 0 rgba(0,0,0,0.24);-moz-user-select: -moz-none;-webkit-user-select: none;-ms-user-select: none;user-select: none;position:sticky;top: 0;height: 220px;max-height: 220px;background-image: url('../../../Dependencies/Images/Header_Background.jpg');
+     style="z-index: 1;box-shadow: 0 0 0.625vw 0 rgba(0,0,0,0.24);-moz-user-select: -moz-none;-webkit-user-select: none;-ms-user-select: none;user-select: none;height: 220px;max-height: 180px;background-image: url('../../../Dependencies/Images/Header_Background.jpg');
                  background-size: cover;width: 100%;margin: auto;border-radius: 5px 5px 0 0;">
     <img id="header-logo" alt="Red Framework" draggable="false"
          src="../../../Dependencies/Images/Red_Framework_Logo_For_Header.png"
@@ -148,38 +162,43 @@
     <div id="header-caption" style="text-shadow: 0 0 0.625vw 0 rgba(0,0,0,0.50);color:#ffffff;padding-top: 14px;">
         Enterprise Applications Host
     </div>
-    <div id="navbar"
-         style="box-shadow: 0 0 0.625vw 0 rgba(0,0,0,0.35);position: absolute;left: 0;top: 170px;z-index: 3;color: white;width: 100%;height: 50px;background-color: rgba(226,90,90,0.55);">
-        <span id="navbar-header" style="display: none;font-family: Calibri, sans-serif;position:relative;top: 14px;left: 12px;">Red Framework Documentation</span>
-        <span id="navbar-toggle"
-              style="cursor: pointer;display: none;position:relative;top: 9px;right: 8px;float: right"><img
-                src="../../../Dependencies/Images/menu.png" alt="Expand Menu"></span>
-        <div id="navbar-items" style="padding: 15px 9px;font-size: 15px;color: #000;text-shadow: white 0 0 1px">
-            <hr id="navbar-separator"
-                style="color: white;text-align: center;margin: auto;position:relative;top: 14px;width: 100%;display: none">
-            <a href="#!home" id="nav-first-item" class="nav-item" style="">
-                <img style="opacity: 0.5;width: 15px;height: 15px;margin-right: 4px;position:relative;top: 2.5px"
-                     src="../../../Dependencies/Images/home.png" alt="Home">
-                Home</a>
-            <a href="#!documentation" class="nav-item" style="">
-                <img style="opacity: 0.5;width: 15px;height: 15px;margin-right: 4px;position:relative;top: 2.5px"
-                     src="../../../Dependencies/Images/document.png" alt="Document">
-                Documentation</a>
-            <a href="#!enterprise_doc" class="nav-item" style="">
-                <img style="opacity: 0.5;width: 15px;height: 15px;margin-right: 4px;position:relative;top: 2.5px"
-                     src="../../../Dependencies/Images/app.png" alt="App">
-                Enterprise SDK</a>
-            <a href="#!console_doc" class="nav-item" style="">
-                <img style="opacity: 0.5;width: 15px;height: 15px;margin-right: 4px;position:relative;top: 2.5px"
-                     src="../../../Dependencies/Images/console.png" alt="Console">
-                Console Kit</a>
-            <a href="#!red_js_doc" id="nav-item-current" class="nav-item" style="">
-                <img style="width: 15px;height: 15px;margin-right: 4px;position:relative;top: 2.5px"
-                     src="../../../Dependencies/Images/java-script.png" alt="Red JS">
-                Red JS</a>
+</div>
 
-            <span id="language"
-                  style="cursor: pointer;color: white;text-decoration: none;margin-right: 20px;font-size: 12px;position:absolute;right: 0">
+<div id="navbar"
+     style="box-shadow: 0 0 0.625vw 0 rgba(0,0,0,0.35);position: sticky;top: 0;z-index: 3;color: white;width: 100%;height: 50px;background-color: rgb(210,90,90);">
+        <span id="navbar-header"
+              style="display: none;font-family: Calibri, sans-serif;position:relative;top: 14px;left: 12px;">Red Framework Documentation</span>
+    <span id="navbar-toggle"
+          style="cursor: pointer;display: none;position:relative;top: 9px;right: 8px;float: right"><img
+            src="../../../Dependencies/Images/menu.png" alt="Expand Menu"></span>
+    <div id="navbar-items" style="padding: 15px 9px;font-size: 15px;color: #000;text-shadow: white 0 0 1px">
+        <hr id="navbar-separator"
+            style="color: white;text-align: center;margin: auto;position:relative;top: 14px;width: 100%;display: none">
+
+        <a href="#!home" class="nav-item" id="nav-first-item" style="">
+            <img style="opacity: 0.5;width: 15px;height: 15px;margin-right: 4px;position:relative;top: 2.5px"
+                 src="../../../Dependencies/Images/home.png" alt="Home">
+            Home</a>
+
+        <a href="#!documentation" class="nav-item" style="">
+            <img style="opacity: 0.5;width: 15px;height: 15px;margin-right: 4px;position:relative;top: 2.5px"
+                 src="../../../Dependencies/Images/document.png" alt="Document">
+            Documentation</a>
+        <a href="#!enterprise_doc" class="nav-item" style="">
+            <img style="opacity: 0.5;width: 15px;height: 15px;margin-right: 4px;position:relative;top: 2.5px"
+                 src="../../../Dependencies/Images/app.png" alt="App">
+            Enterprise SDK</a>
+        <a href="#!console_doc" class="nav-item" style="">
+            <img style="opacity: 0.5;width: 15px;height: 15px;margin-right: 4px;position:relative;top: 2.5px"
+                 src="../../../Dependencies/Images/console.png" alt="Console">
+            Console Kit</a>
+        <a href="#!red_js_doc" class="nav-item" id="nav-item-current" style="">
+            <img style="width: 15px;height: 15px;margin-right: 4px;position:relative;top: 2.5px"
+                 src="../../../Dependencies/Images/java-script.png" alt="Red JS">
+            Red JS</a>
+
+        <span id="language"
+              style="cursor: pointer;color: white;text-decoration: none;margin-right: 20px;font-size: 12px;position:absolute;right: 0">
                 <img style="width: 15px;height: 15px;margin-right: 6px;position:relative;top: 1px"
                      src="../../../Dependencies/Images/language.png" alt="Language">
                 <span id="current-language">EN</span>
@@ -187,14 +206,14 @@
                 <img style="margin-left: 3px;width: 10px;height: 10px;margin-right: 6px;position:relative;top: 1px"
                      src="../../../Dependencies/Images/drop-down-arrow.png" alt="Drop Down">
                 <div id="lang-list"
-                     style="text-shadow: white 0 0 1px;padding: 5px;display: none;width: 140px;text-align: center;background-color: rgba(226,90,90,0.95);box-shadow: 0 0 0.625vw 0 rgba(0,0,0,0.24);height: 50px;position:absolute;right: 0;margin-top: 16px;border-radius: 0 0 4px 4px;">
+                     style="text-shadow: white 0 0 1px;padding: 5px;display: none;width: 140px;text-align: center;background-color: white;box-shadow: 0 0 0.625vw 0 rgba(0,0,0,0.24);height: 50px;position:absolute;right: 0;margin-top: 17px;border-radius: 0 0 4px 4px;">
                     <div id="lang-en" class="lang"
-                         style="font-family: Calibri, sans-serif;margin-bottom: 7px;margin-top: 6px;">English - En</div>
-                    <div id="lang-fa" class="lang" style="font-family: Calibri, sans-serif">Persian - Fa</div>
+                         style="font-family: Calibri, sans-serif;;margin-bottom: 7px;margin-top: 6px;">English - En</div>
+                    <div id="lang-fa" class="lang" style="font-family: Calibri, sans-serif;">Persian - Fa</div>
                 </div>
             </span>
 
-            <span id="version" style="position:absolute;right: 110px;margin-top: -3px">
+        <span id="version" style="position:absolute;right: 110px;margin-top: -3px">
                  <img style="width: 18px;height: 18px;margin-right: 10px;position:relative;top: 4px"
                       src="../../../Dependencies/Images/version.png" alt="Version">
                 <select style="border-color: white;height: 27px;width: 140px;box-shadow: 0 0 0.625vw 0 rgba(0,0,0,0.10);border-radius: 5px;"
@@ -202,43 +221,1437 @@
                     <option value="1.0.0">1.0.0</option>
                 </select>
             </span>
-        </div>
     </div>
 </div>
 
 
 <div id="subjects-container" style="width: 22%;float: left;
-margin-bottom: 20px;position:sticky;left: 0;top: 55px;z-index: 0;">
+margin-bottom: 20px;position:sticky;left: 0;top: 55px;z-index: 1;">
 
     <div id="subjects" style="overflow: auto;max-height: 90vh;min-width: 27vw;margin-top: 10px">
         <ul style="font-family: 'Segoe UI Light', sans-serif;margin-left: 11px;color: rgba(226,90,90,0.70);line-height: 19px;">
-            <li id="preparing-document-s"><a href="#preparing-document"
-                                             style="text-shadow: black 0 0 1px;text-decoration: none;color: black;">Preparing
-                Document</a></li>
+            <li id="overview-s"><a href="#overview"
+                                   style="text-decoration: none;color: black;">Overview</a></li>
+            <li id="document-ready-s"><a href="#document-ready"
+                                         style="text-decoration: none;color: black;">Document Ready</a></li>
+            <li id="module-s"><a href="#module"
+                                 style="text-decoration: none;color: black;">Module</a></li>
+            <li id="controller-s"><a href="#controller"
+                                     style="text-decoration: none;color: black;">Controller</a></li>
+            <li id="model-s"><a href="#model"
+                                style="text-decoration: none;color: black;">Model</a></li>
+
+            <li id="get-select-syntax-s"><a href="#get-select-syntax"
+                                            style="text-decoration: none;color: black;">Get / Select Element(s)</a></li>
+
+            <li id="select-element-s"><a href="#select-element"
+                                         style="text-decoration: none;color: black;">Select Operations</a></li>
+
+            <li id="element-creation-s"><a href="#element-creation"
+                                           style="text-decoration: none;color: black;">Element Creation</a></li>
+
+            <li id="ajax-request-s"><a href="#ajax-request"
+                                       style="text-decoration: none;color: black;">AJAX Request</a></li>
+
+            <li id="cookie-operations-s"><a href="#cookie-operations"
+                                            style="text-decoration: none;color: black;">Cookie Operations</a></li>
+
+            <li id="parser-s"><a href="#parser"
+                                 style="text-decoration: none;color: black;">Parser</a></li>
+
+
+            <li id="array-operations-s"><a href="#array-operations"
+                                           style="text-decoration: none;color: black;">Array Operations</a></li>
+
+            <li id="type-detection-s"><a href="#type-detection"
+                                         style="text-decoration: none;color: black;">Type Detection</a></li>
+
+            <li id="ie-detection-s"><a href="#ie-detection"
+                                       style="text-decoration: none;color: black;">IE Detection</a></li>
+
+            <li id="graphical-fade-s"><a href="#graphical-fade"
+                                         style="text-decoration: none;color: black;">Graphical Fade</a></li>
+
+            <li id="custom-timer-s"><a href="#custom-timer"
+                                       style="text-decoration: none;color: black;">Custom Timer</a></li>
+
+            <li id="auto-complete-s"><a href="#auto-complete"
+                                        style="text-decoration: none;color: black;">Auto Complete</a></li>
+
+            <li id="validation-service-s"><a href="#validation-service"
+                                             style="text-decoration: none;color: black;">Validation Service</a></li>
+
+            <li id="filter-service-s"><a href="#filter-service"
+                                         style="text-decoration: none;color: black;">Filter Service</a></li>
+
+            <li id="sanitize-service-s"><a href="#sanitize-service"
+                                           style="text-decoration: none;color: black;">Sanitize Service</a></li>
+
+            <li id="extra-operations-s"><a href="#extra-operations"
+                                           style="text-decoration: none;color: black;">Extra Operations</a></li>
+
         </ul>
     </div>
 </div>
 
 <div id="subjects-toggle"
-     style="display: none;cursor: pointer;box-shadow: 0 4px 2px -2px rgba(0,0,0,0.30);background-color: white;height: 50px;position: fixed;left: 0;margin-top: 40px;border-radius: 0 3px 3px 0">
+     style="display: none;z-index: 1;cursor: pointer;box-shadow: 0 4px 2px -2px rgba(0,0,0,0.30);background-color: white;height: 50px;position: fixed;left: 0;border-radius: 0 3px 3px 0">
     <img src="../../../Dependencies/Images/subjects_menu.png" style="margin: 3px;width: 38px;height: 40px;"
          alt="Subjects Menu">
 </div>
 
 <div id="content-container" class="block"
      style="box-shadow: 0 4px 2px -2px rgba(0,0,0,0.24);margin-bottom: auto;width: 70%;float: right;margin-top: auto;background: url('../../../Dependencies/Images/background.png') no-repeat center center fixed;
-     background-size: 100% 100%;border-radius: 0 0 0 5px">
+     background-size: cover;border-radius: 0 0 0 5px">
 
-    <div id="preparing-document"
+    <div id="overview"
          class="content-box">
-        <h3 class="content-title">Preparing Document</h3>
-        <hr/>
+        <h3 class="content-title">Overview</h3>
+        <hr>
+
+        <div style="text-align: center">
+            <img class="content-image" id="javascript-logo"
+                 style="border-radius: 3px;width: 500px;height: 300px;opacity: 0.8"
+                 src="../../../Dependencies/Images/js.png" alt="Java Script">
+        </div>
         <p>
-            Unfortunately There is No Red JS Document in English Language at The Moment .
+            Red JS is a Light-Weight Java Script Framework introduced to Provide Easier Relation Between Back and Front
+            Sides ;
+            <br/>
+            Red JS Reached to Version 1.0 and it's Available in Red Framework Enterprise .
+
             <br/>
             <br/>
-            We are Doing our Best to Prepare it as Fast as Possible .
+            Some of Red JS Features :
+            <br/>
+            <br/>
+            <br/>
+            - Following MVC Pattern
+            <br/>
+            <br/>
+            - Coding JS inside HTML Tags
+            <br/>
+            <br/>
+            - Access Elements and Modify their Attributes
+            <br/>
+            <br/>
+            - AJAX Request
+            <br/>
+            <br/>
+            - Cookie Operations
+            <br/>
+            <br/>
+            - Graphical Fade
+            <br/>
+            <br/>
+            - Validate, Filter, Sanitize Service
+
         </p>
+
+    </div>
+
+    <div id="document-ready"
+         class="content-box">
+        <h3 class="content-title">Document Ready Event</h3>
+        <hr>
+        <p>
+            Document Ready Event is a Pre-defined Event in HTML ; This Event will be Invoked When Document is Fully
+            Downloaded and Rendered .
+            <br/>
+            <br/>
+            Assume that We Are going to Register an Event Listener for an Element which it is not Loaded yet ; If We
+            don't use Document Ready Event , An Error Occurs.
+            <br/>
+            <br/>
+            There Is a Pre-defined Function in Red JS Which assist you to Use Document Ready Event .
+        </p>
+
+        <div class="codeheader">Using Ready Function (Callback)</div>
+        <div class="codebox"><pre>Red.ready(function () {
+    Root.initialize();
+});</pre>
+        </div>
+
+    </div>
+
+
+    <div id="module"
+         class="content-box">
+        <h3 class="content-title">Module</h3>
+        <hr>
+        <p>
+            Module in Red JS refers to Namespace . it comes to allow controllers with equal names .
+            <br/>
+            a document can contain many modules and each modules can contain many controllers .
+        </p>
+
+        <div class="codeheader">Register Module</div>
+        <div class="codebox">
+            <pre>&lt;body&gt;
+    &lt;div red-app="main"&gt;&lt;/div&gt;
+    &lt;script src="Dependencies/Library/Red.min.js"&gt;&lt;/script&gt;
+        &lt;script&gt;
+            Red.app.module("main");
+            Red.ready(function () {
+                // some code
+            });
+        &lt;/script&gt;
+&lt;/body&gt;</pre>
+        </div>
+
+        <p>Red JS Allows you to Use JavaScript in HTML with Attributes .
+            <br/>
+            in Top Example we choose DIV as Main Module with red-app Attribute and Registered it into Memory with Module
+            Function .
+        </p>
+    </div>
+
+    <div id="controller"
+         class="content-box">
+        <h3 class="content-title">Controller</h3>
+        <hr>
+        <p>
+            in Red JS Design Controller Receives Data from Model (Client), Make Decisions By Available Data, Register
+            Data in Memory if Necessary and Refers them to View (Binding).
+        </p>
+
+        <div class="codeheader">Registering Controller</div>
+        <div class="codebox">
+            <pre>&lt;body&gt;
+    &lt;div red-app="main"&gt;
+        &lt;div red-controller="test"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;script src="Dependencies/Library/Red.min.js"&gt;&lt;/script&gt;
+        &lt;script&gt;
+            Red.app.module("main");
+            Red.app.addController("main", "test", function () {
+                // decisions
+            });
+
+            Red.ready(function () {
+                // some code
+            });
+        &lt;/script&gt;
+&lt;/body&gt;</pre>
+        </div>
+
+        <p>In Top Example We Registered Main Module ; then Registered our Controller to Main Module with addController
+            Function .
+        </p>
+
+        <p class="box">Third Parameter of addController is a Callback Function . All Variables in That Callback Function
+            will be Registered to Memory for Feature use (Such as Binding) .
+        </p>
+
+
+        <p>
+            You Can Bind your Data through Variables into HTML tags (Data Binding)
+        </p>
+
+
+        <div class="codeheader">Data Binding</div>
+        <div class="codebox">
+            <pre>&lt;body&gt;
+    &lt;div red-app="main"&gt;
+        &lt;div red-controller="test"&gt
+          &lt;div id="result" red-bind="$calculation_result"&gt;&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;script src="Dependencies/Library/Red.min.js"&gt;&lt;/script&gt;
+        &lt;script&gt;
+            Red.app.module("main");
+            Red.app.addController("main", "test", function () {
+                $calculation_result = 3243;
+            });
+
+            Red.ready(function () {
+                // some code
+            });
+        &lt;/script&gt;
+&lt;/body&gt;</pre>
+        </div>
+
+        <p>
+            the Result will Appear in Element with Result ID .
+            <br/>
+            <br/>
+            <br/>
+            A Controller also Can Start with Initialize Values :
+        </p>
+
+
+        <div class="codeheader">Initialize Values</div>
+        <div class="codebox">
+            <pre>&lt;body&gt;
+    &lt;div red-app="main" red-controller="test" red-init="var user_id = 43;"&gt;
+        &lt;div id="user-id" red-bind="user_id"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;script src="Dependencies/Library/Red.min.js"&gt;&lt;/script&gt;
+        &lt;script&gt;
+            Red.app.module("main");
+            Red.app.addController("main", "test", function () {
+                // decisions
+            });
+
+            Red.ready(function () {
+                // some code
+            });
+        &lt;/script&gt;
+&lt;/body&gt;</pre>
+        </div>
+
+        <p>In Top Example We Registered test Controller at Main Module ; initialized our Controller with Following
+            Variable : 'user_id'
+            <br/>
+            <br/>
+            Then We Bound 'user_id' Variable into 'user-id' element .
+        </p>
+    </div>
+
+
+    <div id="model"
+         class="content-box">
+        <h3 class="content-title">Model</h3>
+        <hr>
+        <p>
+            Model in the Red JS Design is Responsible for Receiving Data from Client and Transfer it to Controller /
+            View .
+        </p>
+
+
+        <div class="box" style="direction: ltr;padding-top: 20px;padding-bottom: 20px">
+            <span style="direction: ltr;text-align: left">Data From Client :</span>
+            <span style="margin-left: 20px;float: right"><input red-model="test"
+                                                                style="padding: 2px;border-radius: 5px;text-align: center"
+                                                                type="text" name="model-example" id="model-example"
+                                                                value="Test"></span>
+            <br/>
+            <br/>
+            <hr style="width: 80%">
+            <br/>
+            <span style="direction: rtl;text-align: left">Returning Data from Memory to View :</span>
+            <span style="margin-left: 20px;float: right"><input id="feeder" red-bind="model_test"
+                                                                style="padding: 2px;border-radius: 5px;text-align: center"
+                                                                type="text"
+                                                                disabled
+            ></span>
+        </div>
+
+
+        <p>Pay Attention to the Following Code for More Understanding :</p>
+
+
+        <div class="codeheader">Implementing Top Example</div>
+        <div class="codebox">
+             <pre>&lt;body&gt;
+    &lt;div red-app="main" red-controller="test" &gt;
+
+        &lt;input red-model="test"
+                  style="border-radius: 5px;text-align: center"
+                  type="text" name="model-example" id="model-example"
+                  value="Test"&gt;
+
+        &lt;input id="feeder" red-bind="model_test"
+                  style="border-radius: 5px;text-align: center"
+                  type="text" disabled&gt;
+    &lt;/div&gt;
+    &lt;script src="Dependencies/Library/Red.min.js"&gt;&lt;/script&gt;
+        &lt;script&gt;
+            Red.app.module("main");
+            Red.app.addController("main", "test", function () {
+                // decisions
+            });
+
+            Red.ready(function () {
+                // some code
+            });
+        &lt;/script&gt;
+&lt;/body&gt;</pre>
+        </div>
+
+
+        <p>
+            At First , We Built Main Module and Registered Test Controller .
+            <br/>
+            <br/>
+            Created a Text Input Element with red-model Attribute ; so this element will be choosen as model .
+            <br/>
+            <br/>
+            Model content will be Accessible with model_modelname Variable ; modelname Should be Replace with your Model
+            Name .
+            <br/>
+            <br/>
+            Finally , We Built a Feeder Element and Accessed Content in Memory with red-bind Attribute .
+        </p>
+
+    </div>
+
+
+    <div id="get-select-syntax"
+         class="content-box">
+        <h3 class="content-title">Get / Select Element(s)</h3>
+        <hr>
+        <p>
+            Red JS Provides 2 Way to Easy Access Elements .
+            <br/>
+            <br/>
+            1 - Get : Get Syntax will do a Query to Find Match Element ; If Only one Element exists will Return Element
+            otherwise it will Return NodeList .
+        </p>
+
+        <div class="codeheader">Get Elements</div>
+        <div class="codebox">
+            var elements = Red.get(".heading");
+        </div>
+
+
+        <p>
+            2 - Select : Select Syntax will allow You to Do Any HTML Operations on Match Element(s) .
+            <br/>
+            * All Select Operations will be Introduced in Next Chapter .
+        </p>
+
+    </div>
+
+    <div id="select-element"
+         class="content-box">
+        <h3 class="content-title">Select Operations</h3>
+        <hr>
+        <p>
+            Select Syntax will Return You a Object which Allows you to Do Any HTML Operation .
+        </p>
+
+
+        <div class="codeheader">Select Operations</div>
+        <div class="codebox">
+            var elements = Red.select(".heading");
+            <br/>
+            <br/>
+            // Accessing Elements Directly :
+            <br/>
+            var raw_elements = elements.elements;
+            <br/>
+            <br/>
+            // Getting innerHTML of an Element :
+            <br/>
+            var result = elements.innerHTML();
+            <br/>
+            <br/>
+            // Changing innerHTML of an Element :
+            <br/>
+            elements.innerHTML("New Content");
+            <br/>
+            <br/>
+            // Getting outerHTML of an Element :
+            <br/>
+            var result = elements.outerHTML();
+            <br/>
+            <br/>
+            // Changing outerHTML of an Element :
+            <br/>
+            elements.outerHTML("New Content");
+            <br/>
+            <br/>
+            // Getting value of an Element :
+            <br/>
+            var result = elements.value();
+            <br/>
+            <br/>
+            // Changing value of an Element :
+            <br/>
+            elements.value("New Value");
+            <br/>
+            <br/>
+            // Insert Data After Element :
+            <br/>
+            elements.after("Data");
+            <br/>
+            <br/>
+            // Insert Data Before Element :
+            <br/>
+            elements.before("Data");
+            <br/>
+            <br/>
+            // Get CSS Property :
+            <br/>
+            elements.CSS("color");
+            <br/>
+            <br/>
+            // Change CSS Properties :
+            <br/>
+            elements.CSS({color: "red"});
+            <br/>
+            <br/>
+            // Append Child to Element :
+            <br/>
+            elements.append(child);
+            <br/>
+            <br/>
+            // Clone Element :
+            <br/>
+            var new_element = elements.clone();
+            <br/>
+            <br/>
+            // Getting Parent Element :
+            <br/>
+            var parent_element = elements.parent();
+            <br/>
+            <br/>
+            // Previous Sibling of Element :
+            <br/>
+            var prev_sibling = elements.prev();
+            <br/>
+            <br/>
+            // Next Sibling of Element :
+            <br/>
+            var next_sibling = elements.next();
+            <br/>
+            <br/>
+            // Children of Element :
+            <br/>
+            var children = elements.children();
+            <br/>
+            <br/>
+            // Check if Element Contains another element as Child or Not (Return true / false) :
+            <br/>
+            var result = elements.contains(child);
+            <br/>
+            <br/>
+            // Add Event Listener :
+            <br/>
+            var event = "load";
+            <br/>
+            elements.on(event, function(){
+            <br/>
+            &nbsp;&nbsp;// some code
+            <br/>
+            });
+            <br/>
+            <br/>
+            // Remove Event Listener :
+            <br/>
+            var event = "load";
+            <br/>
+            elements.off(event, event_handler);
+            <br/>
+            <br/>
+            // Add Event Listener on Load :
+            <br/>
+            elements.load(event, event_handler);
+            <br/>
+            <br/>
+            // Add Event Listener on Resize :
+            <br/>
+            elements.resize(event, event_handler);
+            <br/>
+            <br/>
+            // Add Event Listener on Click :
+            <br/>
+            elements.click(event, event_handler);
+            <br/>
+            <br/>
+            // Add Event Listener on Submit :
+            <br/>
+            elements.submit(event, event_handler);
+            <br/>
+            <br/>
+            // Add Event Listener on Change :
+            <br/>
+            elements.change(event, event_handler);
+            <br/>
+            <br/>
+            // Add Event Listener on Keydown :
+            <br/>
+            elements.keydown(event, event_handler);
+            <br/>
+            <br/>
+            // Add Event Listener on Keyup :
+            <br/>
+            elements.keyup(event, event_handler);
+            <br/>
+            <br/>
+            // Add Event Listener on mouseEnter :
+            <br/>
+            elements.mouseEnter(event, event_handler);
+            <br/>
+            <br/>
+            // Add Event Listener on mouseLeave :
+            <br/>
+            elements.mouseLeave(event, event_handler);
+            <br/>
+            <br/>
+            // Add Event Listener on mouseOver :
+            <br/>
+            elements.hover(event, event_handler);
+            <br/>
+            <br/>
+            // Change Text Content :
+            <br/>
+            elements.text("New Text");
+            <br/>
+            <br/>
+            // Add Classes :
+            <br/>
+            elements.addClass("bg-light box");
+            <br/>
+            <br/>
+            // Has Classes (Return true / false) :
+            <br/>
+            var result = elements.hasClass("box");
+            <br/>
+            <br/>
+            // Remove Classes :
+            <br/>
+            elements.removeClass("bg-light box");
+            <br/>
+            <br/>
+            // Set ID :
+            <br/>
+            elements.id("header");
+            <br/>
+            <br/>
+            // Get Attribute :
+            <br/>
+            var result = elements.attr("enabled");
+            <br/>
+            <br/>
+            // Set Attribute :
+            <br/>
+            elements.attr("enabled", "true");
+            <br/>
+            <br/>
+            // Remove Attribute :
+            <br/>
+            elements.removeAttr("enabled");
+            <br/>
+            <br/>
+            // Set Form Action :
+            <br/>
+            elements.action("/home.html");
+            <br/>
+            <br/>
+            // Set Image Source :
+            <br/>
+            elements.source("images/logo.png");
+            <br/>
+            <br/>
+            // Set Image Alt :
+            <br/>
+            elements.alt("Logo");
+            <br/>
+            <br/>
+            // Do ForEach on Elements :
+            <br/>
+            elements.each(function(){
+            <br/>
+            &nbsp;&nbsp; // Some Code
+            <br/>
+            });
+            <br/>
+            <br/>
+            // Clear Element :
+            <br/>
+            elements.empty();
+            <br/>
+            <br/>
+            // Remove Child :
+            <br/>
+            elements.remove(child);
+            <br/>
+            <br/>
+            // Get Element Width :
+            <br/>
+            var result = elements.width(margin);
+            <br/>
+            <br/>
+            // Get Element Height :
+            <br/>
+            var result = elements.height(margin);
+            <br/>
+            <br/>
+            // Get Element Position :
+            <br/>
+            var result = elements.position();
+            <br/>
+            <br/>
+            // Get Element Offset :
+            <br/>
+            var result = elements.offset();
+            <br/>
+            <br/>
+            // Get OffsetParent of Element :
+            <br/>
+            var result = elements.offsetParent();
+            <br/>
+            <br/>
+            // Show Element :
+            <br/>
+            elements.show();
+            <br/>
+            <br/>
+            // Hide Element :
+            <br/>
+            elements.hide();
+            <br/>
+            <br/>
+            // Fade in (Graphical Effect) :
+            <br/>
+            var delay = 1000;
+            <br/>
+            elements.fadeIn(delay);
+            <br/>
+            <br/>
+            // Fade out (Graphical Effect) :
+            <br/>
+            var delay = 1000;
+            <br/>
+            elements.fadeOut(delay);
+            <br/>
+            <br/>
+            // Play Audio Element :
+            <br/>
+            elements.play();
+        </div>
+
+
+    </div>
+
+
+    <div id="element-creation"
+         class="content-box">
+        <h3 class="content-title">Element Creation</h3>
+        <hr>
+        <p>
+            To Have a Dynamic Web Page you Need to Create New Elements , Modify their CSS Properties and Append to an
+            Element as Child Many times .
+            <br/>
+            <br/>
+            There is a Pre-Defined Function in Red JS to Help you Do This Faster .
+        </p>
+
+
+        <div class="codeheader">Element Creation</div>
+        <div class="codebox">
+            var parent = Red.get("#container");
+            <br/>
+            var tag = "div";
+            <br/>
+            var css_props = {color: "red"};
+            <br/>
+            var element = Red.create(tag, parent, css_props);
+        </div>
+
+
+        <p>
+            1st Parameter Refers to Tag Name
+            <br/>
+            <br/>
+            2nd Parameter Refers to Parent Element (Optional)
+            <br/>
+            <br/>
+            3rd Parameter Refers to CSS Properties (Optional)
+        </p>
+
+    </div>
+
+    <div id="ajax-request"
+         class="content-box">
+        <h3 class="content-title">AJAX Request</h3>
+        <hr>
+
+        <div style="text-align: center;margin: auto;">
+            <img class="content-image" id="ajax-diagram" src="../../../Dependencies/Images/ajax_diagram.png" alt="AJAX Request" style="opacity: 0.8;width: 600px;height: 578px">
+        </div>
+
+        <p>
+            One of the Glorious things About Java Script is AJAX Technology ;
+            <br/>
+            This Tech Helps you a lot to Design Dynamic Pages By Sending HTTP Request to CGI Application and Returning
+            Result .
+            <br/>
+            <br/>
+            Since Using this Tech is Common and Necessary By User Experience Frames , Red JS Provides a Pre-Defined
+            Function to Do AJAX Request as Fast as Possible :
+        </p>
+
+
+        <div class="codeheader">Sending AJAX Request</div>
+        <div class="codebox">
+            var config = {
+            <br/>
+            &nbsp;&nbsp;type: "POST",
+            <br/>
+            &nbsp;&nbsp;url: "http://test.com",
+            <br/>
+            &nbsp;&nbsp;data: {
+            username: "admin"
+            },
+            <br/>
+            &nbsp;&nbsp;contentType: "application/json",
+            <br/>
+            &nbsp;&nbsp;dataType: "application/json",
+            <br/>
+            &nbsp;&nbsp;success: function() {
+            <br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;var result = this.response;
+            <br/>
+            &nbsp;&nbsp;}
+            <br/>
+            };
+            <br/>
+            <br/>
+            Red.ajax(config);
+        </div>
+
+
+        <p>
+            ajax Function Requires an Object Containing Configuration as Parameter .
+            <br/>
+            <br/>
+            type and url Properties are necessary .
+            <br/>
+            <br/>
+            data Property is Parameters of Request .
+            <br/>
+            <br/>
+            success Property is a CallBack Function Which will be Executed On Successful Request .
+        </p>
+
+    </div>
+
+    <div id="cookie-operations"
+         class="content-box">
+        <h3 class="content-title">Cookie Operations</h3>
+        <hr>
+        <p>
+            Cookies are Used to Store Temporary Data in Client Browser .
+            <br/>
+            <br/>
+            They will be Stored as String with Pattern :
+        </p>
+
+        <div class="box">analytics_token=c956c79e-7209-88ce-74fc-81115ff495ef; red_session_last_activity=11/19/2019
+        </div>
+
+        <p>
+            Cookie Management Functions in Red JS are Here to Handle them Faster :
+        </p>
+
+        <div class="codeheader">Cookie Management</div>
+        <div class="codebox">
+            // Set Cookie :
+            <br/>
+            var cookie_name = "user_logged_in";
+            <br/>
+            var cookie_value = "DSC32KJDEUAPCMJ4";
+            <br/>
+            var expire_days = 7;
+            <br/>
+            Red.setCookie(cookie_name, cookie_value, expire_days);
+            <br/>
+            <br/>
+            // Get Cookie :
+            <br/>
+            var result = Red.getCookie(cookie_name);
+            <br/>
+            <br/>
+            // Delete Cookie :
+            <br/>
+            Red.deleteCookie(cookie_name);
+        </div>
+    </div>
+
+    <div id="parser"
+         class="content-box">
+        <h3 class="content-title">Parser</h3>
+        <hr>
+        <p>
+            There is 2 Early Access Parser Function to Help with the Parsing Process .
+            <br/>
+            <br/>
+            1 - Parsing HTML :
+        </p>
+
+        <div class="codeheader">HTML Parser</div>
+        <div class="codebox">
+            Red.parseHTML(string);
+        </div>
+
+
+        <p>
+            1 - Parsing JSON :
+        </p>
+
+
+        <div class="codeheader">JSON Parser</div>
+        <div class="codebox">
+            Red.parseJSON(string);
+        </div>
+    </div>
+
+    <div id="array-operations"
+         class="content-box">
+        <h3 class="content-title">Array Operations</h3>
+        <hr>
+
+        <p>
+            Pre-Defined Functions for Operating on Arrays such as ForEach , Map , inArray and etc Are in Red JS to
+            Assist Programmer .
+        </p>
+
+
+        <div class="codeheader">Array Operations</div>
+        <div class="codebox">
+            // ForEach :
+            <br/>
+            Red.each(array, callback);
+            <br/>
+            <br/>
+            // Map :
+            <br/>
+            Red.map(array, callback);
+            <br/>
+            <br/>
+            // inArray :
+            <br/>
+            var result = Red.inArray(item, array);
+            <br/>
+            <br/>
+            // isArray :
+            <br/>
+            var result = Red.isArray(array);
+        </div>
+
+    </div>
+
+
+    <div id="type-detection"
+         class="content-box">
+        <h3 class="content-title">Type Detection</h3>
+        <hr>
+        <p>There is a Pre-Defined Function in Red JS to Detect any Data Type .
+            <br/>
+            <br/>
+            Usage :
+        </p>
+
+
+        <div class="codeheader">Type Detection</div>
+        <div class="codebox">
+            var result = Red.type(new String("test"));
+            <br/>
+            <br/>
+            // The Result will be -> [object string]
+        </div>
+
+    </div>
+
+
+    <div id="ie-detection"
+         class="content-box">
+        <h3 class="content-title">IE Detection</h3>
+        <hr>
+        <p>
+            There are Differences between Internet Explorer Engine and Other Browsers ; There is a Pre-Defined Function
+            to Recognize internet Explorer Users to Code more Responsive and more Flexible .
+            <br/>
+            <br/>
+        </p>
+
+        <div class="box">
+            <span style="float: left;">Status :</span>
+            <span red-bind="ie_status" style="float: right;"></span>
+        </div>
+
+
+        <p>Implementation :</p>
+
+
+        <div class="codeheader">IE Detection</div>
+        <div class="codebox">
+            var result = Red.IE();
+            <br/>
+            <br/>
+            // The Result will be Boolean (true or false)
+        </div>
+    </div>
+
+    <div id="graphical-fade"
+         class="content-box">
+        <h3 class="content-title">Graphical Fade</h3>
+        <hr>
+
+        <div class="box" style="margin-top: 15px;">
+            <span id="hello-world" style="float: left">Hello World !</span>
+            <button id="fade-btn" style="float: right;cursor: pointer;">Fade Out</button>
+        </div>
+
+
+        <p>Implementation :</p>
+
+
+        <div class="codeheader">Graphical Fade</div>
+        <div class="codebox">
+            // ** With Select Syntax **
+            <br/>
+            <br/>
+            var fade_element = Red.select("#hello-world");
+            <br/>
+            var delay = 1000;
+            <br/>
+            <br/>
+            // Fade Out
+            <br/>
+            fade_element.fadeOut(delay);
+            <br/>
+            <br/>
+            // Fade In
+            <br/>
+            fade_element.fadeIn(delay);
+            <br/>
+            <br/>
+            // ** With Using the Main Object **
+            <br/>
+            <br/>
+            // Fade Out
+            <br/>
+            Red.fadeOut(fade_element.elements[0], delay);
+            <br/>
+            <br/>
+            // Fade in
+            <br/>
+            Red.fadeIn(fade_element.elements[0], delay);
+        </div>
+
+        <p>* Process Delay is Based on Milli Second .</p>
+    </div>
+
+    <div id="custom-timer"
+         class="content-box">
+        <h3 class="content-title">Custom Timer</h3>
+        <hr>
+
+        <p>Red JS Custom Timer Presents 2 Timer Mode .
+            <br/>
+            <br/>
+        </p>
+
+        <div class="box" style="margin-top: 15px;">
+            <span id="full-timer" style="float: right;cursor: pointer;">00:00</span>
+            <span style="float: left;cursor: pointer;">Full Mode (4 Digits)</span>
+            <br/>
+            <br/>
+            <br/>
+            <span id="light-timer" style="float: right;cursor: pointer;">00</span>
+            <span style="float: left;cursor: pointer;"> Light Mode (2 Digits)</span>
+        </div>
+
+
+        <p>Implementation :</p>
+
+
+        <div class="codeheader">Custom Timer</div>
+        <div class="codebox">
+            // Implementing Full Timer
+            <br/>
+            var full_timer_element = Red.get("#full-timer");
+            <br/>
+            Red.timer(1800, full_timer_element, "full");
+            <br/>
+            <br/>
+            // Implementing Light Timer
+            <br/>
+            var light_timer_element = Red.get("#light-timer");
+            <br/>
+            Red.timer(60, light_timer_element, "light");
+        </div>
+
+
+        <p>* Light Mode is Only Suggested for Less than 60 Seconds Periods .</p>
+    </div>
+
+    <div id="auto-complete"
+         class="content-box">
+        <h3 class="content-title">Auto Complete</h3>
+        <hr>
+
+        <p> Auto Complete in Red JS is a Feature Which will be Used on Input Fields and Increases User Exprience .
+        </p>
+
+        <div id="city-input-container" class="box" style="text-align: center">
+            <div style="margin-bottom: 10px;font-family: 'Segoe UI Light', sans-serif;">City :</div>
+            <input name="city_input" id="city-input"
+                   style="font-family: 'Segoe UI Light', sans-serif;width: 70%;padding: 2px;border-radius: 5px;text-align: center"
+                   type="text"
+                   placeholder="Enter Your City Name !">
+        </div>
+
+
+        <p>Implementation :</p>
+
+
+        <div class="box">
+            Necessary Components :
+            <br/>
+            <br/>
+            <br/>
+            - Input Element -> To Detect Keyup Event and Compare Value to List
+            <br/>
+            <br/>
+            - Input Container -> To Append List Element to the Container
+            <br/>
+            <br/>
+            - List Element -> Container of List
+            <br/>
+            <br/>
+            - Item Element -> Each Item with Dedicated CSS Properties
+            <br/>
+            <br/>
+            - List -> An Array Containing the List
+            <br/>
+            <br/>
+            - Not Found Message -> A Message which Will be Appear When Value Doesn't Match to List
+        </div>
+
+
+        <div class="codeheader">Auto Complete</div>
+        <div class="codebox">
+            <pre>var city_input_container = Red.get("#city-input-container");
+var city_input = Red.get("#city-input");
+
+var list_element = Red.create("div", null, {
+                   "width": "71%",
+                   "height": "200px",
+                   "background-color": "white",
+                   "color": "black",
+                   "margin": "auto",
+                   "border-radius": "0 0 5px 5px",
+                   "padding-top": "4px",
+                   "padding-bottom": "4px",
+                   "font-family": "'Segoe UI Light', sans-serif",
+                   "font-size": "14px",
+                   });
+
+var item_element = Red.create("div", null, {
+                   "cursor": "pointer",
+                   "padding": "2px",
+                   "opacity": "0.7",
+                   });
+
+var city_list = ["tehran", "babol", "sari",
+                "zanjan", "ahwaz", "mashhad", "birjand", "boshehr"];
+
+var not_found_message = "Not Found !";
+
+Red.autoComplete(city_input, city_input_container, list_element, item_element,
+                city_list, not_found_message);</pre>
+        </div>
+
+
+        <p>* List Element and Item Element Should be Without Any Parent !
+            <br/>
+            <br/>
+            * For Element Creation Refer to Element Creation Chapter .
+        </p>
+    </div>
+
+    <div id="validation-service"
+         class="content-box">
+        <h3 class="content-title">Validation Service</h3>
+        <hr>
+        <p>
+            Working With Validation :
+        </p>
+
+        <div class="codeheader">VALIDATION SERVICE</div>
+        <div class="codebox">
+            var string = 'test';
+            <br/>
+            <br/>
+            var result = Red.validate(string, 'required|method:en|limit:0-4');
+        </div>
+
+
+        <p>
+            Attribute 1 No. Of Fields :
+            <br/>
+            <br/>
+            there are 2 kind of Fields :
+        </p>
+
+
+        <div class="box">
+
+            required (which means it can't be null)
+            <br/>
+            optional (which means it can be null)
+
+        </div>
+
+
+        <p>
+            Attribute 2 Validation Method:
+            <br/>
+            <br/>
+            there are 17 Kind of Standard Validation Methods:
+            <br/>
+        </p>
+
+
+        <div class="box">
+
+            digit
+            <br/>
+            en
+            <br/>
+            en_digit
+            <br/>
+            fa
+            <br/>
+            fa_digit
+            <br/>
+            mix: fa and en with digits
+            <br/>
+            email: email Validation
+            <br/>
+            username: standard username validation (English, Digits, Special Chars .-_)
+            <br/>
+            password: standard password validation (English, Digits, Special Chars .@*)
+            <br/>
+            address: address (English, Persian and Special Char -)
+            <br/>
+            address_en: address_en (English and Special Char -)
+            <br/>
+            address_fa: address_fa (Persian and Special Char -)
+            <br/>
+            phone
+            <br/>
+            IP: IP Validation - No Limit is Acceptable for This Method
+            <br/>
+            text
+            <br/>
+            text_en
+            <br/>
+            text_fa
+        </div>
+
+
+        <p>
+            Attribute 3 is Character Limit; For Example:
+
+        </p>
+
+
+        <div class="box">
+
+            limit:1-10
+        </div>
+
+
+        <p>
+            <span style="text-shadow: black 0 0 1px">Adding Method (Rule) to Validate Service :</span>
+        </p>
+
+
+        <div class="codeheader">ADDING METHOD TO VALIDATE SERVICE</div>
+        <div class="codebox">
+            var method = "test";
+            <br/>
+            <br/>
+            Red.addValidateRule(method, function (no, min, max, string) {
+            <br>
+            // DO Your RegEX Based on Info then Return True or False Result
+            <br>
+            });
+        </div>
+
+    </div>
+
+    <div id="filter-service"
+         class="content-box">
+        <h3 class="content-title">Filter Service</h3>
+        <hr>
+        <p>
+            Working with Filter Service :
+        </p>
+
+        <div class="codeheader">FILTER STRING</div>
+        <div class="codebox">
+
+            var string = "#redcoder";
+            <br/>
+            var method = "username";
+            <br/>
+            <br/>
+            var filtered_string = Red.filter(string, method);
+        </div>
+
+
+        <p>
+            there are 17 Kind of Standard Filter Methods:
+            <br/>
+        </p>
+
+
+        <div class="box">
+
+            digit
+            <br/>
+            en
+            <br/>
+            en_digit
+            <br/>
+            fa
+            <br/>
+            fa_digit
+            <br/>
+            mix: fa and en with digits
+            <br/>
+            email: email filter
+            <br/>
+            username: standard username filter (English, Digits, Special Chars .-_)
+            <br/>
+            password: standard password filter (English, Digits, Special Chars .@*)
+            <br/>
+            address: address (English, Persian and Special Char -)
+            <br/>
+            address_en: address_en (English and Special Char -)
+            <br/>
+            address_fa: address_fa (Persian and Special Char -)
+            <br/>
+            phone
+            <br/>
+            IP: IP Filter
+            <br/>
+            text
+            <br/>
+            text_en
+            <br/>
+            text_fa
+        </div>
+
+
+        <p>
+            <span style="text-shadow: black 0 0 1px">Adding Method (Rule) to Filter Service :</span>
+        </p>
+
+
+
+        <div class="codeheader">ADDING METHOD TO FILTER SERVICE</div>
+        <div class="codebox">
+            var method = "test";
+            <br/>
+            <br/>
+            Red.addFilterRule(method, function (string) {
+            <br/>
+            // Do Your Filter Then Return the String
+            <br/>
+            });
+            <br/>
+        </div>
+
+    </div>
+
+
+    <div id="sanitize-service"
+         class="content-box">
+        <h3 class="content-title">Sanitize Service</h3>
+        <hr>
+        <p>
+            Working with Sanitize Service :
+        </p>
+
+        <div class="codeheader">SANITIZE STRING</div>
+        <div class="codebox">
+
+            var string = "redcoder927";
+            <br/>
+            var method = "digit";
+            <br/>
+            <br/>
+            var sanitized_string = Red.sanitize(string, method);
+        </div>
+
+
+        <p>
+            there are 2 Kind of Standard Sanitize Methods:
+        </p>
+
+
+        <div class="box">
+            digit
+            <br/>
+            space
+        </div>
+
+
+        <p>
+            <span style="text-shadow: black 0 0 1px">Adding Method (Rule) to Sanitize Service :</span>
+        </p>
+
+
+        <div class="codeheader">ADDING METHOD TO SANITIZE SERVICE</div>
+        <div class="codebox">
+            var method = "test";
+            <br/>
+            <br/>
+            Red.addSanitizeRule(method, function (string) {
+            <br/>
+            // Do Your Sanitize then Return String
+            <br/>
+            });
+            <br/>
+        </div>
+
+    </div>
+
+    <div id="extra-operations"
+         class="content-box">
+        <h3 class="content-title">Extra Operations</h3>
+        <hr>
+        <p>
+            There is Some Extra Functions to Assist Programmer :
+        </p>
+
+
+        <div class="codeheader">Extra Functions</div>
+        <div class="codebox">
+
+            // Connection Status, Will Return True If Client is Online
+            <br/>
+            var connection_status = Red.online();
+            <br/>
+            <br/>
+            // User Agent
+            <br/>
+            var user_agent = Red.user();
+            <br/>
+            <br/>
+            // Redirect
+            <br/>
+            Red.redirect("http://redframework.ir");
+            <br/>
+            <br/>
+            // Go Back (Browser Option)
+            <br/>
+            Red.goBack();
+            <br/>
+            <br/>
+            // Random Integer
+            <br/>
+            var min = 3;
+            <br/>
+            var max = 10;
+            <br/>
+            var rnd_int = Red.generateRandomInt(min, max);
+            <br/>
+            <br/>
+            // Now Function, Which Returns the Number of Milliseconds Elapsed Since January 1, 1970, 00:00:00 UTC
+            <br/>
+            var current_time = Red.now();
+        </div>
 
     </div>
 
@@ -258,10 +1671,65 @@ margin-bottom: 20px;position:sticky;left: 0;top: 55px;z-index: 0;">
 
 <script>
 
+
     Red.app.module("main");
 
     Red.app.addController("main", "red_js_doc", function () {
+        this.ie_status = Red.IE();
 
+        if (this.ie_status === false) {
+            this.ie_status = "You are Not Using Internet Explorer !";
+        } else {
+            this.ie_status = "You are Using Internet Explorer !";
+        }
+
+        var fade_element = Red.select("#hello-world");
+        var fade_btn = Red.select("#fade-btn");
+
+        fade_btn.click(function () {
+            if (fade_element.CSS("opacity") == false) {
+                fade_btn.innerHTML("Fade Out");
+                fade_element.fadeIn(1000);
+            } else {
+                fade_btn.innerHTML("Fade In");
+                fade_element.fadeOut(1000);
+            }
+
+            fade_btn.attr("disabled", "true");
+
+            setTimeout(function () {
+                fade_btn.removeAttr("disabled");
+            }, 1000);
+        });
+
+        var full_timer_element = Red.get("#full-timer");
+        var light_timer_element = Red.get("#light-timer");
+        Red.timer(1800, full_timer_element, "full");
+        Red.timer(60, light_timer_element, "light");
+
+        var city_input_container = Red.get("#city-input-container");
+        var city_input = Red.get("#city-input");
+        var list_element = Red.create("div", null, {
+            "width": "71%",
+            "height": "200px",
+            "background-color": "white",
+            "color": "black",
+            "margin": "auto",
+            "border-radius": "0 0 5px 5px",
+            "padding-top": "4px",
+            "padding-bottom": "4px",
+            "font-family": "'Segoe UI Light', sans-serif",
+            "font-size": "14px",
+        });
+        var item_element = Red.create("div", null, {
+            "cursor": "pointer",
+            "padding": "2px",
+            "opacity": "0.7",
+        });
+
+        var city_list = ["tehran", "babol", "sari", "zanjan", "ahwaz", "mashhad", "birjand", "boshehr"];
+        var not_found_message = "Not Found !";
+        Red.autoComplete(city_input, city_input_container, list_element, item_element, city_list, not_found_message);
     });
 
     Red.ready(function () {
@@ -276,6 +1744,7 @@ margin-bottom: 20px;position:sticky;left: 0;top: 55px;z-index: 0;">
         header_logo: $("#header-logo"),
         navbar: $("#navbar"),
         language_element: $("#language"),
+        version_element: $("#version"),
         language_list: $("#lang-list"),
         subjects_title: $("#subjects-title"),
 
@@ -292,6 +1761,54 @@ margin-bottom: 20px;position:sticky;left: 0;top: 55px;z-index: 0;">
         timerHandler: null,
         lang_en: $("#lang-en"),
         lang_fa: $("#lang-fa"),
+        last_size: 0,
+
+        overview_s: $("#overview-s"),
+        document_ready_s: $("#document-ready-s"),
+        module_s: $("#module-s"),
+        controller_s: $("#controller-s"),
+        model_s: $("#model-s"),
+        get_select_syntax_s: $("#get-select-syntax-s"),
+        select_element_s: $("#select-element-s"),
+        element_creation_s: $("#element-creation-s"),
+        ajax_request_s: $("#ajax-request-s"),
+        cookie_operations_s: $("#cookie-operations-s"),
+        parser_s: $("#parser-s"),
+        array_operations_s: $("#array-operations-s"),
+        type_detection_s: $("#type-detection-s"),
+        ie_detection_s: $("#ie-detection-s"),
+        graphical_fade_s: $("#graphical-fade-s"),
+        custom_timer_s: $("#custom-timer-s"),
+        auto_complete_s: $("#auto-complete-s"),
+        validation_service_s: $("#validation-service-s"),
+        filter_service_s: $("#filter-service-s"),
+        sanitize_service_s: $("#sanitize-service-s"),
+        extra_operations_s: $("#extra-operations-s"),
+
+        overview: $("#overview"),
+        document_ready: $("#document-ready"),
+        module: $("#module"),
+        controller: $("#controller"),
+        model: $("#model"),
+        get_select_syntax: $("#get-select-syntax"),
+        select_element: $("#select-element"),
+        element_creation: $("#element-creation"),
+        ajax_request: $("#ajax-request"),
+        cookie_operations: $("#cookie-operations"),
+        parser: $("#parser"),
+        array_operations: $("#array-operations"),
+        type_detection: $("#type-detection"),
+        ie_detection: $("#ie-detection"),
+        graphical_fade: $("#graphical-fade"),
+        custom_timer: $("#custom-timer"),
+        auto_complete: $("#auto-complete"),
+        validation_service: $("#validation-service"),
+        filter_service: $("#filter-service"),
+        sanitize_service: $("#sanitize-service"),
+        extra_operations: $("#extra-operations"),
+
+        js_logo: $("#javascript-logo"),
+        ajax_diagram: $("#ajax-diagram"),
 
         initialize: function () {
 
@@ -299,19 +1816,7 @@ margin-bottom: 20px;position:sticky;left: 0;top: 55px;z-index: 0;">
 
             Root.handleComponentsOnSize();
 
-            if ($(window).scrollTop() >= 31) {
-
-                Root.header.css({
-                    height: "50px",
-                });
-                Root.header_title.hide(0);
-                Root.header_caption.hide(0);
-                Root.header_logo.hide(0);
-                Root.navbar.css({top: 0});
-                Root.language_list.hide(0);
-                Root.subjects_title.hide(0);
-            }
-
+            Root.subjectPager();
 
             $(window).on("resize", Root.handleComponentsOnSize);
 
@@ -319,6 +1824,12 @@ margin-bottom: 20px;position:sticky;left: 0;top: 55px;z-index: 0;">
             Root.subjectsToggle();
             Root.navbarToggle();
             Root.handleRoutes();
+
+            if ($(document).scrollTop() >= 20) {
+                Root.subjects_toggle.css("top", "110px");
+            } else {
+                Root.subjects_toggle.css("top", "280px");
+            }
 
             $("#loader").fadeOut(500);
         },
@@ -385,15 +1896,6 @@ margin-bottom: 20px;position:sticky;left: 0;top: 55px;z-index: 0;">
 
                     Root.subjects_toggle.show();
                     Root.navbar_separator.hide();
-                    if (Root.header_logo.css("display") === "none") {
-                        Root.header.css({
-                            height: "50px",
-                        });
-                    } else {
-                        Root.header.css({
-                            height: "220px",
-                        });
-                    }
 
                     Root.nav_first_item.css({
                         marginTop: "20px",
@@ -404,7 +1906,6 @@ margin-bottom: 20px;position:sticky;left: 0;top: 55px;z-index: 0;">
 
                     Root.navbar.css({
                         height: "50px",
-                        backgroundColor: "rgba(226,90,90,0.55)"
                     });
 
                     Root.navbar_items.css({
@@ -466,7 +1967,7 @@ margin-bottom: 20px;position:sticky;left: 0;top: 55px;z-index: 0;">
                     Root.subjects_toggle.animate({left: "0"}, 400);
                     Root.subjects_toggle.css({
                         right: "",
-                        zIndex: "0"
+                        zIndex: "1"
                     });
 
                 }
@@ -483,7 +1984,7 @@ margin-bottom: 20px;position:sticky;left: 0;top: 55px;z-index: 0;">
                     Root.subjects_toggle.animate({left: "0"}, 400);
                     Root.subjects_toggle.css({
                         right: "",
-                        zIndex: "0"
+                        zIndex: "1"
                     });
 
 
@@ -508,10 +2009,11 @@ margin-bottom: 20px;position:sticky;left: 0;top: 55px;z-index: 0;">
                     Root.navbar_separator.show();
 
                     Root.navbar.css({
-                        height: "233px",
-                        backgroundColor: "rgba(226,90,90,0.95)"
+                        height: "250px",
                     });
 
+                    Root.language_element.css("margin-top", "12px");
+                    Root.version_element.css("margin-top", "8px");
 
                     Root.navbar_items.css({
                         display: "block",
@@ -528,15 +2030,7 @@ margin-bottom: 20px;position:sticky;left: 0;top: 55px;z-index: 0;">
                 } else {
                     Root.subjects_toggle.show();
                     Root.navbar_separator.hide();
-                    if (Root.header_logo.css("display") === "none") {
-                        Root.header.css({
-                            height: "50px",
-                        });
-                    } else {
-                        Root.header.css({
-                            height: "220px",
-                        });
-                    }
+
 
                     Root.nav_first_item.css({
                         marginTop: "20px",
@@ -547,8 +2041,10 @@ margin-bottom: 20px;position:sticky;left: 0;top: 55px;z-index: 0;">
 
                     Root.navbar.css({
                         height: "50px",
-                        backgroundColor: "rgba(226,90,90,0.55)"
                     });
+
+                    Root.language_element.css("margin-top", "");
+                    Root.version_element.css("margin-top", "-3px");
 
                     Root.navbar_items.css({
                         display: "",
@@ -561,19 +2057,7 @@ margin-bottom: 20px;position:sticky;left: 0;top: 55px;z-index: 0;">
         },
 
         handleComponentsOnScroll: function () {
-            clearInterval(Root.timerHandler);
-
-            if ($(document).scrollTop() >= 8) {
-                Root.timerHandler = setTimeout(function handler() {
-                    Root.header_title.hide(0);
-                    Root.header_caption.hide(0);
-                    Root.header_logo.hide(0);
-                    Root.navbar.animate({top: 0});
-                    Root.header.css({height: "50px"});
-
-                    Root.language_list.hide(0);
-                }, 0);
-
+            if ($(document).scrollTop() >= 70) {
 
                 if (Root.subjects_container.css("position") === "fixed") {
                     Root.subjects_container.css({
@@ -589,31 +2073,30 @@ margin-bottom: 20px;position:sticky;left: 0;top: 55px;z-index: 0;">
                     });
                 }
 
+                Root.subjects_toggle.css("top", "110px");
+
             } else {
-                Root.timerHandler = setTimeout(function () {
-                    Root.header.stop(true).animate({height: "220px"}, 200);
-                    Root.header_title.stop(true).show(0);
-                    Root.header_caption.stop(true).show(0);
-                    Root.header_logo.stop(true).show(0);
-                    Root.navbar.stop(true).animate({top: "170px"});
-                    Root.language_list.hide(0);
 
-                    if (Root.subjects_container.css("position") === "fixed") {
-                        Root.subjects_container.css({
-                            width: "87%",
-                            height: "65vh",
-                            float: "",
-                            position: "fixed",
-                            top: "234px",
-                            left: "8px",
-                            backgroundColor: "white",
-                            boxShadow: "0 0 0.625vw 0 rgba(0,0,0,0.55)",
-                            borderRadius: "0 4px 4px 0"
-                        });
-                    }
-                }, 200);
+                if (Root.subjects_container.css("position") === "fixed") {
+                    Root.subjects_container.css({
+                        width: "87%",
+                        height: "65vh",
+                        float: "",
+                        position: "fixed",
+                        top: "234px",
+                        left: "8px",
+                        backgroundColor: "white",
+                        boxShadow: "0 0 0.625vw 0 rgba(0,0,0,0.55)",
+                        borderRadius: "0 4px 4px 0"
+                    });
+                }
 
+                Root.subjects_toggle.css("top", "280px");
             }
+
+            Root.language_list.hide(0);
+
+            Root.subjectPager();
 
         },
 
@@ -627,7 +2110,7 @@ margin-bottom: 20px;position:sticky;left: 0;top: 55px;z-index: 0;">
                     Root.subjects_toggle.css({left: "0"});
                     Root.subjects_toggle.css({
                         right: "",
-                        zIndex: "0"
+                        zIndex: "1"
                     });
 
                     Root.subjects.css({
@@ -660,14 +2143,27 @@ margin-bottom: 20px;position:sticky;left: 0;top: 55px;z-index: 0;">
                 Root.navbar_header.show();
                 Root.subjects_toggle.show();
                 Root.navbar_toggle.show();
-                Root.navbar_items_container.hide();
+                if (Root.last_size >= 500 || Root.last_size === 0) {
+                    Root.navbar_items_container.hide();
+                }
                 Root.subjects_container.hide();
                 Root.subjects.hide();
                 Root.content_container.css({
                     width: "100%",
                     position: "relative",
                     top: "-35px",
-                    zIndex: -5
+                    zIndex: "0"
+                });
+
+
+                Root.js_logo.css({
+                    width: "170px",
+                    height: "100px",
+                });
+
+                Root.ajax_diagram.css({
+                    width: "200px",
+                    height: "178px",
                 });
 
 
@@ -679,7 +2175,7 @@ margin-bottom: 20px;position:sticky;left: 0;top: 55px;z-index: 0;">
                     Root.subjects_toggle.css({left: "0"});
                     Root.subjects_toggle.css({
                         right: "",
-                        zIndex: "0"
+                        zIndex: "1"
                     });
 
                     Root.subjects.css({
@@ -712,18 +2208,33 @@ margin-bottom: 20px;position:sticky;left: 0;top: 55px;z-index: 0;">
                 Root.navbar_header.show();
                 Root.subjects_toggle.show();
                 Root.navbar_toggle.show();
-                Root.navbar_items_container.hide();
+                if (Root.last_size >= 900 || Root.last_size === 0) {
+                    Root.navbar_items_container.hide();
+                }
                 Root.subjects_container.hide();
                 Root.subjects.hide();
                 Root.content_container.css({
                     width: "100%",
                     position: "relative",
                     top: "-35px",
-                    zIndex: -5
+                    zIndex: "0"
                 });
 
 
+                Root.js_logo.css({
+                    width: "400px",
+                    height: "200px",
+                });
+
+                Root.ajax_diagram.css({
+                    width: "400px",
+                    height: "378px",
+                });
+
             } else if ($(window).innerWidth() <= 930) {
+
+                Root.language_element.css("margin-top", "");
+                Root.version_element.css("margin-top", "-3px");
 
                 if (Root.subjects_container.css("position") === "fixed") {
                     Root.subjects_container.hide(0);
@@ -731,7 +2242,7 @@ margin-bottom: 20px;position:sticky;left: 0;top: 55px;z-index: 0;">
                     Root.subjects_toggle.css({left: "0"});
                     Root.subjects_toggle.css({
                         right: "",
-                        zIndex: "0"
+                        zIndex: "1"
                     });
 
                     Root.subjects.css({
@@ -764,15 +2275,6 @@ margin-bottom: 20px;position:sticky;left: 0;top: 55px;z-index: 0;">
                 });
 
                 Root.navbar_separator.hide();
-                if (Root.header_logo.css("display") === "none") {
-                    Root.header.css({
-                        height: "50px",
-                    });
-                } else {
-                    Root.header.css({
-                        height: "220px",
-                    });
-                }
 
                 Root.nav_first_item.css({
                     marginTop: "20px",
@@ -783,7 +2285,6 @@ margin-bottom: 20px;position:sticky;left: 0;top: 55px;z-index: 0;">
 
                 Root.navbar.css({
                     height: "50px",
-                    backgroundColor: "rgba(226,90,90,0.55)"
                 });
 
                 Root.navbar_items.css({
@@ -802,10 +2303,23 @@ margin-bottom: 20px;position:sticky;left: 0;top: 55px;z-index: 0;">
                     width: "100%",
                     position: "relative",
                     top: "-35px",
-                    zIndex: -5
+                    zIndex: "0"
+                });
+
+                Root.js_logo.css({
+                    width: "500px",
+                    height: "300px",
+                });
+
+                Root.ajax_diagram.css({
+                    width: "600px",
+                    height: "578px",
                 });
 
             } else if ($(window).innerWidth() <= 1022) {
+
+                Root.language_element.css("margin-top", "");
+                Root.version_element.css("margin-top", "-3px");
 
                 if (Root.subjects_container.css("position") === "fixed") {
                     Root.subjects.css({
@@ -816,7 +2330,7 @@ margin-bottom: 20px;position:sticky;left: 0;top: 55px;z-index: 0;">
                     Root.subjects_toggle.css({left: "0"});
                     Root.subjects_toggle.css({
                         right: "",
-                        zIndex: "0"
+                        zIndex: "1"
                     });
 
 
@@ -849,15 +2363,6 @@ margin-bottom: 20px;position:sticky;left: 0;top: 55px;z-index: 0;">
 
 
                 Root.navbar_separator.hide();
-                if (Root.header_logo.css("display") === "none") {
-                    Root.header.css({
-                        height: "50px",
-                    });
-                } else {
-                    Root.header.css({
-                        height: "220px",
-                    });
-                }
 
                 Root.nav_first_item.css({
                     marginTop: "20px",
@@ -868,7 +2373,6 @@ margin-bottom: 20px;position:sticky;left: 0;top: 55px;z-index: 0;">
 
                 Root.navbar.css({
                     height: "50px",
-                    backgroundColor: "rgba(226,90,90,0.55)"
                 });
 
                 Root.navbar_items.css({
@@ -889,7 +2393,20 @@ margin-bottom: 20px;position:sticky;left: 0;top: 55px;z-index: 0;">
                     top: ""
                 });
 
+                Root.js_logo.css({
+                    width: "500px",
+                    height: "300px",
+                });
+
+                Root.ajax_diagram.css({
+                    width: "600px",
+                    height: "578px",
+                });
+
             } else {
+
+                Root.language_element.css("margin-top", "");
+                Root.version_element.css("margin-top", "-3px");
 
                 if (Root.subjects_container.css("position") === "fixed") {
                     Root.subjects.css({
@@ -898,7 +2415,7 @@ margin-bottom: 20px;position:sticky;left: 0;top: 55px;z-index: 0;">
                     Root.subjects_toggle.css({left: "0"});
                     Root.subjects_toggle.css({
                         right: "",
-                        zIndex: "0"
+                        zIndex: "1"
                     });
 
 
@@ -932,15 +2449,6 @@ margin-bottom: 20px;position:sticky;left: 0;top: 55px;z-index: 0;">
 
 
                 Root.navbar_separator.hide();
-                if (Root.header_logo.css("display") === "none") {
-                    Root.header.css({
-                        height: "50px",
-                    });
-                } else {
-                    Root.header.css({
-                        height: "220px",
-                    });
-                }
 
                 Root.nav_first_item.css({
                     marginTop: "20px",
@@ -952,7 +2460,6 @@ margin-bottom: 20px;position:sticky;left: 0;top: 55px;z-index: 0;">
 
                 Root.navbar.css({
                     height: "50px",
-                    backgroundColor: "rgba(226,90,90,0.55)"
                 });
 
                 Root.navbar_items.css({
@@ -974,8 +2481,487 @@ margin-bottom: 20px;position:sticky;left: 0;top: 55px;z-index: 0;">
                     top: ""
                 });
 
+
+                Root.js_logo.css({
+                    width: "500px",
+                    height: "300px",
+                });
+
+                Root.ajax_diagram.css({
+                    width: "600px",
+                    height: "578px",
+                });
+
             }
 
+            Root.last_size = $(window).innerWidth();
+
+        },
+
+        subjectPager: function () {
+            if (Root.overview.offset()['top'] <= $(window).scrollTop() && Root.document_ready.offset()['top'] >= $(window).scrollTop()) {
+                Root.overview_s.css({"text-shadow": "black 0 0 1px"});
+                Root.document_ready_s.css({"text-shadow": ""});
+                Root.module_s.css({"text-shadow": ""});
+                Root.controller_s.css({"text-shadow": ""});
+                Root.model_s.css({"text-shadow": ""});
+                Root.get_select_syntax_s.css({"text-shadow": ""});
+                Root.select_element_s.css({"text-shadow": ""});
+                Root.element_creation_s.css({"text-shadow": ""});
+                Root.ajax_request_s.css({"text-shadow": ""});
+                Root.cookie_operations_s.css({"text-shadow": ""});
+                Root.parser_s.css({"text-shadow": ""});
+                Root.array_operations_s.css({"text-shadow": ""});
+                Root.type_detection_s.css({"text-shadow": ""});
+                Root.ie_detection_s.css({"text-shadow": ""});
+                Root.graphical_fade_s.css({"text-shadow": ""});
+                Root.custom_timer_s.css({"text-shadow": ""});
+                Root.auto_complete_s.css({"text-shadow": ""});
+                Root.validation_service_s.css({"text-shadow": ""});
+                Root.filter_service_s.css({"text-shadow": ""});
+                Root.sanitize_service_s.css({"text-shadow": ""});
+                Root.extra_operations_s.css({"text-shadow": ""});
+            } else if (Root.document_ready.offset()['top'] <= $(window).scrollTop() && Root.module.offset()['top'] >= $(window).scrollTop()) {
+                Root.document_ready_s.css({"text-shadow": "black 0 0 1px"});
+                Root.overview_s.css({"text-shadow": ""});
+                Root.module_s.css({"text-shadow": ""});
+                Root.controller_s.css({"text-shadow": ""});
+                Root.model_s.css({"text-shadow": ""});
+                Root.get_select_syntax_s.css({"text-shadow": ""});
+                Root.select_element_s.css({"text-shadow": ""});
+                Root.element_creation_s.css({"text-shadow": ""});
+                Root.ajax_request_s.css({"text-shadow": ""});
+                Root.cookie_operations_s.css({"text-shadow": ""});
+                Root.parser_s.css({"text-shadow": ""});
+                Root.array_operations_s.css({"text-shadow": ""});
+                Root.type_detection_s.css({"text-shadow": ""});
+                Root.ie_detection_s.css({"text-shadow": ""});
+                Root.graphical_fade_s.css({"text-shadow": ""});
+                Root.custom_timer_s.css({"text-shadow": ""});
+                Root.auto_complete_s.css({"text-shadow": ""});
+                Root.validation_service_s.css({"text-shadow": ""});
+                Root.filter_service_s.css({"text-shadow": ""});
+                Root.sanitize_service_s.css({"text-shadow": ""});
+                Root.extra_operations_s.css({"text-shadow": ""});
+            } else if (Root.module.offset()['top'] <= $(window).scrollTop() && Root.controller.offset()['top'] >= $(window).scrollTop()) {
+                Root.module_s.css({"text-shadow": "black 0 0 1px"});
+                Root.overview_s.css({"text-shadow": ""});
+                Root.document_ready_s.css({"text-shadow": ""});
+                Root.controller_s.css({"text-shadow": ""});
+                Root.model_s.css({"text-shadow": ""});
+                Root.get_select_syntax_s.css({"text-shadow": ""});
+                Root.select_element_s.css({"text-shadow": ""});
+                Root.element_creation_s.css({"text-shadow": ""});
+                Root.ajax_request_s.css({"text-shadow": ""});
+                Root.cookie_operations_s.css({"text-shadow": ""});
+                Root.parser_s.css({"text-shadow": ""});
+                Root.array_operations_s.css({"text-shadow": ""});
+                Root.type_detection_s.css({"text-shadow": ""});
+                Root.ie_detection_s.css({"text-shadow": ""});
+                Root.graphical_fade_s.css({"text-shadow": ""});
+                Root.custom_timer_s.css({"text-shadow": ""});
+                Root.auto_complete_s.css({"text-shadow": ""});
+                Root.validation_service_s.css({"text-shadow": ""});
+                Root.filter_service_s.css({"text-shadow": ""});
+                Root.sanitize_service_s.css({"text-shadow": ""});
+                Root.extra_operations_s.css({"text-shadow": ""});
+            } else if (Root.controller.offset()['top'] <= $(window).scrollTop() && Root.model.offset()['top'] >= $(window).scrollTop()) {
+                Root.controller_s.css({"text-shadow": "black 0 0 1px"});
+                Root.overview_s.css({"text-shadow": ""});
+                Root.document_ready_s.css({"text-shadow": ""});
+                Root.module_s.css({"text-shadow": ""});
+                Root.model_s.css({"text-shadow": ""});
+                Root.get_select_syntax_s.css({"text-shadow": ""});
+                Root.select_element_s.css({"text-shadow": ""});
+                Root.element_creation_s.css({"text-shadow": ""});
+                Root.ajax_request_s.css({"text-shadow": ""});
+                Root.cookie_operations_s.css({"text-shadow": ""});
+                Root.parser_s.css({"text-shadow": ""});
+                Root.array_operations_s.css({"text-shadow": ""});
+                Root.type_detection_s.css({"text-shadow": ""});
+                Root.ie_detection_s.css({"text-shadow": ""});
+                Root.graphical_fade_s.css({"text-shadow": ""});
+                Root.custom_timer_s.css({"text-shadow": ""});
+                Root.auto_complete_s.css({"text-shadow": ""});
+                Root.validation_service_s.css({"text-shadow": ""});
+                Root.filter_service_s.css({"text-shadow": ""});
+                Root.sanitize_service_s.css({"text-shadow": ""});
+                Root.extra_operations_s.css({"text-shadow": ""});
+            } else if (Root.model.offset()['top'] <= $(window).scrollTop() && Root.get_select_syntax.offset()['top'] >= $(window).scrollTop()) {
+                Root.model_s.css({"text-shadow": "black 0 0 1px"});
+                Root.overview_s.css({"text-shadow": ""});
+                Root.document_ready_s.css({"text-shadow": ""});
+                Root.module_s.css({"text-shadow": ""});
+                Root.controller_s.css({"text-shadow": ""});
+                Root.get_select_syntax_s.css({"text-shadow": ""});
+                Root.select_element_s.css({"text-shadow": ""});
+                Root.element_creation_s.css({"text-shadow": ""});
+                Root.ajax_request_s.css({"text-shadow": ""});
+                Root.cookie_operations_s.css({"text-shadow": ""});
+                Root.parser_s.css({"text-shadow": ""});
+                Root.array_operations_s.css({"text-shadow": ""});
+                Root.type_detection_s.css({"text-shadow": ""});
+                Root.ie_detection_s.css({"text-shadow": ""});
+                Root.graphical_fade_s.css({"text-shadow": ""});
+                Root.custom_timer_s.css({"text-shadow": ""});
+                Root.auto_complete_s.css({"text-shadow": ""});
+                Root.validation_service_s.css({"text-shadow": ""});
+                Root.filter_service_s.css({"text-shadow": ""});
+                Root.sanitize_service_s.css({"text-shadow": ""});
+                Root.extra_operations_s.css({"text-shadow": ""});
+            } else if (Root.get_select_syntax.offset()['top'] <= $(window).scrollTop() && Root.select_element.offset()['top'] >= $(window).scrollTop()) {
+                Root.get_select_syntax_s.css({"text-shadow": "black 0 0 1px"});
+                Root.overview_s.css({"text-shadow": ""});
+                Root.document_ready_s.css({"text-shadow": ""});
+                Root.module_s.css({"text-shadow": ""});
+                Root.controller_s.css({"text-shadow": ""});
+                Root.model_s.css({"text-shadow": ""});
+                Root.select_element_s.css({"text-shadow": ""});
+                Root.element_creation_s.css({"text-shadow": ""});
+                Root.ajax_request_s.css({"text-shadow": ""});
+                Root.cookie_operations_s.css({"text-shadow": ""});
+                Root.parser_s.css({"text-shadow": ""});
+                Root.array_operations_s.css({"text-shadow": ""});
+                Root.type_detection_s.css({"text-shadow": ""});
+                Root.ie_detection_s.css({"text-shadow": ""});
+                Root.graphical_fade_s.css({"text-shadow": ""});
+                Root.custom_timer_s.css({"text-shadow": ""});
+                Root.auto_complete_s.css({"text-shadow": ""});
+                Root.validation_service_s.css({"text-shadow": ""});
+                Root.filter_service_s.css({"text-shadow": ""});
+                Root.sanitize_service_s.css({"text-shadow": ""});
+                Root.extra_operations_s.css({"text-shadow": ""});
+            } else if (Root.select_element.offset()['top'] <= $(window).scrollTop() && Root.element_creation.offset()['top'] >= $(window).scrollTop()) {
+                Root.select_element_s.css({"text-shadow": "black 0 0 1px"});
+                Root.overview_s.css({"text-shadow": ""});
+                Root.document_ready_s.css({"text-shadow": ""});
+                Root.module_s.css({"text-shadow": ""});
+                Root.controller_s.css({"text-shadow": ""});
+                Root.model_s.css({"text-shadow": ""});
+                Root.get_select_syntax_s.css({"text-shadow": ""});
+                Root.element_creation_s.css({"text-shadow": ""});
+                Root.ajax_request_s.css({"text-shadow": ""});
+                Root.cookie_operations_s.css({"text-shadow": ""});
+                Root.parser_s.css({"text-shadow": ""});
+                Root.array_operations_s.css({"text-shadow": ""});
+                Root.type_detection_s.css({"text-shadow": ""});
+                Root.ie_detection_s.css({"text-shadow": ""});
+                Root.graphical_fade_s.css({"text-shadow": ""});
+                Root.custom_timer_s.css({"text-shadow": ""});
+                Root.auto_complete_s.css({"text-shadow": ""});
+                Root.validation_service_s.css({"text-shadow": ""});
+                Root.filter_service_s.css({"text-shadow": ""});
+                Root.sanitize_service_s.css({"text-shadow": ""});
+                Root.extra_operations_s.css({"text-shadow": ""});
+            } else if (Root.element_creation.offset()['top'] <= $(window).scrollTop() && Root.ajax_request.offset()['top'] >= $(window).scrollTop()) {
+                Root.element_creation_s.css({"text-shadow": "black 0 0 1px"});
+                Root.overview_s.css({"text-shadow": ""});
+                Root.document_ready_s.css({"text-shadow": ""});
+                Root.module_s.css({"text-shadow": ""});
+                Root.controller_s.css({"text-shadow": ""});
+                Root.model_s.css({"text-shadow": ""});
+                Root.select_element_s.css({"text-shadow": ""});
+                Root.select_element_s.css({"text-shadow": ""});
+                Root.ajax_request_s.css({"text-shadow": ""});
+                Root.cookie_operations_s.css({"text-shadow": ""});
+                Root.parser_s.css({"text-shadow": ""});
+                Root.array_operations_s.css({"text-shadow": ""});
+                Root.type_detection_s.css({"text-shadow": ""});
+                Root.ie_detection_s.css({"text-shadow": ""});
+                Root.graphical_fade_s.css({"text-shadow": ""});
+                Root.custom_timer_s.css({"text-shadow": ""});
+                Root.auto_complete_s.css({"text-shadow": ""});
+                Root.validation_service_s.css({"text-shadow": ""});
+                Root.filter_service_s.css({"text-shadow": ""});
+                Root.sanitize_service_s.css({"text-shadow": ""});
+                Root.extra_operations_s.css({"text-shadow": ""});
+            } else if (Root.ajax_request.offset()['top'] <= $(window).scrollTop() && Root.cookie_operations.offset()['top'] >= $(window).scrollTop()) {
+                Root.ajax_request_s.css({"text-shadow": "black 0 0 1px"});
+                Root.overview_s.css({"text-shadow": ""});
+                Root.document_ready_s.css({"text-shadow": ""});
+                Root.module_s.css({"text-shadow": ""});
+                Root.controller_s.css({"text-shadow": ""});
+                Root.model_s.css({"text-shadow": ""});
+                Root.select_element_s.css({"text-shadow": ""});
+                Root.element_creation_s.css({"text-shadow": ""});
+                Root.get_select_syntax_s.css({"text-shadow": ""});
+                Root.cookie_operations_s.css({"text-shadow": ""});
+                Root.parser_s.css({"text-shadow": ""});
+                Root.array_operations_s.css({"text-shadow": ""});
+                Root.type_detection_s.css({"text-shadow": ""});
+                Root.ie_detection_s.css({"text-shadow": ""});
+                Root.graphical_fade_s.css({"text-shadow": ""});
+                Root.custom_timer_s.css({"text-shadow": ""});
+                Root.auto_complete_s.css({"text-shadow": ""});
+                Root.validation_service_s.css({"text-shadow": ""});
+                Root.filter_service_s.css({"text-shadow": ""});
+                Root.sanitize_service_s.css({"text-shadow": ""});
+                Root.extra_operations_s.css({"text-shadow": ""});
+            } else if (Root.cookie_operations.offset()['top'] <= $(window).scrollTop() && Root.parser.offset()['top'] >= $(window).scrollTop()) {
+                Root.cookie_operations_s.css({"text-shadow": "black 0 0 1px"});
+                Root.overview_s.css({"text-shadow": ""});
+                Root.document_ready_s.css({"text-shadow": ""});
+                Root.module_s.css({"text-shadow": ""});
+                Root.controller_s.css({"text-shadow": ""});
+                Root.model_s.css({"text-shadow": ""});
+                Root.select_element_s.css({"text-shadow": ""});
+                Root.element_creation_s.css({"text-shadow": ""});
+                Root.ajax_request_s.css({"text-shadow": ""});
+                Root.get_select_syntax_s.css({"text-shadow": ""});
+                Root.parser_s.css({"text-shadow": ""});
+                Root.array_operations_s.css({"text-shadow": ""});
+                Root.type_detection_s.css({"text-shadow": ""});
+                Root.ie_detection_s.css({"text-shadow": ""});
+                Root.graphical_fade_s.css({"text-shadow": ""});
+                Root.custom_timer_s.css({"text-shadow": ""});
+                Root.auto_complete_s.css({"text-shadow": ""});
+                Root.validation_service_s.css({"text-shadow": ""});
+                Root.filter_service_s.css({"text-shadow": ""});
+                Root.sanitize_service_s.css({"text-shadow": ""});
+                Root.extra_operations_s.css({"text-shadow": ""});
+            } else if (Root.parser.offset()['top'] <= $(window).scrollTop() && Root.array_operations.offset()['top'] >= $(window).scrollTop()) {
+                Root.parser_s.css({"text-shadow": "black 0 0 1px"});
+                Root.overview_s.css({"text-shadow": ""});
+                Root.document_ready_s.css({"text-shadow": ""});
+                Root.module_s.css({"text-shadow": ""});
+                Root.controller_s.css({"text-shadow": ""});
+                Root.model_s.css({"text-shadow": ""});
+                Root.select_element_s.css({"text-shadow": ""});
+                Root.element_creation_s.css({"text-shadow": ""});
+                Root.ajax_request_s.css({"text-shadow": ""});
+                Root.cookie_operations_s.css({"text-shadow": ""});
+                Root.get_select_syntax_s.css({"text-shadow": ""});
+                Root.array_operations_s.css({"text-shadow": ""});
+                Root.type_detection_s.css({"text-shadow": ""});
+                Root.ie_detection_s.css({"text-shadow": ""});
+                Root.graphical_fade_s.css({"text-shadow": ""});
+                Root.custom_timer_s.css({"text-shadow": ""});
+                Root.auto_complete_s.css({"text-shadow": ""});
+                Root.validation_service_s.css({"text-shadow": ""});
+                Root.filter_service_s.css({"text-shadow": ""});
+                Root.sanitize_service_s.css({"text-shadow": ""});
+                Root.extra_operations_s.css({"text-shadow": ""});
+            } else if (Root.array_operations.offset()['top'] <= $(window).scrollTop() && Root.type_detection.offset()['top'] >= $(window).scrollTop()) {
+                Root.array_operations_s.css({"text-shadow": "black 0 0 1px"});
+                Root.overview_s.css({"text-shadow": ""});
+                Root.document_ready_s.css({"text-shadow": ""});
+                Root.module_s.css({"text-shadow": ""});
+                Root.controller_s.css({"text-shadow": ""});
+                Root.model_s.css({"text-shadow": ""});
+                Root.select_element_s.css({"text-shadow": ""});
+                Root.element_creation_s.css({"text-shadow": ""});
+                Root.ajax_request_s.css({"text-shadow": ""});
+                Root.cookie_operations_s.css({"text-shadow": ""});
+                Root.parser_s.css({"text-shadow": ""});
+                Root.get_select_syntax_s.css({"text-shadow": ""});
+                Root.type_detection_s.css({"text-shadow": ""});
+                Root.ie_detection_s.css({"text-shadow": ""});
+                Root.graphical_fade_s.css({"text-shadow": ""});
+                Root.custom_timer_s.css({"text-shadow": ""});
+                Root.auto_complete_s.css({"text-shadow": ""});
+                Root.validation_service_s.css({"text-shadow": ""});
+                Root.filter_service_s.css({"text-shadow": ""});
+                Root.sanitize_service_s.css({"text-shadow": ""});
+                Root.extra_operations_s.css({"text-shadow": ""});
+            } else if (Root.type_detection.offset()['top'] <= $(window).scrollTop() && Root.ie_detection.offset()['top'] >= $(window).scrollTop()) {
+                Root.type_detection_s.css({"text-shadow": "black 0 0 1px"});
+                Root.overview_s.css({"text-shadow": ""});
+                Root.document_ready_s.css({"text-shadow": ""});
+                Root.module_s.css({"text-shadow": ""});
+                Root.controller_s.css({"text-shadow": ""});
+                Root.model_s.css({"text-shadow": ""});
+                Root.select_element_s.css({"text-shadow": ""});
+                Root.element_creation_s.css({"text-shadow": ""});
+                Root.ajax_request_s.css({"text-shadow": ""});
+                Root.cookie_operations_s.css({"text-shadow": ""});
+                Root.parser_s.css({"text-shadow": ""});
+                Root.array_operations_s.css({"text-shadow": ""});
+                Root.get_select_syntax_s.css({"text-shadow": ""});
+                Root.ie_detection_s.css({"text-shadow": ""});
+                Root.graphical_fade_s.css({"text-shadow": ""});
+                Root.custom_timer_s.css({"text-shadow": ""});
+                Root.auto_complete_s.css({"text-shadow": ""});
+                Root.validation_service_s.css({"text-shadow": ""});
+                Root.filter_service_s.css({"text-shadow": ""});
+                Root.sanitize_service_s.css({"text-shadow": ""});
+                Root.extra_operations_s.css({"text-shadow": ""});
+            } else if (Root.ie_detection.offset()['top'] <= $(window).scrollTop() && Root.graphical_fade.offset()['top'] >= $(window).scrollTop()) {
+                Root.ie_detection_s.css({"text-shadow": "black 0 0 1px"});
+                Root.overview_s.css({"text-shadow": ""});
+                Root.document_ready_s.css({"text-shadow": ""});
+                Root.module_s.css({"text-shadow": ""});
+                Root.controller_s.css({"text-shadow": ""});
+                Root.model_s.css({"text-shadow": ""});
+                Root.select_element_s.css({"text-shadow": ""});
+                Root.element_creation_s.css({"text-shadow": ""});
+                Root.ajax_request_s.css({"text-shadow": ""});
+                Root.cookie_operations_s.css({"text-shadow": ""});
+                Root.parser_s.css({"text-shadow": ""});
+                Root.array_operations_s.css({"text-shadow": ""});
+                Root.type_detection_s.css({"text-shadow": ""});
+                Root.get_select_syntax_s.css({"text-shadow": ""});
+                Root.graphical_fade_s.css({"text-shadow": ""});
+                Root.custom_timer_s.css({"text-shadow": ""});
+                Root.auto_complete_s.css({"text-shadow": ""});
+                Root.validation_service_s.css({"text-shadow": ""});
+                Root.filter_service_s.css({"text-shadow": ""});
+                Root.sanitize_service_s.css({"text-shadow": ""});
+                Root.extra_operations_s.css({"text-shadow": ""});
+            } else if (Root.graphical_fade.offset()['top'] <= $(window).scrollTop() && Root.custom_timer.offset()['top'] >= $(window).scrollTop()) {
+                Root.graphical_fade_s.css({"text-shadow": "black 0 0 1px"});
+                Root.overview_s.css({"text-shadow": ""});
+                Root.document_ready_s.css({"text-shadow": ""});
+                Root.module_s.css({"text-shadow": ""});
+                Root.controller_s.css({"text-shadow": ""});
+                Root.model_s.css({"text-shadow": ""});
+                Root.select_element_s.css({"text-shadow": ""});
+                Root.element_creation_s.css({"text-shadow": ""});
+                Root.ajax_request_s.css({"text-shadow": ""});
+                Root.cookie_operations_s.css({"text-shadow": ""});
+                Root.parser_s.css({"text-shadow": ""});
+                Root.array_operations_s.css({"text-shadow": ""});
+                Root.type_detection_s.css({"text-shadow": ""});
+                Root.ie_detection_s.css({"text-shadow": ""});
+                Root.get_select_syntax_s.css({"text-shadow": ""});
+                Root.custom_timer_s.css({"text-shadow": ""});
+                Root.auto_complete_s.css({"text-shadow": ""});
+                Root.validation_service_s.css({"text-shadow": ""});
+                Root.filter_service_s.css({"text-shadow": ""});
+                Root.sanitize_service_s.css({"text-shadow": ""});
+                Root.extra_operations_s.css({"text-shadow": ""});
+            } else if (Root.custom_timer.offset()['top'] <= $(window).scrollTop() && Root.auto_complete.offset()['top'] >= $(window).scrollTop()) {
+                Root.custom_timer_s.css({"text-shadow": "black 0 0 1px"});
+                Root.overview_s.css({"text-shadow": ""});
+                Root.document_ready_s.css({"text-shadow": ""});
+                Root.module_s.css({"text-shadow": ""});
+                Root.controller_s.css({"text-shadow": ""});
+                Root.model_s.css({"text-shadow": ""});
+                Root.select_element_s.css({"text-shadow": ""});
+                Root.element_creation_s.css({"text-shadow": ""});
+                Root.ajax_request_s.css({"text-shadow": ""});
+                Root.cookie_operations_s.css({"text-shadow": ""});
+                Root.parser_s.css({"text-shadow": ""});
+                Root.array_operations_s.css({"text-shadow": ""});
+                Root.type_detection_s.css({"text-shadow": ""});
+                Root.ie_detection_s.css({"text-shadow": ""});
+                Root.graphical_fade_s.css({"text-shadow": ""});
+                Root.get_select_syntax_s.css({"text-shadow": ""});
+                Root.auto_complete_s.css({"text-shadow": ""});
+                Root.validation_service_s.css({"text-shadow": ""});
+                Root.filter_service_s.css({"text-shadow": ""});
+                Root.sanitize_service_s.css({"text-shadow": ""});
+                Root.extra_operations_s.css({"text-shadow": ""});
+            } else if (Root.auto_complete.offset()['top'] <= $(window).scrollTop() && Root.validation_service.offset()['top'] >= $(window).scrollTop()) {
+                Root.auto_complete_s.css({"text-shadow": "black 0 0 1px"});
+                Root.overview_s.css({"text-shadow": ""});
+                Root.document_ready_s.css({"text-shadow": ""});
+                Root.module_s.css({"text-shadow": ""});
+                Root.controller_s.css({"text-shadow": ""});
+                Root.model_s.css({"text-shadow": ""});
+                Root.select_element_s.css({"text-shadow": ""});
+                Root.element_creation_s.css({"text-shadow": ""});
+                Root.ajax_request_s.css({"text-shadow": ""});
+                Root.cookie_operations_s.css({"text-shadow": ""});
+                Root.parser_s.css({"text-shadow": ""});
+                Root.array_operations_s.css({"text-shadow": ""});
+                Root.type_detection_s.css({"text-shadow": ""});
+                Root.ie_detection_s.css({"text-shadow": ""});
+                Root.graphical_fade_s.css({"text-shadow": ""});
+                Root.custom_timer_s.css({"text-shadow": ""});
+                Root.get_select_syntax_s.css({"text-shadow": ""});
+                Root.validation_service_s.css({"text-shadow": ""});
+                Root.filter_service_s.css({"text-shadow": ""});
+                Root.sanitize_service_s.css({"text-shadow": ""});
+                Root.extra_operations_s.css({"text-shadow": ""});
+            } else if (Root.validation_service.offset()['top'] <= $(window).scrollTop() && Root.filter_service.offset()['top'] >= $(window).scrollTop()) {
+                Root.validation_service_s.css({"text-shadow": "black 0 0 1px"});
+                Root.overview_s.css({"text-shadow": ""});
+                Root.document_ready_s.css({"text-shadow": ""});
+                Root.module_s.css({"text-shadow": ""});
+                Root.controller_s.css({"text-shadow": ""});
+                Root.model_s.css({"text-shadow": ""});
+                Root.select_element_s.css({"text-shadow": ""});
+                Root.element_creation_s.css({"text-shadow": ""});
+                Root.ajax_request_s.css({"text-shadow": ""});
+                Root.cookie_operations_s.css({"text-shadow": ""});
+                Root.parser_s.css({"text-shadow": ""});
+                Root.array_operations_s.css({"text-shadow": ""});
+                Root.type_detection_s.css({"text-shadow": ""});
+                Root.ie_detection_s.css({"text-shadow": ""});
+                Root.graphical_fade_s.css({"text-shadow": ""});
+                Root.custom_timer_s.css({"text-shadow": ""});
+                Root.get_select_syntax_s.css({"text-shadow": ""});
+                Root.auto_complete_s.css({"text-shadow": ""});
+                Root.filter_service_s.css({"text-shadow": ""});
+                Root.sanitize_service_s.css({"text-shadow": ""});
+                Root.extra_operations_s.css({"text-shadow": ""});
+            } else if (Root.filter_service.offset()['top'] <= $(window).scrollTop() && Root.sanitize_service.offset()['top'] >= $(window).scrollTop()) {
+                Root.filter_service_s.css({"text-shadow": "black 0 0 1px"});
+                Root.overview_s.css({"text-shadow": ""});
+                Root.document_ready_s.css({"text-shadow": ""});
+                Root.module_s.css({"text-shadow": ""});
+                Root.controller_s.css({"text-shadow": ""});
+                Root.model_s.css({"text-shadow": ""});
+                Root.select_element_s.css({"text-shadow": ""});
+                Root.element_creation_s.css({"text-shadow": ""});
+                Root.ajax_request_s.css({"text-shadow": ""});
+                Root.cookie_operations_s.css({"text-shadow": ""});
+                Root.parser_s.css({"text-shadow": ""});
+                Root.array_operations_s.css({"text-shadow": ""});
+                Root.type_detection_s.css({"text-shadow": ""});
+                Root.ie_detection_s.css({"text-shadow": ""});
+                Root.graphical_fade_s.css({"text-shadow": ""});
+                Root.custom_timer_s.css({"text-shadow": ""});
+                Root.get_select_syntax_s.css({"text-shadow": ""});
+                Root.auto_complete_s.css({"text-shadow": ""});
+                Root.validation_service_s.css({"text-shadow": ""});
+                Root.sanitize_service_s.css({"text-shadow": ""});
+                Root.extra_operations_s.css({"text-shadow": ""});
+            } else if (Root.sanitize_service.offset()['top'] <= $(window).scrollTop() && Root.extra_operations.offset()['top'] >= $(window).scrollTop()) {
+                Root.sanitize_service_s.css({"text-shadow": "black 0 0 1px"});
+                Root.overview_s.css({"text-shadow": ""});
+                Root.document_ready_s.css({"text-shadow": ""});
+                Root.module_s.css({"text-shadow": ""});
+                Root.controller_s.css({"text-shadow": ""});
+                Root.model_s.css({"text-shadow": ""});
+                Root.select_element_s.css({"text-shadow": ""});
+                Root.element_creation_s.css({"text-shadow": ""});
+                Root.ajax_request_s.css({"text-shadow": ""});
+                Root.cookie_operations_s.css({"text-shadow": ""});
+                Root.parser_s.css({"text-shadow": ""});
+                Root.array_operations_s.css({"text-shadow": ""});
+                Root.type_detection_s.css({"text-shadow": ""});
+                Root.ie_detection_s.css({"text-shadow": ""});
+                Root.graphical_fade_s.css({"text-shadow": ""});
+                Root.custom_timer_s.css({"text-shadow": ""});
+                Root.get_select_syntax_s.css({"text-shadow": ""});
+                Root.auto_complete_s.css({"text-shadow": ""});
+                Root.validation_service_s.css({"text-shadow": ""});
+                Root.filter_service_s.css({"text-shadow": ""});
+                Root.extra_operations_s.css({"text-shadow": ""});
+            } else if (Root.extra_operations.offset()['top'] <= $(window).scrollTop()) {
+                Root.extra_operations_s.css({"text-shadow": "black 0 0 1px"});
+                Root.overview_s.css({"text-shadow": ""});
+                Root.document_ready_s.css({"text-shadow": ""});
+                Root.module_s.css({"text-shadow": ""});
+                Root.controller_s.css({"text-shadow": ""});
+                Root.model_s.css({"text-shadow": ""});
+                Root.select_element_s.css({"text-shadow": ""});
+                Root.element_creation_s.css({"text-shadow": ""});
+                Root.ajax_request_s.css({"text-shadow": ""});
+                Root.cookie_operations_s.css({"text-shadow": ""});
+                Root.parser_s.css({"text-shadow": ""});
+                Root.array_operations_s.css({"text-shadow": ""});
+                Root.type_detection_s.css({"text-shadow": ""});
+                Root.ie_detection_s.css({"text-shadow": ""});
+                Root.graphical_fade_s.css({"text-shadow": ""});
+                Root.custom_timer_s.css({"text-shadow": ""});
+                Root.auto_complete_s.css({"text-shadow": ""});
+                Root.get_select_syntax_s.css({"text-shadow": ""});
+                Root.filter_service_s.css({"text-shadow": ""});
+                Root.sanitize_service_s.css({"text-shadow": ""});
+                Root.validation_service_s.css({"text-shadow": ""});
+            }
         },
 
     };

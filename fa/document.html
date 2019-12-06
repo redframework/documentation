@@ -45,12 +45,12 @@
         }
 
         .lang {
-            color: rgba(211, 211, 211, 0.22);
+            color: grey;
             font-size: 13px;
         }
 
         .lang:hover {
-            color: white;
+            color: black;
             transition: 0.6s;
         }
 
@@ -105,7 +105,7 @@
 </div>
 
 <div id="header"
-     style="z-index: 1;box-shadow: 0 0 0.625vw 0 rgba(0,0,0,0.24);-moz-user-select: -moz-none;-webkit-user-select: none;-ms-user-select: none;user-select: none;position:sticky;top: 0;height: 220px;max-height: 220px;background-image: url('../Dependencies/Images/Header_Background.jpg');
+     style="z-index: 1;box-shadow: 0 0 0.625vw 0 rgba(0,0,0,0.24);-moz-user-select: -moz-none;-webkit-user-select: none;-ms-user-select: none;user-select: none;height: 180px;max-height: 180px;background-image: url('../Dependencies/Images/Header_Background.jpg');
                  background-size: cover;width: 100%;margin: auto;border-radius: 5px 5px 0 0;">
     <img id="header-logo" alt="Red Framework" draggable="false"
          src="../Dependencies/Images/Red_Framework_Logo_For_Header.png"
@@ -118,53 +118,55 @@
          style="font-family: Calibri, sans-serif;text-align: right;text-shadow: 0 0 0.625vw 0 rgba(0,0,0,0.50);color:#ffffff;padding-top: 14px;">
         میزبان اپلیکیشن های جامع
     </div>
-    <div id="navbar"
-         style="box-shadow: 0 0 0.625vw 0 rgba(0,0,0,0.35);position: absolute;left: 0;top: 170px;z-index: 3;color: white;width: 100%;height: 50px;background-color: rgba(226,90,90,0.55);">
+</div>
+
+<div id="navbar"
+     style="box-shadow: 0 0 0.625vw 0 rgba(0,0,0,0.35);position: sticky;top: 0;z-index: 3;color: white;height: 50px;background-color: rgb(210,90,90);">
         <span id="navbar-header"
               style="display: none;font-family: Calibri, sans-serif;position:relative;top: 14px;right: 12px;float: right;">مستندات رد فریم ورک</span>
-        <span id="navbar-toggle"
-              style="width: 26px;height: 26px;cursor: pointer;display: none;position:relative;top: 9px;left: 8px;float: left"><img
-                src="../Dependencies/Images/menu_rtl.png" alt="Expand Menu"></span>
-        <div id="navbar-items" style="padding: 15px 9px;font-size: 15px;color: #000;text-shadow: white 0 0 1px">
-            <hr id="navbar-separator"
-                style="color: white;text-align: center;margin: auto;position:relative;top: 20px;width: 100%;display: none">
+    <span id="navbar-toggle"
+          style="width: 26px;height: 26px;cursor: pointer;display: none;position:relative;top: 9px;left: 8px;float: left"><img
+            src="../Dependencies/Images/menu_rtl.png" alt="Expand Menu"></span>
+    <div id="navbar-items" style="padding: 15px 9px;font-size: 15px;color: #000;text-shadow: white 0 0 1px">
+        <hr id="navbar-separator"
+            style="color: white;text-align: center;margin: auto;margin-top: 11px;position:relative;top: 20px;width: 100%;display: none">
 
-            <a href="#!home" class="nav-item" id="nav-first-item" style="float: right;">
-                خانه
-                <img style="opacity: 0.5;width: 15px;height: 15px;margin-left: 4px;position:relative;top: 2.5px;"
-                     src="../Dependencies/Images/home.png" alt="Home">
-            </a>
-
-
-            <a href="#!documentation" class="nav-item" id="nav-item-current" style="float: right;">
-                مستندات
-                <img style="width: 15px;height: 15px;margin-left: 4px;position:relative;top: 2.5px;"
-                     src="../Dependencies/Images/document.png" alt="Document">
-            </a>
-
-            <a href="#!enterprise_doc" class="nav-item" style="float: right;">
-
-                کیت نوسعه جامع
-                <img style="opacity: 0.5;width: 15px;height: 15px;margin-left: 4px;position:relative;top: 2.5px"
-                     src="../Dependencies/Images/app.png" alt="App">
-            </a>
+        <a href="#!home" class="nav-item" id="nav-first-item" style="float: right;">
+            خانه
+            <img style="opacity: 0.5;width: 15px;height: 15px;margin-left: 4px;position:relative;top: 2.5px;"
+                 src="../Dependencies/Images/home.png" alt="Home">
+        </a>
 
 
-            <a href="#!console_doc" class="nav-item" style="float: right;">
-                کیت کنسول اپلیکیشن
-                <img style="opacity: 0.5;width: 15px;height: 15px;margin-left: 4px;position:relative;top: 2.5px"
-                     src="../Dependencies/Images/console.png" alt="Console">
-            </a>
+        <a href="#!documentation" class="nav-item" id="nav-item-current" style="float: right;">
+            مستندات
+            <img style="width: 15px;height: 15px;margin-left: 4px;position:relative;top: 2.5px;"
+                 src="../Dependencies/Images/document.png" alt="Document">
+        </a>
 
-            <a href="#!red_js_doc" class="nav-item" style="float: right;">
-                رد جی اس
-                <img style="opacity: 0.5;width: 15px;height: 15px;margin-left: 4px;position:relative;top: 2.5px"
-                     src="../Dependencies/Images/java-script.png" alt="Red JS">
-            </a>
+        <a href="#!enterprise_doc" class="nav-item" style="float: right;">
+
+            کیت نوسعه جامع
+            <img style="opacity: 0.5;width: 15px;height: 15px;margin-left: 4px;position:relative;top: 2.5px"
+                 src="../Dependencies/Images/app.png" alt="App">
+        </a>
 
 
-            <span id="language"
-                  style="cursor: pointer;color: white;text-decoration: none;margin-left: 20px;font-size: 12px;position:relative;left: 0">
+        <a href="#!console_doc" class="nav-item" style="float: right;">
+            کیت کنسول اپلیکیشن
+            <img style="opacity: 0.5;width: 15px;height: 15px;margin-left: 4px;position:relative;top: 2.5px"
+                 src="../Dependencies/Images/console.png" alt="Console">
+        </a>
+
+        <a href="#!red_js_doc" class="nav-item" style="float: right;">
+            رد جی اس
+            <img style="opacity: 0.5;width: 15px;height: 15px;margin-left: 4px;position:relative;top: 2.5px"
+                 src="../Dependencies/Images/java-script.png" alt="Red JS">
+        </a>
+
+
+        <span id="language"
+              style="cursor: pointer;color: white;text-decoration: none;margin-left: 20px;font-size: 12px;position:relative;left: 0">
                 <img style="width: 15px;height: 15px;margin-right: 6px;position:relative;top: 1px"
                      src="../Dependencies/Images/language.png" alt="Language">
                 <span id="current-language">FA</span>
@@ -172,13 +174,13 @@
                 <img style="margin-left: 3px;width: 10px;height: 10px;margin-right: 6px;position:relative;top: 1px"
                      src="../Dependencies/Images/drop-down-arrow.png" alt="Drop Down">
                 <div id="lang-list"
-                     style="text-shadow: white 0 0 1px;padding: 5px;display: none;width: 140px;text-align: center;background-color: rgba(226,90,90,0.95);box-shadow: 0 0 0.625vw 0 rgba(0,0,0,0.24);height: 50px;position:absolute;left: 0;margin-top: 16px;border-radius: 0 0 4px 4px;">
-                    <div id="lang-fa" class="lang" style="font-family: Calibri, sans-serif">Persian - Fa</div>
+                     style="text-shadow: white 0 0 1px;padding: 5px;display: none;width: 140px;text-align: center;background-color: white;box-shadow: 0 0 0.625vw 0 rgba(0,0,0,0.24);height: 50px;position:absolute;left: 0;margin-top: 17px;border-radius: 0 0 4px 4px;padding-top: 10px">
+                    <div id="lang-fa" class="lang"
+                         style="font-family: Calibri, sans-serif">Persian - Fa</div>
                     <div id="lang-en" class="lang"
                          style="font-family: Calibri, sans-serif;margin-bottom: 7px;margin-top: 6px;">English - En</div>
                 </div>
             </span>
-        </div>
     </div>
 </div>
 
@@ -201,14 +203,14 @@ margin-bottom: 20px;position:sticky;right: 0;top: 55px;z-index: 2;">
 </div>
 
 <div id="subjects-toggle"
-     style="display: none;cursor: pointer;box-shadow: 0 4px 2px -2px rgba(0,0,0,0.30);background-color: white;height: 50px;position: fixed;right: 0;margin-top: 40px;border-radius: 3px 0 0 3px">
+     style="display: none;z-index: 1;cursor: pointer;box-shadow: 0 4px 2px -2px rgba(0,0,0,0.30);background-color: white;height: 50px;position: fixed;right: 0;top: 280px;border-radius: 3px 0 0 3px">
     <img src="../Dependencies/Images/subjects_menu.png" style="margin: 3px;width: 38px;height: 40px;"
          alt="Subjects Menu">
 </div>
 
 <div id="content-container" class="block"
-     style="box-shadow: 0 4px 2px -2px rgba(0,0,0,0.24);margin-bottom: auto;width: 70%;float: left;margin-top: auto;background: url('../Dependencies/Images/background.png') no-repeat center center fixed;
-     background-size: 100% 100%;border-radius: 0 0 5px 0">
+     style="z-index: 0;box-shadow: 0 4px 2px -2px rgba(0,0,0,0.24);margin-bottom: auto;width: 70%;float: left;margin-top: auto;background: url('../Dependencies/Images/background.png') no-repeat center center fixed;
+     background-size: cover;border-radius: 0 0 5px 0">
     <div id="intro"
          class="content-box">
         <h3 class="content-title">مقدمه</h3>
@@ -229,7 +231,7 @@ margin-bottom: 20px;position:sticky;right: 0;top: 55px;z-index: 2;">
             <br/>
 
             <img id="kits" style="border-radius: 4px;margin: 10px;width: 300px;height: 86px"
-                 src="../Dependencies/Images/Development_Kits.png" alt="Development Kits">
+                 src="../Dependencies/Images/Development_kits.png" alt="Development Kits">
         </p>
         <br/>
         <h3 style="direction: rtl">کیت جامع :</h3>
@@ -409,11 +411,11 @@ margin-bottom: 20px;position:sticky;right: 0;top: 55px;z-index: 2;">
         <h3 class="content-title">رد جی اس</h3>
         <hr>
         <p>
-            رد فریم ورک تعلمل جالبی رو با جاوا اسکریپت برای توسع دهندگان فراهم کرده است
+            رد فریم ورک تعامل جالبی رو با جاوا اسکریپت برای توسع دهندگان فراهم کرده است
             <br/>
             <br/>
             بنده به جهت نزدیک تر کردن رابطه Back End و Front End
-            دست به توسعه یک فریم ورک جوا اسکریپتی بردم و در حال حاضر این فریم ورک به نسخه 1.4 خودش رسیده .
+            دست به توسعه یک فریم ورک جوا اسکریپتی بردم و در حال حاضر این فریم ورک به نسخه 1.0 خودش رسیده .
 
             <br/>
             <br/>
@@ -427,7 +429,7 @@ margin-bottom: 20px;position:sticky;right: 0;top: 55px;z-index: 2;">
 
 <hr style="clear: both;opacity: 0;width: 95%;text-align: center;margin-top: 20px;">
 
-<div id="footer" style="height: 65px;margin-top: 20px;">
+<div id="footer" style="height: 75px;margin-top: 20px;">
     <div style="text-shadow: black 0 0 1px;text-align: center">
         مفتخر از میزبانی اپلیکیشن شما
         <br/>
@@ -453,7 +455,6 @@ margin-bottom: 20px;position:sticky;right: 0;top: 55px;z-index: 2;">
     });
 
     var Root = {
-
         header: $("#header"),
         header_title: $("#header-title"),
         header_caption: $("#header-caption"),
@@ -492,28 +493,14 @@ margin-bottom: 20px;position:sticky;right: 0;top: 55px;z-index: 2;">
         nav_first_item: $("#nav-first-item"),
         navbar_separator: $("#navbar-separator"),
         subjects_toggle: $("#subjects-toggle"),
-        timerHandler: null,
         lang_en: $("#lang-en"),
         lang_fa: $("#lang-fa"),
+        last_size: 0,
 
         initialize: function () {
             $(window).on("scroll", Root.handleComponentsOnScroll);
 
-
             Root.handleComponentsOnSize();
-
-            if ($(window).scrollTop() >= 31) {
-
-                Root.header.css({
-                    height: "50px",
-                });
-                Root.header_title.hide(0);
-                Root.header_caption.hide(0);
-                Root.header_logo.hide(0);
-                Root.navbar.css({top: 0});
-                Root.language_list.hide(0);
-                Root.subjects_title.hide(0);
-            }
 
             Root.subjectPager();
 
@@ -524,6 +511,12 @@ margin-bottom: 20px;position:sticky;right: 0;top: 55px;z-index: 2;">
             Root.subjectsToggle();
             Root.navbarToggle();
             Root.handleRoutes();
+
+            if ($(document).scrollTop() >= 20){
+                Root.subjects_toggle.css("top", "110px");
+            } else {
+                Root.subjects_toggle.css("top", "280px");
+            }
 
             $("#loader").fadeOut(500);
         },
@@ -589,15 +582,6 @@ margin-bottom: 20px;position:sticky;right: 0;top: 55px;z-index: 2;">
 
                     Root.subjects_toggle.show();
                     Root.navbar_separator.hide();
-                    if (Root.header_logo.css("display") === "none") {
-                        Root.header.css({
-                            height: "50px",
-                        });
-                    } else {
-                        Root.header.css({
-                            height: "220px",
-                        });
-                    }
 
                     Root.nav_first_item.css({
                         marginTop: "20px",
@@ -608,7 +592,6 @@ margin-bottom: 20px;position:sticky;right: 0;top: 55px;z-index: 2;">
 
                     Root.navbar.css({
                         height: "50px",
-                        backgroundColor: "rgba(226,90,90,0.55)"
                     });
 
                     Root.navbar_items.css({
@@ -663,7 +646,7 @@ margin-bottom: 20px;position:sticky;right: 0;top: 55px;z-index: 2;">
                     Root.subjects_toggle.animate({right: "0"}, 400);
                     Root.subjects_toggle.css({
                         right: "",
-                        zIndex: "0"
+                        zIndex: "1"
                     });
 
                 }
@@ -680,7 +663,7 @@ margin-bottom: 20px;position:sticky;right: 0;top: 55px;z-index: 2;">
                     Root.subjects_toggle.animate({right: "0"}, 400);
                     Root.subjects_toggle.css({
                         left: "",
-                        zIndex: "0"
+                        zIndex: "1"
                     });
 
 
@@ -705,8 +688,7 @@ margin-bottom: 20px;position:sticky;right: 0;top: 55px;z-index: 2;">
                     Root.navbar_separator.show();
 
                     Root.navbar.css({
-                        height: "223px",
-                        backgroundColor: "rgba(226,90,90,0.95)"
+                        height: "245px",
                     });
 
 
@@ -727,15 +709,6 @@ margin-bottom: 20px;position:sticky;right: 0;top: 55px;z-index: 2;">
                 } else {
                     Root.subjects_toggle.show();
                     Root.navbar_separator.hide();
-                    if (Root.header_logo.css("display") === "none") {
-                        Root.header.css({
-                            height: "50px",
-                        });
-                    } else {
-                        Root.header.css({
-                            height: "220px",
-                        });
-                    }
 
                     Root.nav_first_item.css({
                         marginTop: "20px",
@@ -746,7 +719,6 @@ margin-bottom: 20px;position:sticky;right: 0;top: 55px;z-index: 2;">
 
                     Root.navbar.css({
                         height: "50px",
-                        backgroundColor: "rgba(226,90,90,0.55)"
                     });
 
                     Root.navbar_items.css({
@@ -762,19 +734,8 @@ margin-bottom: 20px;position:sticky;right: 0;top: 55px;z-index: 2;">
         },
 
         handleComponentsOnScroll: function () {
-            clearInterval(Root.timerHandler);
 
-            if ($(document).scrollTop() >= 8) {
-                Root.timerHandler = setTimeout(function handler() {
-                    Root.header_title.hide(0);
-                    Root.header_caption.hide(0);
-                    Root.header_logo.hide(0);
-                    Root.navbar.animate({top: 0});
-                    Root.header.css({height: "50px"});
-
-                    Root.language_list.hide(0);
-                }, 0);
-
+            if ($(document).scrollTop() >= 70) {
 
                 if (Root.subjects_container.css("position") === "fixed") {
                     Root.subjects_container.css({
@@ -790,34 +751,31 @@ margin-bottom: 20px;position:sticky;right: 0;top: 55px;z-index: 2;">
                     });
                 }
 
+                Root.subjects_toggle.css("top", "110px");
+
             } else {
-                Root.timerHandler = setTimeout(function () {
-                    Root.header.stop(true).animate({height: "220px"}, 200);
-                    Root.header_title.stop(true).show(0);
-                    Root.header_caption.stop(true).show(0);
-                    Root.header_logo.stop(true).show(0);
-                    Root.navbar.stop(true).animate({top: "170px"});
-                    Root.language_list.hide(0);
 
-                    if (Root.subjects_container.css("position") === "fixed") {
-                        Root.subjects_container.css({
-                            width: "87%",
-                            height: "65vh",
-                            float: "",
-                            position: "fixed",
-                            top: "234px",
-                            right: "8px",
-                            backgroundColor: "white",
-                            boxShadow: "0 0 0.625vw 0 rgba(0,0,0,0.55)",
-                            borderRadius: "4px 0 0 4px"
-                        });
-                    }
-                }, 200);
+                if (Root.subjects_container.css("position") === "fixed") {
+                    Root.subjects_container.css({
+                        width: "87%",
+                        height: "65vh",
+                        float: "",
+                        position: "fixed",
+                        top: "234px",
+                        right: "8px",
+                        backgroundColor: "white",
+                        boxShadow: "0 0 0.625vw 0 rgba(0,0,0,0.55)",
+                        borderRadius: "4px 0 0 4px"
+                    });
+                }
 
+                Root.subjects_toggle.css("top", "280px");
             }
 
+            Root.language_list.hide(0);
 
             Root.subjectPager();
+
         },
 
         handleComponentsOnSize: function () {
@@ -830,7 +788,7 @@ margin-bottom: 20px;position:sticky;right: 0;top: 55px;z-index: 2;">
                     Root.subjects_toggle.css({right: "0"});
                     Root.subjects_toggle.css({
                         left: "",
-                        zIndex: "0"
+                        zIndex: "1"
                     });
 
 
@@ -860,14 +818,19 @@ margin-bottom: 20px;position:sticky;right: 0;top: 55px;z-index: 2;">
                 Root.navbar_header.show();
                 Root.subjects_toggle.show();
                 Root.navbar_toggle.show();
-                Root.navbar_items_container.hide();
+
+                if (Root.last_size >= 500 || Root.last_size === 0){
+                    Root.navbar_items_container.hide();
+
+                }
+
                 Root.subjects_container.hide();
                 Root.subjects.hide();
                 Root.content_container.css({
                     width: "100%",
                     position: "relative",
                     top: "-35px",
-                    zIndex: -5
+                    zIndex: "0"
                 });
 
                 Root.redcoder.css({
@@ -913,7 +876,7 @@ margin-bottom: 20px;position:sticky;right: 0;top: 55px;z-index: 2;">
                     Root.subjects_toggle.css({right: "0"});
                     Root.subjects_toggle.css({
                         left: "",
-                        zIndex: "0"
+                        zIndex: "1"
                     });
 
 
@@ -943,14 +906,16 @@ margin-bottom: 20px;position:sticky;right: 0;top: 55px;z-index: 2;">
                 Root.navbar_header.show();
                 Root.subjects_toggle.show();
                 Root.navbar_toggle.show();
-                Root.navbar_items_container.hide();
+                if(Root.last_size >= 760 || Root.last_size === 0){
+                    Root.navbar_items_container.hide();
+                }
                 Root.subjects_container.hide();
                 Root.subjects.hide();
                 Root.content_container.css({
                     width: "100%",
                     position: "relative",
                     top: "-35px",
-                    zIndex: -5
+                    zIndex: "0"
                 });
 
                 Root.redcoder.css({
@@ -995,7 +960,7 @@ margin-bottom: 20px;position:sticky;right: 0;top: 55px;z-index: 2;">
                     Root.subjects_toggle.css({right: "0"});
                     Root.subjects_toggle.css({
                         left: "",
-                        zIndex: "0"
+                        zIndex: "1"
                     });
 
 
@@ -1025,15 +990,6 @@ margin-bottom: 20px;position:sticky;right: 0;top: 55px;z-index: 2;">
                 });
 
                 Root.navbar_separator.hide();
-                if (Root.header_logo.css("display") === "none") {
-                    Root.header.css({
-                        height: "50px",
-                    });
-                } else {
-                    Root.header.css({
-                        height: "220px",
-                    });
-                }
 
                 Root.nav_first_item.css({
                     marginTop: "20px",
@@ -1044,7 +1000,6 @@ margin-bottom: 20px;position:sticky;right: 0;top: 55px;z-index: 2;">
 
                 Root.navbar.css({
                     height: "50px",
-                    backgroundColor: "rgba(226,90,90,0.55)"
                 });
 
                 Root.navbar_items.css({
@@ -1063,7 +1018,7 @@ margin-bottom: 20px;position:sticky;right: 0;top: 55px;z-index: 2;">
                     width: "100%",
                     position: "relative",
                     top: "-35px",
-                    zIndex: -5
+                    zIndex: "0"
                 });
 
                 Root.redcoder.css({
@@ -1108,7 +1063,7 @@ margin-bottom: 20px;position:sticky;right: 0;top: 55px;z-index: 2;">
                     Root.subjects_toggle.css({right: "0"});
                     Root.subjects_toggle.css({
                         left: "",
-                        zIndex: "0"
+                        zIndex: "1"
                     });
 
 
@@ -1141,15 +1096,6 @@ margin-bottom: 20px;position:sticky;right: 0;top: 55px;z-index: 2;">
 
 
                 Root.navbar_separator.hide();
-                if (Root.header_logo.css("display") === "none") {
-                    Root.header.css({
-                        height: "50px",
-                    });
-                } else {
-                    Root.header.css({
-                        height: "220px",
-                    });
-                }
 
                 Root.nav_first_item.css({
                     marginTop: "20px",
@@ -1160,7 +1106,6 @@ margin-bottom: 20px;position:sticky;right: 0;top: 55px;z-index: 2;">
 
                 Root.navbar.css({
                     height: "50px",
-                    backgroundColor: "rgba(226,90,90,0.55)"
                 });
 
                 Root.navbar_items.css({
@@ -1223,7 +1168,7 @@ margin-bottom: 20px;position:sticky;right: 0;top: 55px;z-index: 2;">
                     Root.subjects_toggle.css({right: "0"});
                     Root.subjects_toggle.css({
                         left: "",
-                        zIndex: "0"
+                        zIndex: "1"
                     });
 
 
@@ -1257,15 +1202,6 @@ margin-bottom: 20px;position:sticky;right: 0;top: 55px;z-index: 2;">
 
 
                 Root.navbar_separator.hide();
-                if (Root.header_logo.css("display") === "none") {
-                    Root.header.css({
-                        height: "50px",
-                    });
-                } else {
-                    Root.header.css({
-                        height: "220px",
-                    });
-                }
 
                 Root.nav_first_item.css({
                     marginTop: "20px",
@@ -1277,7 +1213,6 @@ margin-bottom: 20px;position:sticky;right: 0;top: 55px;z-index: 2;">
 
                 Root.navbar.css({
                     height: "50px",
-                    backgroundColor: "rgba(226,90,90,0.55)"
                 });
 
                 Root.navbar_items.css({
@@ -1336,6 +1271,9 @@ margin-bottom: 20px;position:sticky;right: 0;top: 55px;z-index: 2;">
                     height: "550px",
                 });
             }
+
+
+            Root.last_size = $(window).innerWidth();
 
         },
 

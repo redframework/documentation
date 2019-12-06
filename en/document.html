@@ -44,12 +44,12 @@
         }
 
         .lang {
-            color: rgba(211, 211, 211, 0.22);
+            color: grey;
             font-size: 13px;
         }
 
         .lang:hover {
-            color: white;
+            color: black;
             transition: 0.6s;
         }
 
@@ -100,7 +100,7 @@
 </div>
 
 <div id="header"
-     style="z-index: 1;box-shadow: 0 0 0.625vw 0 rgba(0,0,0,0.24);-moz-user-select: -moz-none;-webkit-user-select: none;-ms-user-select: none;user-select: none;position:sticky;top: 0;height: 220px;max-height: 220px;background-image: url('../Dependencies/Images/Header_Background.jpg');
+     style="z-index: 1;box-shadow: 0 0 0.625vw 0 rgba(0,0,0,0.24);-moz-user-select: -moz-none;-webkit-user-select: none;-ms-user-select: none;user-select: none;height: 220px;max-height: 180px;background-image: url('../Dependencies/Images/Header_Background.jpg');
                  background-size: cover;width: 100%;margin: auto;border-radius: 5px 5px 0 0;">
     <img id="header-logo" alt="Red Framework" draggable="false"
          src="../Dependencies/Images/Red_Framework_Logo_For_Header.png"
@@ -112,41 +112,43 @@
     <div id="header-caption" style="text-shadow: 0 0 0.625vw 0 rgba(0,0,0,0.50);color:#ffffff;padding-top: 14px;">
         Enterprise Applications Host
     </div>
-    <div id="navbar"
-         style="box-shadow: 0 0 0.625vw 0 rgba(0,0,0,0.35);position: absolute;left: 0;top: 170px;z-index: 3;color: white;width: 100%;height: 50px;background-color: rgba(226,90,90,0.55);">
+</div>
+
+<div id="navbar"
+     style="box-shadow: 0 0 0.625vw 0 rgba(0,0,0,0.35);position: sticky;top: 0;z-index: 3;color: white;width: 100%;height: 50px;background-color: rgb(210,90,90);">
         <span id="navbar-header"
               style="display: none;font-family: Calibri, sans-serif;position:relative;top: 14px;left: 12px;">Red Framework Documentation</span>
-        <span id="navbar-toggle"
-              style="cursor: pointer;display: none;position:relative;top: 9px;right: 8px;float: right"><img
-                src="../Dependencies/Images/menu.png" alt="Expand Menu"></span>
-        <div id="navbar-items" style="padding: 15px 9px;font-size: 15px;color: #000;text-shadow: white 0 0 1px">
-            <hr id="navbar-separator"
-                style="color: white;text-align: center;margin: auto;position:relative;top: 14px;width: 100%;display: none">
+    <span id="navbar-toggle"
+          style="cursor: pointer;display: none;position:relative;top: 9px;right: 8px;float: right"><img
+            src="../Dependencies/Images/menu.png" alt="Expand Menu"></span>
+    <div id="navbar-items" style="padding: 15px 9px;font-size: 15px;color: #000;text-shadow: white 0 0 1px">
+        <hr id="navbar-separator"
+            style="color: white;text-align: center;margin: auto;position:relative;top: 14px;width: 100%;display: none">
 
-            <a href="#!home" class="nav-item" id="nav-first-item" style="">
-                <img style="opacity: 0.5;width: 15px;height: 15px;margin-right: 4px;position:relative;top: 2.5px"
-                     src="../Dependencies/Images/home.png" alt="Home">
-                Home</a>
+        <a href="#!home" class="nav-item" id="nav-first-item" style="">
+            <img style="opacity: 0.5;width: 15px;height: 15px;margin-right: 4px;position:relative;top: 2.5px"
+                 src="../Dependencies/Images/home.png" alt="Home">
+            Home</a>
 
-            <a href="#!documentation" class="nav-item" id="nav-item-current" style="">
-                <img style="width: 15px;height: 15px;margin-right: 4px;position:relative;top: 2.5px"
-                     src="../Dependencies/Images/document.png" alt="Document">
-                Documentation</a>
-            <a href="#!enterprise_doc" class="nav-item" style="">
-                <img style="opacity: 0.5;width: 15px;height: 15px;margin-right: 4px;position:relative;top: 2.5px"
-                     src="../Dependencies/Images/app.png" alt="App">
-                Enterprise SDK</a>
-            <a href="#!console_doc" class="nav-item" style="">
-                <img style="opacity: 0.5;width: 15px;height: 15px;margin-right: 4px;position:relative;top: 2.5px"
-                     src="../Dependencies/Images/console.png" alt="Console">
-                Console Kit</a>
-            <a href="#!red_js_doc" class="nav-item" style="">
-                <img style="opacity: 0.5;width: 15px;height: 15px;margin-right: 4px;position:relative;top: 2.5px"
-                     src="../Dependencies/Images/java-script.png" alt="Red JS">
-                Red JS</a>
+        <a href="#!documentation" class="nav-item" id="nav-item-current" style="">
+            <img style="width: 15px;height: 15px;margin-right: 4px;position:relative;top: 2.5px"
+                 src="../Dependencies/Images/document.png" alt="Document">
+            Documentation</a>
+        <a href="#!enterprise_doc" class="nav-item" style="">
+            <img style="opacity: 0.5;width: 15px;height: 15px;margin-right: 4px;position:relative;top: 2.5px"
+                 src="../Dependencies/Images/app.png" alt="App">
+            Enterprise SDK</a>
+        <a href="#!console_doc" class="nav-item" style="">
+            <img style="opacity: 0.5;width: 15px;height: 15px;margin-right: 4px;position:relative;top: 2.5px"
+                 src="../Dependencies/Images/console.png" alt="Console">
+            Console Kit</a>
+        <a href="#!red_js_doc" class="nav-item" style="">
+            <img style="opacity: 0.5;width: 15px;height: 15px;margin-right: 4px;position:relative;top: 2.5px"
+                 src="../Dependencies/Images/java-script.png" alt="Red JS">
+            Red JS</a>
 
-            <span id="language"
-                  style="cursor: pointer;color: white;text-decoration: none;margin-right: 20px;font-size: 12px;position:absolute;right: 0">
+        <span id="language"
+              style="cursor: pointer;color: white;text-decoration: none;margin-right: 20px;font-size: 12px;position:absolute;right: 0">
                 <img style="width: 15px;height: 15px;margin-right: 6px;position:relative;top: 1px"
                      src="../Dependencies/Images/language.png" alt="Language">
                 <span id="current-language">EN</span>
@@ -154,13 +156,12 @@
                 <img style="margin-left: 3px;width: 10px;height: 10px;margin-right: 6px;position:relative;top: 1px"
                      src="../Dependencies/Images/drop-down-arrow.png" alt="Drop Down">
                 <div id="lang-list"
-                     style="text-shadow: white 0 0 1px;padding: 5px;display: none;width: 140px;text-align: center;background-color: rgba(226,90,90,0.95);box-shadow: 0 0 0.625vw 0 rgba(0,0,0,0.24);height: 50px;position:absolute;right: 0;margin-top: 16px;border-radius: 0 0 4px 4px;">
+                     style="text-shadow: white 0 0 1px;padding: 5px;display: none;width: 140px;text-align: center;background-color: white;box-shadow: 0 0 0.625vw 0 rgba(0,0,0,0.24);height: 50px;position:absolute;right: 0;margin-top: 17px;padding-top: 7px;border-radius: 0 0 4px 4px;">
                     <div id="lang-en" class="lang"
                          style="font-family: Calibri, sans-serif;margin-bottom: 7px;margin-top: 6px;">English - En</div>
                     <div id="lang-fa" class="lang" style="font-family: Calibri, sans-serif">Persian - Fa</div>
                 </div>
             </span>
-        </div>
     </div>
 </div>
 
@@ -184,14 +185,14 @@ margin-bottom: 20px;position:sticky;left: 0;top: 55px;z-index: 2;">
 </div>
 
 <div id="subjects-toggle"
-     style="display: none;cursor: pointer;box-shadow: 0 4px 2px -2px rgba(0,0,0,0.30);background-color: white;height: 50px;position: fixed;left: 0;margin-top: 40px;border-radius: 0 3px 3px 0">
+     style="display: none;z-index: 1;cursor: pointer;box-shadow: 0 4px 2px -2px rgba(0,0,0,0.30);background-color: white;height: 50px;position: fixed;left: 0;top: 280px;border-radius: 0 3px 3px 0">
     <img src="../Dependencies/Images/subjects_menu.png" style="margin: 3px;width: 38px;height: 40px;"
          alt="Subjects Menu">
 </div>
 
 <div id="content-container" class="block"
-     style="box-shadow: 0 4px 2px -2px rgba(0,0,0,0.24);margin-bottom: auto;width: 70%;float: right;margin-top: auto;background: url('../Dependencies/Images/background.png') no-repeat center center fixed;
-     background-size: 100% 100%;border-radius: 0 0 0 5px">
+     style="z-index: 0;box-shadow: 0 4px 2px -2px rgba(0,0,0,0.24);margin-bottom: auto;width: 70%;float: right;margin-top: auto;background: url('../Dependencies/Images/background.png') no-repeat center center fixed;
+     background-size: cover;border-radius: 0 0 0 5px">
     <div id="intro"
          class="content-box">
         <h3 class="content-title">Introduce</h3>
@@ -210,7 +211,7 @@ margin-bottom: 20px;position:sticky;left: 0;top: 55px;z-index: 2;">
             <br/>
             <br/>
             <img id="kits" style="border-radius: 4px;margin: 10px;width: 300px;height: 86px"
-                 src="../Dependencies/Images/Development_Kits.png" alt="Development Kits">
+                 src="../Dependencies/Images/Development_kits.png" alt="Development Kits">
         </p>
         <br/>
         <h3>Enterprise SDK :</h3>
@@ -375,7 +376,6 @@ margin-bottom: 20px;position:sticky;left: 0;top: 55px;z-index: 2;">
             <img id="red-analytics-3" style="width: 600px;height: 550px;margin-top: 15px"
                  src="../Dependencies/Images/Red_Analytics_for_console.png" alt="Red Analytics for Console App">
         </div>
-
     </div>
     <div id="red-js"
          class="content-box">
@@ -384,7 +384,7 @@ margin-bottom: 20px;position:sticky;left: 0;top: 55px;z-index: 2;">
         <p>
             Red Framework has a Interesting interact with Java Script
             <br/>
-            I have Been Developed a Java Script Framework (Currently Version 1.4) to keep Back End - Front End Relation
+            I have Been Developed a Java Script Framework (Currently Version 1.0) to keep Back End - Front End Relation
             Close and Easy
             <br/>
             Red JS has Many features such as Coding JS inside HTML Tags which will be Introduced in its own Section
@@ -459,9 +459,9 @@ margin-bottom: 20px;position:sticky;left: 0;top: 55px;z-index: 2;">
         nav_first_item: $("#nav-first-item"),
         navbar_separator: $("#navbar-separator"),
         subjects_toggle: $("#subjects-toggle"),
-        timerHandler: null,
         lang_en: $("#lang-en"),
         lang_fa: $("#lang-fa"),
+        last_size: 0,
 
         initialize: function () {
             $(window).on("scroll", Root.handleComponentsOnScroll);
@@ -469,21 +469,7 @@ margin-bottom: 20px;position:sticky;left: 0;top: 55px;z-index: 2;">
 
             Root.handleComponentsOnSize();
 
-            if ($(window).scrollTop() >= 31) {
-
-                Root.header.css({
-                    height: "50px",
-                });
-                Root.header_title.hide(0);
-                Root.header_caption.hide(0);
-                Root.header_logo.hide(0);
-                Root.navbar.css({top: 0});
-                Root.language_list.hide(0);
-                Root.subjects_title.hide(0);
-            }
-
             Root.subjectPager();
-
 
             $(window).on("resize", Root.handleComponentsOnSize);
 
@@ -491,6 +477,12 @@ margin-bottom: 20px;position:sticky;left: 0;top: 55px;z-index: 2;">
             Root.subjectsToggle();
             Root.navbarToggle();
             Root.handleRoutes();
+
+            if ($(document).scrollTop() >= 20){
+                Root.subjects_toggle.css("top", "110px");
+            } else {
+                Root.subjects_toggle.css("top", "280px");
+            }
 
             $("#loader").fadeOut(500);
         },
@@ -556,15 +548,6 @@ margin-bottom: 20px;position:sticky;left: 0;top: 55px;z-index: 2;">
 
                     Root.subjects_toggle.show();
                     Root.navbar_separator.hide();
-                    if (Root.header_logo.css("display") === "none") {
-                        Root.header.css({
-                            height: "50px",
-                        });
-                    } else {
-                        Root.header.css({
-                            height: "220px",
-                        });
-                    }
 
                     Root.nav_first_item.css({
                         marginTop: "20px",
@@ -575,7 +558,6 @@ margin-bottom: 20px;position:sticky;left: 0;top: 55px;z-index: 2;">
 
                     Root.navbar.css({
                         height: "50px",
-                        backgroundColor: "rgba(226,90,90,0.55)"
                     });
 
                     Root.navbar_items.css({
@@ -628,7 +610,7 @@ margin-bottom: 20px;position:sticky;left: 0;top: 55px;z-index: 2;">
                     Root.subjects_toggle.animate({left: "0"}, 400);
                     Root.subjects_toggle.css({
                         right: "",
-                        zIndex: "0"
+                        zIndex: "1"
                     });
 
                 }
@@ -645,7 +627,7 @@ margin-bottom: 20px;position:sticky;left: 0;top: 55px;z-index: 2;">
                     Root.subjects_toggle.animate({left: "0"}, 400);
                     Root.subjects_toggle.css({
                         right: "",
-                        zIndex: "0"
+                        zIndex: "1"
                     });
 
 
@@ -670,8 +652,7 @@ margin-bottom: 20px;position:sticky;left: 0;top: 55px;z-index: 2;">
                     Root.navbar_separator.show();
 
                     Root.navbar.css({
-                        height: "233px",
-                        backgroundColor: "rgba(226,90,90,0.95)"
+                        height: "238px",
                     });
 
 
@@ -690,15 +671,6 @@ margin-bottom: 20px;position:sticky;left: 0;top: 55px;z-index: 2;">
                 } else {
                     Root.subjects_toggle.show();
                     Root.navbar_separator.hide();
-                    if (Root.header_logo.css("display") === "none") {
-                        Root.header.css({
-                            height: "50px",
-                        });
-                    } else {
-                        Root.header.css({
-                            height: "220px",
-                        });
-                    }
 
                     Root.nav_first_item.css({
                         marginTop: "20px",
@@ -709,7 +681,6 @@ margin-bottom: 20px;position:sticky;left: 0;top: 55px;z-index: 2;">
 
                     Root.navbar.css({
                         height: "50px",
-                        backgroundColor: "rgba(226,90,90,0.55)"
                     });
 
                     Root.navbar_items.css({
@@ -723,19 +694,7 @@ margin-bottom: 20px;position:sticky;left: 0;top: 55px;z-index: 2;">
         },
 
         handleComponentsOnScroll: function () {
-            clearInterval(Root.timerHandler);
-
-            if ($(document).scrollTop() >= 8) {
-                Root.timerHandler = setTimeout(function handler() {
-                    Root.header_title.hide(0);
-                    Root.header_caption.hide(0);
-                    Root.header_logo.hide(0);
-                    Root.navbar.animate({top: 0});
-                    Root.header.css({height: "50px"});
-
-                    Root.language_list.hide(0);
-                }, 0);
-
+            if ($(document).scrollTop() >= 70) {
 
                 if (Root.subjects_container.css("position") === "fixed") {
                     Root.subjects_container.css({
@@ -751,32 +710,28 @@ margin-bottom: 20px;position:sticky;left: 0;top: 55px;z-index: 2;">
                     });
                 }
 
+                Root.subjects_toggle.css("top", "110px");
+
             } else {
-                Root.timerHandler = setTimeout(function () {
-                    Root.header.stop(true).animate({height: "220px"}, 200);
-                    Root.header_title.stop(true).show(0);
-                    Root.header_caption.stop(true).show(0);
-                    Root.header_logo.stop(true).show(0);
-                    Root.navbar.stop(true).animate({top: "170px"});
-                    Root.language_list.hide(0);
 
-                    if (Root.subjects_container.css("position") === "fixed") {
-                        Root.subjects_container.css({
-                            width: "87%",
-                            height: "65vh",
-                            float: "",
-                            position: "fixed",
-                            top: "234px",
-                            left: "8px",
-                            backgroundColor: "white",
-                            boxShadow: "0 0 0.625vw 0 rgba(0,0,0,0.55)",
-                            borderRadius: "0 4px 4px 0"
-                        });
-                    }
-                }, 200);
+                if (Root.subjects_container.css("position") === "fixed") {
+                    Root.subjects_container.css({
+                        width: "87%",
+                        height: "65vh",
+                        float: "",
+                        position: "fixed",
+                        top: "234px",
+                        left: "8px",
+                        backgroundColor: "white",
+                        boxShadow: "0 0 0.625vw 0 rgba(0,0,0,0.55)",
+                        borderRadius: "0 4px 4px 0"
+                    });
+                }
 
+                Root.subjects_toggle.css("top", "280px");
             }
 
+            Root.language_list.hide(0);
 
             Root.subjectPager();
         },
@@ -791,7 +746,7 @@ margin-bottom: 20px;position:sticky;left: 0;top: 55px;z-index: 2;">
                     Root.subjects_toggle.css({left: "0"});
                     Root.subjects_toggle.css({
                         right: "",
-                        zIndex: "0"
+                        zIndex: "1"
                     });
 
 
@@ -821,14 +776,16 @@ margin-bottom: 20px;position:sticky;left: 0;top: 55px;z-index: 2;">
                 Root.navbar_header.show();
                 Root.subjects_toggle.show();
                 Root.navbar_toggle.show();
-                Root.navbar_items_container.hide();
+                if (Root.last_size >= 500 || Root.last_size === 0){
+                    Root.navbar_items_container.hide();
+                }
                 Root.subjects_container.hide();
                 Root.subjects.hide();
                 Root.content_container.css({
                     width: "100%",
                     position: "relative",
                     top: "-35px",
-                    zIndex: -5
+                    zIndex: "0"
                 });
 
                 Root.redcoder.css({
@@ -873,7 +830,7 @@ margin-bottom: 20px;position:sticky;left: 0;top: 55px;z-index: 2;">
                     Root.subjects_toggle.css({left: "0"});
                     Root.subjects_toggle.css({
                         right: "",
-                        zIndex: "0"
+                        zIndex: "1"
                     });
 
 
@@ -903,14 +860,16 @@ margin-bottom: 20px;position:sticky;left: 0;top: 55px;z-index: 2;">
                 Root.navbar_header.show();
                 Root.subjects_toggle.show();
                 Root.navbar_toggle.show();
-                Root.navbar_items_container.hide();
+                if (Root.last_size >= 760 || Root.last_size === 0){
+                    Root.navbar_items_container.hide();
+                }
                 Root.subjects_container.hide();
                 Root.subjects.hide();
                 Root.content_container.css({
                     width: "100%",
                     position: "relative",
                     top: "-35px",
-                    zIndex: -5
+                    zIndex: "0"
                 });
 
                 Root.redcoder.css({
@@ -955,7 +914,7 @@ margin-bottom: 20px;position:sticky;left: 0;top: 55px;z-index: 2;">
                     Root.subjects_toggle.css({left: "0"});
                     Root.subjects_toggle.css({
                         right: "",
-                        zIndex: "0"
+                        zIndex: "1"
                     });
 
 
@@ -985,15 +944,6 @@ margin-bottom: 20px;position:sticky;left: 0;top: 55px;z-index: 2;">
                 });
 
                 Root.navbar_separator.hide();
-                if (Root.header_logo.css("display") === "none") {
-                    Root.header.css({
-                        height: "50px",
-                    });
-                } else {
-                    Root.header.css({
-                        height: "220px",
-                    });
-                }
 
                 Root.nav_first_item.css({
                     marginTop: "20px",
@@ -1004,7 +954,6 @@ margin-bottom: 20px;position:sticky;left: 0;top: 55px;z-index: 2;">
 
                 Root.navbar.css({
                     height: "50px",
-                    backgroundColor: "rgba(226,90,90,0.55)"
                 });
 
                 Root.navbar_items.css({
@@ -1023,7 +972,7 @@ margin-bottom: 20px;position:sticky;left: 0;top: 55px;z-index: 2;">
                     width: "100%",
                     position: "relative",
                     top: "-35px",
-                    zIndex: -5
+                    zIndex: "0"
                 });
 
                 Root.redcoder.css({
@@ -1068,7 +1017,7 @@ margin-bottom: 20px;position:sticky;left: 0;top: 55px;z-index: 2;">
                     Root.subjects_toggle.css({left: "0"});
                     Root.subjects_toggle.css({
                         right: "",
-                        zIndex: "0"
+                        zIndex: "1"
                     });
 
 
@@ -1101,15 +1050,6 @@ margin-bottom: 20px;position:sticky;left: 0;top: 55px;z-index: 2;">
 
 
                 Root.navbar_separator.hide();
-                if (Root.header_logo.css("display") === "none") {
-                    Root.header.css({
-                        height: "50px",
-                    });
-                } else {
-                    Root.header.css({
-                        height: "220px",
-                    });
-                }
 
                 Root.nav_first_item.css({
                     marginTop: "20px",
@@ -1120,7 +1060,6 @@ margin-bottom: 20px;position:sticky;left: 0;top: 55px;z-index: 2;">
 
                 Root.navbar.css({
                     height: "50px",
-                    backgroundColor: "rgba(226,90,90,0.55)"
                 });
 
                 Root.navbar_items.css({
@@ -1181,7 +1120,7 @@ margin-bottom: 20px;position:sticky;left: 0;top: 55px;z-index: 2;">
                     Root.subjects_toggle.css({left: "0"});
                     Root.subjects_toggle.css({
                         right: "",
-                        zIndex: "0"
+                        zIndex: "1"
                     });
 
 
@@ -1215,15 +1154,6 @@ margin-bottom: 20px;position:sticky;left: 0;top: 55px;z-index: 2;">
 
 
                 Root.navbar_separator.hide();
-                if (Root.header_logo.css("display") === "none") {
-                    Root.header.css({
-                        height: "50px",
-                    });
-                } else {
-                    Root.header.css({
-                        height: "220px",
-                    });
-                }
 
                 Root.nav_first_item.css({
                     marginTop: "20px",
@@ -1235,7 +1165,6 @@ margin-bottom: 20px;position:sticky;left: 0;top: 55px;z-index: 2;">
 
                 Root.navbar.css({
                     height: "50px",
-                    backgroundColor: "rgba(226,90,90,0.55)"
                 });
 
                 Root.navbar_items.css({
@@ -1292,6 +1221,8 @@ margin-bottom: 20px;position:sticky;left: 0;top: 55px;z-index: 2;">
                     height: "550px",
                 });
             }
+
+            Root.last_size = $(window).innerWidth();
 
         },
 
