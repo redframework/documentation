@@ -241,6 +241,9 @@ margin-bottom: 20px;position:sticky;left: 0;top: 55px;z-index: 1;">
             <li id="model-s"><a href="#model"
                                 style="text-decoration: none;color: black;">Model</a></li>
 
+            <li id="handle-routes-s"><a href="#handle-routes"
+                                        style="text-decoration: none;color: black;">Handle Routes</a></li>
+
             <li id="get-select-syntax-s"><a href="#get-select-syntax"
                                             style="text-decoration: none;color: black;">Get / Select Element(s)</a></li>
 
@@ -588,6 +591,48 @@ margin-bottom: 20px;position:sticky;left: 0;top: 55px;z-index: 1;">
 
     </div>
 
+    <div id="handle-routes"
+         class="content-box">
+        <h3 class="content-title">Handle Routes</h3>
+        <hr>
+        <p>
+            Red JS is Providing a System to Handle Routes and Links in HTML .
+        </p>
+
+        <div class="codeheader">Handle Routes via Red JS</div>
+        <div class="codebox">
+            <pre>&lt;div red-app="main"&gt;
+    &lt;a href="#!blog"&gt;Blog&lt;/a&gt;
+    &lt;a href="#!forum"&gt;Forum&lt;/a&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+    var blog_path = "http://redframework.ir/blog";
+    var forum_path = "http://redframework.ir/forums";
+    var module_name = "main";
+    Red.app.registerRoute(module_name, {
+        blog: blog_path,
+        forum: forum_path,
+    });
+&lt;/script&gt;
+</pre>
+
+        </div>
+
+        <p>Explain :</p>
+
+        <div class="box">
+            We Registered our Routes by registerRoute method in Red.app Module .
+            <br/>
+            <br/>
+            registerRoute method Requires 2 Parameter -> Module Name and An Object Containing Route Name as Key and Route Path as Value .
+        </div>
+
+        <p> * Routes are Accessible only on their Module's .
+        <br/>
+            * You Can Access Routes in HTML with Special Keys (#!route_name) .
+        </p>
+    </div>
 
     <div id="get-select-syntax"
          class="content-box">
@@ -962,7 +1007,8 @@ margin-bottom: 20px;position:sticky;left: 0;top: 55px;z-index: 1;">
         <hr>
 
         <div style="text-align: center;margin: auto;">
-            <img class="content-image" id="ajax-diagram" src="../../../Dependencies/Images/ajax_diagram.png" alt="AJAX Request" style="opacity: 0.8;width: 600px;height: 578px">
+            <img class="content-image" id="ajax-diagram" src="../../../Dependencies/Images/ajax_diagram.png"
+                 alt="AJAX Request" style="opacity: 0.8;width: 600px;height: 578px">
         </div>
 
         <p>
@@ -1538,7 +1584,6 @@ Red.autoComplete(city_input, city_input_container, list_element, item_element,
         </p>
 
 
-
         <div class="codeheader">ADDING METHOD TO FILTER SERVICE</div>
         <div class="codebox">
             var method = "test";
@@ -1768,6 +1813,7 @@ Red.autoComplete(city_input, city_input_container, list_element, item_element,
         module_s: $("#module-s"),
         controller_s: $("#controller-s"),
         model_s: $("#model-s"),
+        handle_routes_s: $("#handle-routes-s"),
         get_select_syntax_s: $("#get-select-syntax-s"),
         select_element_s: $("#select-element-s"),
         element_creation_s: $("#element-creation-s"),
@@ -1790,6 +1836,7 @@ Red.autoComplete(city_input, city_input_container, list_element, item_element,
         module: $("#module"),
         controller: $("#controller"),
         model: $("#model"),
+        handle_routes: $("#handle-routes"),
         get_select_syntax: $("#get-select-syntax"),
         select_element: $("#select-element"),
         element_creation: $("#element-creation"),
@@ -2505,6 +2552,7 @@ Red.autoComplete(city_input, city_input_container, list_element, item_element,
                 Root.module_s.css({"text-shadow": ""});
                 Root.controller_s.css({"text-shadow": ""});
                 Root.model_s.css({"text-shadow": ""});
+                Root.handle_routes_s.css({"text-shadow": ""});
                 Root.get_select_syntax_s.css({"text-shadow": ""});
                 Root.select_element_s.css({"text-shadow": ""});
                 Root.element_creation_s.css({"text-shadow": ""});
@@ -2527,6 +2575,7 @@ Red.autoComplete(city_input, city_input_container, list_element, item_element,
                 Root.module_s.css({"text-shadow": ""});
                 Root.controller_s.css({"text-shadow": ""});
                 Root.model_s.css({"text-shadow": ""});
+                Root.handle_routes_s.css({"text-shadow": ""});
                 Root.get_select_syntax_s.css({"text-shadow": ""});
                 Root.select_element_s.css({"text-shadow": ""});
                 Root.element_creation_s.css({"text-shadow": ""});
@@ -2549,6 +2598,7 @@ Red.autoComplete(city_input, city_input_container, list_element, item_element,
                 Root.document_ready_s.css({"text-shadow": ""});
                 Root.controller_s.css({"text-shadow": ""});
                 Root.model_s.css({"text-shadow": ""});
+                Root.handle_routes_s.css({"text-shadow": ""});
                 Root.get_select_syntax_s.css({"text-shadow": ""});
                 Root.select_element_s.css({"text-shadow": ""});
                 Root.element_creation_s.css({"text-shadow": ""});
@@ -2571,6 +2621,7 @@ Red.autoComplete(city_input, city_input_container, list_element, item_element,
                 Root.document_ready_s.css({"text-shadow": ""});
                 Root.module_s.css({"text-shadow": ""});
                 Root.model_s.css({"text-shadow": ""});
+                Root.handle_routes_s.css({"text-shadow": ""});
                 Root.get_select_syntax_s.css({"text-shadow": ""});
                 Root.select_element_s.css({"text-shadow": ""});
                 Root.element_creation_s.css({"text-shadow": ""});
@@ -2587,8 +2638,32 @@ Red.autoComplete(city_input, city_input_container, list_element, item_element,
                 Root.filter_service_s.css({"text-shadow": ""});
                 Root.sanitize_service_s.css({"text-shadow": ""});
                 Root.extra_operations_s.css({"text-shadow": ""});
-            } else if (Root.model.offset()['top'] <= $(window).scrollTop() && Root.get_select_syntax.offset()['top'] >= $(window).scrollTop()) {
+            } else if (Root.model.offset()['top'] <= $(window).scrollTop() && Root.handle_routes.offset()['top'] >= $(window).scrollTop()) {
                 Root.model_s.css({"text-shadow": "black 0 0 1px"});
+                Root.handle_routes_s.css({"text-shadow": ""});
+                Root.overview_s.css({"text-shadow": ""});
+                Root.document_ready_s.css({"text-shadow": ""});
+                Root.module_s.css({"text-shadow": ""});
+                Root.controller_s.css({"text-shadow": ""});
+                Root.get_select_syntax_s.css({"text-shadow": ""});
+                Root.select_element_s.css({"text-shadow": ""});
+                Root.element_creation_s.css({"text-shadow": ""});
+                Root.ajax_request_s.css({"text-shadow": ""});
+                Root.cookie_operations_s.css({"text-shadow": ""});
+                Root.parser_s.css({"text-shadow": ""});
+                Root.array_operations_s.css({"text-shadow": ""});
+                Root.type_detection_s.css({"text-shadow": ""});
+                Root.ie_detection_s.css({"text-shadow": ""});
+                Root.graphical_fade_s.css({"text-shadow": ""});
+                Root.custom_timer_s.css({"text-shadow": ""});
+                Root.auto_complete_s.css({"text-shadow": ""});
+                Root.validation_service_s.css({"text-shadow": ""});
+                Root.filter_service_s.css({"text-shadow": ""});
+                Root.sanitize_service_s.css({"text-shadow": ""});
+                Root.extra_operations_s.css({"text-shadow": ""});
+            } else if (Root.handle_routes.offset()['top'] <= $(window).scrollTop() && Root.get_select_syntax.offset()['top'] >= $(window).scrollTop()) {
+                Root.handle_routes_s.css({"text-shadow": "black 0 0 1px"});
+                Root.model_s.css({"text-shadow": ""});
                 Root.overview_s.css({"text-shadow": ""});
                 Root.document_ready_s.css({"text-shadow": ""});
                 Root.module_s.css({"text-shadow": ""});
@@ -2616,6 +2691,7 @@ Red.autoComplete(city_input, city_input_container, list_element, item_element,
                 Root.module_s.css({"text-shadow": ""});
                 Root.controller_s.css({"text-shadow": ""});
                 Root.model_s.css({"text-shadow": ""});
+                Root.handle_routes_s.css({"text-shadow": ""});
                 Root.select_element_s.css({"text-shadow": ""});
                 Root.element_creation_s.css({"text-shadow": ""});
                 Root.ajax_request_s.css({"text-shadow": ""});
@@ -2638,6 +2714,7 @@ Red.autoComplete(city_input, city_input_container, list_element, item_element,
                 Root.module_s.css({"text-shadow": ""});
                 Root.controller_s.css({"text-shadow": ""});
                 Root.model_s.css({"text-shadow": ""});
+                Root.handle_routes_s.css({"text-shadow": ""});
                 Root.get_select_syntax_s.css({"text-shadow": ""});
                 Root.element_creation_s.css({"text-shadow": ""});
                 Root.ajax_request_s.css({"text-shadow": ""});
@@ -2660,6 +2737,7 @@ Red.autoComplete(city_input, city_input_container, list_element, item_element,
                 Root.module_s.css({"text-shadow": ""});
                 Root.controller_s.css({"text-shadow": ""});
                 Root.model_s.css({"text-shadow": ""});
+                Root.handle_routes_s.css({"text-shadow": ""});
                 Root.select_element_s.css({"text-shadow": ""});
                 Root.select_element_s.css({"text-shadow": ""});
                 Root.ajax_request_s.css({"text-shadow": ""});
@@ -2682,6 +2760,7 @@ Red.autoComplete(city_input, city_input_container, list_element, item_element,
                 Root.module_s.css({"text-shadow": ""});
                 Root.controller_s.css({"text-shadow": ""});
                 Root.model_s.css({"text-shadow": ""});
+                Root.handle_routes_s.css({"text-shadow": ""});
                 Root.select_element_s.css({"text-shadow": ""});
                 Root.element_creation_s.css({"text-shadow": ""});
                 Root.get_select_syntax_s.css({"text-shadow": ""});
@@ -2704,6 +2783,7 @@ Red.autoComplete(city_input, city_input_container, list_element, item_element,
                 Root.module_s.css({"text-shadow": ""});
                 Root.controller_s.css({"text-shadow": ""});
                 Root.model_s.css({"text-shadow": ""});
+                Root.handle_routes_s.css({"text-shadow": ""});
                 Root.select_element_s.css({"text-shadow": ""});
                 Root.element_creation_s.css({"text-shadow": ""});
                 Root.ajax_request_s.css({"text-shadow": ""});
@@ -2726,6 +2806,7 @@ Red.autoComplete(city_input, city_input_container, list_element, item_element,
                 Root.module_s.css({"text-shadow": ""});
                 Root.controller_s.css({"text-shadow": ""});
                 Root.model_s.css({"text-shadow": ""});
+                Root.handle_routes_s.css({"text-shadow": ""});
                 Root.select_element_s.css({"text-shadow": ""});
                 Root.element_creation_s.css({"text-shadow": ""});
                 Root.ajax_request_s.css({"text-shadow": ""});
@@ -2748,6 +2829,7 @@ Red.autoComplete(city_input, city_input_container, list_element, item_element,
                 Root.module_s.css({"text-shadow": ""});
                 Root.controller_s.css({"text-shadow": ""});
                 Root.model_s.css({"text-shadow": ""});
+                Root.handle_routes_s.css({"text-shadow": ""});
                 Root.select_element_s.css({"text-shadow": ""});
                 Root.element_creation_s.css({"text-shadow": ""});
                 Root.ajax_request_s.css({"text-shadow": ""});
@@ -2770,6 +2852,7 @@ Red.autoComplete(city_input, city_input_container, list_element, item_element,
                 Root.module_s.css({"text-shadow": ""});
                 Root.controller_s.css({"text-shadow": ""});
                 Root.model_s.css({"text-shadow": ""});
+                Root.handle_routes_s.css({"text-shadow": ""});
                 Root.select_element_s.css({"text-shadow": ""});
                 Root.element_creation_s.css({"text-shadow": ""});
                 Root.ajax_request_s.css({"text-shadow": ""});
@@ -2792,6 +2875,7 @@ Red.autoComplete(city_input, city_input_container, list_element, item_element,
                 Root.module_s.css({"text-shadow": ""});
                 Root.controller_s.css({"text-shadow": ""});
                 Root.model_s.css({"text-shadow": ""});
+                Root.handle_routes_s.css({"text-shadow": ""});
                 Root.select_element_s.css({"text-shadow": ""});
                 Root.element_creation_s.css({"text-shadow": ""});
                 Root.ajax_request_s.css({"text-shadow": ""});
@@ -2814,6 +2898,7 @@ Red.autoComplete(city_input, city_input_container, list_element, item_element,
                 Root.module_s.css({"text-shadow": ""});
                 Root.controller_s.css({"text-shadow": ""});
                 Root.model_s.css({"text-shadow": ""});
+                Root.handle_routes_s.css({"text-shadow": ""});
                 Root.select_element_s.css({"text-shadow": ""});
                 Root.element_creation_s.css({"text-shadow": ""});
                 Root.ajax_request_s.css({"text-shadow": ""});
@@ -2836,6 +2921,7 @@ Red.autoComplete(city_input, city_input_container, list_element, item_element,
                 Root.module_s.css({"text-shadow": ""});
                 Root.controller_s.css({"text-shadow": ""});
                 Root.model_s.css({"text-shadow": ""});
+                Root.handle_routes_s.css({"text-shadow": ""});
                 Root.select_element_s.css({"text-shadow": ""});
                 Root.element_creation_s.css({"text-shadow": ""});
                 Root.ajax_request_s.css({"text-shadow": ""});
@@ -2858,6 +2944,7 @@ Red.autoComplete(city_input, city_input_container, list_element, item_element,
                 Root.module_s.css({"text-shadow": ""});
                 Root.controller_s.css({"text-shadow": ""});
                 Root.model_s.css({"text-shadow": ""});
+                Root.handle_routes_s.css({"text-shadow": ""});
                 Root.select_element_s.css({"text-shadow": ""});
                 Root.element_creation_s.css({"text-shadow": ""});
                 Root.ajax_request_s.css({"text-shadow": ""});
@@ -2880,6 +2967,7 @@ Red.autoComplete(city_input, city_input_container, list_element, item_element,
                 Root.module_s.css({"text-shadow": ""});
                 Root.controller_s.css({"text-shadow": ""});
                 Root.model_s.css({"text-shadow": ""});
+                Root.handle_routes_s.css({"text-shadow": ""});
                 Root.select_element_s.css({"text-shadow": ""});
                 Root.element_creation_s.css({"text-shadow": ""});
                 Root.ajax_request_s.css({"text-shadow": ""});
@@ -2902,6 +2990,7 @@ Red.autoComplete(city_input, city_input_container, list_element, item_element,
                 Root.module_s.css({"text-shadow": ""});
                 Root.controller_s.css({"text-shadow": ""});
                 Root.model_s.css({"text-shadow": ""});
+                Root.handle_routes_s.css({"text-shadow": ""});
                 Root.select_element_s.css({"text-shadow": ""});
                 Root.element_creation_s.css({"text-shadow": ""});
                 Root.ajax_request_s.css({"text-shadow": ""});
@@ -2924,6 +3013,7 @@ Red.autoComplete(city_input, city_input_container, list_element, item_element,
                 Root.module_s.css({"text-shadow": ""});
                 Root.controller_s.css({"text-shadow": ""});
                 Root.model_s.css({"text-shadow": ""});
+                Root.handle_routes_s.css({"text-shadow": ""});
                 Root.select_element_s.css({"text-shadow": ""});
                 Root.element_creation_s.css({"text-shadow": ""});
                 Root.ajax_request_s.css({"text-shadow": ""});
@@ -2946,6 +3036,7 @@ Red.autoComplete(city_input, city_input_container, list_element, item_element,
                 Root.module_s.css({"text-shadow": ""});
                 Root.controller_s.css({"text-shadow": ""});
                 Root.model_s.css({"text-shadow": ""});
+                Root.handle_routes_s.css({"text-shadow": ""});
                 Root.select_element_s.css({"text-shadow": ""});
                 Root.element_creation_s.css({"text-shadow": ""});
                 Root.ajax_request_s.css({"text-shadow": ""});
